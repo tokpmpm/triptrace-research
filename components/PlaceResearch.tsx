@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { AlertTriangle, Check, Clock3, ExternalLink, LoaderCircle, Play, RefreshCw, Search, ShieldCheck, X } from "lucide-react";
+import { AlertTriangle, Check, Clock3, ExternalLink, LoaderCircle, MapPin, Play, RefreshCw, Search, ShieldCheck, X } from "lucide-react";
+import taipei101Demo from "@/data/taipei-101-demo.json";
 import type { PlaceResearchResult, ResearchIntent, ResearchStage, ResearchStreamEvent } from "@/types/research";
 
 const STAGES: Array<{ id: ResearchStage; label: string }> = [
@@ -21,6 +22,7 @@ const SECTION_LABELS: Record<ResearchIntent, string> = {
 };
 
 const EXAMPLE_PLACES = ["Ximending", "Dadaocheng", "Shilin Night Market"];
+const TAIPEI_101_DEMO = taipei101Demo as PlaceResearchResult;
 
 function timestamp(seconds: number) {
   return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
@@ -28,6 +30,12 @@ function timestamp(seconds: number) {
 
 function formatElapsed(milliseconds: number) {
   return `${Math.max(0, Math.round(milliseconds / 1000))}s`;
+}
+
+function locationLabel(result: PlaceResearchResult, distanceMeters: number, relationship: "queried_place" | "inside" | "nearby") {
+  if (relationship === "inside") return `Inside ${result.place}`;
+  if (relationship === "queried_place") return `At ${result.place}`;
+  return distanceMeters < 1_000 ? `${distanceMeters} m from ${result.place}` : `${(distanceMeters / 1_000).toFixed(1)} km from ${result.place}`;
 }
 
 function highlightedTakeaway(value: string, highlights: string[] = []) {
@@ -39,13 +47,32 @@ function highlightedTakeaway(value: string, highlights: string[] = []) {
   return value.split(matcher).map((part, index) => normalizedTerms.has(part.toLowerCase()) ? <mark key={`${part}-${index}`}>{part}</mark> : part);
 }
 
+function VerificationFunnel({ result, running }: { result: PlaceResearchResult; running: boolean }) {
+  const verification = result.verification;
+  if (!verification) return null;
+  const steps = [
+    ["Video candidates", verification.videosFound],
+    ["Captioned sources", verification.captionedVideos],
+    ["Candidate clips", verification.candidateClips],
+    ["Evidence matches", verification.evidenceMatches],
+    ["Location verified", verification.verifiedClips]
+  ] as const;
+  const excluded = verification.rejectedEvidenceOrRanking + verification.rejectedLocation;
+
+  return <section className="verification-funnel" aria-label="Verification funnel">
+    <div className="verification-heading"><div><span>How this result was verified</span><h3>{running ? "Verified results are ready while research continues." : "Every recommendation survived the evidence checks."}</h3></div><ShieldCheck size={22} /></div>
+    <ol>{steps.map(([label, value], index) => <li key={label}><strong>{value}</strong><span>{label}</span>{index < steps.length - 1 && <i aria-hidden="true">→</i>}</li>)}</ol>
+    <div className="verification-rejections"><span>{excluded} excluded after clip extraction</span><p><b>{verification.rejectedEvidenceOrRanking}</b> unsupported, off-topic, duplicate, or lower-ranked</p><p><b>{verification.rejectedLocation}</b> unresolved or outside the allowed distance</p></div>
+  </section>;
+}
+
 export function PlaceResearch() {
   const [place, setPlace] = useState("Taipei 101");
   const [city, setCity] = useState("Taipei");
   const [force, setForce] = useState(false);
   const [status, setStatus] = useState<"idle" | "running" | "success" | "error" | "cancelled">("idle");
   const [progress, setProgress] = useState<Extract<ResearchStreamEvent, { type: "progress" }> | null>(null);
-  const [result, setResult] = useState<PlaceResearchResult | null>(null);
+  const [result, setResult] = useState<PlaceResearchResult | null>(TAIPEI_101_DEMO);
   const [error, setError] = useState("");
   const [elapsedMs, setElapsedMs] = useState(0);
   const controllerRef = useRef<AbortController | null>(null);
@@ -95,6 +122,8 @@ export function PlaceResearch() {
           if (message.type === "progress") {
             setProgress(message);
             setElapsedMs(message.elapsedMs);
+          } else if (message.type === "partial_result") {
+            setResult(message.result);
           } else if (message.type === "result") {
             completedResult = message.result;
             setResult(message.result);
@@ -140,7 +169,7 @@ export function PlaceResearch() {
           <label><span>City</span><input value={city} onChange={(event) => setCity(event.target.value)} placeholder="Taipei" disabled={status === "running"} required minLength={2} maxLength={80} /></label>
           <div className="research-examples"><span>Try another Taipei place:</span>{EXAMPLE_PLACES.map((example) => <button type="button" key={example} disabled={status === "running"} onClick={() => setPlace(example)}>{example}</button>)}</div>
           <label className="research-force"><input type="checkbox" checked={force} onChange={(event) => setForce(event.target.checked)} disabled={status === "running"} /><span>Ignore saved result and research again</span></label>
-          {status === "running" ? <button className="research-cancel" type="button" onClick={cancel}><X size={17} />Cancel research</button> : <button className="primary-button" type="submit"><span>{result ? "Research another place" : "Research this place"}</span><Search size={18} /></button>}
+          {status === "running" ? <button className="research-cancel" type="button" onClick={cancel}><X size={17} />Cancel research</button> : <button className="primary-button" type="submit"><span>{result?.demoSnapshot ? "Research live" : result ? "Research another place" : "Research this place"}</span><Search size={18} /></button>}
           <p className="research-boundary"><ShieldCheck size={13} />Runs only after you submit. Captions, metadata, and storyboard frames only—no video stream download.</p>
         </form>
 
@@ -153,22 +182,26 @@ export function PlaceResearch() {
           </>}
           {status === "cancelled" && <div className="research-idle"><X size={25} /><h3>Research cancelled</h3><p>No result was saved. Change the place or start again when ready.</p></div>}
           {status === "error" && <div className="research-idle error"><AlertTriangle size={25} /><h3>Research stopped</h3><p>{error}</p><button type="button" onClick={() => setStatus("idle")}><RefreshCw size={13} />Try again</button></div>}
-          {status === "success" && result && <div className="research-complete"><Check size={27} /><div><span>{result.cacheHit ? "Saved research" : "Fresh research"}</span><h3>{result.sourceCount} videos · {result.clipCount} timestamped clips</h3><p>Completed in {formatElapsed(elapsedMs)} using {result.mode === "ai" ? "AI synthesis with deterministic timestamps" : "extractive fallback"}.</p></div></div>}
+          {status === "success" && result && <div className="research-complete"><Check size={27} /><div><span>{result.cacheHit ? "Saved research" : "Fresh research"}</span><h3>{result.sourceCount} videos · {result.clipCount} timestamped clips</h3><p>Completed in {formatElapsed(elapsedMs)} using {result.mode === "ai" ? `${result.aiModel || "OpenAI"} synthesis with deterministic timestamps` : "extractive fallback"}.</p></div></div>}
         </div>
       </section>
 
       {result && <section className="research-result">
-        <header><div><span className="drawer-kicker">Source-backed place brief</span><h2>{result.place}</h2><p>{result.city}</p></div><div className="research-result-stats"><strong>{result.sourceCount}</strong><span>videos</span><strong>{result.clipCount}</strong><span>clips</span></div></header>
+        <header><div><span className="drawer-kicker">{result.demoSnapshot ? `Verified demo snapshot · ${new Date(result.generatedAt).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}` : status === "running" ? "Verified so far · research continues" : "Source-backed place brief"}</span><h2>{result.place}</h2><p>{result.city}</p></div><div className="research-result-stats"><strong>{result.sourceCount}</strong><span>videos</span><strong>{result.clipCount}</strong><span>clips</span></div></header>
         <p className="research-overview">{result.overview}</p>
+        <VerificationFunnel result={result} running={status === "running"} />
         <div className="research-plan"><span>Suggested visit outline</span><ol>{result.suggestedPlan.map((step, index) => <li key={`${step}-${index}`}><strong>{String(index + 1).padStart(2, "0")}</strong>{step}</li>)}</ol></div>
         <div className="research-sections">{(Object.keys(SECTION_LABELS) as ResearchIntent[]).map((intent) => {
           const clips = result.clips.filter((clip) => clip.intent === intent);
           return <section key={intent}><h3>{SECTION_LABELS[intent]}</h3>{clips.length ? <div className="research-clips">{clips.map((clip) => {
             const youtubeUrl = `https://www.youtube.com/watch?v=${clip.video.id}&t=${clip.startSeconds}s`;
-            return <article key={clip.id} className="research-clip"><a className="research-thumbnail" href={youtubeUrl} target="_blank" rel="noreferrer"><Image src={clip.frameDataUrl || clip.video.thumbnailUrl} alt={`Video frame from ${clip.video.title} near ${timestamp(clip.frameSeconds ?? clip.startSeconds)}`} fill unoptimized={Boolean(clip.frameDataUrl)} sizes="(max-width: 680px) 100vw, 520px" /><span><Play size={12} fill="currentColor" />{timestamp(clip.startSeconds)}</span></a><div><span className="research-source-meta">{clip.video.channelName} · {clip.captionTrack} captions</span><h4>{clip.title}</h4><span className="research-takeaway-label">Key takeaway</span><p className="research-takeaway">{highlightedTakeaway(clip.takeaway, clip.highlights)}</p><details><summary>Read exact transcript</summary><blockquote>“{clip.exactQuote}”</blockquote></details><a href={youtubeUrl} target="_blank" rel="noreferrer">Open source at {timestamp(clip.startSeconds)} <ExternalLink size={12} /></a></div></article>;
+            const imageAlt = clip.frameDataUrl
+              ? `Video frame from ${clip.video.title} near ${timestamp(clip.frameSeconds ?? clip.startSeconds)}`
+              : `YouTube thumbnail for ${clip.video.title}`;
+            return <article key={clip.id} className="research-clip"><a className="research-thumbnail" href={youtubeUrl} target="_blank" rel="noreferrer"><Image src={clip.frameDataUrl || clip.video.thumbnailUrl} alt={imageAlt} fill unoptimized={Boolean(clip.frameDataUrl)} sizes="(max-width: 680px) 100vw, 520px" /><span><Play size={12} fill="currentColor" />{timestamp(clip.startSeconds)}</span></a><div><span className="research-source-meta">{clip.video.channelName} · {clip.captionTrack} captions</span>{clip.locationVerification && clip.locationVerification.status !== "pending" && <span className="research-location"><MapPin size={10} />{locationLabel(result, clip.locationVerification.distanceMeters, clip.locationVerification.relationship)}</span>}<h4>{clip.title}</h4><span className="research-takeaway-label">Key takeaway</span><p className="research-takeaway">{highlightedTakeaway(clip.takeaway, clip.highlights)}</p><details><summary>Read exact transcript</summary><blockquote>“{clip.exactQuote}”</blockquote></details><a href={youtubeUrl} target="_blank" rel="noreferrer">Open source at {timestamp(clip.startSeconds)} <ExternalLink size={12} /></a></div></article>;
           })}</div> : <p className="research-gap">No caption segment passed validation for this category.</p>}</section>;
         })}</div>
-        <div className="research-warnings">{result.warnings.map((warning) => <p key={warning}><AlertTriangle size={13} />{warning}</p>)}</div>
+        <div className="research-warnings">{result.warnings.map((warning) => <p key={warning}><AlertTriangle size={13} />{warning}</p>)}{result.clips.some((clip) => clip.locationVerification) && <p><MapPin size={13} />Location checks use <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> data.</p>}</div>
       </section>}
     </div>
   );

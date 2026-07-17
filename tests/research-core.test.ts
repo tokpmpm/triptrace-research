@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { applySemanticClipAnalyses, buildExtractiveResearchResult, extractResearchClips, parseResearchJson3, type ResearchVideoTranscript } from "@/lib/research-core";
+import { applySemanticClipAnalyses, buildExtractiveResearchResult, extractResearchClips, parseResearchJson3, reconcileVerificationCounts, type ResearchVideoTranscript } from "@/lib/research-core";
 import { researchPlaceRequestSchema } from "@/lib/schemas";
 import type { ResearchClip } from "@/types/research";
 
@@ -8,6 +8,24 @@ const baseVideo = (overrides: Partial<ResearchVideoTranscript> & Pick<ResearchVi
   captionTrack: "creator",
   language: "en",
   ...overrides
+});
+
+describe("verification funnel counts", () => {
+  it("reclassifies clips dropped by final ranking so every funnel stage reconciles", () => {
+    const counts = reconcileVerificationCounts({
+      videosFound: 24,
+      captionedVideos: 13,
+      candidateClips: 24,
+      evidenceMatches: 11,
+      verifiedClips: 8,
+      rejectedEvidenceOrRanking: 13,
+      rejectedLocation: 0
+    }, 7);
+
+    expect(counts.verifiedClips).toBe(7);
+    expect(counts.evidenceMatches - counts.verifiedClips).toBe(counts.rejectedLocation);
+    expect(counts.candidateClips - counts.evidenceMatches).toBe(counts.rejectedEvidenceOrRanking);
+  });
 });
 
 const videos: ResearchVideoTranscript[] = [
@@ -159,6 +177,34 @@ describe("new-place transcript research", () => {
       mentionOnly: false,
       placeRelevant: true,
       confidence: 0.95
+    }]);
+
+    expect(verified.clips).toEqual([]);
+  });
+
+  it("rejects a semantically tempting recommendation from a different area", () => {
+    const clip: ResearchClip = {
+      id: "far-food-101", intent: "food", title: "Keyword fallback", takeaway: "fallback", startSeconds: 90, endSeconds: 120,
+      exactQuote: "Try the famous pepper buns at Raohe Night Market after you finish visiting Taipei 101.",
+      contextText: "We are leaving Taipei 101 and traveling across town to Raohe Night Market.",
+      locationContext: "This guide began at Taipei 101.", captionTrack: "creator", language: "en",
+      video: { id: "farfood101x", title: "Taipei 101 and Raohe food guide", channelName: "Fixture channel", thumbnailUrl: "https://i.ytimg.com/vi/farfood101x/hqdefault.jpg" }
+    };
+    const result = buildExtractiveResearchResult("Taipei 101", "Taipei", [clip], "2026-07-17T00:00:00.000Z");
+    const verified = applySemanticClipAnalyses(result, [{
+      clipId: clip.id,
+      intent: "food",
+      primarySubject: "pepper buns",
+      title: "Try the famous pepper buns",
+      takeaway: "Try the famous pepper buns at Raohe Night Market after finishing the Taipei 101 visit.",
+      supportQuote: "famous pepper buns at Raohe Night Market",
+      highlights: ["pepper buns"],
+      mentionOnly: false,
+      placeRelevant: true,
+      confidence: 0.96,
+      poiName: "Raohe Night Market",
+      locationRelationship: "different_area",
+      locationEvidence: "traveling across town to Raohe Night Market"
     }]);
 
     expect(verified.clips).toEqual([]);

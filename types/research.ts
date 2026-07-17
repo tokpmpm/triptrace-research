@@ -24,6 +24,13 @@ export type ResearchClip = {
   captionTrack: "creator" | "automatic";
   language: string;
   video: ResearchVideo;
+  locationVerification?: {
+    poiName: string;
+    relationship: "queried_place" | "inside" | "nearby";
+    evidence: string;
+    status: "pending" | "same_place" | "verified_nearby";
+    distanceMeters: number;
+  };
 };
 
 export type PlaceResearchResult = {
@@ -38,11 +45,23 @@ export type PlaceResearchResult = {
   suggestedPlan: string[];
   warnings: string[];
   mode: "ai" | "extractive";
+  aiModel?: string;
+  verification?: {
+    videosFound: number;
+    captionedVideos: number;
+    candidateClips: number;
+    evidenceMatches: number;
+    verifiedClips: number;
+    rejectedEvidenceOrRanking: number;
+    rejectedLocation: number;
+  };
+  demoSnapshot?: boolean;
 };
 
 export type ResearchStage = "search" | "screen" | "captions" | "extract" | "synthesize" | "complete";
 
 export type ResearchStreamEvent =
   | { type: "progress"; stage: ResearchStage; message: string; completed: number; total: number; elapsedMs: number }
+  | { type: "partial_result"; result: PlaceResearchResult }
   | { type: "result"; result: PlaceResearchResult }
   | { type: "error"; message: string; recoverable: boolean };

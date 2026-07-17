@@ -9,12 +9,13 @@ import { promisify } from "node:util";
 import sharp from "sharp";
 import { z } from "zod";
 import { zodTextFormat } from "openai/helpers/zod";
-import { applySemanticClipAnalyses, buildExtractiveResearchResult, buildVerifiedResearchResult, extractResearchClips, normalizeResearchText, parseResearchJson3, type ResearchVideoTranscript, type SemanticClipAnalysis } from "@/lib/research-core";
+import { applySemanticClipAnalyses, buildExtractiveResearchResult, buildVerifiedResearchResult, extractResearchClips, normalizeResearchText, parseResearchJson3, reconcileVerificationCounts, type ResearchVideoTranscript, type SemanticClipAnalysis } from "@/lib/research-core";
+import { verifyResearchLocations } from "@/lib/geospatial";
 import { getOpenAIClient, OPENAI_MODEL } from "@/lib/openai";
 import type { PlaceResearchResult, ResearchClip, ResearchIntent } from "@/types/research";
 
 const execFileAsync = promisify(execFile);
-const CACHE_VERSION = "v12-research-site";
+const CACHE_VERSION = "v13-geospatial-research";
 const CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 const MAX_CANDIDATES_TO_PROBE = 14;
 const MAX_SELECTED_VIDEOS = 8;
@@ -66,7 +67,10 @@ const semanticAnalysisSchema = z.object({
     highlights: z.array(z.string().min(2).max(50)).max(3),
     mentionOnly: z.boolean(),
     placeRelevant: z.boolean(),
-    confidence: z.number().min(0).max(1)
+    confidence: z.number().min(0).max(1),
+    poiName: z.string().min(2).max(100).nullable(),
+    locationRelationship: z.enum(["queried_place", "inside", "nearby", "different_area", "unknown"]),
+    locationEvidence: z.string().min(8).max(260).nullable()
   })).min(1).max(16)
 });
 
@@ -323,7 +327,7 @@ async function attachStoryboardFrames(clips: ResearchClip[], videos: ProbedVideo
   }));
 }
 
-const SEMANTIC_PROMPT_VERSION = "semantic-v4";
+const SEMANTIC_PROMPT_VERSION = "semantic-v5-geospatial";
 
 function semanticEvidenceHash(result: PlaceResearchResult, clip: ResearchClip) {
   return crypto.createHash("sha256").update(JSON.stringify({
@@ -359,21 +363,27 @@ async function synthesizeResult(result: PlaceResearchResult, semanticCachePath: 
     return analysis ? [analysis] : [];
   });
   const pendingClips = result.clips.filter((clip) => !cachedByHash.has(semanticEvidenceHash(result, clip)));
-  if (!pendingClips.length) return applySemanticClipAnalyses(result, cachedAnalyses);
+  if (!pendingClips.length) return { ...applySemanticClipAnalyses(result, cachedAnalyses), aiModel: OPENAI_MODEL };
 
   const client = getOpenAIClient();
   if (!client) return cachedAnalyses.length ? applySemanticClipAnalyses(result, cachedAnalyses) : result;
   try {
     const response = await client.responses.parse({
       model: OPENAI_MODEL,
-      max_output_tokens: 3_000,
+      // Keep enough room for the structured payload. GPT-5 models count hidden
+      // reasoning against this limit, which previously left Luna with no JSON.
+      reasoning: { effort: "low" },
+      max_output_tokens: 8_000,
       input: [
-        { role: "system", content: `Analyze travel-video clips conservatively. Use only the supplied video title, exact quote, and nearby context. Location relevance is the first gate: set placeRelevant=false for generic city-wide advice or a different neighborhood, attraction, museum, or market. A video title that lists several locations does not prove its current clip is about the requested place. A title focused only on the requested place can be supporting location context unless the transcript clearly moves elsewhere. Use these user-facing intents strictly: why_visit means a reason the place itself is worth visiting (history, atmosphere, architecture, significance), never a restaurant or dish; activity means a concrete experience or stop; food means a named dish, drink, shop, or food recommendation; practical_tip means actionable timing, queue, transport, access, payment, or crowd advice, never a food description. For every clipId, identify the main subject—not a casually mentioned keyword—and reclassify the intent when needed. primarySubject must be one short, contiguous phrase copied exactly from exactQuote, never the video title. Write a specific 3–12 word title containing that complete primarySubject phrase verbatim and without inserting words inside it; never copy the video title. supportQuote must be one contiguous verbatim excerpt from exactQuote that directly supports both the title and takeaway. The takeaway must be 12–30 words, include the primarySubject wording, reuse at least four meaningful content words from exactQuote, and make no claim that is absent from exactQuote. Do not import details from nearbyContext into the title or takeaway; nearbyContext is only for deciding location relevance. Every highlight must be copied exactly from the takeaway. Set mentionOnly=true when the tempting label is only incidental. Examples: use "Arrive before 11 to avoid the sashimi queue", not "How to approach the area"; describe the named noodle dish, not "Seafood mentioned nearby", when seafood is only a flavoring. Do not state current prices, hours, availability, awards, or ratings as facts unless exactQuote explicitly says them; even then, attribute time-sensitive advice to the creator. Return exactly one item for every supplied clipId.` },
+        { role: "system", content: `Analyze travel-video clips conservatively. Use only the supplied video title, exact quote, and nearby context. Location relevance is the first gate: set placeRelevant=false for generic city-wide advice or a different neighborhood, attraction, museum, or market. A video title that lists several locations does not prove its current clip is about the requested place. A title focused only on the requested place can be supporting location context unless the transcript clearly moves elsewhere. Classify locationRelationship as queried_place when the claim is about the requested place itself, inside only when the transcript explicitly places the subject inside it, nearby only when a separate named POI is explicitly presented as nearby, different_area for another neighborhood or attraction, and unknown when the relationship is not supported. For nearby, poiName must be the exact separately named POI from the supplied text; otherwise use null. For queried_place or inside, use the requested place as poiName. locationEvidence must be one contiguous excerpt from exactQuote or nearbyContext that proves the relationship, or null when it cannot be proven. Use these user-facing intents strictly: why_visit means a reason the place itself is worth visiting (history, atmosphere, architecture, significance), never a restaurant or dish; activity means a concrete experience or stop; food means a named dish, drink, shop, or food recommendation; practical_tip means actionable timing, queue, transport, access, payment, or crowd advice, never a food description. For every clipId, identify the main subject—not a casually mentioned keyword—and reclassify the intent when needed. primarySubject must be one short, contiguous phrase copied exactly from exactQuote, never the video title. Write a specific 3–12 word title containing that complete primarySubject phrase verbatim and without inserting words inside it; never copy the video title. supportQuote must be one contiguous verbatim excerpt from exactQuote that directly supports both the title and takeaway. The takeaway must be 12–30 words, include the primarySubject wording, reuse at least four meaningful content words from exactQuote, and make no claim that is absent from exactQuote. Do not import details from nearbyContext into the title or takeaway; nearbyContext is only for deciding location relevance. Every highlight must be copied exactly from the takeaway. Set mentionOnly=true when the tempting label is only incidental. Examples: use "Arrive before 11 to avoid the sashimi queue", not "How to approach the area"; describe the named noodle dish, not "Seafood mentioned nearby", when seafood is only a flavoring. Do not state current prices, hours, availability, awards, or ratings as facts unless exactQuote explicitly says them; even then, attribute time-sensitive advice to the creator. Return exactly one item for every supplied clipId.` },
         { role: "user", content: JSON.stringify({ place: result.place, city: result.city, clips: pendingClips.map((clip) => ({ clipId: clip.id, candidateIntent: clip.intent, videoTitle: clip.video.title, exactQuote: clip.exactQuote, nearbyContext: clip.contextText })) }) }
       ],
       text: { format: zodTextFormat(semanticAnalysisSchema, "clip_semantic_analysis") }
     });
-    if (!response.output_parsed) throw new Error("The model returned no structured semantic analysis.");
+    if (!response.output_parsed) {
+      const outputTypes = response.output.map((item) => item.type).join(",") || "none";
+      throw new Error(`The model returned no structured semantic analysis (status=${response.status}, incomplete=${response.incomplete_details?.reason || "none"}, output=${outputTypes}).`);
+    }
     const newEntries = pendingClips.flatMap((clip) => {
       const analysis = response.output_parsed?.items.find((item) => item.clipId === clip.id);
       return analysis ? [{ evidenceHash: semanticEvidenceHash(result, clip), analysis }] : [];
@@ -381,15 +391,29 @@ async function synthesizeResult(result: PlaceResearchResult, semanticCachePath: 
     if (newEntries.length !== pendingClips.length) throw new Error("The model returned an incomplete semantic analysis.");
     const mergedEntries = new Map([...cacheEntries, ...newEntries].map((entry) => [entry.evidenceHash, entry]));
     await fs.writeFile(semanticCachePath, `${JSON.stringify({ version: SEMANTIC_PROMPT_VERSION, model: OPENAI_MODEL, entries: [...mergedEntries.values()] }, null, 2)}\n`, "utf8");
-    return applySemanticClipAnalyses(result, [...cachedAnalyses, ...response.output_parsed.items]);
+    return { ...applySemanticClipAnalyses(result, [...cachedAnalyses, ...response.output_parsed.items]), aiModel: OPENAI_MODEL };
   } catch (error) {
     console.warn("[research-place] synthesis failed", error instanceof Error ? error.message : "unknown error");
     throw new Error("AI synthesis could not produce verified summaries. Please retry this place.");
   }
 }
 
+async function applyGeospatialVerification(result: PlaceResearchResult, cacheDir: string, signal: AbortSignal) {
+  if (result.mode !== "ai" || !result.clips.length) return result;
+  const { verified, rejectedCount } = await verifyResearchLocations(result, cacheDir, signal);
+  const checked = buildVerifiedResearchResult(result, verified, 0);
+  return {
+    ...checked,
+    overview: `${checked.overview} Named places are also checked against the requested location.`,
+    warnings: [
+      ...(rejectedCount ? [`${rejectedCount} clips were omitted because their place or distance could not be verified.`] : []),
+      ...checked.warnings
+    ]
+  };
+}
+
 function cachePaths(place: string, city: string) {
-  const cacheKey = crypto.createHash("sha256").update(`${CACHE_VERSION}:${city.trim().toLowerCase()}:${place.trim().toLowerCase()}`).digest("hex").slice(0, 24);
+  const cacheKey = crypto.createHash("sha256").update(`${CACHE_VERSION}:${OPENAI_MODEL}:${city.trim().toLowerCase()}:${place.trim().toLowerCase()}`).digest("hex").slice(0, 24);
   const cacheDir = path.join(/*turbopackIgnore: true*/ CACHE_ROOT, cacheKey);
   return {
     cacheDir,
@@ -436,7 +460,13 @@ function qualifyPracticalClaims(result: PlaceResearchResult) {
   return { ...result, clips, suggestedPlan: result.suggestedPlan.map((item) => replacements.get(item) || item) };
 }
 
-export async function researchPlace({ place, city, force = false, signal, onProgress }: { place: string; city: string; force?: boolean; signal: AbortSignal; onProgress: ProgressCallback }) {
+function canStreamVerifiedResult(result: PlaceResearchResult) {
+  return result.mode === "ai"
+    && result.clips.length > 0
+    && result.clips.every((clip) => clip.locationVerification && clip.locationVerification.status !== "pending");
+}
+
+export async function researchPlace({ place, city, force = false, signal, onProgress, onPartialResult }: { place: string; city: string; force?: boolean; signal: AbortSignal; onProgress: ProgressCallback; onPartialResult?: (result: PlaceResearchResult) => void }) {
   const { cacheDir, resultPath, semanticCachePath } = cachePaths(place, city);
   await fs.mkdir(cacheDir, { recursive: true });
   let savedResult: PlaceResearchResult | null = null;
@@ -471,9 +501,26 @@ export async function researchPlace({ place, city, force = false, signal, onProg
   if (new Set(clips.map((clip) => clip.video.id)).size < 3) throw new Error("The captions did not produce three independent, relevant source clips.");
   clips = await attachStoryboardFrames(clips, selectedVideos, signal);
   let result = buildExtractiveResearchResult(place, city, clips, new Date().toISOString());
+  let verification = {
+    videosFound: candidates.length,
+    captionedVideos: transcripts.length,
+    candidateClips: clips.length,
+    evidenceMatches: 0,
+    verifiedClips: 0,
+    rejectedEvidenceOrRanking: 0,
+    rejectedLocation: 0
+  };
 
   onProgress("synthesize", "Building a source-backed visit outline without changing any timestamps…", 4, 5);
-  result = await synthesizeResult(result, semanticCachePath);
+  const synthesizedInitial = await synthesizeResult(result, semanticCachePath);
+  verification.evidenceMatches = synthesizedInitial.clipCount;
+  verification.rejectedEvidenceOrRanking = Math.max(0, verification.candidateClips - verification.evidenceMatches);
+  result = await applyGeospatialVerification(synthesizedInitial, cacheDir, signal);
+  verification.verifiedClips = result.clipCount;
+  verification.rejectedLocation = Math.max(0, verification.evidenceMatches - verification.verifiedClips);
+  verification = reconcileVerificationCounts(verification, result.clipCount);
+  result = { ...result, aiModel: OPENAI_MODEL, verification: { ...verification } };
+  if (canStreamVerifiedResult(result)) onPartialResult?.(result);
 
   const firstMissing = missingIntents(result);
   if (firstMissing.length || result.sourceCount < MIN_VERIFIED_SOURCES) {
@@ -489,12 +536,19 @@ export async function researchPlace({ place, city, force = false, signal, onProg
     const extraProbed = await inBatches(extraCandidates, 4, (candidate) => probeCandidate(candidate, signal));
     const extraVideos = chooseVideos(extraProbed, refillIntents, 5);
     const extraTranscripts = await inBatches(extraVideos, 4, (video) => downloadTranscript(video, cacheDir, signal));
+    verification.videosFound += extraCandidates.length;
+    verification.captionedVideos += extraTranscripts.length;
     let refillClips = extractResearchClips(place, extraTranscripts)
       .filter((clip) => refillIntents.includes(clip.intent) && !clips.some((existing) => existing.id === clip.id));
     refillClips = await attachStoryboardFrames(refillClips, extraVideos, signal);
+    verification.candidateClips += refillClips.length;
     if (refillClips.length) {
       const refillBase = buildExtractiveResearchResult(place, city, refillClips, result.generatedAt);
-      const refillResult = await synthesizeResult(refillBase, semanticCachePath);
+      const synthesizedRefill = await synthesizeResult(refillBase, semanticCachePath);
+      verification.evidenceMatches += synthesizedRefill.clipCount;
+      verification.rejectedEvidenceOrRanking = Math.max(0, verification.candidateClips - verification.evidenceMatches);
+      const refillResult = await applyGeospatialVerification(synthesizedRefill, cacheDir, signal);
+      verification.rejectedLocation += Math.max(0, synthesizedRefill.clipCount - refillResult.clipCount);
       const combinedCandidates = [...clips, ...refillClips];
       if (result.mode === "ai" && refillResult.mode === "ai") {
         const verified = [...result.clips, ...refillResult.clips].filter((clip, index, items) => items.findIndex((item) => item.id === clip.id) === index);
@@ -504,6 +558,9 @@ export async function researchPlace({ place, city, force = false, signal, onProg
         result = buildExtractiveResearchResult(place, city, combinedCandidates, result.generatedAt);
       }
       clips = combinedCandidates;
+      verification = reconcileVerificationCounts(verification, result.clipCount);
+      result = { ...result, aiModel: OPENAI_MODEL, verification: { ...verification } };
+      if (canStreamVerifiedResult(result)) onPartialResult?.(result);
     }
   }
 
@@ -511,6 +568,11 @@ export async function researchPlace({ place, city, force = false, signal, onProg
   if (savedResult && (remainingMissing.length || result.sourceCount < MIN_VERIFIED_SOURCES)) {
     const savedFill = savedResult.clips.filter((clip) => remainingMissing.length ? remainingMissing.includes(clip.intent) : true);
     if (savedFill.length) {
+      const savedVideoCount = new Set(savedFill.map((clip) => clip.video.id)).size;
+      verification.videosFound += savedVideoCount;
+      verification.captionedVideos += savedVideoCount;
+      verification.candidateClips += savedFill.length;
+      verification.evidenceMatches += savedFill.length;
       const verified = [...result.clips, ...savedFill].filter((clip, index, items) => items.findIndex((item) => item.id === clip.id) === index);
       result = buildVerifiedResearchResult({ ...result, clips: verified }, verified, 0);
       result.warnings = ["Reused still-valid evidence from the previous seven-day research cache where live YouTube results had a category gap.", ...result.warnings];
@@ -518,10 +580,22 @@ export async function researchPlace({ place, city, force = false, signal, onProg
   }
 
   const finalMissing = missingIntents(result);
-  if (finalMissing.length || result.sourceCount < MIN_VERIFIED_SOURCES) {
-    const missingMessage = finalMissing.length ? ` Missing: ${intentLabels(finalMissing)}.` : "";
-    throw new Error(`TripTrace could not verify four complete categories from at least ${MIN_VERIFIED_SOURCES} independent videos.${missingMessage}`);
+  if (!result.clips.length) throw new Error("TripTrace could not verify any usable clips for this place.");
+  if (result.mode !== "ai" || result.clips.some((clip) => !clip.locationVerification || clip.locationVerification.status === "pending")) {
+    throw new Error("TripTrace could not complete conservative location verification for every selected clip.");
   }
+  if (finalMissing.length || result.sourceCount < MIN_VERIFIED_SOURCES) {
+    const coverage = finalMissing.length ? ` Missing: ${intentLabels(finalMissing)}.` : "";
+    result = {
+      ...result,
+      warnings: [
+        `Partial research: ${result.sourceCount} independent videos produced ${result.clipCount} verified clips.${coverage}`,
+        ...result.warnings
+      ]
+    };
+  }
+  verification = reconcileVerificationCounts(verification, result.clipCount);
+  result = { ...result, aiModel: OPENAI_MODEL, verification: { ...verification } };
   result = qualifyPracticalClaims(result);
   await fs.writeFile(resultPath, `${JSON.stringify(result, null, 2)}\n`, "utf8");
   onProgress("complete", `Finished with ${result.sourceCount} videos and ${result.clipCount} verified clips.`, 5, 5);

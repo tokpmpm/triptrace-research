@@ -1,81 +1,178 @@
 # TripTrace Research
 
-一個只做 travel-video research 的獨立 Next.js 網站。輸入地點後，網站會用 `yt-dlp` 搜尋多部 YouTube 旅遊影片、讀取 timed captions、擷取 storyboard frame，再用 OpenAI 做保守的語意摘要。
+**Turn real travel videos into a trustworthy, timestamped guide for one place.**
 
-本專案只有 research 首頁與 `/api/research-place` API；不包含 itinerary、trip、地圖或原專案首頁，也不會導向其他 TripTrace 頁面。
+TripTrace Research is an OpenAI Build Week project in the **Apps for Your Life** category. It helps travelers use the valuable details hidden inside long YouTube videos without trusting an untraceable AI summary.
 
-## 功能與資料對齊
+Enter a place and TripTrace returns four practical views:
 
-- 搜尋至少多部不同 YouTube 影片；正式結果要求至少 4 個不同影片來源。
-- 只讀 metadata、字幕與 storyboard，不下載或重新發布影片串流。
-- 下載並解析 timed JSON3 captions，所有 `startSeconds` 都由字幕 cue 計算。
-- 由 storyboard sprite 擷取最接近 timestamp 的 frame，沒有 frame 時退回 YouTube thumbnail。
-- OpenAI 只負責在已鎖定的 clip 上做語意分類與摘要，不得修改 video ID、timestamp 或 transcript。
-- 每個結果都顯示：`Why it’s worth going`、`What to do`、`What to eat`、`Good to know`。
-- title 必須引用 exact transcript 的具體主題；key takeaway 必須與 transcript 有足夠詞彙重疊；transcript、timestamp、YouTube 連結指向同一個 clip。
-- 當地點只是字幕順帶提到、來源其實是其他街區／景點，或語意分類不可靠時，clip 會被排除。
-- 沒有 OpenAI key 時仍有 deterministic extractive fallback，但不會產生像 `Food evidence from this clip` 這類 generic title。
+- Why it’s worth going
+- What to do
+- What to eat
+- Good to know before you go
 
-## 安裝
+Every recommendation keeps its receipt: a specific title, concise takeaway, exact transcript, timestamp, video frame, location status, and a YouTube link that opens at the supporting moment.
 
-需求：Node.js 20+、npm，以及可執行的 `yt-dlp`。
+## The problem
+
+Travel videos contain first-hand observations that often do not appear in generic travel pages, but the useful evidence is scattered across many long videos. Conventional summaries introduce a second problem: users cannot tell which creator said a claim, when they said it, or whether a restaurant mentioned in the same video is actually near the requested place.
+
+TripTrace treats this as an evidence-verification problem, not just a summarization problem.
+
+## What makes TripTrace different
+
+- It searches several independent videos instead of summarizing one source.
+- Timestamps come from timed YouTube captions; the model cannot invent them.
+- Titles and takeaways must remain aligned with an exact transcript excerpt.
+- Generic titles such as “Food evidence from this clip” are rejected.
+- GPT-5.6 classifies whether a place is the main subject, merely mentioned, inside the requested place, nearby, or in a different area.
+- Separately named places are checked against OpenStreetMap coordinates and a conservative distance radius.
+- Verified partial results appear immediately while missing categories continue researching.
+- Ambiguous, unsupported, unresolved, or distant recommendations are omitted instead of guessed.
+
+## Verification funnel
+
+The product exposes its real pipeline counts so users and judges can see how a result was produced:
+
+```text
+Video candidates
+      ↓
+Captioned sources
+      ↓
+Candidate transcript clips
+      ↓
+Evidence matches
+      ↓
+Location-verified recommendations
+```
+
+The UI also reports how many extracted clips were excluded by evidence/ranking checks and how many failed location or distance verification. These numbers come from the server pipeline; they are not decorative frontend animation.
+
+## Built with GPT-5.6
+
+Live research uses **`gpt-5.6-luna`** through the OpenAI Responses API with structured output. The model receives only fixed evidence fields:
+
+- requested place and city
+- video title
+- exact timed transcript
+- nearby transcript context
+- candidate visitor-intent category
+
+GPT-5.6 returns a typed analysis containing the primary subject, supported title, takeaway, verbatim support quote, category, location relationship, POI name, location evidence, and confidence. Deterministic code then rejects outputs that fail quote alignment, title specificity, landmark matching, actionable-tip rules, or location verification.
+
+The model summarizes and classifies evidence; it does not choose or rewrite timestamps.
+
+## How Codex accelerated the build
+
+Codex was used as the engineering environment for the project, not as a feature label added after implementation. It helped:
+
+- inspect and preserve the existing standalone Next.js architecture;
+- design the typed research and streamed partial-result contracts;
+- implement YouTube caption extraction, semantic guardrails, local caching, and geospatial verification;
+- identify failure modes such as incidental location mentions, numeric-landmark false positives, distant POIs, transient geocoder failures, and cache/model mixing;
+- add deterministic regression tests before changing model behavior;
+- perform code-review passes focused on correctness, security, privacy, and accidental scope expansion;
+- run desktop and mobile browser QA against the local application.
+
+Key product decisions made during the Codex sessions include keeping API keys server-side, avoiding a database, never downloading video streams, preferring partial verified results over all-or-nothing failure, and rejecting uncertain recommendations rather than filling category gaps with generic content.
+
+## How it works
+
+1. **Search** — `yt-dlp` searches YouTube using several travel intents.
+2. **Screen** — Videos are checked for captions, duration, embed access, and source diversity.
+3. **Read evidence** — Timed JSON3 captions are parsed into transcript cues.
+4. **Match clips** — Candidate moments are scored by place relevance and visitor intent.
+5. **Verify with GPT-5.6** — Structured analysis identifies the main subject and transcript-supported claim.
+6. **Apply deterministic guardrails** — Unsupported wording, generic titles, incidental mentions, and wrong categories are removed.
+7. **Check distance** — Named nearby POIs are geocoded, cached, and compared with the requested place.
+8. **Stream results** — Verified categories appear while the system continues researching missing ones.
+9. **Show the receipt** — Every result links back to the exact YouTube timestamp.
+
+No database is required. Captions, semantic analysis, geocoding responses, and final research are stored in a local seven-day cache. The cache key includes the OpenAI model so evidence produced by different models is never silently mixed.
+
+## Default demo and sample data
+
+The site opens with a bundled **Taipei 101 verified demo snapshot**, so judges can inspect the complete product immediately without waiting for a cold research run.
+
+- Place: `Taipei 101`
+- City: `Taipei`
+- Four independently sourced, timestamped result cards
+- Transcript and location verification metadata
+- Three storyboard frames and one conservative YouTube-thumbnail fallback
+- Quick suggestions: `Ximending`, `Dadaocheng`, `Shilin Night Market`
+
+Select **Research live** to run fresh source discovery with GPT-5.6 Luna. A fresh run usually takes 30–90 seconds; verified partial results can appear before every category is complete.
+
+## Run locally
+
+### Requirements
+
+- Node.js 20+
+- npm
+- a current `yt-dlp` executable
+- an OpenAI API key with access to `gpt-5.6-luna`
+
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-## yt-dlp
-
-新地點研究必須使用目前版本的 `yt-dlp`，並且能從 shell 執行：
+Confirm `yt-dlp` is available:
 
 ```bash
 yt-dlp --version
 ```
 
-如果 `yt-dlp` 不在 PATH，可在 `.env.local` 設定：
-
-```text
-YT_DLP_BIN=/absolute/path/to/yt-dlp
-```
-
-網站會使用 `yt-dlp` 的 YouTube search、video metadata、timed captions 與 storyboard format；不會使用 `-f` 下載 video/audio。
-
-## `.env.local`
-
-先複製範例檔：
+Create the local environment file:
 
 ```bash
 cp .env.example .env.local
 ```
 
-只在本機 `.env.local` 的空白 `OPENAI_API_KEY` 後填入真正的 key：
+Configure values only in `.env.local`:
 
 ```text
 OPENAI_API_KEY=
-OPENAI_MODEL=gpt-4o-mini
+OPENAI_MODEL=gpt-5.6-luna
 YT_DLP_BIN=
 TRIPTRACE_CACHE_DIR=
 ```
 
-`OPENAI_API_KEY` 只從 server-side 的 `process.env.OPENAI_API_KEY` 讀取；程式碼、client bundle、`.env.example` 與 Git 都不應包含 key。`.env.local` 已列入 `.gitignore`。沒有 key 時會使用 deterministic fallback，仍需要 `yt-dlp` 才能抓取新來源。
-
-不使用資料庫。預設 cache 在作業系統的本機 temporary directory 下 `triptrace-research`；可用 `TRIPTRACE_CACHE_DIR` 改成專案內的 `.cache/triptrace-research` 或另一個本機目錄。cache 內容包含短期的研究結果、字幕 JSON3 與 semantic analysis，不會進 Git。
-
-## Local 啟動
+Start the site:
 
 ```bash
 npm run dev -- -p 3100
 ```
 
-開啟 [http://localhost:3100](http://localhost:3100)。表單預設為：
+Open [http://localhost:3100](http://localhost:3100).
 
-- Place: `Taipei 101`
-- City: `Taipei`
-- 快速提示地點：`Ximending`、`Dadaocheng`、`Shilin Night Market`
+If `yt-dlp` is outside `PATH`, set `YT_DLP_BIN` to its absolute path. `TRIPTRACE_CACHE_DIR` is optional; by default the cache uses the operating system’s temporary directory.
 
-第一次研究會依 YouTube 回應速度花費數十秒；相同地點在 cache 有效期間會直接載入。若要重新抓取，勾選 `Ignore saved result and research again`。
+## Security and data boundaries
 
-## 測試與驗證
+- `OPENAI_API_KEY` is read only from `.env.local` by server-side code.
+- `.env.local` is ignored by Git and must never be copied into code, documentation, or client output.
+- User input is schema-validated and cannot contain URLs or shell expressions.
+- Public research requests are rate-limited.
+- Nominatim calls use a project User-Agent, global one-request-per-second scheduling, attribution, and local caching.
+- The system downloads captions, metadata, and storyboard images only—never YouTube video or audio streams.
+- There is no database, account system, itinerary page, or connection to the original TripTrace project.
+
+## Project structure
+
+```text
+app/          Next.js page, styles, and streamed research API
+components/   Research form, progress, funnel, and evidence cards
+data/         Bundled Taipei 101 demo snapshot
+lib/          YouTube, transcript, GPT-5.6, cache, and geospatial pipeline
+public/       Bundled demo storyboard frames
+scripts/      Snapshot export utility
+types/        Shared typed research and stream contracts
+tests/        Evidence, location, funnel-adjacent, and stream regressions
+```
+
+## Verification commands
 
 ```bash
 npm test
@@ -83,15 +180,23 @@ npm run typecheck
 npm run build
 ```
 
-測試涵蓋：
+The automated suite covers timed-caption parsing, source diversity, all four visitor categories, title specificity, evidence alignment, incidental-place rejection, numeric landmarks, different-area recommendations, distance calculations, location radii, request validation, demo-snapshot integrity, and preservation of partial results when later research fails.
 
-- JSON3 timed cue parsing 與 timestamp 不造假；
-- 四個 research 分類、至少三個不同影片來源與 distinct clips；
-- generic title 防護與 extractive fallback；
-- Taipei 101 這類 numeric landmark 的精確地點 gate；
-- 其他街區、順帶提及、錯誤分類與未對齊的 AI 摘要排除；
-- place/city 輸入安全驗證。
+## Known limitations
 
-## 本機 GitHub 狀態
+- Caption availability and accuracy depend on YouTube and the original creator.
+- The current research pipeline prioritizes English caption tracks.
+- OpenStreetMap coverage varies; ambiguous POIs are excluded.
+- Storyboards are not available for every video, so the UI may use the YouTube thumbnail.
+- Opening hours, prices, reservations, closures, and local rules still require a current check.
+- The bundled snapshot is sample evidence; live research is the GPT-5.6 path and can discover different current sources.
 
-這個目錄可作為獨立 local Git repository；目前不會自動建立 GitHub remote、不會部署，也不會 push。預設建議的遠端 repository 名稱是 `triptrace-research`。建立遠端前請先確認 repository 名稱與 visibility。
+## 中文簡介
+
+TripTrace Research 會把多部 YouTube 旅遊影片整理成一份可以回到原始證據的地點指南。每個重點都有逐字字幕、時間戳、影片來源、畫面與位置驗證。系統會排除其他街區、只是順帶提到、字幕無法支持，或距離查詢點太遠的餐廳與景點。
+
+研究過程不是全部完成才顯示：已通過驗證的分類會先出現，其餘分類繼續搜尋。Verification funnel 會呈現影片候選、字幕來源、候選片段、證據通過與位置通過的真實數字。
+
+## License
+
+This project is available under the [MIT License](LICENSE).

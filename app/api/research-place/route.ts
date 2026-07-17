@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { researchPlace } from "@/lib/research-server";
 import { researchPlaceRequestSchema } from "@/lib/schemas";
-import type { ResearchStreamEvent } from "@/types/research";
+import type { PlaceResearchResult, ResearchStreamEvent } from "@/types/research";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -41,12 +41,17 @@ export async function POST(request: Request) {
   const stream = new ReadableStream({
     async start(controller) {
       const send = (event: ResearchStreamEvent) => controller.enqueue(encoder.encode(`${JSON.stringify(event)}\n`));
+      const partialState: { result?: PlaceResearchResult } = {};
       try {
         const result = await researchPlace({
           ...input,
           signal: request.signal,
           onProgress(stage, message, completed, total) {
             send({ type: "progress", stage, message, completed, total, elapsedMs: Date.now() - startedAt });
+          },
+          onPartialResult(result) {
+            partialState.result = result;
+            send({ type: "partial_result", result });
           }
         });
         send({ type: "result", result });
@@ -55,7 +60,12 @@ export async function POST(request: Request) {
         if (!aborted) {
           const message = error instanceof Error ? error.message : "The research run failed.";
           console.error("[research-place] failed", { traceId, message });
-          send({ type: "error", message, recoverable: true });
+          const latestPartial = partialState.result;
+          if (latestPartial) {
+            send({ type: "result", result: { ...latestPartial, warnings: [`Research ended early while looking for more categories: ${message}`, ...latestPartial.warnings] } });
+          } else {
+            send({ type: "error", message, recoverable: true });
+          }
         }
       } finally {
         controller.close();

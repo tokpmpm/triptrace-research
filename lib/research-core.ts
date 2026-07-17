@@ -9,6 +9,25 @@ export type ResearchVideoTranscript = ResearchVideo & {
   cues: TranscriptCue[];
 };
 
+export function reconcileVerificationCounts(
+  verification: NonNullable<PlaceResearchResult["verification"]>,
+  verifiedClipCount: number
+) {
+  const verifiedClips = Math.min(verification.candidateClips, Math.max(0, verifiedClipCount));
+  const rejectedLocation = Math.min(
+    Math.max(0, verification.candidateClips - verifiedClips),
+    Math.max(0, verification.rejectedLocation)
+  );
+  const evidenceMatches = verifiedClips + rejectedLocation;
+  return {
+    ...verification,
+    evidenceMatches,
+    verifiedClips,
+    rejectedEvidenceOrRanking: verification.candidateClips - evidenceMatches,
+    rejectedLocation
+  };
+}
+
 type ClipCandidate = Omit<ResearchClip, "title" | "takeaway"> & { score: number; matchedKeywords: string[]; intentSearchMatch: boolean };
 
 const KEYWORDS: Record<ResearchIntent, string[]> = {
@@ -290,6 +309,9 @@ export type SemanticClipAnalysis = {
   mentionOnly: boolean;
   placeRelevant: boolean;
   confidence: number;
+  poiName?: string | null;
+  locationRelationship?: "queried_place" | "inside" | "nearby" | "different_area" | "unknown";
+  locationEvidence?: string | null;
 };
 
 function limitVerifiedClips(clips: ResearchClip[]) {
@@ -347,6 +369,14 @@ export function applySemanticClipAnalyses(result: PlaceResearchResult, analyses:
   const accepted = result.clips.flatMap((clip) => {
     const analysis = byId.get(clip.id);
     if (!analysis || analysis.mentionOnly || !analysis.placeRelevant || analysis.confidence < 0.76) return [];
+    const locationRelationship = analysis.locationRelationship || "queried_place";
+    if (locationRelationship === "different_area" || locationRelationship === "unknown") return [];
+    if (analysis.locationEvidence !== undefined) {
+      const locationProof = normalizeResearchText(analysis.locationEvidence || "");
+      const suppliedLocationText = normalizeResearchText(`${clip.exactQuote} ${clip.contextText}`);
+      if (locationProof.length < 8 || !suppliedLocationText.includes(locationProof)) return [];
+      if (locationRelationship === "nearby" && (!analysis.poiName || !locationProof.includes(normalizeResearchText(analysis.poiName)))) return [];
+    }
     const quoteText = normalizeResearchText(clip.exactQuote);
     const subject = normalizeResearchText(analysis.primarySubject);
     const support = normalizeResearchText(analysis.supportQuote);
@@ -381,7 +411,20 @@ export function applySemanticClipAnalyses(result: PlaceResearchResult, analyses:
     const takeaway = analysis.intent === "practical_tip" && !/^the creator/i.test(analysis.takeaway)
       ? `The creator observed: ${analysis.takeaway.charAt(0).toLowerCase()}${analysis.takeaway.slice(1)}`
       : analysis.takeaway;
-    return [{ ...clip, intent: analysis.intent, title, takeaway, highlights }];
+    return [{
+      ...clip,
+      intent: analysis.intent,
+      title,
+      takeaway,
+      highlights,
+      locationVerification: {
+        poiName: analysis.poiName?.trim() || result.place,
+        relationship: locationRelationship,
+        evidence: analysis.locationEvidence?.trim() || analysis.supportQuote,
+        status: "pending" as const,
+        distanceMeters: 0
+      }
+    }];
   });
   return buildVerifiedResearchResult(result, accepted, result.clips.length - accepted.length);
 }

@@ -1,0 +1,165 @@
+{
+  "place": "Taipei 101",
+  "city": "Taipei",
+  "overview": "Four independent travel videos produced four semantically and geographically verified, timestamped clips for Taipei 101. This saved demo opens instantly; run live research whenever you want fresh source discovery.",
+  "generatedAt": "2026-07-16T02:24:59.975Z",
+  "cacheHit": true,
+  "sourceCount": 4,
+  "clipCount": 4,
+  "clips": [
+    {
+      "id": "LdH71ZCeeXc-why_visit-120",
+      "intent": "why_visit",
+      "startSeconds": 120,
+      "endSeconds": 161,
+      "exactQuote": "collects and purifies rainwater for use in the building's restrooms and Landscaping Taipei New Year's Eve fireworks display is one of the largest in the world attracting millions of viewers each year overall Taipei 101 is a remarkable feat of engineering and design with many fascinating features that are worth",
+      "contextText": "collects and purifies rainwater for use in the building's restrooms and Landscaping Taipei New Year's Eve fireworks display is one of the largest in the world attracting millions of viewers each year overall Taipei 101 is a remarkable feat of engineering and design with many fascinating features that are worth exploring have something to add write in the comments subscribe it will be even more interesting",
+      "locationContext": "hello on our Channel you will learn a lot of interesting things about our planet its inhabitants and Technologies have a seat we're about to start Taipei 101 is a renowned Landmark located in Taipei Taiwan known for its unique design and impressive height it was once the tallest building in the world standing at 508 meters tall until the completion of the Burj Khalifa in Dubai here are some incredible facts about Taipei 101 that you may not know type a101 has 101 floors with the number 101 representing the ideal of perfection in Taiwanese culture the building has a tuning Mass damper which is the largest and heaviest in the world weighing in at 660 metric tons this device helps to counteract the",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "LdH71ZCeeXc",
+        "title": "Taipei 101 interesting facts",
+        "channelName": "The World of Mr. Bo",
+        "thumbnailUrl": "https://i.ytimg.com/vi/LdH71ZCeeXc/maxresdefault.jpg",
+        "publishedAt": "2023-04-24"
+      },
+      "title": "Taipei 101 is a remarkable feat of engineering and design",
+      "takeaway": "Taipei 101 is a remarkable feat of engineering and design with many fascinating features that are worth exploring.",
+      "highlights": [
+        "Taipei 101 is a remarkable feat of engineering and",
+        "design with many fascinating features that are",
+        "worth exploring."
+      ],
+      "frameDataUrl": "/demo/taipei-101/LdH71ZCeeXc-why_visit-120.jpg",
+      "frameSeconds": 120,
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "queried_place",
+        "evidence": "overall Taipei 101 is a remarkable feat of engineering and design",
+        "status": "same_place",
+        "distanceMeters": 0
+      }
+    },
+    {
+      "id": "gJueucOQT5M-activity-101",
+      "intent": "activity",
+      "startSeconds": 101,
+      "endSeconds": 142,
+      "exactQuote": "including Taipei 101. That is Taipei and Taiwan's tallest building, 101 floors to the top, and it's home to lots of trendy shopping malls just inside that complex too. Now some other neighborhoods you'll wanna visit. Shilin. It's home to the National Palace Museum. We'll talk more about that later. And it's also home to Taipei's biggest night market.",
+      "contextText": "including Taipei 101. That is Taipei and Taiwan's tallest building, 101 floors to the top, and it's home to lots of trendy shopping malls just inside that complex too. Now some other neighborhoods you'll wanna visit. Shilin. It's home to the National Palace Museum. We'll talk more about that later. And it's also home to Taipei's biggest night market. Up in this area, you'll also find Beitou, famous for its natural hot springs. Taipei is a relatively easy city to navigate once you figure out the layout. And you gotta figure out that the layout is based on a very large grid. I say very large grid because the major streets, like this one here, Zhongxiao East Road, are really wide and really straight and really long.",
+      "locationContext": "- Everything you need to go to Taipei, Taiwan. First, let's start with some background. 2.6 million people call this city home, with 7 million people in the metropolitan area. Over one third of all the people that live in Taiwan live here in Taipei. And now many people when they're considering a trip to Asia, they think about Hong Kong, Singapore or Tokyo, but in this video, I hope to put Taipei on your list of big cities you should go to in Asia. It's really an East meets West kind of city, where you'll find some of the world's tallest buildings nestled right next to traditional temples. You'll find street food night markets next to five star Michelin restaurants. Well, Michelin doesn't rate them five stars, but really good restaurants. Anyway, it's just a really amazing destination, and we're gonna go see it and tell you everything you need to know in this video. All right, let's go. Number two. Let's get you oriented to the city. Taipei is in the northern part of Taiwan. It's a little bit inland from the ocean, nestled in between two rivers. You'll find the city itself is really culturally divided",
+      "captionTrack": "creator",
+      "language": "en-ehkg1hFWq8A",
+      "video": {
+        "id": "gJueucOQT5M",
+        "title": "TAIPEI TRAVEL GUIDE: Everything You Need to Know",
+        "channelName": "Yellow Productions",
+        "thumbnailUrl": "https://i.ytimg.com/vi/gJueucOQT5M/maxresdefault.jpg",
+        "publishedAt": "2023-08-18"
+      },
+      "title": "Taipei 101 has lots of trendy shopping malls",
+      "takeaway": "Taipei 101 is home to lots of trendy shopping malls just inside that complex, offering a variety of shopping experiences.",
+      "highlights": [
+        "Taipei 101 is home to lots of trendy shopping",
+        "malls just inside that complex",
+        "offering a variety of shopping experiences."
+      ],
+      "frameDataUrl": "/demo/taipei-101/gJueucOQT5M-activity-101.jpg",
+      "frameSeconds": 99,
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "inside",
+        "evidence": "it's home to lots of trendy shopping malls just inside that complex",
+        "status": "same_place",
+        "distanceMeters": 0
+      }
+    },
+    {
+      "id": "fJJjbqRjZtM-food-176",
+      "intent": "food",
+      "startSeconds": 176,
+      "endSeconds": 217,
+      "exactQuote": "where I really thought I was fainting my best advice for today bring a lot of water it's it's an absolute necessity Taipei 101 also has a massive shopping mall in the basement with many fancy restaurants including the famous Michelin star restaurant then typhoon why they serve the absolute best dim sum in Taiwan watch the next episode for my full review oh that's so good I almost like creamy pork but it's delicious the",
+      "contextText": "where I really thought I was fainting my best advice for today bring a lot of water it's it's an absolute necessity Taipei 101 also has a massive shopping mall in the basement with many fancy restaurants including the famous Michelin star restaurant then typhoon why they serve the absolute best dim sum in Taiwan watch the next episode for my full review oh that's so good I almost like creamy pork but it's delicious the heat and temperature is absolutely on point I remember being in a few earthquakes myself during my stay in Japan one earthquake even being six on the Richter scale this was really unsettling because there was nowhere to hide the whole building was shaking like crazy I'm a question to you is have you ever been in an earthquake and if so what was it like please share your",
+      "locationContext": "why is there a gigantic beehive hanging in one of the world's largest buildings let's find out [Music] welcome back to the before my show my name is Matt and in today's episode we're going to explore Taipei 101 the most iconic landmark here in Taiwan Taipei 101 used to be the tallest building in the world from 2004 to 2010 but has been surpassed by Guangzhou New York Seoul Shenzhen Mecca Shanghai and Dubai but even for today's standards one of the most futuristic buildings I've ever set foot in getting a glimpse of its sheer size is enough to make your jaw drop this is absolutely one of the most impressive buildings I've ever seen in my life rocking a height of 508 meters its segments are based on blossoming flowers although others have suggested it looks more like bamboo or pagodas with 101 force now you know what that name is coming from an entrance",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "fJJjbqRjZtM",
+        "title": "Taipei 101: Icon of Taiwan",
+        "channelName": "Reformatt Travel Show",
+        "thumbnailUrl": "https://i.ytimg.com/vi/fJJjbqRjZtM/maxresdefault.jpg",
+        "publishedAt": "2018-05-29"
+      },
+      "title": "Taipei 101 serves the absolute best dim sum in Taiwan",
+      "takeaway": "Taipei 101 includes a Michelin star restaurant known for serving the absolute best dim sum in Taiwan.",
+      "highlights": [
+        "Taipei 101 includes a Michelin star restaurant",
+        "known for serving the absolute best dim sum in",
+        "Taiwan."
+      ],
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "inside",
+        "evidence": "Taipei 101 also has a massive shopping mall in the basement with many fancy restaurants",
+        "status": "same_place",
+        "distanceMeters": 0
+      }
+    },
+    {
+      "id": "mPs0tvAbWno-practical_tip-485",
+      "intent": "practical_tip",
+      "startSeconds": 485,
+      "endSeconds": 526,
+      "exactQuote": "famous tower of Taipei. Fun fact, the 101 Taipei was the world's highest tower with 508 m tall from 2004 until 2010. To get to the tower, take the red line to station Taipei 101 and then take exit four or five. Once you're inside the building, take the elevator to the fifth floor to find the entrance and the ticket office.",
+      "contextText": "famous tower of Taipei. Fun fact, the 101 Taipei was the world's highest tower with 508 m tall from 2004 until 2010. To get to the tower, take the red line to station Taipei 101 and then take exit four or five. Once you're inside the building, take the elevator to the fifth floor to find the entrance and the ticket office. There are several tickets available. For example, you can buy a regular ticket for floors 88 and 89, an upgraded ticket to the 101st floor, or lastly, you can also do a walk on the roof. Sadly, when we visited, we had kind of bad weather, but we can tell you that getting to the 89th floor is more than enough for",
+      "locationContext": "Are you visiting Taipei for the first time and don't know what to do? In this video, we'll show you our top 10 must-do things in Taipei City. We only chose activities that we personally love and would do again. And for your information, you can find full videos [music] and links for the activities in the description box. Let's get right into it. If you think of Taipei, the first thing that should come to mind is street food. And yes, uh going to the night markets is the place to be for street food. The night market that we love visiting is the Raohe Night Market, which is set up in a long street. To get here, go to station Songshan on the green metro line, take exit one or five, and walk like 100 m. You are then welcomed by the Ciyou Temple, and if you turn left, you can see the famous night market entrance gate. As soon as you enter, the smell of Taiwanese food fills the air. Like these famous meat-filled buns made in a traditional oven. Of course, you could also try stinky",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "mPs0tvAbWno",
+        "title": "Our Top 10 Things to Do in Taipei for First-Time Visitors! (2026)",
+        "channelName": "Laurens & Laura",
+        "thumbnailUrl": "https://i.ytimg.com/vi/mPs0tvAbWno/maxresdefault.jpg",
+        "publishedAt": "2025-12-13"
+      },
+      "title": "Creator tip: Take the red line to Taipei 101 station",
+      "takeaway": "The creator observed: to visit Taipei 101, take the red line to station Taipei 101 and then take exit four or five for access.",
+      "highlights": [
+        "To visit Taipei 101, take the red line to station",
+        "Taipei 101 and then take exit four or five",
+        "for access."
+      ],
+      "frameDataUrl": "/demo/taipei-101/mPs0tvAbWno-practical_tip-485.jpg",
+      "frameSeconds": 485,
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "queried_place",
+        "evidence": "take the red line to station Taipei 101 and then take exit four or five",
+        "status": "same_place",
+        "distanceMeters": 0
+      }
+    }
+  ],
+  "suggestedPlan": [
+    "Taipei 101 has lots of trendy shopping malls",
+    "Taipei 101 serves the absolute best dim sum in Taiwan",
+    "Creator tip: Take the red line to Taipei 101 station"
+  ],
+  "warnings": [
+    "Verified demo snapshot generated 2026-07-16T02:24:59.975Z. Run live research to refresh YouTube evidence.",
+    "Opening hours, prices, reservations, and temporary closures still require a current check."
+  ],
+  "mode": "ai",
+  "verification": {
+    "videosFound": 5,
+    "captionedVideos": 5,
+    "candidateClips": 7,
+    "evidenceMatches": 4,
+    "verifiedClips": 4,
+    "rejectedEvidenceOrRanking": 3,
+    "rejectedLocation": 0
+  },
+  "demoSnapshot": true
+}
