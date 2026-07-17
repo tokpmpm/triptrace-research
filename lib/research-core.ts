@@ -9,6 +9,23 @@ export type ResearchVideoTranscript = ResearchVideo & {
   cues: TranscriptCue[];
 };
 
+export const MAX_VIDEO_AGE_YEARS = 2;
+
+export function recentVideoCutoffDate(now = new Date()) {
+  const cutoff = new Date(now);
+  cutoff.setUTCFullYear(cutoff.getUTCFullYear() - MAX_VIDEO_AGE_YEARS);
+  return cutoff.toISOString().slice(0, 10);
+}
+
+export function isRecentPublishedAt(publishedAt: string | undefined, now = new Date()) {
+  if (!publishedAt || !/^\d{4}-\d{2}-\d{2}$/.test(publishedAt)) return false;
+  const publishedTime = Date.parse(`${publishedAt}T00:00:00.000Z`);
+  if (!Number.isFinite(publishedTime)) return false;
+  if (new Date(publishedTime).toISOString().slice(0, 10) !== publishedAt) return false;
+  const nowTime = now.getTime();
+  return publishedTime >= Date.parse(`${recentVideoCutoffDate(now)}T00:00:00.000Z`) && publishedTime <= nowTime;
+}
+
 export function reconcileVerificationCounts(
   verification: NonNullable<PlaceResearchResult["verification"]>,
   verifiedClipCount: number
@@ -31,22 +48,30 @@ export function reconcileVerificationCounts(
 type ClipCandidate = Omit<ResearchClip, "title" | "takeaway"> & { score: number; matchedKeywords: string[]; intentSearchMatch: boolean };
 
 const KEYWORDS: Record<ResearchIntent, string[]> = {
-  why_visit: ["worth", "must visit", "must see", "beautiful", "historic", "history", "heritage", "culture", "architecture", "oldest", "traditional", "preserved", "atmosphere", "charming", "special", "unique", "favorite", "popular", "famous", "largest", "best"],
-  activity: ["explore", "museum", "temple", "shrine", "gardens", "garden", "tour", "visit", "walk", "stroll", "browse", "shopping", "shop", "view", "sunset", "pier", "waterfront", "exhibition", "craft", "building", "park", "street", "market"],
-  food: ["delicious", "specialty", "speciality", "sushi", "seafood", "ramen", "noodle", "noodles", "rice", "pork", "sausage", "shrimp", "dumpling", "dumplings", "tea", "dessert", "pastry", "breakfast", "stall", "vendor", "drink", "croquette", "snack", "dish", "taste", "tasty", "restaurant", "street food", "food", "eat", "cafe", "lunch", "dinner", "coffee"],
+  why_visit: ["worth", "must visit", "must see", "beautiful", "historic", "history", "heritage", "culture", "architecture", "oldest", "traditional", "preserved", "atmosphere", "charming", "special", "unique", "favorite", "popular", "famous", "largest", "best", "vibrant", "lively", "energy", "nightlife", "character", "iconic", "landmark", "significance", "experience", "shopping district", "pedestrian"],
+  activity: ["explore", "museum", "temple", "shrine", "gardens", "garden", "tour", "visit", "walk", "stroll", "browse", "shopping", "shop", "view", "sunset", "pier", "waterfront", "exhibition", "craft", "building", "park", "street", "market", "nightlife", "arcade", "cinema", "theater", "theatre", "pedestrian", "experience", "people watching"],
+  food: ["delicious", "specialty", "speciality", "sushi", "seafood", "ramen", "noodle", "noodles", "rice", "pork", "sausage", "shrimp", "dumpling", "dumplings", "tea", "dessert", "pastry", "breakfast", "stall", "vendor", "drink", "croquette", "snack", "dish", "taste", "tasty", "restaurant", "street food", "food", "eat", "cafe", "lunch", "dinner", "coffee", "flavor", "flavour", "sweet", "savory", "savoury", "crispy", "crunchy", "filling", "ingredient", "custard", "cream", "bite", "texture"],
   practical_tip: ["reservation", "restroom", "photography", "not allowed", "cash only", "payment", "card", "station", "exit", "early", "before", "after", "morning", "weekday", "weekdays", "crowded", "crowds", "crowd", "avoid", "hours", "closing", "closed", "close", "open", "ticket", "minutes", "wait", "line", "train", "metro", "bus", "ferry", "weekend", "queue", "busy"]
 };
 
 const KEYWORD_WEIGHTS: Record<ResearchIntent, Record<string, number>> = {
-  why_visit: { worth: 5, "must visit": 5, "must see": 5, beautiful: 3, historic: 4, history: 3, heritage: 4, culture: 3, architecture: 4, oldest: 4, traditional: 3, preserved: 3, atmosphere: 3, charming: 3, special: 3, unique: 4, favorite: 3, popular: 2, famous: 1, largest: 2, best: 2 },
-  activity: { explore: 5, museum: 5, temple: 5, shrine: 5, gardens: 5, garden: 5, tour: 4, visit: 3, walk: 2, stroll: 3, browse: 3, shopping: 3, shop: 2, view: 3, sunset: 4, pier: 4, waterfront: 4, exhibition: 4, craft: 3, building: 2, park: 4, street: 1, market: 1 },
-  food: { delicious: 5, specialty: 4, speciality: 4, sushi: 5, seafood: 5, ramen: 5, noodle: 5, noodles: 5, rice: 4, pork: 4, sausage: 5, shrimp: 4, dumpling: 5, dumplings: 5, tea: 2, dessert: 4, pastry: 4, breakfast: 3, stall: 3, vendor: 2, drink: 2, croquette: 5, snack: 4, dish: 4, taste: 4, tasty: 4, restaurant: 3, "street food": 4, food: 2, eat: 1, cafe: 3, lunch: 2, dinner: 2, coffee: 3 },
+  why_visit: { worth: 5, "must visit": 5, "must see": 5, beautiful: 3, historic: 4, history: 3, heritage: 4, culture: 3, architecture: 4, oldest: 4, traditional: 3, preserved: 3, atmosphere: 3, charming: 3, special: 3, unique: 4, favorite: 3, popular: 2, famous: 1, largest: 2, best: 2, vibrant: 4, lively: 4, energy: 3, nightlife: 3, character: 3, iconic: 4, landmark: 4, significance: 4, experience: 2, "shopping district": 4, pedestrian: 2 },
+  activity: { explore: 5, museum: 5, temple: 5, shrine: 5, gardens: 5, garden: 5, tour: 4, visit: 3, walk: 2, stroll: 3, browse: 3, shopping: 3, shop: 2, view: 3, sunset: 4, pier: 4, waterfront: 4, exhibition: 4, craft: 3, building: 2, park: 4, street: 1, market: 1, nightlife: 3, arcade: 4, cinema: 4, theater: 4, theatre: 4, pedestrian: 2, experience: 3, "people watching": 3 },
+  food: { delicious: 5, specialty: 4, speciality: 4, sushi: 5, seafood: 5, ramen: 5, noodle: 5, noodles: 5, rice: 4, pork: 4, sausage: 5, shrimp: 4, dumpling: 5, dumplings: 5, tea: 2, dessert: 4, pastry: 4, breakfast: 3, stall: 3, vendor: 2, drink: 2, croquette: 5, snack: 4, dish: 4, taste: 4, tasty: 4, restaurant: 3, "street food": 4, food: 2, eat: 1, cafe: 3, lunch: 2, dinner: 2, coffee: 3, flavor: 3, flavour: 3, sweet: 2, savory: 3, savoury: 3, crispy: 3, crunchy: 3, filling: 3, ingredient: 2, custard: 3, cream: 2, bite: 2, texture: 2 },
   practical_tip: { reservation: 5, restroom: 5, photography: 4, "not allowed": 5, "cash only": 5, payment: 4, card: 3, station: 4, exit: 5, early: 4, before: 3, after: 2, morning: 2, weekday: 3, weekdays: 3, crowded: 4, crowds: 4, crowd: 4, avoid: 4, hours: 4, closing: 4, closed: 4, close: 4, open: 2, ticket: 4, minutes: 2, wait: 3, line: 3, train: 3, metro: 3, bus: 3, ferry: 3, weekend: 3, queue: 4, busy: 2 }
 };
 
 const STOPWORDS = new Set(["tokyo", "japan", "the", "and", "area", "guide"]);
 const STRONG_TIP_TERMS = ["reservation", "restroom", "photography", "not allowed", "cash only", "payment", "card", "station", "exit", "arrive", "early", "before 11", "weekday", "weekdays", "crowded", "crowds", "crowd", "avoid", "opening hours", "closing", "closed", "ticket", "minutes", "train", "metro", "bus", "ferry", "weekend", "queue"];
 const ACTIONABLE_TIP_OUTPUT_TERMS = ["reservation", "restroom", "photography", "cash", "payment", "card", "station", "exit", "arrive", "early", "before", "weekday", "crowd", "avoid", "hours", "closing", "closed", "ticket", "minutes", "train", "metro", "bus", "ferry", "weekend", "queue", "walk from", "how to reach", "how to get"];
+const WHY_REASON_TERMS = ["worth", "must visit", "must see", "beautiful", "historic", "history", "heritage", "culture", "architecture", "oldest", "traditional", "preserved", "atmosphere", "charming", "special", "unique", "favorite", "popular", "famous", "largest", "vibrant", "lively", "energy", "nightlife", "character", "iconic", "landmark", "significance", "shopping district", "pedestrian"];
+const WHY_TITLE_TERMS = ["why", "worth", "remarkable", "engineering", "design", "history", "heritage", "culture", "architecture", "significance", "oldest", "unique", "vibrant", "lively", "nightlife", "iconic", "landmark", "character", "atmosphere"];
+
+const TOPIC_LOOKBACK_SECONDS = 36;
+const EVIDENCE_WINDOW_SECONDS = 26;
+const CONTEXT_WINDOW_SECONDS = 52;
+const TOPIC_BREAK_PATTERN = /\b(?:next|moving on|after that|finally|back to|we(?:'re| are) leaving|heading to|arriving at)\b/i;
+const TOPIC_LEAD_IN_PATTERN = /\b(?:our|the)\s+(?:last|first)\b/i;
 
 function cleanText(value: string) {
   return value.replace(/\s+/g, " ").trim();
@@ -102,6 +127,46 @@ const ALIGNMENT_STOPWORDS = new Set([
 
 function meaningfulTokens(value: string) {
   return normalizeResearchText(value).split(" ").filter((token) => token.length >= 4 && !ALIGNMENT_STOPWORDS.has(token));
+}
+
+function meaningfulBigrams(value: string) {
+  const tokens = meaningfulTokens(value);
+  return tokens.slice(0, -1).map((token, index) => `${token} ${tokens[index + 1]}`);
+}
+
+function findTopicStartIndex(cues: TranscriptCue[], anchorIndex: number, intent: ResearchIntent, anchorQuote: string) {
+  const anchor = cues[anchorIndex];
+  if (TOPIC_LEAD_IN_PATTERN.test(anchorQuote)) return anchorIndex;
+  const topicTokens = new Set(meaningfulTokens(anchorQuote));
+  const topicPhrases = meaningfulBigrams(anchorQuote);
+  let startIndex = anchorIndex;
+  let connected = false;
+  let bridgeUsed = false;
+  let phraseMatches = 0;
+
+  for (let index = anchorIndex - 1; index >= 0; index -= 1) {
+    const cue = cues[index];
+    if (anchor.startSeconds - cue.endSeconds > TOPIC_LOOKBACK_SECONDS) break;
+    if (TOPIC_BREAK_PATTERN.test(cue.text)) break;
+    const cueText = normalizeResearchText(cue.text);
+    const overlap = meaningfulTokens(cue.text).filter((token) => topicTokens.has(token)).length;
+    const categoryScore = semanticScores(normalizeResearchText(cue.text))[intent];
+    const hasTopicPhrase = topicPhrases.some((phrase) => includesKeyword(cueText, phrase));
+    if (hasTopicPhrase) phraseMatches += 1;
+    if (phraseMatches >= 2 && !hasTopicPhrase) break;
+    if (overlap >= 1 || categoryScore >= 2) {
+      startIndex = index;
+      connected = true;
+      continue;
+    }
+    if (connected && !bridgeUsed && cue.text.length <= 70) {
+      startIndex = index;
+      bridgeUsed = true;
+      continue;
+    }
+    break;
+  }
+  return startIndex;
 }
 
 function takeawayMatchesEvidence(quote: string, supportQuote: string, takeaway: string, subject: string) {
@@ -183,29 +248,35 @@ export function extractResearchClips(place: string, videos: ResearchVideoTranscr
     for (const intent of Object.keys(KEYWORDS) as ResearchIntent[]) {
       for (let index = 0; index < video.cues.length; index += 1) {
         const cue = video.cues[index];
-        const quote = textBetween(video.cues, cue.startSeconds, cue.startSeconds + 18);
-        const context = textBetween(video.cues, cue.startSeconds, cue.startSeconds + 38);
+        const anchorQuote = textBetween(video.cues, cue.startSeconds, cue.startSeconds + 18);
+        const topicStartIndex = findTopicStartIndex(video.cues, index, intent, anchorQuote);
+        const evidenceStart = video.cues[topicStartIndex]?.startSeconds ?? cue.startSeconds;
+        const quote = textBetween(video.cues, evidenceStart, evidenceStart + EVIDENCE_WINDOW_SECONDS);
+        const context = textBetween(video.cues, evidenceStart, evidenceStart + CONTEXT_WINDOW_SECONDS);
+        const anchorContext = textBetween(video.cues, cue.startSeconds, cue.startSeconds + 38);
         const normalizedQuote = normalizeResearchText(quote);
         const normalizedContext = normalizeResearchText(context);
-        if (normalizedQuote.length < 45) continue;
-        if (primaryPlaceToken && !videoPlaceFocused && !includesKeyword(normalizedQuote, primaryPlaceToken)) continue;
-        const categoryScores = semanticScores(normalizedQuote);
+        const normalizedAnchorContext = normalizeResearchText(anchorContext);
+        if (normalizeResearchText(anchorQuote).length < 45 || normalizedQuote.length < 45) continue;
+        if (primaryPlaceToken && !videoPlaceFocused && !includesKeyword(`${normalizeResearchText(anchorQuote)} ${normalizedAnchorContext}`, primaryPlaceToken)) continue;
+        const categoryScores = semanticScores(normalizeResearchText(anchorQuote));
         const semanticScore = categoryScores[intent];
         const strongestOtherScore = Math.max(...(Object.keys(categoryScores) as ResearchIntent[]).filter((category) => category !== intent).map((category) => categoryScores[category]));
-        const hasStrongPracticalEvidence = intent === "practical_tip" && STRONG_TIP_TERMS.some((term) => includesKeyword(normalizedQuote, term));
+        const hasStrongPracticalEvidence = intent === "practical_tip" && STRONG_TIP_TERMS.some((term) => includesKeyword(normalizeResearchText(anchorQuote), term));
         if (semanticScore < 3) continue;
         if (semanticScore + 1 < strongestOtherScore && !hasStrongPracticalEvidence) continue;
-        const matchedKeywords = KEYWORDS[intent].filter((keyword) => includesKeyword(normalizedQuote, keyword));
+        const matchedKeywords = KEYWORDS[intent].filter((keyword) => includesKeyword(normalizeResearchText(anchorQuote), keyword));
         if (!matchedKeywords.length) continue;
-        const locationMentions = tokens.filter((token) => normalizedContext.includes(token)).length;
+        const locationMentions = tokens.filter((token) => normalizedAnchorContext.includes(token)).length;
         const intentSearchBonus = video.searchIntents.includes(intent) ? 2 : 0;
         const score = semanticScore * 4 + locationMentions * 5 + titleLocationScore + intentSearchBonus;
         if (score < 9) continue;
+        const startSeconds = Math.max(0, Math.floor(evidenceStart) - 1);
         candidates.push({
-          id: `${video.id}-${intent}-${Math.max(0, Math.floor(cue.startSeconds) - 2)}`,
+          id: `${video.id}-${intent}-${startSeconds}`,
           intent,
-          startSeconds: Math.max(0, Math.floor(cue.startSeconds) - 2),
-          endSeconds: Math.ceil(cue.startSeconds + 38),
+          startSeconds,
+          endSeconds: Math.ceil(evidenceStart + CONTEXT_WINDOW_SECONDS),
           exactQuote: quote,
           contextText: context,
           locationContext,
@@ -277,6 +348,8 @@ export function buildExtractiveResearchResult(place: string, city: string, clips
   const sourceCount = new Set(clips.map((clip) => clip.video.id)).size;
   const covered = new Set(clips.map((clip) => clip.intent));
   const warnings = [
+    ...(!covered.has("why_visit") ? ["No reliable why-visit segment was found in the selected captions."] : []),
+    ...(!covered.has("activity") ? ["No reliable activity segment was found in the selected captions."] : []),
     ...(!covered.has("food") ? ["No reliable food segment was found in the selected captions."] : []),
     ...(!covered.has("practical_tip") ? ["No reliable practical-tip segment was found in the selected captions."] : []),
     "Opening hours, prices, reservations, and temporary closures still require a current check."
@@ -318,20 +391,14 @@ function limitVerifiedClips(clips: ResearchClip[]) {
   const intents = ["why_visit", "activity", "food", "practical_tip"] as ResearchIntent[];
   const selected: ResearchClip[] = [];
   const usedVideos = new Set<string>();
-  for (const intent of intents) {
-    const candidates = clips.filter((clip) => clip.intent === intent);
-    const first = candidates.find((clip) => !usedVideos.has(clip.video.id)) || candidates[0];
-    if (first) {
-      selected.push(first);
-      usedVideos.add(first.video.id);
-    }
-  }
-  for (const intent of intents) {
-    const candidates = clips.filter((clip) => clip.intent === intent && !selected.some((item) => item.id === clip.id));
-    const second = candidates.find((clip) => !usedVideos.has(clip.video.id)) || candidates[0];
-    if (second) {
-      selected.push(second);
-      usedVideos.add(second.video.id);
+  for (let round = 0; round < 3; round += 1) {
+    for (const intent of intents) {
+      const candidates = clips.filter((clip) => clip.intent === intent && !selected.some((item) => item.id === clip.id));
+      const candidate = candidates.find((clip) => !usedVideos.has(clip.video.id)) || candidates[0];
+      if (candidate) {
+        selected.push(candidate);
+        usedVideos.add(candidate.video.id);
+      }
     }
   }
   return intents.flatMap((intent) => selected.filter((clip) => clip.intent === intent));
@@ -393,8 +460,10 @@ export function applySemanticClipAnalyses(result: PlaceResearchResult, analyses:
     const quoteAndTitleScores = semanticScores(`${quoteText} ${normalizedTitle}`);
     if (analysis.intent !== "food" && titleScores.food >= 4) return [];
     if (requiresSpecificLandmark && !includesKeyword(normalizeResearchText(`${analysis.title} ${analysis.primarySubject} ${clip.exactQuote}`), primaryPlaceToken || "")) return [];
-    const whyTitleTerms = ["why", "worth", "remarkable", "engineering", "design", "history", "heritage", "culture", "architecture", "significance", "oldest", "unique"];
-    if (analysis.intent === "why_visit" && (quoteAndTitleScores.why_visit < 3 || !whyTitleTerms.some((term) => includesKeyword(normalizedTitle, term)))) return [];
+    const hasWhyReason = WHY_REASON_TERMS.some((term) => includesKeyword(`${quoteText} ${normalizedTitle}`, term));
+    const hasSpecificWhyTitle = WHY_TITLE_TERMS.some((term) => includesKeyword(normalizedTitle, term));
+    const titleNamesPlaceOrSubject = normalizedTitle.includes(subject) || subjectTitleOverlap >= 0.5 || placeFocusedTitle(result.place, analysis.title);
+    if (analysis.intent === "why_visit" && (quoteAndTitleScores.why_visit < 3 || !hasWhyReason || (!hasSpecificWhyTitle && !titleNamesPlaceOrSubject))) return [];
     if (analysis.intent === "activity" && quoteAndTitleScores.activity < 3) return [];
     if (analysis.intent === "food" && quoteAndTitleScores.food < 3) return [];
     if (analysis.intent === "practical_tip") {

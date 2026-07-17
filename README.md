@@ -21,13 +21,13 @@ TripTrace treats this as an evidence-verification problem, not just a summarizat
 
 ## What makes TripTrace different
 
-- It searches several independent videos instead of summarizing one source.
+- It searches a larger pool of independent videos, keeps only videos published within the last two years, and aims for six independent sources before stopping.
 - Timestamps come from timed YouTube captions; the model cannot invent them.
 - Titles and takeaways must remain aligned with an exact transcript excerpt.
 - Generic titles such as “Food evidence from this clip” are rejected.
 - GPT-5.6 classifies whether a place is the main subject, merely mentioned, inside the requested place, nearby, or in a different area.
 - Separately named places are checked against OpenStreetMap coordinates and a conservative distance radius.
-- Verified partial results appear immediately while missing categories continue researching.
+- Verified partial results appear immediately while missing categories continue researching. If one evidence or API step is unavailable, exact transcript matches that already exist are still shown and the missing category is explained instead of being filled with a generic claim.
 - Ambiguous, unsupported, unresolved, or distant recommendations are omitted instead of guessed.
 
 ## Verification funnel
@@ -48,9 +48,11 @@ Location-verified recommendations
 
 The UI also reports how many extracted clips were excluded by evidence/ranking checks and how many failed location or distance verification. These numbers come from the server pipeline; they are not decorative frontend animation.
 
-## Built with GPT-5.6
+## Model and cost controls
 
-Live research uses **`gpt-5.6-luna`** through the OpenAI Responses API with structured output. The model receives only fixed evidence fields:
+Production research uses **`gpt-5.6-luna`** through the OpenAI Responses API with structured output. Local development defaults to the lower-cost **`gpt-5.4-nano`** model, and `TRIPTRACE_TEST_MODE=fixture` can run the bundled Taipei 101 flow without calling OpenAI or yt-dlp at all. `TRIPTRACE_RUNTIME=production` hard-locks the production model to Luna.
+
+The model receives only fixed evidence fields:
 
 - requested place and city
 - video title
@@ -78,11 +80,11 @@ Key product decisions made during the Codex sessions include keeping API keys se
 
 ## How it works
 
-1. **Search** — `yt-dlp` searches YouTube using several travel intents.
-2. **Screen** — Videos are checked for captions, duration, embed access, and source diversity.
+1. **Search** — `yt-dlp` searches YouTube using several travel intents and a two-year recency window.
+2. **Screen** — Videos are checked for publication date, captions, duration, embed access, and source diversity.
 3. **Read evidence** — Timed JSON3 captions are parsed into transcript cues.
 4. **Match clips** — Candidate moments are scored by place relevance and visitor intent.
-5. **Verify with GPT-5.6** — Structured analysis identifies the main subject and transcript-supported claim.
+5. **Verify with the configured model** — Structured analysis identifies the main subject and transcript-supported claim. Production uses Luna; local development uses nano unless the fixture mode is enabled.
 6. **Apply deterministic guardrails** — Unsupported wording, generic titles, incidental mentions, and wrong categories are removed.
 7. **Check distance** — Named nearby POIs are geocoded, cached, and compared with the requested place.
 8. **Stream results** — Verified categories appear while the system continues researching missing ones.
@@ -101,7 +103,7 @@ The site opens with a bundled **Taipei 101 verified demo snapshot**, so judges c
 - Three storyboard frames and one conservative YouTube-thumbnail fallback
 - Quick suggestions: `Ximending`, `Dadaocheng`, `Shilin Night Market`
 
-Select **Research live** to run fresh source discovery with GPT-5.6 Luna. A fresh run usually takes 30–90 seconds; verified partial results can appear before every category is complete.
+Select **Research live** to run fresh source discovery. A fresh run usually takes 30–90 seconds; verified partial results can appear before every category is complete. In development, automatic refill searches are disabled by default to avoid surprise API spend; set `TRIPTRACE_ALLOW_DEV_REFILL=1` only when you explicitly want a second pass.
 
 ## Run locally
 
@@ -110,7 +112,7 @@ Select **Research live** to run fresh source discovery with GPT-5.6 Luna. A fres
 - Node.js 20+
 - npm
 - a current `yt-dlp` executable
-- an OpenAI API key with access to `gpt-5.6-luna`
+- an OpenAI API key with access to the configured development model; production uses `gpt-5.6-luna`
 
 Install dependencies:
 
@@ -134,8 +136,11 @@ Configure values only in `.env.local`:
 
 ```text
 OPENAI_API_KEY=
-OPENAI_MODEL=gpt-5.6-luna
+OPENAI_DEV_MODEL=gpt-5.4-nano
+TRIPTRACE_RUNTIME=development
+TRIPTRACE_TEST_MODE=
 YT_DLP_BIN=
+YT_DLP_YOUTUBE_CLIENT=web_embedded,android_vr
 TRIPTRACE_CACHE_DIR=
 ```
 
@@ -148,6 +153,30 @@ npm run dev -- -p 3100
 Open [http://localhost:3100](http://localhost:3100).
 
 If `yt-dlp` is outside `PATH`, set `YT_DLP_BIN` to its absolute path. `TRIPTRACE_CACHE_DIR` is optional; by default the cache uses the operating system’s temporary directory.
+
+`YT_DLP_YOUTUBE_CLIENT` defaults to clients that do not require stored YouTube account cookies. Some datacenter IP ranges can still receive YouTube's bot-verification response; the bundled demo and persistent verified cache remain available when live discovery is blocked.
+
+### Persistent seven-day cache in production
+
+For a deployment that must keep research across restarts, attach a persistent volume and point `TRIPTRACE_CACHE_DIR` at its mounted directory, for example:
+
+```text
+TRIPTRACE_CACHE_DIR=/data/triptrace-cache
+```
+
+The application expires final research after seven days. Caption, semantic-analysis, geocoding, and result files remain on the mounted volume between deploys. A cache hit replays the five research stages for about four seconds before showing the saved result, leaving cold-start, network, and rendering headroom to stay under five seconds. This replay creates no OpenAI usage.
+
+An ephemeral or free-instance filesystem cannot guarantee cache survival after a restart. On those services, the bundled Taipei 101 snapshot still opens instantly, but live-place cache persistence requires the provider’s persistent-disk option.
+
+### Google Cloud deployment
+
+The repository includes a production `Dockerfile` for Cloud Run. The runtime image installs the standalone Linux `yt-dlp` binary, runs Next.js on port `8080`, and excludes every `.env` file from the image. The recommended deployment uses:
+
+- Cloud Run in `asia-east1` with request-based billing and scale-to-zero;
+- Secret Manager for `OPENAI_API_KEY`;
+- a Cloud Storage volume mounted at `/cache`;
+- `TRIPTRACE_CACHE_DIR=/cache/triptrace-research`;
+- the lifecycle policy in `deploy/gcs-lifecycle.json` to remove cache objects after eight days, allowing the application’s seven-day TTL to complete safely.
 
 ## Security and data boundaries
 
@@ -185,6 +214,8 @@ The automated suite covers timed-caption parsing, source diversity, all four vis
 ## Known limitations
 
 - Caption availability and accuracy depend on YouTube and the original creator.
+- New live research intentionally excludes videos without a verifiable publication date or older than two years; a smaller result is preferable to silently using stale evidence.
+- The expanded source target means fresh research can take longer and use more caption/AI work; saved cache replays do not repeat that work or create OpenAI usage.
 - The current research pipeline prioritizes English caption tracks.
 - OpenStreetMap coverage varies; ambiguous POIs are excluded.
 - Storyboards are not available for every video, so the UI may use the YouTube thumbnail.

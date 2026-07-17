@@ -5,30 +5,49 @@ import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
+import { setTimeout as wait } from "node:timers/promises";
 import { promisify } from "node:util";
 import sharp from "sharp";
 import { z } from "zod";
 import { zodTextFormat } from "openai/helpers/zod";
-import { applySemanticClipAnalyses, buildExtractiveResearchResult, buildVerifiedResearchResult, extractResearchClips, normalizeResearchText, parseResearchJson3, reconcileVerificationCounts, type ResearchVideoTranscript, type SemanticClipAnalysis } from "@/lib/research-core";
+import taipei101Demo from "@/data/taipei-101-demo.json";
+import { applySemanticClipAnalyses, buildExtractiveResearchResult, buildVerifiedResearchResult, extractResearchClips, isRecentPublishedAt, normalizeResearchText, parseResearchJson3, recentVideoCutoffDate, reconcileVerificationCounts, type ResearchVideoTranscript, type SemanticClipAnalysis } from "@/lib/research-core";
 import { verifyResearchLocations } from "@/lib/geospatial";
-import { getOpenAIClient, OPENAI_MODEL } from "@/lib/openai";
+import { getOpenAIClient, OPENAI_MODEL, PRODUCTION_OPENAI_MODEL, TRIPTRACE_RUNTIME, TRIPTRACE_TEST_MODE } from "@/lib/openai";
 import type { PlaceResearchResult, ResearchClip, ResearchIntent } from "@/types/research";
 
 const execFileAsync = promisify(execFile);
-const CACHE_VERSION = "v13-geospatial-research";
+const CACHE_VERSION = "v14-recent-video-timestamps";
 const CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
-const MAX_CANDIDATES_TO_PROBE = 14;
-const MAX_SELECTED_VIDEOS = 8;
+const MAX_CANDIDATES_TO_PROBE = 32;
+const MAX_SELECTED_VIDEOS = 10;
 const ALL_INTENTS: ResearchIntent[] = ["why_visit", "activity", "food", "practical_tip"];
 const MIN_VERIFIED_SOURCES = 4;
+const TARGET_VERIFIED_SOURCES = 6;
 const CACHE_ROOT = process.env.TRIPTRACE_CACHE_DIR || path.join(/*turbopackIgnore: true*/ os.tmpdir(), "triptrace-research");
 
 type ProgressCallback = (stage: "search" | "screen" | "captions" | "extract" | "synthesize" | "complete", message: string, completed: number, total: number) => void;
+
+const CACHED_PROGRESS_REPLAY = [
+  ["search", "Checking the saved research for this place…", 0],
+  ["screen", "Rechecking the saved video-source coverage…", 1],
+  ["captions", "Loading the saved timed-caption evidence…", 2],
+  ["extract", "Restoring the verified transcript matches…", 3],
+  ["synthesize", "Preparing the saved source-backed visit outline…", 4]
+] as const;
+
+async function replayCachedProgress(onProgress: ProgressCallback, signal: AbortSignal) {
+  for (const [stage, message, completed] of CACHED_PROGRESS_REPLAY) {
+    onProgress(stage, message, completed, 5);
+    await wait(800, undefined, { signal });
+  }
+}
 
 type SearchCandidate = {
   id: string;
   title: string;
   channelName: string;
+  publishedAt?: string;
   score: number;
   intents: Set<ResearchIntent>;
 };
@@ -55,6 +74,19 @@ type StoryboardFormat = {
   columns: number;
   fragments: Array<{ url: string; duration: number }>;
 };
+
+const PLACE_ALIASES: Array<{ match: string[]; terms: string[] }> = [
+  { match: ["ximending", "ximen", "西門町"], terms: ["Ximending", "Ximen", "Ximen Pedestrian Area", "西門町"] },
+  { match: ["dadaocheng", "大稻埕"], terms: ["Dadaocheng", "Dadaocheng Wharf", "大稻埕"] },
+  { match: ["shilin night market", "士林夜市"], terms: ["Shilin Night Market", "Shilin", "士林夜市"] },
+  { match: ["taipei 101", "taipei101"], terms: ["Taipei 101", "Taipei 101 Observatory"] }
+];
+
+function placeSearchTerms(place: string) {
+  const normalized = normalizeResearchText(place);
+  const alias = PLACE_ALIASES.find((entry) => entry.match.some((term) => normalized.includes(normalizeResearchText(term))));
+  return [...new Set([place.trim(), ...(alias?.terms || [])].filter(Boolean))].slice(0, 3);
+}
 
 const semanticAnalysisSchema = z.object({
   items: z.array(z.object({
@@ -87,7 +119,8 @@ async function resolveYtDlp() {
 
 async function runYtDlp(args: string[], signal: AbortSignal, timeout = 35_000) {
   const binary = await resolveYtDlp();
-  const { stdout } = await execFileAsync(binary, ["--js-runtimes", `node:${process.execPath}`, "--no-warnings", ...args], {
+  const youtubeClient = process.env.YT_DLP_YOUTUBE_CLIENT || "web_embedded,android_vr";
+  const { stdout } = await execFileAsync(binary, ["--js-runtimes", `node:${process.execPath}`, "--extractor-args", `youtube:player_client=${youtubeClient}`, "--no-warnings", ...args], {
     encoding: "utf8",
     maxBuffer: 16 * 1024 * 1024,
     timeout,
@@ -138,11 +171,13 @@ async function searchCandidates(place: string, city: string, signal: AbortSignal
   relatedTerms?: string[];
 } = {}) {
   const intents = options.intents?.length ? options.intents : ALL_INTENTS;
-  const searchLimit = options.refill ? 14 : 10;
+  const searchLimit = options.refill ? 22 : 20;
+  const recentAfter = recentVideoCutoffDate();
+  const searchPlaces = placeSearchTerms(place);
   const querySuffixes: Record<ResearchIntent, string[]> = {
-    why_visit: ["history culture architecture worth visiting", "travel guide atmosphere heritage"],
-    activity: ["things to do walking tour attractions", "shops temple pier sunset itinerary"],
-    food: ["food guide street food restaurants", "what to eat local food market"],
+    why_visit: ["history culture architecture worth visiting", "travel guide atmosphere heritage local experience"],
+    activity: ["things to do walking tour attractions", "shops temple pier sunset itinerary nightlife experience"],
+    food: ["food guide street food restaurants", "what to eat local food market dishes"],
     practical_tip: ["travel tips crowds queue transport", "best time visit opening hours how to get there"]
   };
   const refillSuffixes: Record<ResearchIntent, string> = {
@@ -152,34 +187,41 @@ async function searchCandidates(place: string, city: string, signal: AbortSignal
     practical_tip: "walking tour advice arrive early queue station"
   };
   const searches = intents.flatMap((intent) => [...querySuffixes[intent], ...(options.refill ? [refillSuffixes[intent]] : [])]
-    .map((suffix) => ({ intent, query: `${place} ${city} ${suffix}` })));
+    .flatMap((suffix) => searchPlaces.map((searchPlace) => ({ intent, query: `${searchPlace} ${city} ${suffix} after:${recentAfter}` }))));
   if (options.refill) {
     for (const intent of intents) {
       for (const term of (options.relatedTerms || []).slice(0, 2)) {
-        searches.push({ intent, query: `${place} ${term} ${city} ${refillSuffixes[intent]}` });
+        searches.push({ intent, query: `${searchPlaces[0]} ${term} ${city} ${refillSuffixes[intent]} after:${recentAfter}` });
       }
     }
   }
   const resultSets = await inBatches(searches, 4, async ({ intent, query }) => {
     const output = await runYtDlp(["--flat-playlist", "--playlist-end", String(searchLimit), "--dump-json", `ytsearch${searchLimit}:${query}`], signal, 30_000);
-    return { intent, entries: parseJsonLines<{ id?: string; title?: string; channel?: string }>(output) };
+    return { intent, entries: parseJsonLines<{ id?: string; title?: string; channel?: string; upload_date?: string }>(output) };
   });
 
   const byId = new Map<string, SearchCandidate>();
   for (const { intent, entries } of resultSets) {
     entries.forEach((entry, index) => {
       if (!entry.id || !entry.title) return;
+      const publishedAt = entry.upload_date && /^\d{8}$/.test(entry.upload_date)
+        ? `${entry.upload_date.slice(0, 4)}-${entry.upload_date.slice(4, 6)}-${entry.upload_date.slice(6, 8)}`
+        : undefined;
+      if (publishedAt && !isRecentPublishedAt(publishedAt)) return;
       if (options.excludeIds?.has(entry.id)) return;
-      const placeTitleBonus = normalizeResearchText(entry.title).includes(normalizeResearchText(place)) ? 8 : 0;
+      const normalizedTitle = normalizeResearchText(entry.title);
+      const placeTitleBonus = searchPlaces.some((term) => normalizedTitle.includes(normalizeResearchText(term))) ? 8 : 0;
       const existing = byId.get(entry.id);
       if (existing) {
         existing.intents.add(intent);
         existing.score += Math.max(1, searchLimit - index) + placeTitleBonus;
+        existing.publishedAt ||= publishedAt;
       } else {
         byId.set(entry.id, {
           id: entry.id,
           title: entry.title,
           channelName: entry.channel || "Unknown channel",
+          publishedAt,
           score: Math.max(1, searchLimit - index) + placeTitleBonus,
           intents: new Set([intent])
         });
@@ -213,6 +255,10 @@ async function probeCandidate(candidate: SearchCandidate, signal: AbortSignal): 
       formats?: unknown;
     };
     if (!info.id || !info.title || !info.channel || info.playable_in_embed === false || !info.duration || info.duration < 90 || info.duration > 3600) return null;
+    const publishedAt = info.upload_date && /^\d{8}$/.test(info.upload_date)
+      ? `${info.upload_date.slice(0, 4)}-${info.upload_date.slice(4, 6)}-${info.upload_date.slice(6, 8)}`
+      : candidate.publishedAt;
+    if (!isRecentPublishedAt(publishedAt)) return null;
     const creatorLanguage = englishTrack(info.subtitles);
     const automaticLanguage = englishTrack(info.automatic_captions);
     const language = creatorLanguage || automaticLanguage;
@@ -222,7 +268,7 @@ async function probeCandidate(candidate: SearchCandidate, signal: AbortSignal): 
       title: info.title,
       channelName: info.channel,
       thumbnailUrl: info.thumbnail || `https://i.ytimg.com/vi/${info.id}/hqdefault.jpg`,
-      publishedAt: info.upload_date ? `${info.upload_date.slice(0, 4)}-${info.upload_date.slice(4, 6)}-${info.upload_date.slice(6, 8)}` : undefined,
+      publishedAt,
       duration: info.duration,
       language,
       captionTrack: creatorLanguage ? "creator" : "automatic",
@@ -230,7 +276,9 @@ async function probeCandidate(candidate: SearchCandidate, signal: AbortSignal): 
       score: candidate.score + (creatorLanguage ? 8 : 0),
       storyboard: bestStoryboard(info.formats)
     };
-  } catch {
+  } catch (error) {
+    const message = error instanceof Error ? error.message.replace(/\s+/g, " ").slice(0, 500) : "unknown error";
+    console.warn("[research-place] video probe failed", { videoId: candidate.id, message });
     return null;
   }
 }
@@ -238,13 +286,21 @@ async function probeCandidate(candidate: SearchCandidate, signal: AbortSignal): 
 function chooseVideos(videos: ProbedVideo[], intents: ResearchIntent[] = ALL_INTENTS, maxVideos = MAX_SELECTED_VIDEOS) {
   const ranked = [...videos].sort((a, b) => b.score - a.score);
   const selected: ProbedVideo[] = [];
+  const addCandidate = (candidate: ProbedVideo) => {
+    if (selected.length >= maxVideos || selected.some((item) => item.id === candidate.id)) return;
+    selected.push(candidate);
+  };
   for (const intent of intents) {
     const candidate = ranked.find((video) => video.searchIntents.includes(intent) && !selected.some((item) => item.id === video.id) && !selected.some((item) => item.channelName === video.channelName));
-    if (candidate) selected.push(candidate);
+    if (candidate) addCandidate(candidate);
   }
   for (const candidate of ranked) {
     if (selected.length >= maxVideos) break;
-    if (!selected.some((item) => item.id === candidate.id)) selected.push(candidate);
+    if (!selected.some((item) => item.id === candidate.id) && !selected.some((item) => item.channelName === candidate.channelName)) addCandidate(candidate);
+  }
+  for (const candidate of ranked) {
+    if (selected.length >= maxVideos) break;
+    addCandidate(candidate);
   }
   return selected;
 }
@@ -339,7 +395,7 @@ function semanticEvidenceHash(result: PlaceResearchResult, clip: ResearchClip) {
   })).digest("hex");
 }
 
-async function synthesizeResult(result: PlaceResearchResult, semanticCachePath: string) {
+async function synthesizeResult(result: PlaceResearchResult, semanticCachePath: string): Promise<PlaceResearchResult> {
   if (!result.clips.length) return result;
   type SemanticCacheEntry = { evidenceHash: string; analysis: SemanticClipAnalysis };
   let cacheEntries: SemanticCacheEntry[] = [];
@@ -366,7 +422,14 @@ async function synthesizeResult(result: PlaceResearchResult, semanticCachePath: 
   if (!pendingClips.length) return { ...applySemanticClipAnalyses(result, cachedAnalyses), aiModel: OPENAI_MODEL };
 
   const client = getOpenAIClient();
-  if (!client) return cachedAnalyses.length ? applySemanticClipAnalyses(result, cachedAnalyses) : result;
+  if (!client) {
+    return {
+      ...result,
+      warnings: ["AI verification was skipped; showing exact transcript matches without model-written claims.", ...result.warnings],
+      aiModel: undefined,
+      mode: "extractive" as const
+    };
+  }
   try {
     const response = await client.responses.parse({
       model: OPENAI_MODEL,
@@ -374,12 +437,23 @@ async function synthesizeResult(result: PlaceResearchResult, semanticCachePath: 
       // reasoning against this limit, which previously left Luna with no JSON.
       reasoning: { effort: "low" },
       max_output_tokens: 8_000,
+      prompt_cache_key: `triptrace-semantic-${OPENAI_MODEL}`,
+      ...(OPENAI_MODEL === PRODUCTION_OPENAI_MODEL ? { prompt_cache_options: { mode: "implicit" as const, ttl: "30m" as const } } : {}),
       input: [
         { role: "system", content: `Analyze travel-video clips conservatively. Use only the supplied video title, exact quote, and nearby context. Location relevance is the first gate: set placeRelevant=false for generic city-wide advice or a different neighborhood, attraction, museum, or market. A video title that lists several locations does not prove its current clip is about the requested place. A title focused only on the requested place can be supporting location context unless the transcript clearly moves elsewhere. Classify locationRelationship as queried_place when the claim is about the requested place itself, inside only when the transcript explicitly places the subject inside it, nearby only when a separate named POI is explicitly presented as nearby, different_area for another neighborhood or attraction, and unknown when the relationship is not supported. For nearby, poiName must be the exact separately named POI from the supplied text; otherwise use null. For queried_place or inside, use the requested place as poiName. locationEvidence must be one contiguous excerpt from exactQuote or nearbyContext that proves the relationship, or null when it cannot be proven. Use these user-facing intents strictly: why_visit means a reason the place itself is worth visiting (history, atmosphere, architecture, significance), never a restaurant or dish; activity means a concrete experience or stop; food means a named dish, drink, shop, or food recommendation; practical_tip means actionable timing, queue, transport, access, payment, or crowd advice, never a food description. For every clipId, identify the main subject—not a casually mentioned keyword—and reclassify the intent when needed. primarySubject must be one short, contiguous phrase copied exactly from exactQuote, never the video title. Write a specific 3–12 word title containing that complete primarySubject phrase verbatim and without inserting words inside it; never copy the video title. supportQuote must be one contiguous verbatim excerpt from exactQuote that directly supports both the title and takeaway. The takeaway must be 12–30 words, include the primarySubject wording, reuse at least four meaningful content words from exactQuote, and make no claim that is absent from exactQuote. Do not import details from nearbyContext into the title or takeaway; nearbyContext is only for deciding location relevance. Every highlight must be copied exactly from the takeaway. Set mentionOnly=true when the tempting label is only incidental. Examples: use "Arrive before 11 to avoid the sashimi queue", not "How to approach the area"; describe the named noodle dish, not "Seafood mentioned nearby", when seafood is only a flavoring. Do not state current prices, hours, availability, awards, or ratings as facts unless exactQuote explicitly says them; even then, attribute time-sensitive advice to the creator. Return exactly one item for every supplied clipId.` },
         { role: "user", content: JSON.stringify({ place: result.place, city: result.city, clips: pendingClips.map((clip) => ({ clipId: clip.id, candidateIntent: clip.intent, videoTitle: clip.video.title, exactQuote: clip.exactQuote, nearbyContext: clip.contextText })) }) }
       ],
       text: { format: zodTextFormat(semanticAnalysisSchema, "clip_semantic_analysis") }
     });
+    if (response.usage) {
+      console.info("[research-place] semantic usage", {
+        model: OPENAI_MODEL,
+        inputTokens: response.usage.input_tokens,
+        cachedInputTokens: response.usage.input_tokens_details?.cached_tokens ?? 0,
+        cacheWriteTokens: response.usage.input_tokens_details?.cache_write_tokens ?? 0,
+        outputTokens: response.usage.output_tokens
+      });
+    }
     if (!response.output_parsed) {
       const outputTypes = response.output.map((item) => item.type).join(",") || "none";
       throw new Error(`The model returned no structured semantic analysis (status=${response.status}, incomplete=${response.incomplete_details?.reason || "none"}, output=${outputTypes}).`);
@@ -394,7 +468,12 @@ async function synthesizeResult(result: PlaceResearchResult, semanticCachePath: 
     return { ...applySemanticClipAnalyses(result, [...cachedAnalyses, ...response.output_parsed.items]), aiModel: OPENAI_MODEL };
   } catch (error) {
     console.warn("[research-place] synthesis failed", error instanceof Error ? error.message : "unknown error");
-    throw new Error("AI synthesis could not produce verified summaries. Please retry this place.");
+    return {
+      ...result,
+      warnings: ["AI verification was unavailable for this pass; showing exact transcript matches while preserving the source timestamp.", ...result.warnings],
+      aiModel: undefined,
+      mode: "extractive" as const
+    };
   }
 }
 
@@ -460,21 +539,63 @@ function qualifyPracticalClaims(result: PlaceResearchResult) {
   return { ...result, clips, suggestedPlan: result.suggestedPlan.map((item) => replacements.get(item) || item) };
 }
 
-function canStreamVerifiedResult(result: PlaceResearchResult) {
-  return result.mode === "ai"
-    && result.clips.length > 0
-    && result.clips.every((clip) => clip.locationVerification && clip.locationVerification.status !== "pending");
+function fixtureResultFor(place: string, city: string): PlaceResearchResult {
+  if (normalizeResearchText(place) !== "taipei 101" || normalizeResearchText(city) !== "taipei") {
+    throw new Error("Local fixture mode currently includes the Taipei 101 demo only. Clear TRIPTRACE_TEST_MODE to research another place.");
+  }
+  const demo = taipei101Demo as PlaceResearchResult;
+  return {
+    ...demo,
+    place,
+    city,
+    generatedAt: new Date().toISOString(),
+    cacheHit: false,
+    mode: "fixture",
+    aiModel: "fixture (no API call)",
+    warnings: ["Local fixture mode: this bundled snapshot avoids yt-dlp and OpenAI charges; live research still enforces the two-year video filter.", ...demo.warnings]
+  };
+}
+
+async function replayFixtureProgress(onProgress: ProgressCallback, signal: AbortSignal) {
+  const stages: Array<["search" | "screen" | "captions" | "extract" | "synthesize", string]> = [
+    ["search", "Loading the local verified demo…"],
+    ["screen", "Restoring the saved source checks…"],
+    ["captions", "Restoring timed-caption evidence…"],
+    ["extract", "Restoring category matches…"],
+    ["synthesize", "Restoring the source-backed outline…"]
+  ];
+  for (const [index, [stage, message]] of stages.entries()) {
+    onProgress(stage, message, index, 5);
+    await wait(360, undefined, { signal });
+  }
+}
+
+function canStreamResult(result: PlaceResearchResult) {
+  if (!result.clips.length) return false;
+  if (result.mode === "extractive") return true;
+  return result.clips.every((clip) => clip.locationVerification && clip.locationVerification.status !== "pending");
 }
 
 export async function researchPlace({ place, city, force = false, signal, onProgress, onPartialResult }: { place: string; city: string; force?: boolean; signal: AbortSignal; onProgress: ProgressCallback; onPartialResult?: (result: PlaceResearchResult) => void }) {
+  if (TRIPTRACE_TEST_MODE) {
+    const fixture = fixtureResultFor(place, city);
+    await replayFixtureProgress(onProgress, signal);
+    onProgress("complete", "Loaded the local verified demo without external API calls.", 5, 5);
+    onPartialResult?.(fixture);
+    return fixture;
+  }
   const { cacheDir, resultPath, semanticCachePath } = cachePaths(place, city);
   await fs.mkdir(cacheDir, { recursive: true });
   let savedResult: PlaceResearchResult | null = null;
   try {
     const cached = JSON.parse(await fs.readFile(resultPath, "utf8")) as PlaceResearchResult;
     if (Date.now() - new Date(cached.generatedAt).getTime() < CACHE_TTL_MS) {
-      savedResult = qualifyPracticalClaims(cached);
+      savedResult = qualifyPracticalClaims({
+        ...cached,
+        verification: cached.verification ? reconcileVerificationCounts(cached.verification, cached.clipCount) : undefined
+      });
       if (!force) {
+        await replayCachedProgress(onProgress, signal);
         onProgress("complete", `Loaded ${cached.sourceCount} previously verified video sources.`, 5, 5);
         return { ...savedResult, cacheHit: true };
       }
@@ -485,22 +606,28 @@ export async function researchPlace({ place, city, force = false, signal, onProg
 
   onProgress("search", `Searching travel videos for ${place}…`, 0, 5);
   const candidates = await searchCandidates(place, city, signal);
-  if (candidates.length < 3) throw new Error("Too few relevant YouTube candidates were found for this place.");
+  if (!candidates.length) throw new Error("No recent YouTube candidates were found for this place.");
 
   onProgress("screen", `Found ${candidates.length} candidates. Checking captions, channels, and embed access…`, 1, 5);
   const probed = await inBatches(candidates, 4, (candidate) => probeCandidate(candidate, signal));
   const selectedVideos = chooseVideos(probed);
-  if (selectedVideos.length < 3) throw new Error("TripTrace could not find at least three embeddable videos with English captions.");
+  if (!selectedVideos.length) throw new Error("TripTrace could not find a recent embeddable video with English captions.");
 
   onProgress("captions", `Reading timed captions from ${selectedVideos.length} videos…`, 2, 5);
   const transcripts = await inBatches(selectedVideos, 3, (video) => downloadTranscript(video, cacheDir, signal));
-  if (transcripts.length < 3) throw new Error("Fewer than three usable timed transcripts could be downloaded.");
+  if (!transcripts.length) throw new Error("No usable recent timed transcript could be downloaded.");
 
   onProgress("extract", "Matching distinct clips for why to visit, what to do, food, and practical tips…", 3, 5);
   let clips = extractResearchClips(place, transcripts);
-  if (new Set(clips.map((clip) => clip.video.id)).size < 3) throw new Error("The captions did not produce three independent, relevant source clips.");
+  if (!clips.length) throw new Error("The recent captions did not produce a relevant, source-backed clip.");
   clips = await attachStoryboardFrames(clips, selectedVideos, signal);
   let result = buildExtractiveResearchResult(place, city, clips, new Date().toISOString());
+  const earlyCoverageWarnings = [
+    ...(selectedVideos.length < 3 ? [`Only ${selectedVideos.length} recent video source${selectedVideos.length === 1 ? " was" : "s were"} available after screening.`] : []),
+    ...(transcripts.length < selectedVideos.length ? [`${selectedVideos.length - transcripts.length} screened source${selectedVideos.length - transcripts.length === 1 ? " lost" : "s lost"} its timed captions.`] : []),
+    ...(new Set(clips.map((clip) => clip.video.id)).size < 3 ? ["Fewer than three independent recent videos produced relevant clips; the result is shown as partial research."] : [])
+  ];
+  result = { ...result, warnings: [...earlyCoverageWarnings, ...result.warnings] };
   let verification = {
     videosFound: candidates.length,
     captionedVideos: transcripts.length,
@@ -513,28 +640,29 @@ export async function researchPlace({ place, city, force = false, signal, onProg
 
   onProgress("synthesize", "Building a source-backed visit outline without changing any timestamps…", 4, 5);
   const synthesizedInitial = await synthesizeResult(result, semanticCachePath);
-  verification.evidenceMatches = synthesizedInitial.clipCount;
+  verification.evidenceMatches = synthesizedInitial.mode === "ai" ? synthesizedInitial.clipCount : 0;
   verification.rejectedEvidenceOrRanking = Math.max(0, verification.candidateClips - verification.evidenceMatches);
   result = await applyGeospatialVerification(synthesizedInitial, cacheDir, signal);
-  verification.verifiedClips = result.clipCount;
-  verification.rejectedLocation = Math.max(0, verification.evidenceMatches - verification.verifiedClips);
+  verification.verifiedClips = result.mode === "ai" ? result.clipCount : 0;
+  verification.rejectedLocation = result.mode === "ai" ? Math.max(0, verification.evidenceMatches - verification.verifiedClips) : 0;
   verification = reconcileVerificationCounts(verification, result.clipCount);
-  result = { ...result, aiModel: OPENAI_MODEL, verification: { ...verification } };
-  if (canStreamVerifiedResult(result)) onPartialResult?.(result);
+  result = { ...result, aiModel: result.mode === "ai" ? OPENAI_MODEL : undefined, verification: { ...verification } };
+  if (canStreamResult(result)) onPartialResult?.(result);
 
   const firstMissing = missingIntents(result);
-  if (firstMissing.length || result.sourceCount < MIN_VERIFIED_SOURCES) {
+  const shouldRefill = TRIPTRACE_RUNTIME === "production" || process.env.TRIPTRACE_ALLOW_DEV_REFILL === "1";
+  if (shouldRefill && result.mode === "ai" && (firstMissing.length || result.sourceCount < TARGET_VERIFIED_SOURCES)) {
     const refillIntents = firstMissing.length ? firstMissing : ALL_INTENTS;
     onProgress("extract", `Adding new video sources for ${firstMissing.length ? intentLabels(firstMissing) : "source diversity"}…`, 4, 5);
     const extraCandidates = await searchCandidates(place, city, signal, {
       intents: refillIntents,
       excludeIds: new Set(selectedVideos.map((video) => video.id)),
       refill: true,
-      maxCandidates: 10,
+      maxCandidates: 18,
       relatedTerms: relatedPlaceTerms(result)
     });
     const extraProbed = await inBatches(extraCandidates, 4, (candidate) => probeCandidate(candidate, signal));
-    const extraVideos = chooseVideos(extraProbed, refillIntents, 5);
+    const extraVideos = chooseVideos(extraProbed, refillIntents, 7);
     const extraTranscripts = await inBatches(extraVideos, 4, (video) => downloadTranscript(video, cacheDir, signal));
     verification.videosFound += extraCandidates.length;
     verification.captionedVideos += extraTranscripts.length;
@@ -545,22 +673,25 @@ export async function researchPlace({ place, city, force = false, signal, onProg
     if (refillClips.length) {
       const refillBase = buildExtractiveResearchResult(place, city, refillClips, result.generatedAt);
       const synthesizedRefill = await synthesizeResult(refillBase, semanticCachePath);
-      verification.evidenceMatches += synthesizedRefill.clipCount;
+      verification.evidenceMatches += synthesizedRefill.mode === "ai" ? synthesizedRefill.clipCount : 0;
       verification.rejectedEvidenceOrRanking = Math.max(0, verification.candidateClips - verification.evidenceMatches);
       const refillResult = await applyGeospatialVerification(synthesizedRefill, cacheDir, signal);
-      verification.rejectedLocation += Math.max(0, synthesizedRefill.clipCount - refillResult.clipCount);
+      if (synthesizedRefill.mode === "ai") verification.rejectedLocation += Math.max(0, synthesizedRefill.clipCount - refillResult.clipCount);
       const combinedCandidates = [...clips, ...refillClips];
       if (result.mode === "ai" && refillResult.mode === "ai") {
         const verified = [...result.clips, ...refillResult.clips].filter((clip, index, items) => items.findIndex((item) => item.id === clip.id) === index);
         const combinedBase = buildExtractiveResearchResult(place, city, combinedCandidates, result.generatedAt);
         result = buildVerifiedResearchResult(combinedBase, verified, combinedCandidates.length - verified.length);
-      } else if (result.mode === "extractive" && refillResult.mode === "extractive") {
-        result = buildExtractiveResearchResult(place, city, combinedCandidates, result.generatedAt);
+      } else {
+        result = {
+          ...buildExtractiveResearchResult(place, city, combinedCandidates, result.generatedAt),
+          warnings: ["The refill pass could not be semantically verified; showing the exact caption matches collected so far.", ...result.warnings]
+        };
       }
       clips = combinedCandidates;
       verification = reconcileVerificationCounts(verification, result.clipCount);
-      result = { ...result, aiModel: OPENAI_MODEL, verification: { ...verification } };
-      if (canStreamVerifiedResult(result)) onPartialResult?.(result);
+      result = { ...result, aiModel: result.mode === "ai" ? OPENAI_MODEL : undefined, verification: { ...verification } };
+      if (canStreamResult(result)) onPartialResult?.(result);
     }
   }
 
@@ -574,30 +705,50 @@ export async function researchPlace({ place, city, force = false, signal, onProg
       verification.candidateClips += savedFill.length;
       verification.evidenceMatches += savedFill.length;
       const verified = [...result.clips, ...savedFill].filter((clip, index, items) => items.findIndex((item) => item.id === clip.id) === index);
-      result = buildVerifiedResearchResult({ ...result, clips: verified }, verified, 0);
+      result = result.mode === "ai"
+        ? buildVerifiedResearchResult({ ...result, clips: verified }, verified, 0)
+        : buildExtractiveResearchResult(place, city, verified, result.generatedAt);
       result.warnings = ["Reused still-valid evidence from the previous seven-day research cache where live YouTube results had a category gap.", ...result.warnings];
     }
   }
 
-  const finalMissing = missingIntents(result);
-  if (!result.clips.length) throw new Error("TripTrace could not verify any usable clips for this place.");
-  if (result.mode !== "ai" || result.clips.some((clip) => !clip.locationVerification || clip.locationVerification.status === "pending")) {
-    throw new Error("TripTrace could not complete conservative location verification for every selected clip.");
+  if (!result.clips.length && clips.length) {
+    result = {
+      ...buildExtractiveResearchResult(place, city, clips, result.generatedAt),
+      warnings: ["No clip passed semantic verification in this pass; showing the exact caption matches so the research does not stop empty.", ...result.warnings]
+    };
   }
-  if (finalMissing.length || result.sourceCount < MIN_VERIFIED_SOURCES) {
+  if (!result.clips.length) throw new Error("TripTrace could not find any usable caption matches for this place.");
+  if (result.mode === "ai" && result.clips.some((clip) => !clip.locationVerification || clip.locationVerification.status === "pending")) {
+    result = {
+      ...result,
+      mode: "extractive",
+      aiModel: undefined,
+      warnings: ["Some location checks were unresolved; showing transcript evidence without presenting those clips as location-verified.", ...result.warnings]
+    };
+  }
+  const finalMissing = missingIntents(result);
+  if (finalMissing.length || result.sourceCount < TARGET_VERIFIED_SOURCES) {
     const coverage = finalMissing.length ? ` Missing: ${intentLabels(finalMissing)}.` : "";
+    const sourceGap = result.sourceCount < TARGET_VERIFIED_SOURCES
+      ? result.mode === "ai"
+        ? ` Only ${result.sourceCount} recent independent videos passed all checks; the research did not fill the target of ${TARGET_VERIFIED_SOURCES}.`
+        : ` Only ${result.sourceCount} recent independent videos produced transcript matches; the research did not fill the target of ${TARGET_VERIFIED_SOURCES}.`
+      : "";
+    const resultKind = result.mode === "ai" ? "verified clips" : "timestamped transcript matches";
     result = {
       ...result,
       warnings: [
-        `Partial research: ${result.sourceCount} independent videos produced ${result.clipCount} verified clips.${coverage}`,
+        `Partial research: ${result.sourceCount} independent videos produced ${result.clipCount} ${resultKind}.${coverage}${sourceGap}`,
         ...result.warnings
       ]
     };
   }
   verification = reconcileVerificationCounts(verification, result.clipCount);
-  result = { ...result, aiModel: OPENAI_MODEL, verification: { ...verification } };
+  result = { ...result, aiModel: result.mode === "ai" ? OPENAI_MODEL : undefined, verification: { ...verification } };
   result = qualifyPracticalClaims(result);
   await fs.writeFile(resultPath, `${JSON.stringify(result, null, 2)}\n`, "utf8");
-  onProgress("complete", `Finished with ${result.sourceCount} videos and ${result.clipCount} verified clips.`, 5, 5);
+  const completionKind = result.mode === "ai" ? "verified" : "timestamped";
+  onProgress("complete", `Finished with ${result.sourceCount} videos and ${result.clipCount} ${completionKind} clips.`, 5, 5);
   return result;
 }

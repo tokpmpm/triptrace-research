@@ -44,7 +44,7 @@ export type PlaceResearchResult = {
   clips: ResearchClip[];
   suggestedPlan: string[];
   warnings: string[];
-  mode: "ai" | "extractive";
+  mode: "ai" | "extractive" | "fixture";
   aiModel?: string;
   verification?: {
     videosFound: number;

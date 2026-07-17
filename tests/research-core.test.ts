@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { applySemanticClipAnalyses, buildExtractiveResearchResult, extractResearchClips, parseResearchJson3, reconcileVerificationCounts, type ResearchVideoTranscript } from "@/lib/research-core";
+import { applySemanticClipAnalyses, buildExtractiveResearchResult, buildVerifiedResearchResult, extractResearchClips, isRecentPublishedAt, parseResearchJson3, recentVideoCutoffDate, reconcileVerificationCounts, type ResearchVideoTranscript } from "@/lib/research-core";
+import { resolveOpenAIModel } from "@/lib/openai";
 import { researchPlaceRequestSchema } from "@/lib/schemas";
 import type { ResearchClip } from "@/types/research";
 
@@ -25,6 +26,16 @@ describe("verification funnel counts", () => {
     expect(counts.verifiedClips).toBe(7);
     expect(counts.evidenceMatches - counts.verifiedClips).toBe(counts.rejectedLocation);
     expect(counts.candidateClips - counts.evidenceMatches).toBe(counts.rejectedEvidenceOrRanking);
+  });
+});
+
+describe("model cost guardrails", () => {
+  it("hard-locks production to Luna even when a cheaper override is supplied", () => {
+    expect(resolveOpenAIModel({ runtime: "production", developmentModel: "gpt-5.4-nano" })).toBe("gpt-5.6-luna");
+  });
+
+  it("uses the explicitly selected development model", () => {
+    expect(resolveOpenAIModel({ runtime: "development", developmentModel: "gpt-5.4-nano" })).toBe("gpt-5.4-nano");
   });
 });
 
@@ -60,6 +71,16 @@ const videos: ResearchVideoTranscript[] = [
 ];
 
 describe("new-place transcript research", () => {
+  it("keeps only videos published within the rolling two-year window", () => {
+    const now = new Date("2026-07-17T12:00:00.000Z");
+    expect(recentVideoCutoffDate(now)).toBe("2024-07-17");
+    expect(isRecentPublishedAt("2024-07-17", now)).toBe(true);
+    expect(isRecentPublishedAt("2024-07-16", now)).toBe(false);
+    expect(isRecentPublishedAt("2023-07-21", now)).toBe(false);
+    expect(isRecentPublishedAt("2024-02-30", now)).toBe(false);
+    expect(isRecentPublishedAt(undefined, now)).toBe(false);
+  });
+
   it("parses timed YouTube JSON3 events without inventing timestamps", () => {
     expect(parseResearchJson3({ events: [
       { tStartMs: 12500, dDurationMs: 2500, segs: [{ utf8: "Timed " }, { utf8: "caption" }] },
@@ -269,6 +290,51 @@ describe("new-place transcript research", () => {
     const clips = extractResearchClips("Dadaocheng", [queueVideo]);
     expect(clips.some((clip) => clip.intent === "practical_tip" && clip.video.id === queueVideo.id)).toBe(true);
   });
+
+  it("opens a food clip near the topic lead-in instead of the last tasting sentence", () => {
+    const wheelCakeVideo = baseVideo({
+      id: "wheel-cake-123",
+      title: "Dadaocheng food walk and wheel cakes",
+      channelName: "Taipei Food Notes",
+      searchIntents: ["food"],
+      cues: [
+        { startSeconds: 171.5, endSeconds: 174.5, text: "I still prefer the wheel cake with sweet filling." },
+        { startSeconds: 174.5, endSeconds: 180.7, text: "Our last wheel cake in Dihua Street is the sweet potato flavor, that's my favorite." },
+        { startSeconds: 180.7, endSeconds: 181.9, text: "Taste test." },
+        { startSeconds: 181.9, endSeconds: 187, text: "The outer layer is very crispy." },
+        { startSeconds: 187, endSeconds: 191.8, text: "The inner layer is full of the filling." },
+        { startSeconds: 191.8, endSeconds: 196.2, text: "The sweet potato is not so sweet; you can taste the original taste." },
+        { startSeconds: 196.2, endSeconds: 199.4, text: "They didn't add much sugar in the filling." }
+      ]
+    });
+
+    const clips = extractResearchClips("Dadaocheng", [wheelCakeVideo]).filter((clip) => clip.intent === "food");
+    expect(clips.length).toBeGreaterThan(0);
+    expect(Math.min(...clips.map((clip) => clip.startSeconds))).toBeLessThanOrEqual(172);
+    expect(clips.some((clip) => /last wheel cake|sweet potato/i.test(clip.exactQuote))).toBe(true);
+  });
+
+  it("keeps a third independent source per category when it is verified", () => {
+    const clips = ["one", "two", "three"].map((id) => ({
+      id: `clip-${id}`,
+      intent: "food" as const,
+      title: `Food ${id}`,
+      takeaway: `Takeaway ${id}`,
+      startSeconds: 30,
+      endSeconds: 60,
+      exactQuote: `Dadaocheng has a named food recommendation from source ${id}.`,
+      contextText: "Dadaocheng food context.",
+      locationContext: "Dadaocheng.",
+      captionTrack: "creator" as const,
+      language: "en",
+      video: { id: `video-${id}`, title: `Dadaocheng food ${id}`, channelName: `Channel ${id}`, thumbnailUrl: "https://example.com/thumb.jpg" },
+      locationVerification: { poiName: "Dadaocheng", relationship: "queried_place" as const, evidence: "Dadaocheng", status: "same_place" as const, distanceMeters: 0 }
+    }));
+    const result = buildExtractiveResearchResult("Dadaocheng", "Taipei", clips, "2026-07-17T00:00:00.000Z");
+    const verified = buildVerifiedResearchResult({ ...result, mode: "ai" }, clips, 0);
+    expect(verified.clips.filter((clip) => clip.intent === "food")).toHaveLength(3);
+    expect(verified.sourceCount).toBe(3);
+  });
 });
 
 describe("new-place request validation", () => {
@@ -401,6 +467,41 @@ describe("semantic title verification", () => {
     }]);
 
     expect(verified.clips.map((item) => item.id)).toEqual(["routing"]);
+  });
+
+  it("keeps a place-level reason to visit when the title uses natural language instead of a why keyword", () => {
+    const clip = makeClip(
+      "ximending-why",
+      "why_visit",
+      "Ximending Taipei evening walk",
+      "Ximending is vibrant and lively, with colorful lights, late-night shops, and a lively atmosphere that makes the area worth visiting."
+    );
+    const result = buildExtractiveResearchResult("Ximending", "Taipei", [clip], "2026-07-17T00:00:00.000Z");
+    const verified = applySemanticClipAnalyses(result, [{
+      clipId: "ximending-why",
+      intent: "why_visit",
+      primarySubject: "Ximending",
+      title: "Ximending offers vibrant nightlife and lively streets",
+      takeaway: "Ximending feels vibrant and lively, with colorful lights and late-night shops creating a memorable atmosphere.",
+      supportQuote: "Ximending is vibrant and lively, with colorful lights, late-night shops",
+      highlights: ["vibrant", "late-night shops"],
+      mentionOnly: false,
+      placeRelevant: true,
+      confidence: 0.96
+    }]);
+
+    expect(verified.clips.map((item) => item.id)).toEqual(["ximending-why"]);
+  });
+
+  it("reports every uncovered category instead of silently presenting a complete-looking brief", () => {
+    const clip = makeClip("only-food", "food", "Dadaocheng food walk", "Dadaocheng has a famous noodle dish with a rich broth and chewy noodles worth trying.");
+    const result = buildExtractiveResearchResult("Dadaocheng", "Taipei", [clip], "2026-07-17T00:00:00.000Z");
+
+    expect(result.warnings).toEqual(expect.arrayContaining([
+      expect.stringMatching(/why-visit/i),
+      expect.stringMatching(/activity/i),
+      expect.stringMatching(/practical-tip/i)
+    ]));
   });
 
   it("rejects a title-supported clip when the key takeaway is about a different subject", () => {
