@@ -1,0 +1,4 @@
+interface:
+  display_name: "TripTrace GCP Deploy"
+  short_description: "Deploy TripTrace safely to Cloud Run"
+  default_prompt: "Use $deploy-triptrace-gcp to deploy this project to its existing GCP Cloud Run service."

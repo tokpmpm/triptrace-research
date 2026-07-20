@@ -1,0 +1,317 @@
+{
+  "place": "Shilin Night Market",
+  "city": "Taipei",
+  "overview": "8 captioned travel videos produced 9 semantically verified clips for Shilin Night Market. Each title is tied to an exact supporting quote. Named places are also checked against the requested location.",
+  "generatedAt": "2026-07-18T12:50:38.136Z",
+  "cacheHit": true,
+  "sourceCount": 8,
+  "clipCount": 9,
+  "clips": [
+    {
+      "id": "YR0-wjmA48A-why_visit-842",
+      "intent": "why_visit",
+      "startSeconds": 842,
+      "endSeconds": 896,
+      "exactQuote": "but looks like we're leaving it. I don't know. Let me go back this way. I don't want to go too far off. Um, where we go, guys? So, here we are, guys. The oldest night market in Taiwan, right? 100 years old, but this has been around. Look at the You can tell actually by the by the architecture here, guys. Check out this uh check out these uh these buildings here. Look how",
+      "contextText": "but looks like we're leaving it. I don't know. Let me go back this way. I don't want to go too far off. Um, where we go, guys? So, here we are, guys. The oldest night market in Taiwan, right? 100 years old, but this has been around. Look at the You can tell actually by the by the architecture here, guys. Check out this uh check out these uh these buildings here. Look how old this is. This is actually a nice shot. I'll bring out my camera later. Very old architecture. Um I'm sure there's a lot of history here behind all these shops. Um, this will probably be a cool place to do actual a legit tour I would say, guys. Um, like a tour, guided tour of the history here. Um, I feel like there's a lot of",
+      "locationContext": "Welcome back to the channel. Tonight, we're heading to one of the most famous night markets in all of Taiwan, Schillin Night Market in [music] Taipei. This place is legendary for its street food, wild snacks, and huge crowds that come here every night to eat and [music] explore. But is it actually worth visiting, or is it just a tourist trap? Let's walk around the market, try out some of the [music] local food, and see what the crowd is really like. Please join [music] me, and thanks for tuning in. Heading to the Shilling Night Market. We have to follow signs to Jihei Road if I'm saying that correct. I'm using my easy card. Got a little bit of money left on it. So, I might have to top it up and come back. We'll see. But very easy, guys. It literally took me two trains. It was like six stops in total for my location. So, we are near the Chile Market. And I have some facts I like to share once we approach. Let's figure out how to get there. Actually, it's quite a chilly uh evening, guys. The weather was warm all day and then now this is quite chilly right now. So,",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "YR0-wjmA48A",
+        "title": "Inside Taiwan’s CRAZIEST Night Market 🇹🇼 Shilin Night Market Street Food Tour",
+        "channelName": "Elias World Travel",
+        "thumbnailUrl": "https://i.ytimg.com/vi/YR0-wjmA48A/maxresdefault.jpg",
+        "publishedAt": "2026-03-15"
+      },
+      "title": "Explore The oldest night market in Taiwan",
+      "takeaway": "The oldest night market in Taiwan offers historic architecture and buildings that suggest a rich history behind the shops.",
+      "highlights": [
+        "The oldest night market in Taiwan offers historic"
+      ],
+      "locationVerification": {
+        "poiName": "Shilin Night Market",
+        "relationship": "queried_place",
+        "evidence": "The oldest night market in Taiwan",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=YR0-wjmA48A&t=842s"
+    },
+    {
+      "id": "YBoHV08MYVA-why_visit-1238",
+      "intent": "why_visit",
+      "startSeconds": 1238,
+      "endSeconds": 1292,
+      "exactQuote": "there are plenty of good finds there too holy moly large oh that looks good too here's more one bite fried dumplings yeah ni the shiny Night Market has over 500 stalls offering a mix of street food clothing accessories games and souvenirs it's one of the largest and most famous night markets in Taiwan oh there oyster mushrooms look at the line here for these see the oyster mushrooms not only is the food amazing",
+      "contextText": "there are plenty of good finds there too holy moly large oh that looks good too here's more one bite fried dumplings yeah ni the shiny Night Market has over 500 stalls offering a mix of street food clothing accessories games and souvenirs it's one of the largest and most famous night markets in Taiwan oh there oyster mushrooms look at the line here for these see the oyster mushrooms not only is the food amazing but there's also this beautiful Temple here as well it seems to be a gathering spot for locals that are visiting the market look at this Temple baby huh wow after seeing the temple we continued on through the market and it was time to try another local treat want to get the peanut ice cream hole Yeah you want to get it here all right guys we've heard a lot about this peanut roll ice cream and",
+      "locationContext": "in today's video we are taking the MRT green line from the zimand ding walking District transferring to the red line and ending up at the shyland night market this Market has a lot of fun games smiling faces and great food to try the vibe here is like being at a smaller cleaner Time Square just look at the graphics on this giant sign all right let's get this journey started it's going to be 6:00 p.m. so you can see what the MRT is like at 6:00 p.m. when everybody's getting off of work and making their way to the markets we love how the MRT gets you anywhere in the city easily and quickly and even though it's rush hour just look at how orderly everyone is and notice how the people ride the escalator Riders on the right and walkers on the left it is also surprisingly quiet in here all right listen up if you want to know the route we were taking okay so to get to the market we're going to take the sunen zindan green line right here we're just take the escalator down remember when I told you how polite and orderly everyone is well I kind of forgot the rules oh",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "YBoHV08MYVA",
+        "title": "Shilin Night Market Food Challenge | Taipei's Most Insane Street Food",
+        "channelName": "TV Travels",
+        "thumbnailUrl": "https://i.ytimg.com/vi/YBoHV08MYVA/maxresdefault.jpg",
+        "publishedAt": "2025-03-08"
+      },
+      "title": "Discover over 500 stalls at Shilin",
+      "takeaway": "With over 500 stalls, the market combines street food, clothing, accessories, games, and souvenirs in one famous destination.",
+      "highlights": [
+        "With over 500 stalls, the market combines street"
+      ],
+      "locationVerification": {
+        "poiName": "Shilin Night Market",
+        "relationship": "queried_place",
+        "evidence": "the shiny Night Market has over 500 stalls offering a mix of street food clothing accessories games and souvenirs",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=YBoHV08MYVA&t=1238s"
+    },
+    {
+      "id": "9Ax5LnFAJ1k-activity-766",
+      "intent": "activity",
+      "startSeconds": 766,
+      "endSeconds": 820,
+      "exactQuote": "the sign we are going to turn back around and get to the food again back to the center of the temple but we're going to walk down this way there does pick up some food as we get back to the main street again uh I love this big chicken up here oh this is not familyfriendly that is not a familyfriendly stuffy back there okay uh we've got another watermelon juice stall coming up as you see in a market this big it does tend to get a little bit repetitive with the offerings although I don't know Saturday",
+      "contextText": "the sign we are going to turn back around and get to the food again back to the center of the temple but we're going to walk down this way there does pick up some food as we get back to the main street again uh I love this big chicken up here oh this is not familyfriendly that is not a familyfriendly stuffy back there okay uh we've got another watermelon juice stall coming up as you see in a market this big it does tend to get a little bit repetitive with the offerings although I don't know Saturday night I'm not sure why that watermelon juice vendor isn't open today probably mom and pop places so we're probably just sick or something like that maybe they decide to take a vacation too here you get uh some grilled meat on a stick one skewer for $25 Taiwan 5 for 100 print cheese potatoes get your potato with some cheese we've got some kind of more of",
+      "locationContext": "this is the largest Night Market in taipe Taiwan Sherin Night Market I'm going to turn the camera around so you can see what I can see and I'm going to take you inside this is the main Market building that we're going to go into in just a minute but I'm starting this tour here because if you were to take an Uber or Google Maps to shein Night Market it would bring you right to this building now this neighor it's a whole neighborhood as a night market really busy from 6:00 to midnight pretty much every I'm here in a Saturday which is definitely the busiest night at the peak of this Market's like popularity which was before Co there were over 500 stalls in and around this neighborhood and uh we've got food we've got games we've got shops but I'm starting outside this building cuz there's a cool little food Street here on the side one of the most popular you can see this long line here is for the fried chicken chop yes it's basically like the pork chop except it's a chicken chop it's fried and it's breaded uh it is 90 Taiwan dollar so",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "9Ax5LnFAJ1k",
+        "title": "Inside Taiwan's Biggest Night Market: Shilin 士林夜市",
+        "channelName": "Yellow Productions",
+        "thumbnailUrl": "https://i.ytimg.com/vi/9Ax5LnFAJ1k/maxresdefault.jpg",
+        "publishedAt": "2025-11-28"
+      },
+      "title": "Walk around and pick up some food",
+      "takeaway": "Walk down this way, return to the main street, and pick up some food while exploring the large market.",
+      "highlights": [
+        "Walk down this way, return to the main street"
+      ],
+      "locationVerification": {
+        "poiName": "Shilin Night Market",
+        "relationship": "queried_place",
+        "evidence": "as we get back to the main street again",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=9Ax5LnFAJ1k&t=766s"
+    },
+    {
+      "id": "DsWZznou5_g-activity-103",
+      "intent": "activity",
+      "startSeconds": 103,
+      "endSeconds": 157,
+      "exactQuote": "guys have tried it, but that is quite an acquired taste, not my favourite fruit to be honest and it in Shilin Night Market there's also a couple of watch shops as well that's certainly worth checking out and we will check that out in a second. Obviously this is the final video of our Taipei tour. I was here for one week meeting some clients and doing some work, and on the side you know, exploring the city",
+      "contextText": "guys have tried it, but that is quite an acquired taste, not my favourite fruit to be honest and it in Shilin Night Market there's also a couple of watch shops as well that's certainly worth checking out and we will check that out in a second. Obviously this is the final video of our Taipei tour. I was here for one week meeting some clients and doing some work, and on the side you know, exploring the city and Taipei, got to say this is the last episode, so we'll comment a bit about Taipei in general. Beautiful city, a lot of people, people are very friendly, English you will struggle to to run around in Taiwan with just speaking English, a few words of Mandarin does help, does go a long way, some of the restaurants do have English, otherwise you just need to get",
+      "locationContext": "Spotted this second hand watch shop near my hotel on Linsen Road, so we do a quick check of what it has got here, a £8,000 2014 Yacht Master, this 2021 Sky Dweller at £16,500, we got a 2017 Sprite at £13,500, a GMT Zombie 2023 at £14,500, a beautiful looking AP in gold and here we got a Pepsi GMT 2023 at £13,.500, a Root Beer 2024 at £14,500, a Bluesy 2022 at £12,000, a black Daytona there at the back, a 2021 version at £15,500, no price on that Daytona and then we've got a Day Date President at £18,000. It's 9:10 p.m, we're here at Shilin Night Market, one of the two most famous night markets along with Raohe we discussed on episode 3. This nice",
+      "captionTrack": "creator",
+      "language": "en-GB",
+      "video": {
+        "id": "DsWZznou5_g",
+        "title": "Taipei EP4: Iconic Shilin Night Market: Watch Hunting in the Shadow of China–Taiwan Tensions",
+        "channelName": "UK Watch Reviews",
+        "thumbnailUrl": "https://i.ytimg.com/vi/DsWZznou5_g/maxresdefault.jpg",
+        "publishedAt": "2025-07-02"
+      },
+      "title": "Check out a couple of watch shops",
+      "takeaway": "Shilin Night Market has a couple of watch shops worth checking out during your exploration of Taipei’s final tour stop.",
+      "highlights": [
+        "Shilin Night Market has a couple of watch shops"
+      ],
+      "locationVerification": {
+        "poiName": "Shilin Night Market",
+        "relationship": "inside",
+        "evidence": "in Shilin Night Market there's also a couple of watch shops",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=DsWZznou5_g&t=103s"
+    },
+    {
+      "id": "ovMBdPtM48I-why_visit-521",
+      "intent": "food",
+      "startSeconds": 521,
+      "endSeconds": 575,
+      "exactQuote": "Tasty crunchy but the meat is also delicious . Winner. Okay. There is time to try. Mm. Yes, indeed. The best. Mmm. The best. What? Worth the hype, right? Mm. That's why it's famous. M. Allr. We also tasted the hot store fried chicken located here at Chili Night Market. Worth the hype. Delicious. Mm. That's delicious. I hope we're not full yet so we can have more . The size. Oh.",
+      "contextText": "Tasty crunchy but the meat is also delicious . Winner. Okay. There is time to try. Mm. Yes, indeed. The best. Mmm. The best. What? Worth the hype, right? Mm. That's why it's famous. M. Allr. We also tasted the hot store fried chicken located here at Chili Night Market. Worth the hype. Delicious. Mm. That's delicious. I hope we're not full yet so we can have more . The size. Oh. We are divided there. That's it guys, we're just sitting here for now. We're eating this. It's so delicious. The best. Don't forget to eat here. Really try it. We were just sitting right across from each other . There is a chair. There you go. Oh, there you go. That's where we sit . Delicious. Seriously. The best. Highly recommended. What does salt and pepper taste like? Mm. Plus it's crunchy. White meat. Healthy.",
+      "locationContext": "Hi guys. So welcome back to our vlog. And for this vlog guys, we're going to the Shil Night Market. There, we'll have dinner there. So, you watched this morning we bet and then this afternoon we taped Zu with my gondolas. And then now, let's go to the Shil Night Market. There, you need to be careful. Tired. Yes. Join us guys and we hope you stay tuned until the end and I hope you've eaten or if you haven't, get ready because we're going to eat or you might get hungry. We'll try a lot of Taiwanese food there again. Yes. And we hope that if you like this vlog, don't forget to",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "ovMBdPtM48I",
+        "title": "🇹🇼 First Time at Shilin Night Market | Taipei’s Biggest Night Market! | Daphne Barcelona",
+        "channelName": "Daphne Barcelona",
+        "thumbnailUrl": "https://i.ytimg.com/vi/ovMBdPtM48I/maxresdefault.jpg",
+        "publishedAt": "2026-01-28"
+      },
+      "title": "Try the hot store fried chicken",
+      "takeaway": "The hot store fried chicken at Shilin Night Market is described as delicious, crunchy, famous, and worth the hype.",
+      "highlights": [
+        "The hot store fried chicken at Shilin Night Market"
+      ],
+      "locationVerification": {
+        "poiName": "Shilin Night Market",
+        "relationship": "queried_place",
+        "evidence": "hot store fried chicken located here at Chili Night Market",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=ovMBdPtM48I&t=521s"
+    },
+    {
+      "id": "9Ax5LnFAJ1k-food-929",
+      "intent": "food",
+      "startSeconds": 929,
+      "endSeconds": 983,
+      "exactQuote": "there's no English because they're like no nobody none of the foreigners are going to eat of this place smells too bad it really does uh crispy chicken leg squid balls crispy pork balls adult crane games glad to get away from that stinky tofu stall lamb chops drink stall here grass jelly milk ice cream black tea black tea ultt we've got a sausage another sausage with sticky rice doll here on the corner and then this is like a like a milk place",
+      "contextText": "there's no English because they're like no nobody none of the foreigners are going to eat of this place smells too bad it really does uh crispy chicken leg squid balls crispy pork balls adult crane games glad to get away from that stinky tofu stall lamb chops drink stall here grass jelly milk ice cream black tea black tea ultt we've got a sausage another sausage with sticky rice doll here on the corner and then this is like a like a milk place that serves milk with boba basically what that serves um and they've also got some jelly drinks on the corner our uh our daughter the cous princess we try not to get her boba tea to get her the caffeine but she likes her Boba so we uh will get her the Boba with milk here we got a lot of various ingredients they'll uh you just kind of point to them what you want and then",
+      "locationContext": "this is the largest Night Market in taipe Taiwan Sherin Night Market I'm going to turn the camera around so you can see what I can see and I'm going to take you inside this is the main Market building that we're going to go into in just a minute but I'm starting this tour here because if you were to take an Uber or Google Maps to shein Night Market it would bring you right to this building now this neighor it's a whole neighborhood as a night market really busy from 6:00 to midnight pretty much every I'm here in a Saturday which is definitely the busiest night at the peak of this Market's like popularity which was before Co there were over 500 stalls in and around this neighborhood and uh we've got food we've got games we've got shops but I'm starting outside this building cuz there's a cool little food Street here on the side one of the most popular you can see this long line here is for the fried chicken chop yes it's basically like the pork chop except it's a chicken chop it's fried and it's breaded uh it is 90 Taiwan dollar so",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "9Ax5LnFAJ1k",
+        "title": "Inside Taiwan's Biggest Night Market: Shilin 士林夜市",
+        "channelName": "Yellow Productions",
+        "thumbnailUrl": "https://i.ytimg.com/vi/9Ax5LnFAJ1k/maxresdefault.jpg",
+        "publishedAt": "2025-11-28"
+      },
+      "title": "Try the grass jelly milk drink",
+      "takeaway": "The stall offers grass jelly milk, ice cream, black tea, sausages, sticky rice, and milk with boba for night-market visitors.",
+      "highlights": [
+        "The stall offers grass jelly milk, ice cream"
+      ],
+      "locationVerification": {
+        "poiName": "Shilin Night Market",
+        "relationship": "queried_place",
+        "evidence": "drink stall here grass jelly milk",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=9Ax5LnFAJ1k&t=929s"
+    },
+    {
+      "id": "VLxuUoPTw8k-practical_tip-555",
+      "intent": "practical_tip",
+      "startSeconds": 555,
+      "endSeconds": 609,
+      "exactQuote": "photo essential tips for navigating the night market to make the most of your shyen night market experience keep these handy tips in mind arrive early to beat the crowds the market starts to get busy as the night progresses so arriving Just Before Sunset can give you a head start this way you can enjoy the vibrant atmosphere without feeling overwhelmed by the throngs of people while the market is open until late it gets incredibly busy during peak hours the peak hours are usually between 8:00 p.m.",
+      "contextText": "photo essential tips for navigating the night market to make the most of your shyen night market experience keep these handy tips in mind arrive early to beat the crowds the market starts to get busy as the night progresses so arriving Just Before Sunset can give you a head start this way you can enjoy the vibrant atmosphere without feeling overwhelmed by the throngs of people while the market is open until late it gets incredibly busy during peak hours the peak hours are usually between 8:00 p.m. and 10: p.m. when both locals and tourists flock to the market navigating through the dense crowd can be challenging so plan your visit accordingly arriving earlier in the evening allows you to explore at a more leisurely Pace you can take your time to br through the Stalls and soak in the Lively Ambiance without feeling rushed bring cash while some vendors accept mobile payments cash is still King at Shayan KN Market many of the smaller",
+      "locationContext": "Welcome to shyen Night Market a vibrant tapestry of Taiwanese culture and Cuisine established in 1909 this iconic Market has evolved from a humble Gathering Place for locals to a bustling tourist Hotpot initially A small collection of vendors near the shyen temple the market quickly gained popularity for its diverse offerings and Lively atmosphere over the decades shein Night Market has expanded significantly drawing visitors from across the globe who come to experience its unique charm your shein night market adventure begins at the gantan MRT station exit through Exit 1 and prepare to be greeted by the sights and smells that make this market so captivating cross the intersection at J road and wendland road and you'll find yourself at the southern edge of the market follow J Road and you'll soon spot the Grand shillin Market sign marking the official entrance before you enter take a moment to admire the vibrant energy of the",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "VLxuUoPTw8k",
+        "title": "Ultimate Shilin Night Market Guide",
+        "channelName": "Topics on Hot Travel ",
+        "thumbnailUrl": "https://i.ytimg.com/vi/VLxuUoPTw8k/hqdefault.jpg",
+        "publishedAt": "2024-11-29"
+      },
+      "title": "Creator tip: Arrive early to beat the crowds",
+      "takeaway": "The creator observed: arrive early to beat the crowds; arriving just before sunset gives you a head start before peak evening hours.",
+      "highlights": [
+        "Arrive early to beat the crowds; arriving just"
+      ],
+      "locationVerification": {
+        "poiName": "Shilin Night Market",
+        "relationship": "queried_place",
+        "evidence": "arrive early to beat the crowds the market starts to get busy",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=VLxuUoPTw8k&t=555s"
+    },
+    {
+      "id": "EbVOrLbPsEk-practical_tip-57",
+      "intent": "practical_tip",
+      "startSeconds": 57,
+      "endSeconds": 111,
+      "exactQuote": "We took the S18 bus from in front of the museum to Jiantan Station ... which is just across the road from Shilin Night Market However, if you are coming from Taipei's main station ... You can take the Tamsui-Xinyi metro line toward Beitou ... and get off at Jiantan station The train ride will take about 25 minutes",
+      "contextText": "We took the S18 bus from in front of the museum to Jiantan Station ... which is just across the road from Shilin Night Market However, if you are coming from Taipei's main station ... You can take the Tamsui-Xinyi metro line toward Beitou ... and get off at Jiantan station The train ride will take about 25 minutes Several bus routes also serve the area with stops at Jiantan Station Route 218 will take you directly from Taipei Main Station to Jiantan station and cost about 15 NTD and you can pay with Easycard Watch my other video on how to get an Easycard Like most night markets in Taiwan ... the local businesses and vendors begin opening around 16:00 as students begin returning home from school ... ... as sunset approaches the city begins to light up ...",
+      "locationContext": "Hi, welcome to another video from Cheeseman Travel ... In this video, we are going to show you some of the exotic and yummy food that we eat at Shilin Night Market ... and things that we see and experience ... .. in one of the largest and most famous night markets in Taiwan. ... as well as some information to get there and navigate around the market It's going to be exciting ... ... so stick around and join us Continuing from our last video ... where we explored the National Palace Museum in Shilin District ... We took the S18 bus from in front of the museum to Jiantan Station",
+      "captionTrack": "creator",
+      "language": "en",
+      "video": {
+        "id": "EbVOrLbPsEk",
+        "title": "8 street foods that we ate at Shilin Night Market #taipei #taiwan #shilinnightmarket",
+        "channelName": "CHEESEman TRAVEL",
+        "thumbnailUrl": "https://i.ytimg.com/vi/EbVOrLbPsEk/maxresdefault.jpg",
+        "publishedAt": "2024-07-20"
+      },
+      "title": "Creator tip: Take the S18 bus to Jiantan Station",
+      "takeaway": "The creator observed: the S18 bus goes from in front of the museum to Jiantan Station, just across the road from Shilin Night Market.",
+      "highlights": [
+        "The S18 bus goes from in front of the museum"
+      ],
+      "locationVerification": {
+        "poiName": "Shilin Night Market",
+        "relationship": "queried_place",
+        "evidence": "Jiantan Station ... which is just across the road from Shilin Night Market",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=EbVOrLbPsEk&t=57s"
+    },
+    {
+      "id": "oLN5EUQN6KU-practical_tip-17",
+      "intent": "practical_tip",
+      "startSeconds": 17,
+      "endSeconds": 71,
+      "exactQuote": "in Taipei we came up here it's just about what five stops or so on the red line away from the taipan ma station just take exit one and you walk right out here we're going to go to shinin Night Market I've been to here a couple years back and it's really nice the place is massive it actually goes from the gn10 to the shinin BTS stops or MRT stops it is the it is absolutely massive you can just wander around in here for hours uh so anyway Let's cross the road and let's uh let's go enjoy the",
+      "contextText": "in Taipei we came up here it's just about what five stops or so on the red line away from the taipan ma station just take exit one and you walk right out here we're going to go to shinin Night Market I've been to here a couple years back and it's really nice the place is massive it actually goes from the gn10 to the shinin BTS stops or MRT stops it is the it is absolutely massive you can just wander around in here for hours uh so anyway Let's cross the road and let's uh let's go enjoy the [Music] night so the MRT goes right here and right over this way is is the night market so we'll walk up in here and we'll go across you can see it's has a lot of signage like I said exit one just takes you right here and you're about maybe 200 M or so away from the",
+      "locationContext": "welcome everybody today's video finds us over here in Taipei and where we are we're at the gnan MRT and we're getting ready to go over to the biggest and the best or most popular Night Market here in Taipei we came up here it's just about what five stops or so on the red line away from the taipan ma station just take exit one and you walk right out here we're going to go to shinin Night Market I've been to here a couple years back and it's really nice the place is massive it actually goes from the gn10 to the shinin BTS stops or MRT stops it is the it is absolutely massive you can just wander around in here for hours uh so anyway Let's cross the road and let's uh let's go enjoy the [Music] night so the MRT goes right here and right over this way is is the night",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "oLN5EUQN6KU",
+        "title": "Shilin Night Market 士林夜市 - Oldest & Largest in Taipei - Taiwan 2025",
+        "channelName": "Endless Journey",
+        "thumbnailUrl": "https://i.ytimg.com/vi/oLN5EUQN6KU/sddefault.jpg",
+        "publishedAt": "2025-01-15"
+      },
+      "title": "Creator tip: Take exit one for Shilin Night Market",
+      "takeaway": "The creator observed: to reach Shilin Night Market, take exit one from the red line and walk right out here.",
+      "highlights": [
+        "To reach Shilin Night Market, take exit one from",
+        "red line and walk right out here."
+      ],
+      "locationVerification": {
+        "poiName": "Shilin Night Market",
+        "relationship": "queried_place",
+        "evidence": "we're going to go to shinin Night Market",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=oLN5EUQN6KU&t=17s"
+    }
+  ],
+  "suggestedPlan": [
+    "Creator tip: Arrive early to beat the crowds",
+    "Walk around and pick up some food",
+    "Check out a couple of watch shops",
+    "Try the hot store fried chicken"
+  ],
+  "warnings": [
+    "Opening hours, prices, reservations, and temporary closures still require a current check."
+  ],
+  "mode": "ai",
+  "aiModel": "gpt-5.6-luna",
+  "sourceStatus": "verified_snapshot",
+  "verification": {
+    "videosFound": 208,
+    "captionedVideos": 49,
+    "candidateClips": 9,
+    "evidenceMatches": 9,
+    "verifiedClips": 9,
+    "rejectedEvidenceOrRanking": 0,
+    "rejectedLocation": 0
+  },
+  "snapshotVersion": 1,
+  "snapshotStatus": "verified",
+  "sourceCutoffDate": "2024-07-18",
+  "reviewAfter": "2026-07-25",
+  "demoSnapshot": true
+}

@@ -1,0 +1,1328 @@
+{
+  "entries": [
+    {
+      "place": "Dadaocheng",
+      "city": "Taipei",
+      "file": "verified/taipei-dadaocheng.json",
+      "snapshot": {
+        "place": "Dadaocheng",
+        "city": "Taipei",
+        "overview": "8 captioned travel videos produced 8 semantically verified clips for Dadaocheng. Each title is tied to an exact supporting quote.",
+        "generatedAt": "2026-07-18T14:58:32.437Z",
+        "cacheHit": true,
+        "sourceCount": 8,
+        "clipCount": 8,
+        "clips": [
+          {
+            "id": "frcjhcSxe0U-food-28",
+            "intent": "why_visit",
+            "startSeconds": 28,
+            "endSeconds": 82,
+            "exactQuote": "这裡融合了传统与创新 成为怀旧与时尚交织的场域 这一集我们走街串巷 探索大稻埕周边的商店美食 走访就是台北最大的製茶厂 更不能错过的是 各具特色的三间咖啡茶馆 跟我一起感受大稻埕的百年风华",
+            "contextText": "这裡融合了传统与创新 成为怀旧与时尚交织的场域 这一集我们走街串巷 探索大稻埕周边的商店美食 走访就是台北最大的製茶厂 更不能错过的是 各具特色的三间咖啡茶馆 跟我一起感受大稻埕的百年风华 老台北人的一天 常常都是慈圣宫前的早餐开始的 这裡是台北传统文化的起点 也是老台北人的聚集地",
+            "locationContext": "一百多年前 大稻埕是台北最繁华的物资集散地 茶叶与布料的贸易 让这片土地熠熠生辉 一百多年後 大稻埕以全新的面貌延续它的生命力 老宅咖啡厅 复古老茶馆 南北乾货铺 文创艺术小店 在保留历史建築与人文底蕴的基础上 这裡融合了传统与创新 成为怀旧与时尚交织的场域 这一集我们走街串巷 探索大稻埕周边的商店美食 走访就是台北最大的製茶厂 更不能错过的是 各具特色的三间咖啡茶馆 跟我一起感受大稻埕的百年风华",
+            "captionTrack": "creator",
+            "language": "zh-CN",
+            "englishPresentation": {
+              "title": "Dadaocheng, where tradition meets innovation",
+              "takeaway": "Dadaocheng blends tradition and innovation into a district where nostalgia and contemporary style meet, while preserving more than a century of history.",
+              "exactQuote": "Here, tradition and innovation come together, creating a place where nostalgia and fashion intertwine. In this episode, we walk the streets and alleys to explore the shops and food around Dadaocheng, visit Taipei's largest tea factory, and discover three distinctive coffee and tea houses. Come experience Dadaocheng's century-old charm with me.",
+              "highlights": [
+                "tradition and innovation come together",
+                "nostalgia and fashion intertwine",
+                "Dadaocheng's century-old charm"
+              ],
+              "channelName": "Miffy's Journey"
+            },
+            "video": {
+              "id": "frcjhcSxe0U",
+              "title": "2025大稻埕景點美食攻略｜16個必逛必吃景點，迪化街老屋咖啡茶館推薦｜台北旅遊必去 ｜Taipei travel guide2025|taipeitravel #dadaocheng",
+              "channelName": "米菲看世界Miffy’s journey",
+              "thumbnailUrl": "https://i.ytimg.com/vi/frcjhcSxe0U/maxresdefault.jpg",
+              "publishedAt": "2025-01-22"
+            },
+            "title": "传统与创新交织的大稻埕",
+            "takeaway": "大稻埕融合传统与创新，成为怀旧与时尚交织的场域，并展现百年风华。",
+            "highlights": [
+              "大稻埕融合传统与创新",
+              "成为怀旧与时尚交织的场域",
+              "并展现百年风华"
+            ],
+            "locationVerification": {
+              "poiName": "Dadaocheng",
+              "relationship": "queried_place",
+              "evidence": "探索大稻埕周边的商店美食",
+              "evidenceSource": "transcript",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=frcjhcSxe0U&t=28s"
+          },
+          {
+            "id": "4Nw3JXwEVKU-why_visit-249",
+            "intent": "why_visit",
+            "startSeconds": 249,
+            "endSeconds": 303,
+            "exactQuote": "needed, and I did a lot of shooting. You can do it faster, but why would you? It's just beautiful. And we are not done with this video yet. Just like on my first day in Taipei many years ago, I am heading to Dadaocheng to check out Dihua Street. As you see, it got dark, and I am now in Dadaocheng, a very famous tourist area. They used to build ships here, but now it is an outgoing district. Dadaocheng is a famous nightlife area with many pop-up bars. On a normal day, it reminds me a bit of a beer",
+            "contextText": "needed, and I did a lot of shooting. You can do it faster, but why would you? It's just beautiful. And we are not done with this video yet. Just like on my first day in Taipei many years ago, I am heading to Dadaocheng to check out Dihua Street. As you see, it got dark, and I am now in Dadaocheng, a very famous tourist area. They used to build ships here, but now it is an outgoing district. Dadaocheng is a famous nightlife area with many pop-up bars. On a normal day, it reminds me a bit of a beer garden back home. But tonight is special, and as you may realize, it is super busy today. There are more people here than usual. It is literally packed with people everywhere. The reason is today there are some fireworks that we got to check out right now. [Applause] [Music] [Applause] [Music]",
+            "locationContext": "After 5 years, I finally had time to return to the Elephant Mountain. This was the very first spot that I visited in Taipei, and I recommend that you do the same. See all the details in this video. In this video, I recreate my first day in Taiwan, exploring Elephant Mountain and Dadaocheng in Datong. So many good memories, and an ideal start for your trip to Taipei. But be warned, I came as a tourist and ended up living here permanently. [Music] Hey there, and welcome back to the Traveling Kunz YouTube channel. I'm your host, Ferdinand, and today I am checking out Elephant Mountain. I just arrived and left the Metro. I am now in the park, and it is time to hike up",
+            "captionTrack": "creator",
+            "language": "en-US",
+            "video": {
+              "id": "4Nw3JXwEVKU",
+              "title": "Taipei Travel Guide - 2 Spots for Your First Taiwan Trip - Elephant Mountain & Dadaocheng (象山 & 大稻埕)",
+              "channelName": "Traveling Kunz",
+              "thumbnailUrl": "https://i.ytimg.com/vi/4Nw3JXwEVKU/maxresdefault.jpg",
+              "publishedAt": "2024-09-01"
+            },
+            "title": "Dadaocheng is a famous nightlife area",
+            "takeaway": "The creator describes Dadaocheng as a famous nightlife area with many pop-up bars and compares it to a beer garden back home.",
+            "highlights": [
+              "many pop-up bars",
+              "a beer garden back home"
+            ],
+            "locationVerification": {
+              "poiName": "Dadaocheng",
+              "relationship": "queried_place",
+              "evidence": "I am now in Dadaocheng, a very famous tourist area.",
+              "evidenceSource": "transcript",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=4Nw3JXwEVKU&t=249s"
+          },
+          {
+            "id": "btZPB8MJfys-activity-6",
+            "intent": "activity",
+            "startSeconds": 6,
+            "endSeconds": 59,
+            "exactQuote": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter",
+            "contextText": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights century old buildings glow under lantern light red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+            "locationContext": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights century old buildings glow under lantern light red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+            "captionTrack": "creator",
+            "language": "en-US",
+            "video": {
+              "id": "btZPB8MJfys",
+              "title": "【TaipeiWalk】EP.27 Dihua St to Ningxia Night Market | 台北迪化街→寧夏夜市・從大稻埕老街夜色走進熱鬧夜市 | 4K | 2025",
+              "channelName": "Wasabi Walk",
+              "thumbnailUrl": "https://i.ytimg.com/vi/btZPB8MJfys/maxresdefault.jpg",
+              "publishedAt": "2026-06-28"
+            },
+            "title": "Walking east through Dadaocheng at night",
+            "takeaway": "At night, walk east from Dadaocheng Dihua Street as crowds increase, quiet streets become nightlife scenes, and food aromas spread.",
+            "highlights": [
+              "At night, walk east from Dadaocheng Dihua Street",
+              "crowds increase",
+              "quiet streets become nightlife scenes"
+            ],
+            "locationVerification": {
+              "poiName": "Dadaocheng",
+              "relationship": "queried_place",
+              "evidence": "At night Dadaocheng Dihua Street shifts rhythm",
+              "evidenceSource": "transcript",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=btZPB8MJfys&t=6s"
+          },
+          {
+            "id": "FO9MQmRffmM-activity-72",
+            "intent": "activity",
+            "startSeconds": 72,
+            "endSeconds": 126,
+            "exactQuote": "are perfect for a leisurely stroll. A new lifestyle scene to slowly explore. Come and follow us for a day of Dadaocheng Come walk around with us. For our first stop, we arrived at Cisheng Temple in Dadaocheng It's right here And this temple, has been here since 1866 I can still see on it a juren (provincial exam graduate)",
+            "contextText": "are perfect for a leisurely stroll. A new lifestyle scene to slowly explore. Come and follow us for a day of Dadaocheng Come walk around with us. For our first stop, we arrived at Cisheng Temple in Dadaocheng It's right here And this temple, has been here since 1866 I can still see on it a juren (provincial exam graduate) and from the Tongzhi era Mm, the Tongzhi period But when people come here, aside from worshipping, there's another very important attraction which is that there are many delicious foods here This is Bao'an Street This place is known as a top snack hotspot Only a short stretch, under 100 meters There are over a dozen popular food stalls gathered here. It's like an outdoor food street.",
+            "locationContext": "Hi everyone, welcome back to Yang Yang's channel Taipei's 12 districts Each district has its own story and style We've already been to places like Wanhua Beitou In the last episode and Songshan This time we've come to Datong District Datong District has two iconic spots like Dalongdong There is also the familiar Dadaocheng The name Dadaocheng comes from earlier times when it was a space for drying rice Back then, with the opening of the Tamsui port this area became Taipei's most prosperous commercial center The tea and textile businesses",
+            "captionTrack": "creator",
+            "language": "en",
+            "video": {
+              "id": "FO9MQmRffmM",
+              "title": "大稻埕每間都經典，走28站吃喝逛好逛滿｜最好吃油飯・小京都咖啡店Ura・蔥油餅・黑膠復古老宅・觀光客必喝咖啡・現做潤餅＋白湯豬腳麵線｜Taipei VLOG｜yang and yang",
+              "channelName": "yang and yang",
+              "thumbnailUrl": "https://i.ytimg.com/vi/FO9MQmRffmM/maxresdefault.jpg",
+              "publishedAt": "2025-11-09"
+            },
+            "title": "Visit Cisheng Temple in Dadaocheng",
+            "takeaway": "Visit Cisheng Temple in Dadaocheng, a temple that has been there since 1866 and serves as the video's first stop.",
+            "highlights": [
+              "Visit Cisheng Temple in Dadaocheng",
+              "has been there since 1866",
+              "the video's first stop"
+            ],
+            "locationVerification": {
+              "poiName": "Dadaocheng",
+              "relationship": "inside",
+              "evidence": "we arrived at Cisheng Temple in Dadaocheng",
+              "evidenceSource": "transcript",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=FO9MQmRffmM&t=72s"
+          },
+          {
+            "id": "2xMEkcpCgqA-food-217",
+            "intent": "food",
+            "startSeconds": 217,
+            "endSeconds": 270,
+            "exactQuote": "It's really a good deal There are soup noodles and stir-fried side dishes eat pasta It turns out that there are also shops where many people drink coffee. The price is also low Iced drip coffee NTD 100 This restaurant specializes in pork All are pork From cooked to raw food Look at the pork sausage",
+            "contextText": "It's really a good deal There are soup noodles and stir-fried side dishes eat pasta It turns out that there are also shops where many people drink coffee. The price is also low Iced drip coffee NTD 100 This restaurant specializes in pork All are pork From cooked to raw food Look at the pork sausage There is also a stall here that serves sushi and sashimi The store is smaller I originally wanted to try crepes Turns out it’s closed in the fall Until the 23rd This stall is famous for its buns I see many people choosing to eat Thousand Layer Steamed Buns There is custard filling inside",
+            "locationContext": "(music) This morning we came to Dadaocheng There is a very famous market It's called Yongle Market The shop only opens in the morning So if you want to eat, you have to come in the morning There are also some famous shops there. Let's find a restaurant called Marutaka Sashimi Shop see many people I'll go over and take a look first right here Looks like there's a queue The store opened at 9 a.m. But please note that they are closed on Mondays At the counter you can clearly see the chef working.",
+            "captionTrack": "creator",
+            "language": "en",
+            "englishPresentation": {
+              "channelName": "The Walk Street Channel"
+            },
+            "video": {
+              "id": "2xMEkcpCgqA",
+              "title": "【台北旅行】大稻埕迪化街一日怎安排？人氣美食推介！中西合璧的獨特建築風格！ 充滿日式昭和風情的小店！【Taipei Travel】DIHUA STREET walking tour #heritage",
+              "channelName": "The Walk Street Channel 玩行街頻道",
+              "thumbnailUrl": "https://i.ytimg.com/vi/2xMEkcpCgqA/maxresdefault.jpg",
+              "publishedAt": "2024-10-13"
+            },
+            "title": "Try Iced drip coffee in Dihua Street",
+            "takeaway": "The Dihua Street restaurant offers Iced drip coffee for NTD 100 and specializes in pork, including pork sausage.",
+            "highlights": [
+              "The Dihua Street restaurant offers Iced drip",
+              "coffee for NTD 100 and specializes in pork,",
+              "including pork sausage."
+            ],
+            "locationVerification": {
+              "poiName": "Dadaocheng",
+              "relationship": "inside",
+              "evidence": "Dihua Street",
+              "evidenceSource": "video_title",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=2xMEkcpCgqA&t=217s"
+          },
+          {
+            "id": "DegR9CsYttU-food-31",
+            "intent": "food",
+            "startSeconds": 31,
+            "endSeconds": 85,
+            "exactQuote": "一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔",
+            "contextText": "一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔 淋上麵糊炸成的一個餅 我們還點了韭菜條和糯米腸 先吃韭菜條 看起來很吸引，滿滿的韭菜 韭菜條的麵皮比較厚 但裡面的韭菜很嫩 有新鮮的韭菜香味 完全沒有渣，好吃 來吃蚵嗲吧",
+            "locationContext": ". Hello 大家好，我是士多貓Joys 我是Alan 今天來到迪化街（大稻埕） 來吃一些放在口袋名單很久的東西 迪化街有很多又美又古典的餐廳 迪化街有很多又美又古典的餐廳 我們有很多口袋名單想試 這支影片會吃很多家我們想吃的餐廳 來看看是否真的好吃 我們也不知道好不好吃 一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔 淋上麵糊炸成的一個餅",
+            "captionTrack": "creator",
+            "language": "zh-HK",
+            "englishPresentation": {
+              "title": "Try traditional oyster fritters on Dihua Street",
+              "takeaway": "Cai Ji on Dihua Street serves traditional Taiwanese oyster fritters made with cabbage, Chinese chives, and oysters.",
+              "exactQuote": "Let's go and try it. Two years ago, we made a video recommending sights and food on Dihua Street, which you can also refer to. Beside Yongle Market is Cai Ji Traditional Dihua Street Oyster Fritters, a classic Taiwanese snack. An oyster fritter is made with cabbage, Chinese chives, and oysters.",
+              "highlights": [
+                "Cai Ji Traditional Dihua Street Oyster Fritters",
+                "a classic Taiwanese snack",
+                "cabbage, Chinese chives, and oysters"
+              ],
+              "channelName": "Store Cat TV"
+            },
+            "video": {
+              "id": "DegR9CsYttU",
+              "title": "【台灣旅行】大稻埕迪化街必吃10樣隱藏美食2026，不吃可惜！推薦在台港人開的咖啡店",
+              "channelName": "士多貓TV",
+              "thumbnailUrl": "https://i.ytimg.com/vi/DegR9CsYttU/maxresdefault.jpg",
+              "publishedAt": "2026-07-11"
+            },
+            "title": "Eat 蔡記迪化街古早味蚵嗲",
+            "takeaway": "迪化街有蔡記迪化街古早味蚵嗲，是台灣的古早小吃，蚵嗲包括高麗菜、韭菜和蚵仔。",
+            "highlights": [
+              "迪化街有蔡記迪化街古早味蚵嗲，是台灣的古早小吃，蚵嗲包括高麗菜、韭菜和蚵仔。"
+            ],
+            "locationVerification": {
+              "poiName": "Dadaocheng",
+              "relationship": "inside",
+              "evidence": "迪化街",
+              "evidenceSource": "video_title",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=DegR9CsYttU&t=31s"
+          },
+          {
+            "id": "gBV3XgzzBC0-practical_tip-13",
+            "intent": "practical_tip",
+            "startSeconds": 13,
+            "endSeconds": 67,
+            "exactQuote": "snacks in this video we'll be revealing Tai's most epic four floor wholesale decoration shop in Lunar New Year's secret that's hidden in plain sight dewa street is really easy to get to once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free shuttle bus but during Lunar New Year basically everyone's heading the same direction so you can just follow the crowd it's basically just around a 10 to 15 minute walk from the station so I don't think that you really need to take a shuttle there's huge traffic jam here we're going to buy that souvenir later that's a really famous Taiwanese egg roll we're going to go there right now everyone's here taking photos so we're going to go to this place so line up lineup starts over here this place is",
+            "contextText": "snacks in this video we'll be revealing Tai's most epic four floor wholesale decoration shop in Lunar New Year's secret that's hidden in plain sight dewa street is really easy to get to once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free shuttle bus but during Lunar New Year basically everyone's heading the same direction so you can just follow the crowd it's basically just around a 10 to 15 minute walk from the station so I don't think that you really need to take a shuttle there's huge traffic jam here we're going to buy that souvenir later that's a really famous Taiwanese egg roll we're going to go there right now everyone's here taking photos so we're going to go to this place so line up lineup starts over here this place is",
+            "locationContext": "it's pure Madness at taies Dew street it's our tradition to visit every year to shop for New Year decorations and snacks in this video we'll be revealing Tai's most epic four floor wholesale decoration shop in Lunar New Year's secret that's hidden in plain sight dewa street is really easy to get to once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free shuttle bus but during Lunar New Year basically everyone's heading the same direction so you can just follow the crowd it's basically just around a 10 to 15 minute walk from the station so I don't think that you really need to take a shuttle there's huge traffic jam here we're going to buy that souvenir later that's a really famous Taiwanese egg roll we're going to go there right now everyone's here taking photos so we're going to go to this",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "gBV3XgzzBC0",
+              "title": "We Braved Taiwan's CRAZIEST Market: Dihua Street Before Lunar New Year",
+              "channelName": "Bodhi Explorers",
+              "thumbnailUrl": "https://i.ytimg.com/vi/gBV3XgzzBC0/maxresdefault.jpg",
+              "publishedAt": "2025-01-26"
+            },
+            "title": "Creator tip: The 10 to 15 minute walk from the station",
+            "takeaway": "The creator says the 10 to 15 minute walk from the station means you do not really need to take a shuttle.",
+            "highlights": [
+              "The creator says the 10 to 15 minute walk from the",
+              "station means you do not really need to take a",
+              "shuttle."
+            ],
+            "locationVerification": {
+              "poiName": "Dadaocheng",
+              "relationship": "inside",
+              "evidence": "Dihua Street",
+              "evidenceSource": "video_title",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=gBV3XgzzBC0&t=13s"
+          },
+          {
+            "id": "O_KsRhOE8Gs-practical_tip-36",
+            "intent": "practical_tip",
+            "startSeconds": 36,
+            "endSeconds": 90,
+            "exactQuote": "Hello, we're JS. Today's video shows us strolling through Taipei's Dadaocheng district. Exploring a wonderful day of experiences. There are so many local delicacies, quality shops, and old houses and alleyways that we love. We wanted to share these leisurely moments with everyone. So I edited this video to reflect my daily life. I hope you can relax and enjoy it to the end. If you have favorite Taiwanese local delicacies, quality restaurants, or old houses and alleyways, please leave a comment and share your experiences with us. Tourists taking the MRT to Beimen Station or Daqiaotou Station Dadaocheng Street is about a 5-minute walk away. Okay, let's begin our journey to Taipei's Dadaocheng! This morning, I discovered a coffee shop in the ABC building that's currently in its trial operation.",
+            "contextText": "Hello, we're JS. Today's video shows us strolling through Taipei's Dadaocheng district. Exploring a wonderful day of experiences. There are so many local delicacies, quality shops, and old houses and alleyways that we love. We wanted to share these leisurely moments with everyone. So I edited this video to reflect my daily life. I hope you can relax and enjoy it to the end. If you have favorite Taiwanese local delicacies, quality restaurants, or old houses and alleyways, please leave a comment and share your experiences with us. Tourists taking the MRT to Beimen Station or Daqiaotou Station Dadaocheng Street is about a 5-minute walk away. Okay, let's begin our journey to Taipei's Dadaocheng! This morning, I discovered a coffee shop in the ABC building that's currently in its trial operation.",
+            "locationContext": "Hello, we're JS. Today's video shows us strolling through Taipei's Dadaocheng district. Exploring a wonderful day of experiences. There are so many local delicacies, quality shops, and old houses and alleyways that we love. We wanted to share these leisurely moments with everyone. So I edited this video to reflect my daily life.",
+            "captionTrack": "creator",
+            "language": "en",
+            "englishPresentation": {
+              "channelName": "JS Travel Journal"
+            },
+            "video": {
+              "id": "O_KsRhOE8Gs",
+              "title": "漫步台北大稻埕，探索老宅巷弄的台灣美食！擔仔麵．杏仁豆腐．魚丸湯．咖啡．魯肉飯．蔥油餅．油飯｜大同區．迪化街．永樂市場．捷運．北門站．大橋頭站｜度小月．大稻埕魯肉飯．滋養和菓子．夏樹甜品｜JSの旅途中",
+              "channelName": "JSの旅途中",
+              "thumbnailUrl": "https://i.ytimg.com/vi/O_KsRhOE8Gs/maxresdefault.jpg",
+              "publishedAt": "2025-08-08"
+            },
+            "title": "Creator tip: Dadaocheng Street is about a 5-minute walk away",
+            "takeaway": "The creator says Dadaocheng Street is about a 5-minute walk away from Beimen Station or Daqiaotou Station.",
+            "highlights": [
+              "The creator says Dadaocheng Street is about a 5",
+              "minute walk away from Beimen Station or Daqiaotou",
+              "Station."
+            ],
+            "locationVerification": {
+              "poiName": "Dadaocheng",
+              "relationship": "queried_place",
+              "evidence": "Today's video shows us strolling through Taipei's Dadaocheng district.",
+              "evidenceSource": "transcript",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=O_KsRhOE8Gs&t=36s"
+          }
+        ],
+        "suggestedPlan": [
+          "Creator tip: The 10 to 15 minute walk from the station",
+          "Walking east through Dadaocheng at night",
+          "Visit Cisheng Temple in Dadaocheng",
+          "Try Iced drip coffee in Dihua Street"
+        ],
+        "warnings": [
+          "Opening hours, prices, reservations, and temporary closures still require a current check."
+        ],
+        "mode": "ai",
+        "aiModel": "gpt-5.6-luna",
+        "sourceStatus": "verified_snapshot",
+        "verification": {
+          "videosFound": 857,
+          "captionedVideos": 138,
+          "candidateClips": 19,
+          "evidenceMatches": 8,
+          "verifiedClips": 8,
+          "rejectedEvidenceOrRanking": 11,
+          "rejectedLocation": 0
+        },
+        "snapshotVersion": 1,
+        "snapshotStatus": "verified",
+        "sourceCutoffDate": "2024-07-18",
+        "reviewAfter": "2026-07-25",
+        "demoSnapshot": true
+      }
+    },
+    {
+      "place": "Shilin Night Market",
+      "city": "Taipei",
+      "file": "verified/taipei-shilin-night-market.json",
+      "snapshot": {
+        "place": "Shilin Night Market",
+        "city": "Taipei",
+        "overview": "8 captioned travel videos produced 9 semantically verified clips for Shilin Night Market. Each title is tied to an exact supporting quote. Named places are also checked against the requested location.",
+        "generatedAt": "2026-07-18T12:50:38.136Z",
+        "cacheHit": true,
+        "sourceCount": 8,
+        "clipCount": 9,
+        "clips": [
+          {
+            "id": "YR0-wjmA48A-why_visit-842",
+            "intent": "why_visit",
+            "startSeconds": 842,
+            "endSeconds": 896,
+            "exactQuote": "but looks like we're leaving it. I don't know. Let me go back this way. I don't want to go too far off. Um, where we go, guys? So, here we are, guys. The oldest night market in Taiwan, right? 100 years old, but this has been around. Look at the You can tell actually by the by the architecture here, guys. Check out this uh check out these uh these buildings here. Look how",
+            "contextText": "but looks like we're leaving it. I don't know. Let me go back this way. I don't want to go too far off. Um, where we go, guys? So, here we are, guys. The oldest night market in Taiwan, right? 100 years old, but this has been around. Look at the You can tell actually by the by the architecture here, guys. Check out this uh check out these uh these buildings here. Look how old this is. This is actually a nice shot. I'll bring out my camera later. Very old architecture. Um I'm sure there's a lot of history here behind all these shops. Um, this will probably be a cool place to do actual a legit tour I would say, guys. Um, like a tour, guided tour of the history here. Um, I feel like there's a lot of",
+            "locationContext": "Welcome back to the channel. Tonight, we're heading to one of the most famous night markets in all of Taiwan, Schillin Night Market in [music] Taipei. This place is legendary for its street food, wild snacks, and huge crowds that come here every night to eat and [music] explore. But is it actually worth visiting, or is it just a tourist trap? Let's walk around the market, try out some of the [music] local food, and see what the crowd is really like. Please join [music] me, and thanks for tuning in. Heading to the Shilling Night Market. We have to follow signs to Jihei Road if I'm saying that correct. I'm using my easy card. Got a little bit of money left on it. So, I might have to top it up and come back. We'll see. But very easy, guys. It literally took me two trains. It was like six stops in total for my location. So, we are near the Chile Market. And I have some facts I like to share once we approach. Let's figure out how to get there. Actually, it's quite a chilly uh evening, guys. The weather was warm all day and then now this is quite chilly right now. So,",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "YR0-wjmA48A",
+              "title": "Inside Taiwan’s CRAZIEST Night Market 🇹🇼 Shilin Night Market Street Food Tour",
+              "channelName": "Elias World Travel",
+              "thumbnailUrl": "https://i.ytimg.com/vi/YR0-wjmA48A/maxresdefault.jpg",
+              "publishedAt": "2026-03-15"
+            },
+            "title": "Explore The oldest night market in Taiwan",
+            "takeaway": "The oldest night market in Taiwan offers historic architecture and buildings that suggest a rich history behind the shops.",
+            "highlights": [
+              "The oldest night market in Taiwan offers historic"
+            ],
+            "locationVerification": {
+              "poiName": "Shilin Night Market",
+              "relationship": "queried_place",
+              "evidence": "The oldest night market in Taiwan",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=YR0-wjmA48A&t=842s"
+          },
+          {
+            "id": "YBoHV08MYVA-why_visit-1238",
+            "intent": "why_visit",
+            "startSeconds": 1238,
+            "endSeconds": 1292,
+            "exactQuote": "there are plenty of good finds there too holy moly large oh that looks good too here's more one bite fried dumplings yeah ni the shiny Night Market has over 500 stalls offering a mix of street food clothing accessories games and souvenirs it's one of the largest and most famous night markets in Taiwan oh there oyster mushrooms look at the line here for these see the oyster mushrooms not only is the food amazing",
+            "contextText": "there are plenty of good finds there too holy moly large oh that looks good too here's more one bite fried dumplings yeah ni the shiny Night Market has over 500 stalls offering a mix of street food clothing accessories games and souvenirs it's one of the largest and most famous night markets in Taiwan oh there oyster mushrooms look at the line here for these see the oyster mushrooms not only is the food amazing but there's also this beautiful Temple here as well it seems to be a gathering spot for locals that are visiting the market look at this Temple baby huh wow after seeing the temple we continued on through the market and it was time to try another local treat want to get the peanut ice cream hole Yeah you want to get it here all right guys we've heard a lot about this peanut roll ice cream and",
+            "locationContext": "in today's video we are taking the MRT green line from the zimand ding walking District transferring to the red line and ending up at the shyland night market this Market has a lot of fun games smiling faces and great food to try the vibe here is like being at a smaller cleaner Time Square just look at the graphics on this giant sign all right let's get this journey started it's going to be 6:00 p.m. so you can see what the MRT is like at 6:00 p.m. when everybody's getting off of work and making their way to the markets we love how the MRT gets you anywhere in the city easily and quickly and even though it's rush hour just look at how orderly everyone is and notice how the people ride the escalator Riders on the right and walkers on the left it is also surprisingly quiet in here all right listen up if you want to know the route we were taking okay so to get to the market we're going to take the sunen zindan green line right here we're just take the escalator down remember when I told you how polite and orderly everyone is well I kind of forgot the rules oh",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "YBoHV08MYVA",
+              "title": "Shilin Night Market Food Challenge | Taipei's Most Insane Street Food",
+              "channelName": "TV Travels",
+              "thumbnailUrl": "https://i.ytimg.com/vi/YBoHV08MYVA/maxresdefault.jpg",
+              "publishedAt": "2025-03-08"
+            },
+            "title": "Discover over 500 stalls at Shilin",
+            "takeaway": "With over 500 stalls, the market combines street food, clothing, accessories, games, and souvenirs in one famous destination.",
+            "highlights": [
+              "With over 500 stalls, the market combines street"
+            ],
+            "locationVerification": {
+              "poiName": "Shilin Night Market",
+              "relationship": "queried_place",
+              "evidence": "the shiny Night Market has over 500 stalls offering a mix of street food clothing accessories games and souvenirs",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=YBoHV08MYVA&t=1238s"
+          },
+          {
+            "id": "9Ax5LnFAJ1k-activity-766",
+            "intent": "activity",
+            "startSeconds": 766,
+            "endSeconds": 820,
+            "exactQuote": "the sign we are going to turn back around and get to the food again back to the center of the temple but we're going to walk down this way there does pick up some food as we get back to the main street again uh I love this big chicken up here oh this is not familyfriendly that is not a familyfriendly stuffy back there okay uh we've got another watermelon juice stall coming up as you see in a market this big it does tend to get a little bit repetitive with the offerings although I don't know Saturday",
+            "contextText": "the sign we are going to turn back around and get to the food again back to the center of the temple but we're going to walk down this way there does pick up some food as we get back to the main street again uh I love this big chicken up here oh this is not familyfriendly that is not a familyfriendly stuffy back there okay uh we've got another watermelon juice stall coming up as you see in a market this big it does tend to get a little bit repetitive with the offerings although I don't know Saturday night I'm not sure why that watermelon juice vendor isn't open today probably mom and pop places so we're probably just sick or something like that maybe they decide to take a vacation too here you get uh some grilled meat on a stick one skewer for $25 Taiwan 5 for 100 print cheese potatoes get your potato with some cheese we've got some kind of more of",
+            "locationContext": "this is the largest Night Market in taipe Taiwan Sherin Night Market I'm going to turn the camera around so you can see what I can see and I'm going to take you inside this is the main Market building that we're going to go into in just a minute but I'm starting this tour here because if you were to take an Uber or Google Maps to shein Night Market it would bring you right to this building now this neighor it's a whole neighborhood as a night market really busy from 6:00 to midnight pretty much every I'm here in a Saturday which is definitely the busiest night at the peak of this Market's like popularity which was before Co there were over 500 stalls in and around this neighborhood and uh we've got food we've got games we've got shops but I'm starting outside this building cuz there's a cool little food Street here on the side one of the most popular you can see this long line here is for the fried chicken chop yes it's basically like the pork chop except it's a chicken chop it's fried and it's breaded uh it is 90 Taiwan dollar so",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "9Ax5LnFAJ1k",
+              "title": "Inside Taiwan's Biggest Night Market: Shilin 士林夜市",
+              "channelName": "Yellow Productions",
+              "thumbnailUrl": "https://i.ytimg.com/vi/9Ax5LnFAJ1k/maxresdefault.jpg",
+              "publishedAt": "2025-11-28"
+            },
+            "title": "Walk around and pick up some food",
+            "takeaway": "Walk down this way, return to the main street, and pick up some food while exploring the large market.",
+            "highlights": [
+              "Walk down this way, return to the main street"
+            ],
+            "locationVerification": {
+              "poiName": "Shilin Night Market",
+              "relationship": "queried_place",
+              "evidence": "as we get back to the main street again",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=9Ax5LnFAJ1k&t=766s"
+          },
+          {
+            "id": "DsWZznou5_g-activity-103",
+            "intent": "activity",
+            "startSeconds": 103,
+            "endSeconds": 157,
+            "exactQuote": "guys have tried it, but that is quite an acquired taste, not my favourite fruit to be honest and it in Shilin Night Market there's also a couple of watch shops as well that's certainly worth checking out and we will check that out in a second. Obviously this is the final video of our Taipei tour. I was here for one week meeting some clients and doing some work, and on the side you know, exploring the city",
+            "contextText": "guys have tried it, but that is quite an acquired taste, not my favourite fruit to be honest and it in Shilin Night Market there's also a couple of watch shops as well that's certainly worth checking out and we will check that out in a second. Obviously this is the final video of our Taipei tour. I was here for one week meeting some clients and doing some work, and on the side you know, exploring the city and Taipei, got to say this is the last episode, so we'll comment a bit about Taipei in general. Beautiful city, a lot of people, people are very friendly, English you will struggle to to run around in Taiwan with just speaking English, a few words of Mandarin does help, does go a long way, some of the restaurants do have English, otherwise you just need to get",
+            "locationContext": "Spotted this second hand watch shop near my hotel on Linsen Road, so we do a quick check of what it has got here, a £8,000 2014 Yacht Master, this 2021 Sky Dweller at £16,500, we got a 2017 Sprite at £13,500, a GMT Zombie 2023 at £14,500, a beautiful looking AP in gold and here we got a Pepsi GMT 2023 at £13,.500, a Root Beer 2024 at £14,500, a Bluesy 2022 at £12,000, a black Daytona there at the back, a 2021 version at £15,500, no price on that Daytona and then we've got a Day Date President at £18,000. It's 9:10 p.m, we're here at Shilin Night Market, one of the two most famous night markets along with Raohe we discussed on episode 3. This nice",
+            "captionTrack": "creator",
+            "language": "en-GB",
+            "video": {
+              "id": "DsWZznou5_g",
+              "title": "Taipei EP4: Iconic Shilin Night Market: Watch Hunting in the Shadow of China–Taiwan Tensions",
+              "channelName": "UK Watch Reviews",
+              "thumbnailUrl": "https://i.ytimg.com/vi/DsWZznou5_g/maxresdefault.jpg",
+              "publishedAt": "2025-07-02"
+            },
+            "title": "Check out a couple of watch shops",
+            "takeaway": "Shilin Night Market has a couple of watch shops worth checking out during your exploration of Taipei’s final tour stop.",
+            "highlights": [
+              "Shilin Night Market has a couple of watch shops"
+            ],
+            "locationVerification": {
+              "poiName": "Shilin Night Market",
+              "relationship": "inside",
+              "evidence": "in Shilin Night Market there's also a couple of watch shops",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=DsWZznou5_g&t=103s"
+          },
+          {
+            "id": "ovMBdPtM48I-why_visit-521",
+            "intent": "food",
+            "startSeconds": 521,
+            "endSeconds": 575,
+            "exactQuote": "Tasty crunchy but the meat is also delicious . Winner. Okay. There is time to try. Mm. Yes, indeed. The best. Mmm. The best. What? Worth the hype, right? Mm. That's why it's famous. M. Allr. We also tasted the hot store fried chicken located here at Chili Night Market. Worth the hype. Delicious. Mm. That's delicious. I hope we're not full yet so we can have more . The size. Oh.",
+            "contextText": "Tasty crunchy but the meat is also delicious . Winner. Okay. There is time to try. Mm. Yes, indeed. The best. Mmm. The best. What? Worth the hype, right? Mm. That's why it's famous. M. Allr. We also tasted the hot store fried chicken located here at Chili Night Market. Worth the hype. Delicious. Mm. That's delicious. I hope we're not full yet so we can have more . The size. Oh. We are divided there. That's it guys, we're just sitting here for now. We're eating this. It's so delicious. The best. Don't forget to eat here. Really try it. We were just sitting right across from each other . There is a chair. There you go. Oh, there you go. That's where we sit . Delicious. Seriously. The best. Highly recommended. What does salt and pepper taste like? Mm. Plus it's crunchy. White meat. Healthy.",
+            "locationContext": "Hi guys. So welcome back to our vlog. And for this vlog guys, we're going to the Shil Night Market. There, we'll have dinner there. So, you watched this morning we bet and then this afternoon we taped Zu with my gondolas. And then now, let's go to the Shil Night Market. There, you need to be careful. Tired. Yes. Join us guys and we hope you stay tuned until the end and I hope you've eaten or if you haven't, get ready because we're going to eat or you might get hungry. We'll try a lot of Taiwanese food there again. Yes. And we hope that if you like this vlog, don't forget to",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "ovMBdPtM48I",
+              "title": "🇹🇼 First Time at Shilin Night Market | Taipei’s Biggest Night Market! | Daphne Barcelona",
+              "channelName": "Daphne Barcelona",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ovMBdPtM48I/maxresdefault.jpg",
+              "publishedAt": "2026-01-28"
+            },
+            "title": "Try the hot store fried chicken",
+            "takeaway": "The hot store fried chicken at Shilin Night Market is described as delicious, crunchy, famous, and worth the hype.",
+            "highlights": [
+              "The hot store fried chicken at Shilin Night Market"
+            ],
+            "locationVerification": {
+              "poiName": "Shilin Night Market",
+              "relationship": "queried_place",
+              "evidence": "hot store fried chicken located here at Chili Night Market",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=ovMBdPtM48I&t=521s"
+          },
+          {
+            "id": "9Ax5LnFAJ1k-food-929",
+            "intent": "food",
+            "startSeconds": 929,
+            "endSeconds": 983,
+            "exactQuote": "there's no English because they're like no nobody none of the foreigners are going to eat of this place smells too bad it really does uh crispy chicken leg squid balls crispy pork balls adult crane games glad to get away from that stinky tofu stall lamb chops drink stall here grass jelly milk ice cream black tea black tea ultt we've got a sausage another sausage with sticky rice doll here on the corner and then this is like a like a milk place",
+            "contextText": "there's no English because they're like no nobody none of the foreigners are going to eat of this place smells too bad it really does uh crispy chicken leg squid balls crispy pork balls adult crane games glad to get away from that stinky tofu stall lamb chops drink stall here grass jelly milk ice cream black tea black tea ultt we've got a sausage another sausage with sticky rice doll here on the corner and then this is like a like a milk place that serves milk with boba basically what that serves um and they've also got some jelly drinks on the corner our uh our daughter the cous princess we try not to get her boba tea to get her the caffeine but she likes her Boba so we uh will get her the Boba with milk here we got a lot of various ingredients they'll uh you just kind of point to them what you want and then",
+            "locationContext": "this is the largest Night Market in taipe Taiwan Sherin Night Market I'm going to turn the camera around so you can see what I can see and I'm going to take you inside this is the main Market building that we're going to go into in just a minute but I'm starting this tour here because if you were to take an Uber or Google Maps to shein Night Market it would bring you right to this building now this neighor it's a whole neighborhood as a night market really busy from 6:00 to midnight pretty much every I'm here in a Saturday which is definitely the busiest night at the peak of this Market's like popularity which was before Co there were over 500 stalls in and around this neighborhood and uh we've got food we've got games we've got shops but I'm starting outside this building cuz there's a cool little food Street here on the side one of the most popular you can see this long line here is for the fried chicken chop yes it's basically like the pork chop except it's a chicken chop it's fried and it's breaded uh it is 90 Taiwan dollar so",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "9Ax5LnFAJ1k",
+              "title": "Inside Taiwan's Biggest Night Market: Shilin 士林夜市",
+              "channelName": "Yellow Productions",
+              "thumbnailUrl": "https://i.ytimg.com/vi/9Ax5LnFAJ1k/maxresdefault.jpg",
+              "publishedAt": "2025-11-28"
+            },
+            "title": "Try the grass jelly milk drink",
+            "takeaway": "The stall offers grass jelly milk, ice cream, black tea, sausages, sticky rice, and milk with boba for night-market visitors.",
+            "highlights": [
+              "The stall offers grass jelly milk, ice cream"
+            ],
+            "locationVerification": {
+              "poiName": "Shilin Night Market",
+              "relationship": "queried_place",
+              "evidence": "drink stall here grass jelly milk",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=9Ax5LnFAJ1k&t=929s"
+          },
+          {
+            "id": "VLxuUoPTw8k-practical_tip-555",
+            "intent": "practical_tip",
+            "startSeconds": 555,
+            "endSeconds": 609,
+            "exactQuote": "photo essential tips for navigating the night market to make the most of your shyen night market experience keep these handy tips in mind arrive early to beat the crowds the market starts to get busy as the night progresses so arriving Just Before Sunset can give you a head start this way you can enjoy the vibrant atmosphere without feeling overwhelmed by the throngs of people while the market is open until late it gets incredibly busy during peak hours the peak hours are usually between 8:00 p.m.",
+            "contextText": "photo essential tips for navigating the night market to make the most of your shyen night market experience keep these handy tips in mind arrive early to beat the crowds the market starts to get busy as the night progresses so arriving Just Before Sunset can give you a head start this way you can enjoy the vibrant atmosphere without feeling overwhelmed by the throngs of people while the market is open until late it gets incredibly busy during peak hours the peak hours are usually between 8:00 p.m. and 10: p.m. when both locals and tourists flock to the market navigating through the dense crowd can be challenging so plan your visit accordingly arriving earlier in the evening allows you to explore at a more leisurely Pace you can take your time to br through the Stalls and soak in the Lively Ambiance without feeling rushed bring cash while some vendors accept mobile payments cash is still King at Shayan KN Market many of the smaller",
+            "locationContext": "Welcome to shyen Night Market a vibrant tapestry of Taiwanese culture and Cuisine established in 1909 this iconic Market has evolved from a humble Gathering Place for locals to a bustling tourist Hotpot initially A small collection of vendors near the shyen temple the market quickly gained popularity for its diverse offerings and Lively atmosphere over the decades shein Night Market has expanded significantly drawing visitors from across the globe who come to experience its unique charm your shein night market adventure begins at the gantan MRT station exit through Exit 1 and prepare to be greeted by the sights and smells that make this market so captivating cross the intersection at J road and wendland road and you'll find yourself at the southern edge of the market follow J Road and you'll soon spot the Grand shillin Market sign marking the official entrance before you enter take a moment to admire the vibrant energy of the",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "VLxuUoPTw8k",
+              "title": "Ultimate Shilin Night Market Guide",
+              "channelName": "Topics on Hot Travel ",
+              "thumbnailUrl": "https://i.ytimg.com/vi/VLxuUoPTw8k/hqdefault.jpg",
+              "publishedAt": "2024-11-29"
+            },
+            "title": "Creator tip: Arrive early to beat the crowds",
+            "takeaway": "The creator observed: arrive early to beat the crowds; arriving just before sunset gives you a head start before peak evening hours.",
+            "highlights": [
+              "Arrive early to beat the crowds; arriving just"
+            ],
+            "locationVerification": {
+              "poiName": "Shilin Night Market",
+              "relationship": "queried_place",
+              "evidence": "arrive early to beat the crowds the market starts to get busy",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=VLxuUoPTw8k&t=555s"
+          },
+          {
+            "id": "EbVOrLbPsEk-practical_tip-57",
+            "intent": "practical_tip",
+            "startSeconds": 57,
+            "endSeconds": 111,
+            "exactQuote": "We took the S18 bus from in front of the museum to Jiantan Station ... which is just across the road from Shilin Night Market However, if you are coming from Taipei's main station ... You can take the Tamsui-Xinyi metro line toward Beitou ... and get off at Jiantan station The train ride will take about 25 minutes",
+            "contextText": "We took the S18 bus from in front of the museum to Jiantan Station ... which is just across the road from Shilin Night Market However, if you are coming from Taipei's main station ... You can take the Tamsui-Xinyi metro line toward Beitou ... and get off at Jiantan station The train ride will take about 25 minutes Several bus routes also serve the area with stops at Jiantan Station Route 218 will take you directly from Taipei Main Station to Jiantan station and cost about 15 NTD and you can pay with Easycard Watch my other video on how to get an Easycard Like most night markets in Taiwan ... the local businesses and vendors begin opening around 16:00 as students begin returning home from school ... ... as sunset approaches the city begins to light up ...",
+            "locationContext": "Hi, welcome to another video from Cheeseman Travel ... In this video, we are going to show you some of the exotic and yummy food that we eat at Shilin Night Market ... and things that we see and experience ... .. in one of the largest and most famous night markets in Taiwan. ... as well as some information to get there and navigate around the market It's going to be exciting ... ... so stick around and join us Continuing from our last video ... where we explored the National Palace Museum in Shilin District ... We took the S18 bus from in front of the museum to Jiantan Station",
+            "captionTrack": "creator",
+            "language": "en",
+            "video": {
+              "id": "EbVOrLbPsEk",
+              "title": "8 street foods that we ate at Shilin Night Market #taipei #taiwan #shilinnightmarket",
+              "channelName": "CHEESEman TRAVEL",
+              "thumbnailUrl": "https://i.ytimg.com/vi/EbVOrLbPsEk/maxresdefault.jpg",
+              "publishedAt": "2024-07-20"
+            },
+            "title": "Creator tip: Take the S18 bus to Jiantan Station",
+            "takeaway": "The creator observed: the S18 bus goes from in front of the museum to Jiantan Station, just across the road from Shilin Night Market.",
+            "highlights": [
+              "The S18 bus goes from in front of the museum"
+            ],
+            "locationVerification": {
+              "poiName": "Shilin Night Market",
+              "relationship": "queried_place",
+              "evidence": "Jiantan Station ... which is just across the road from Shilin Night Market",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=EbVOrLbPsEk&t=57s"
+          },
+          {
+            "id": "oLN5EUQN6KU-practical_tip-17",
+            "intent": "practical_tip",
+            "startSeconds": 17,
+            "endSeconds": 71,
+            "exactQuote": "in Taipei we came up here it's just about what five stops or so on the red line away from the taipan ma station just take exit one and you walk right out here we're going to go to shinin Night Market I've been to here a couple years back and it's really nice the place is massive it actually goes from the gn10 to the shinin BTS stops or MRT stops it is the it is absolutely massive you can just wander around in here for hours uh so anyway Let's cross the road and let's uh let's go enjoy the",
+            "contextText": "in Taipei we came up here it's just about what five stops or so on the red line away from the taipan ma station just take exit one and you walk right out here we're going to go to shinin Night Market I've been to here a couple years back and it's really nice the place is massive it actually goes from the gn10 to the shinin BTS stops or MRT stops it is the it is absolutely massive you can just wander around in here for hours uh so anyway Let's cross the road and let's uh let's go enjoy the [Music] night so the MRT goes right here and right over this way is is the night market so we'll walk up in here and we'll go across you can see it's has a lot of signage like I said exit one just takes you right here and you're about maybe 200 M or so away from the",
+            "locationContext": "welcome everybody today's video finds us over here in Taipei and where we are we're at the gnan MRT and we're getting ready to go over to the biggest and the best or most popular Night Market here in Taipei we came up here it's just about what five stops or so on the red line away from the taipan ma station just take exit one and you walk right out here we're going to go to shinin Night Market I've been to here a couple years back and it's really nice the place is massive it actually goes from the gn10 to the shinin BTS stops or MRT stops it is the it is absolutely massive you can just wander around in here for hours uh so anyway Let's cross the road and let's uh let's go enjoy the [Music] night so the MRT goes right here and right over this way is is the night",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "oLN5EUQN6KU",
+              "title": "Shilin Night Market 士林夜市 - Oldest & Largest in Taipei - Taiwan 2025",
+              "channelName": "Endless Journey",
+              "thumbnailUrl": "https://i.ytimg.com/vi/oLN5EUQN6KU/sddefault.jpg",
+              "publishedAt": "2025-01-15"
+            },
+            "title": "Creator tip: Take exit one for Shilin Night Market",
+            "takeaway": "The creator observed: to reach Shilin Night Market, take exit one from the red line and walk right out here.",
+            "highlights": [
+              "To reach Shilin Night Market, take exit one from",
+              "red line and walk right out here."
+            ],
+            "locationVerification": {
+              "poiName": "Shilin Night Market",
+              "relationship": "queried_place",
+              "evidence": "we're going to go to shinin Night Market",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=oLN5EUQN6KU&t=17s"
+          }
+        ],
+        "suggestedPlan": [
+          "Creator tip: Arrive early to beat the crowds",
+          "Walk around and pick up some food",
+          "Check out a couple of watch shops",
+          "Try the hot store fried chicken"
+        ],
+        "warnings": [
+          "Opening hours, prices, reservations, and temporary closures still require a current check."
+        ],
+        "mode": "ai",
+        "aiModel": "gpt-5.6-luna",
+        "sourceStatus": "verified_snapshot",
+        "verification": {
+          "videosFound": 208,
+          "captionedVideos": 49,
+          "candidateClips": 9,
+          "evidenceMatches": 9,
+          "verifiedClips": 9,
+          "rejectedEvidenceOrRanking": 0,
+          "rejectedLocation": 0
+        },
+        "snapshotVersion": 1,
+        "snapshotStatus": "verified",
+        "sourceCutoffDate": "2024-07-18",
+        "reviewAfter": "2026-07-25",
+        "demoSnapshot": true
+      }
+    },
+    {
+      "place": "Taipei 101",
+      "city": "Taipei",
+      "file": "verified/taipei-taipei-101.json",
+      "snapshot": {
+        "place": "Taipei 101",
+        "city": "Taipei",
+        "overview": "9 captioned travel videos produced 9 semantically verified clips for Taipei 101. Each title is tied to an exact supporting quote. Named places are also checked against the requested location.",
+        "generatedAt": "2026-07-18T13:07:20.612Z",
+        "cacheHit": true,
+        "sourceCount": 9,
+        "clipCount": 9,
+        "clips": [
+          {
+            "id": "TaWwXMebpUs-why_visit-304",
+            "intent": "why_visit",
+            "startSeconds": 304,
+            "endSeconds": 358,
+            "exactQuote": "direction effectively stabilizing the entire structure the damper is made of 41 circular steel plates each 125 mm thick it's so effective that it reduces the building's Movement by 40% the damper is one of the largest in the world and visitors to taipe 101 can actually see it in action providing a unique glimpse into how engineering can mitigate natural",
+            "contextText": "direction effectively stabilizing the entire structure the damper is made of 41 circular steel plates each 125 mm thick it's so effective that it reduces the building's Movement by 40% the damper is one of the largest in the world and visitors to taipe 101 can actually see it in action providing a unique glimpse into how engineering can mitigate natural disasters taipe 101 is not just an iconic Landmark it's a testament to what human Ingenuity can achieve from its striking design to its Advanced earthquake resistant technology this building stands as a symbol of strength Innovation and cultural Pride whether you're an architect an engineer or simply a lover of great design taipe 101",
+            "locationContext": "Rising high above the skyline of Taipei this is the Taipei 101 it is a symbol of resilience Innovation and cultural Pride this incredible skyscraper once held the title of the world's tallest building and continues to inspire Architects and Engineers worldwide but beyond its breathtaking height and design there's a story of how a building was engineered to defy Nature's Most unpredictable forces stick with us as we dive into the fascinating world of taipe 101 and uncover the secrets behind its groundbreaking construction and earthquake resistant design [Music]",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "TaWwXMebpUs",
+              "title": "The Marvel of Taipei 101: Architecture That Defies Earthquakes",
+              "channelName": "3Ts Architecture",
+              "thumbnailUrl": "https://i.ytimg.com/vi/TaWwXMebpUs/maxresdefault.jpg",
+              "publishedAt": "2024-08-20"
+            },
+            "title": "See the damper in action",
+            "takeaway": "The damper lets visitors see engineering in action while stabilizing Taipei 101 and mitigating natural disasters.",
+            "highlights": [
+              "The damper lets visitors see engineering in action"
+            ],
+            "locationVerification": {
+              "poiName": "Taipei 101",
+              "relationship": "queried_place",
+              "evidence": "visitors to taipe 101 can actually see it in action",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=TaWwXMebpUs&t=304s"
+          },
+          {
+            "id": "CPoDRr-0xsQ-why_visit-75",
+            "intent": "why_visit",
+            "startSeconds": 75,
+            "endSeconds": 129,
+            "exactQuote": "This damper sways to counteract the building's movements during earthquakes and typhoons, ensuring stability. Additionally, the skyscrapers flexible design inspired by bamboo allows it to absorb and dissipate seismic energy, making it one of the safest buildings in the world. What are the secrets behind Taipei 101's design? Taipei 101’s design is packed with symbolism and innovation. The tower's eight sections represent prosperity in Chinese culture,",
+            "contextText": "This damper sways to counteract the building's movements during earthquakes and typhoons, ensuring stability. Additionally, the skyscrapers flexible design inspired by bamboo allows it to absorb and dissipate seismic energy, making it one of the safest buildings in the world. What are the secrets behind Taipei 101's design? Taipei 101’s design is packed with symbolism and innovation. The tower's eight sections represent prosperity in Chinese culture, while its pagoda like tiers echo traditional Asian architecture. Hidden within are advanced green technologies, making it one of the world's most energy efficient skyscrapers. The building's exterior features a double-paned reflective glass curtain wall that conserves energy and reduces heat gain. Plus, its foundation anchors deep into the ground, ensuring stability. How did Taipei 101 shatter records?",
+            "locationContext": "Why is Taipei 101 so special? Taipei 101 isn't just any skyscraper. It's a symbol of innovation and resilience. Standing at 1,667 feet, it held the title of the world's tallest building from 2004 to 2010. But what really sets it apart is its design. Inspired by bamboo, it represents strength and growth. The building's segmented structure mimics bamboo stalks, symbolizing prosperity and flexibility making Taipei 101 truly unique. How was Taipei 101 built? The construction of Taipei 101 was a feat of engineering and design. Rising from a small plot of land, the skyscraper was built between 1999 and 2004. It involved over 5000 workers and used 100,000 tons of steel. Innovative techniques like the use of a giant crane and advanced seismic engineering, ensured the building's safety and stability.",
+            "captionTrack": "creator",
+            "language": "en",
+            "video": {
+              "id": "CPoDRr-0xsQ",
+              "title": "Why Taipei 101 is More Than Just a Tall Building",
+              "channelName": "Walls of Wonder",
+              "thumbnailUrl": "https://i.ytimg.com/vi/CPoDRr-0xsQ/maxresdefault.jpg",
+              "publishedAt": "2024-08-30"
+            },
+            "title": "Taipei 101’s eight sections symbolize prosperity",
+            "takeaway": "Taipei 101’s eight sections represent prosperity, combining cultural symbolism with innovative skyscraper design.",
+            "highlights": [
+              "Taipei 101’s eight sections represent prosperity"
+            ],
+            "locationVerification": {
+              "poiName": "Taipei 101",
+              "relationship": "queried_place",
+              "evidence": "Taipei 101’s design is packed with symbolism and innovation",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=CPoDRr-0xsQ&t=75s"
+          },
+          {
+            "id": "QjqNQTpqiHU-why_visit-562",
+            "intent": "activity",
+            "startSeconds": 562,
+            "endSeconds": 616,
+            "exactQuote": "building in the world and houses offices, restaurants, a very packed food court, luxury shops like Dior, Prada, LV, and lastly, what everyone comes here for, the Taipei 101 indoor and outdoor observatories. While the shops are beautiful, surprisingly, today's main goal is not to shop. Today, we are going to hit up",
+            "contextText": "building in the world and houses offices, restaurants, a very packed food court, luxury shops like Dior, Prada, LV, and lastly, what everyone comes here for, the Taipei 101 indoor and outdoor observatories. While the shops are beautiful, surprisingly, today's main goal is not to shop. Today, we are going to hit up Ding Taiong, Taiwan's most famous Shaol restaurant. And then we're going to hit up the observatories just in time for sunset. >> 60 minutes. >> 60 to 75. >> Okay. Thank you. >> I don't think we're going to get it. Oh, >> at this time. >> Okay, change of plans. Although we arrived at 400 p.m., the wait was still",
+            "locationContext": "Hi everyone, welcome back to my channel. In today's vlog, I will be sharing the first four days of my November 2023 Asia trip with you in the beautiful Taipei, Taiwan. My partner and I will be eating, visiting landmarks, and eating more throughout this video. So, if you're interested in all the places we visited and everything we ate, then just keep on watching. We are descending. >> I don't think my legs work anymore. What time is it? It's currently 7:17 a.m. in Taipei. Finally arrived. Even though our flight was delayed an hour about, we were supposed to arrive at 6:00 a.m. We walked through immigration after this and then proceeded to get our bags from baggage claim, picked up some cash at",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "QjqNQTpqiHU",
+              "title": "our first day in taipei | din tai fung, taipei 101 & quiet moments",
+              "channelName": "jamie hung",
+              "thumbnailUrl": "https://i.ytimg.com/vi/QjqNQTpqiHU/maxresdefault.jpg",
+              "publishedAt": "2026-02-22"
+            },
+            "title": "Visit the Taipei 101 indoor and outdoor observatories",
+            "takeaway": "The Taipei 101 indoor and outdoor observatories are the main goal after browsing restaurants, shops, and the packed food court.",
+            "highlights": [
+              "The Taipei 101 indoor and outdoor observatories"
+            ],
+            "locationVerification": {
+              "poiName": "Taipei 101",
+              "relationship": "queried_place",
+              "evidence": "what everyone comes here for, the Taipei 101 indoor and outdoor observatories",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=QjqNQTpqiHU&t=562s"
+          },
+          {
+            "id": "S7aSOOhXr9Q-activity-36",
+            "intent": "activity",
+            "startSeconds": 36,
+            "endSeconds": 90,
+            "exactQuote": "then we're going to go take a look around the food court right I'm going to start this tour outside just so you get a sense of place those the entry doors to the Food Hall as I said is in the basement of taipe 101 now 101 floor building with a great Observatory up on top if you're just coming for the food Hall the best way to get here is to take the MRT to the taipe 101 Station and then you will come out exit number four the station is taipe",
+            "contextText": "then we're going to go take a look around the food court right I'm going to start this tour outside just so you get a sense of place those the entry doors to the Food Hall as I said is in the basement of taipe 101 now 101 floor building with a great Observatory up on top if you're just coming for the food Hall the best way to get here is to take the MRT to the taipe 101 Station and then you will come out exit number four the station is taipe 101 World Trade Center now just outside is a famous branch of D thaun well is this Branch famous I guess it is cuz it's in taipe 101 but Den thaun is a famous soup dumpling restaurant here in Taipei they're all around the world now but their original location is in Taipei it's not this one but because this one's in taipe 101 it's really popular you can see the weight time if you want to eat here on a Sunday at 1:00",
+            "locationContext": "hey fellow explorers today I'm at the best food court in taipe 101 I'm going to show you around this food court all the different things you can get here but first let me show you what I've got for lunch today this is the chong ching shrimp rice this is the shrimp rice set about $300 Taiwan dollars that includes the drink it's a oolong tea so about $10 for this plate of food the main course is the shrimp rice here it's got egg it's got shrimp over rice it comes with a soup and it comes with a little kind of tofu and some pickled veggies on the side all right I'm going to eat this and then we're going to go take a look around the food court right I'm going to start this tour outside just so you get a sense of place those the entry doors to the Food Hall as I said is in the basement of taipe 101 now 101 floor building with a great Observatory up on top if you're just coming for the food Hall the best way to get here is to take the MRT to the taipe 101 Station and then you will come out",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "S7aSOOhXr9Q",
+              "title": "Inside the Best Food Court in Taipei Taiwan - Taipei 101",
+              "channelName": "Yellow Productions",
+              "thumbnailUrl": "https://i.ytimg.com/vi/S7aSOOhXr9Q/maxresdefault.jpg",
+              "publishedAt": "2025-12-14"
+            },
+            "title": "Tour the food court inside Taipei 101",
+            "takeaway": "Tour the food court in the basement of Taipei 101, using MRT exit number four for access.",
+            "highlights": [
+              "Tour the food court in the basement of Taipei 101"
+            ],
+            "locationVerification": {
+              "poiName": "Taipei 101",
+              "relationship": "inside",
+              "evidence": "the Food Hall as I said is in the basement of taipe 101",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=S7aSOOhXr9Q&t=36s"
+          },
+          {
+            "id": "fHXvu6Ev9yA-activity-758",
+            "intent": "activity",
+            "startSeconds": 758,
+            "endSeconds": 812,
+            "exactQuote": "See the mountains way up on the hill there. So cool. Kind of looks down the city. So, you can't go all the way around. That side's fenced, but still a lot of space up here. Like, I'm not really struggling to get a spot to see the view. Right. And you can get all the way around to there. So, half the building.",
+            "contextText": "See the mountains way up on the hill there. So cool. Kind of looks down the city. So, you can't go all the way around. That side's fenced, but still a lot of space up here. Like, I'm not really struggling to get a spot to see the view. Right. And you can get all the way around to there. So, half the building. And the weirdest thing about being up here is is you're looking out at the skyline and for the first time that I've been in this country or in the city, I can't see Taipei 101 cuz I'm standing on it. So, that's actually kind of bizarre. It's been ever present in everything that I've looked at. Every time I look out a window or, you know, out of an Uber or out of my hotel, there it is. There's something that's not there.",
+            "locationContext": "Good day humans. Chris Dead here. I'm on the road today. I'm in Taipei in Taiwan. I'm about to do the most touristy thing that you can do here. I'm going to go up Taipei 101 X tallest building in the world. Up to the top, take a look and see if it's worth your while. Let's do it. Now, I'm not going to give you instructions on how to get there to be honest because you can see this place from everywhere. It's pretty clear which general direction you need to go in. Uh I've just walked here from my hotel actually. So I'm not sure what the closest MRT is, but I'll work that out. What's interesting is that I'm in floor 28 of my hotel room, which is that one, second one in the background there. And this thing, you know, it looks big. It doesn't look that much bigger than where I was at 428, but it goes up to floor 101, hence the name. So, I can't wait to see just how much higher it feels once you're up there. All right,",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "fHXvu6Ev9yA",
+              "title": "Taipei 101 Observatory Review, Guide and Tour - ex-World's Tallest Building",
+              "channelName": "Motivated Travel | Family Reviews, Guides and Tips",
+              "thumbnailUrl": "https://i.ytimg.com/vi/fHXvu6Ev9yA/maxresdefault.jpg",
+              "publishedAt": "2025-10-29"
+            },
+            "title": "Enjoy the view from Taipei 101",
+            "takeaway": "The view from up here includes mountains, city scenery, and space to move around despite one fenced side.",
+            "highlights": [
+              "The view from up here includes mountains, city"
+            ],
+            "locationVerification": {
+              "poiName": "Taipei 101",
+              "relationship": "inside",
+              "evidence": "for the first time that I've been in this country or in the city, I can't see Taipei 101 cuz I'm standing on it",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=fHXvu6Ev9yA&t=758s"
+          },
+          {
+            "id": "RBwGCZo0uwo-food-1291",
+            "intent": "food",
+            "startSeconds": 1291,
+            "endSeconds": 1345,
+            "exactQuote": "nice order online yeah so we just used my device to order so I mean I feel like yeah they have like the whole menu set they have a ton of appetizers ton all their Shon Bowser on display which is good cuz America doesn't have all of these uh sh as well pork buns dessert pork top rice yeah get one of those get one of those we can share this I always get this one you want brown",
+            "contextText": "nice order online yeah so we just used my device to order so I mean I feel like yeah they have like the whole menu set they have a ton of appetizers ton all their Shon Bowser on display which is good cuz America doesn't have all of these uh sh as well pork buns dessert pork top rice yeah get one of those get one of those we can share this I always get this one you want brown rice or white rice white rice get that healthy stuff out of here I already ate purple rice this morning all right let add it at B tyone you hungry Sarah I'm very hungry yeah we're at taipe 101 101 here so yeah [Music] excited cucumbers start off with 90 for one one that's right how to enjoy the sh",
+            "locationContext": "[Music] [Applause] [Music] good morning it is now day three of Taiwan morning 2 and today we are going to go to the Pokemon Center taipe which just opened about a month ago and then we're going to shop at the Shing Kong department store and then head to taipe 101 later tonight so yeah this will be a fun Vlog I'm I love see Pokémon centers",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "RBwGCZo0uwo",
+              "title": "Top 5 Things To Do In Taiwan's TAIPEI 101! Pokemon Center, Din Tai Fung, Linjiang Night Market 🏮",
+              "channelName": "CantoExplorers",
+              "thumbnailUrl": "https://i.ytimg.com/vi/RBwGCZo0uwo/maxresdefault.jpg",
+              "publishedAt": "2024-07-20"
+            },
+            "title": "Order pork buns at Taipei 101",
+            "takeaway": "Order pork buns from the menu, alongside appetizers, dessert, pork, and rice, using the device to choose items.",
+            "highlights": [
+              "Order pork buns from the menu"
+            ],
+            "locationVerification": {
+              "poiName": "Taipei 101",
+              "relationship": "inside",
+              "evidence": "we're at taipe 101 101 here",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=RBwGCZo0uwo&t=1291s"
+          },
+          {
+            "id": "FSoK7VVN7JQ-food-1145",
+            "intent": "food",
+            "startSeconds": 1145,
+            "endSeconds": 1199,
+            "exactQuote": "Johnson takes. Get it? But still good. Right here, fruit? Yeah, fruit is dessert in Asia. Here they have an assortment of delectable chocolates and desserts and cakes. They have flan, a little bit of everything. Finally, we are in Taipei 101 after all, so they have a dessert that looks just like this building. Look at that, a mini Taipei 101. That is 101 floors of pure flavor. Cheers. Mhm, crispy. And look, the inside is full of little offices and happy eating people. So that is a joy buffet and my",
+            "contextText": "Johnson takes. Get it? But still good. Right here, fruit? Yeah, fruit is dessert in Asia. Here they have an assortment of delectable chocolates and desserts and cakes. They have flan, a little bit of everything. Finally, we are in Taipei 101 after all, so they have a dessert that looks just like this building. Look at that, a mini Taipei 101. That is 101 floors of pure flavor. Cheers. Mhm, crispy. And look, the inside is full of little offices and happy eating people. So that is a joy buffet and my god, it was a joy to come here. Next I'm going to tell you between the very cheap buffet and the more expensive buffet, which one I thought gave me the most bang for my buck. Boom, today we ate at two different buffets. One that was very affordable and one that was a bit more expensive. The first buffet, I appreciated 90 minutes under $10, eat as much weird meat as you want, amazing. But I must say as far as premium buffets go, the buffet that I had just up there, it is without a doubt the best buffet I've ever had in my life. I know what",
+            "locationContext": "In this video, I'm going to reveal what you can find at Taiwan's cheapest buffet. Look at that. It's gorgeous. It's basically Italian pasta, the low-carb version. Then, I'll compare that to Taiwan's most expensive buffet, one of the most beautiful, well-put-together buffets I've ever seen in my life. Oh my god. Have you ever seen anything like that? But, is it worth the high price tag? Today, I'm on a mission to choose which of these two extreme buffets gives me the most bang for my buck. Let's move. Right behind me, we've come to our first crazy affordable location. The restaurant is called Da Wei Wan. Here, they're serving hot pot, but you can also grill up the meat, too. It costs only 250 Taiwanese dollars, or $7.72. That is extremely affordable. When I first came here, I thought there must be a catch. How is it that you can come here and eat as much hot pot and grill as much meat as you want to for under $10? The only stipulation is that you only have 90 minutes. The other way they save money is on staff. Here, you don't exactly have a server. You need to go up and get all the food yourself. That's",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "FSoK7VVN7JQ",
+              "title": "Rich Man Buffet vs Poor Man Buffet in Taiwan!!",
+              "channelName": "More Best Ever Food Review Show",
+              "thumbnailUrl": "https://i.ytimg.com/vi/FSoK7VVN7JQ/maxresdefault.jpg",
+              "publishedAt": "2024-08-03"
+            },
+            "title": "Try a dessert that looks just like this building",
+            "takeaway": "A dessert that looks just like this building offers a crispy, Taipei 101-shaped treat with little offices inside.",
+            "highlights": [
+              "A dessert that looks just like this building"
+            ],
+            "locationVerification": {
+              "poiName": "Taipei 101",
+              "relationship": "inside",
+              "evidence": "Finally, we are in Taipei 101 after all, so they have a dessert that looks just like this building",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=FSoK7VVN7JQ&t=1145s"
+          },
+          {
+            "id": "sDLkWbKGi74-practical_tip-1",
+            "intent": "practical_tip",
+            "startSeconds": 1,
+            "endSeconds": 55,
+            "exactQuote": "After exploring Taipei Zoo, our next stop was none other than the iconic Taipei 101. From Taipei Zoo Station, we hopped on the Wenhoo or Brown Line to Dawn station, then transferred to the Tamsui Shini Red Line. The entire ride took around 38 minutes, giving us just enough time to recharge before our next big adventure. Stepping out of exit 4, the very first thing you'll notice is the towering giant itself, Taipei 101. The",
+            "contextText": "After exploring Taipei Zoo, our next stop was none other than the iconic Taipei 101. From Taipei Zoo Station, we hopped on the Wenhoo or Brown Line to Dawn station, then transferred to the Tamsui Shini Red Line. The entire ride took around 38 minutes, giving us just enough time to recharge before our next big adventure. Stepping out of exit 4, the very first thing you'll notice is the towering giant itself, Taipei 101. The way it dominates the skyline is incredible. Before heading in, we also spotted a massive advertisement of Gragon, the South Korean music and fashion icon. And yes, we couldn't resist joining the viral trend of filming the elevator ride up and down just for fun. Walking inside, you'll immediately be surrounded by luxury. High-end brands line both sides of the lobby, making it feel like you're strolling through an international fashion avenue. Right in the middle, we",
+            "locationContext": "After exploring Taipei Zoo, our next stop was none other than the iconic Taipei 101. From Taipei Zoo Station, we hopped on the Wenhoo or Brown Line to Dawn station, then transferred to the Tamsui Shini Red Line. The entire ride took around 38 minutes, giving us just enough time to recharge before our next big adventure. Stepping out of exit 4, the very first thing you'll notice is the towering giant itself, Taipei 101. The way it dominates the skyline is incredible. Before heading in, we also spotted a massive advertisement of Gragon, the South Korean music and fashion icon. And yes, we couldn't resist joining the viral trend of filming the elevator ride up and down just for fun. Walking inside, you'll immediately be surrounded by luxury. High-end brands line both sides of the lobby, making it feel like you're strolling through an international fashion avenue. Right in the middle, we also came across the Gragon media exhibition, Uber Mench, which added a",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "sDLkWbKGi74",
+              "title": "Taipei 101 Travel Guide 2025 🇹🇼 | Observatory, Fast Elevator & G-Dragon Exhibit",
+              "channelName": "Nomadic Thyme",
+              "thumbnailUrl": "https://i.ytimg.com/vi/sDLkWbKGi74/maxresdefault.jpg",
+              "publishedAt": "2025-08-23"
+            },
+            "title": "Creator tip: From Taipei Zoo Station to Taipei 101",
+            "takeaway": "The creator observed: from Taipei Zoo Station, take the Wenhoo or Brown Line, transfer to the Tamsui Shini Red Line, and ride around 38 minutes.",
+            "highlights": [
+              "From Taipei Zoo Station, take the Wenhoo or Brown",
+              "transfer to the Tamsui Shini Red Line",
+              "ride around 38 minutes"
+            ],
+            "locationVerification": {
+              "poiName": "Taipei 101",
+              "relationship": "queried_place",
+              "evidence": "our next stop was none other than the iconic Taipei 101",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=sDLkWbKGi74&t=1s"
+          },
+          {
+            "id": "BFJQMeQS6Cc-practical_tip-51",
+            "intent": "practical_tip",
+            "startSeconds": 51,
+            "endSeconds": 105,
+            "exactQuote": "like a very luxurious mall. All the luxury brands are here. And you got to break a way up to the fifth floor in order to go up to the observatory. >> [music] >> I got our tickets. Yeah, we booked them online through Klook. And we booked the experience including the 101 floor. With the online reservation, you can skip the queue buying tickets. We have a normal ticket [music] for the 89th and 88th floor. And this is for the 101 floor, which has a time of 1 hour from",
+            "contextText": "like a very luxurious mall. All the luxury brands are here. And you got to break a way up to the fifth floor in order to go up to the observatory. >> [music] >> I got our tickets. Yeah, we booked them online through Klook. And we booked the experience including the 101 floor. With the online reservation, you can skip the queue buying tickets. We have a normal ticket [music] for the 89th and 88th floor. And this is for the 101 floor, which has a time of 1 hour from 1:00 to 2:00. And also we got a discount voucher for the cafe upstairs. [music] And a postcard cuz apparently there's a mailbox up there. So first, we're going to go to the 88th floor. The Taipei 101 elevators is one of the fastest in the world. It reaches a top speed of 60 km/h",
+            "locationContext": "This is the tallest building here in Taiwan, the Taipei 101. And today we're going to go check it out. Let's go. Today we are exploring four floors at the top of Taipei 101. We'll be checking out the main observation deck, >> [music] >> the outdoor platform, getting a close-up look at this impressive mass damper, and then making a visit to the secret garden on the 101st floor. From the outside, the design of Taipei 101 is meant to resemble a giant bamboo stalk and the form of a traditional Chinese pagoda. >> [music] >> All right, we're here at Taipei 101. We're going to head in and check out the place. In order to go to the observatory at Taipei 101, you have to go through this mall first. And this is actually like a very luxurious mall. All the luxury brands are here. And you got to break a way up to the fifth floor in order to go up to the observatory. >> [music]",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "BFJQMeQS6Cc",
+              "title": "Taipei 101 Experience: The FULL Tour (89F, 101F, Sky Deck) | Taiwan Travel",
+              "channelName": "Puri and Sue",
+              "thumbnailUrl": "https://i.ytimg.com/vi/BFJQMeQS6Cc/maxresdefault.jpg",
+              "publishedAt": "2025-10-13"
+            },
+            "title": "Creator tip: Book tickets online through Klook for Taipei 101",
+            "takeaway": "The creator observed: they booked them online through Klook, including the 101 floor, and say online reservations let visitors skip the ticket queue.",
+            "highlights": [
+              "booked them online through Klook",
+              "including the 101 floor",
+              "online reservations let visitors skip the ticket"
+            ],
+            "locationVerification": {
+              "poiName": "Taipei 101",
+              "relationship": "inside",
+              "evidence": "And you got to break a way up to the fifth floor in order to go up to the observatory",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=BFJQMeQS6Cc&t=51s"
+          }
+        ],
+        "suggestedPlan": [
+          "Creator tip: From Taipei Zoo Station to Taipei 101",
+          "Visit the Taipei 101 indoor and outdoor observatories",
+          "Tour the food court inside Taipei 101",
+          "Order pork buns at Taipei 101"
+        ],
+        "warnings": [
+          "Opening hours, prices, reservations, and temporary closures still require a current check."
+        ],
+        "mode": "ai",
+        "aiModel": "gpt-5.6-luna",
+        "sourceStatus": "verified_snapshot",
+        "verification": {
+          "videosFound": 362,
+          "captionedVideos": 111,
+          "candidateClips": 10,
+          "evidenceMatches": 9,
+          "verifiedClips": 9,
+          "rejectedEvidenceOrRanking": 1,
+          "rejectedLocation": 0
+        },
+        "snapshotVersion": 1,
+        "snapshotStatus": "verified",
+        "sourceCutoffDate": "2024-07-18",
+        "reviewAfter": "2026-07-25",
+        "demoSnapshot": true
+      }
+    },
+    {
+      "place": "Ximending",
+      "city": "Taipei",
+      "file": "verified/taipei-ximending.json",
+      "snapshot": {
+        "place": "Ximending",
+        "city": "Taipei",
+        "overview": "9 captioned travel videos produced 9 semantically verified clips for Ximending. Each title is tied to an exact supporting quote. Named places are also checked against the requested location.",
+        "generatedAt": "2026-07-18T13:35:33.769Z",
+        "cacheHit": true,
+        "sourceCount": 9,
+        "clipCount": 9,
+        "clips": [
+          {
+            "id": "oHzxT-pLMqE-why_visit-356",
+            "intent": "why_visit",
+            "startSeconds": 356,
+            "endSeconds": 409,
+            "exactQuote": "easy commute system choosing an accommodation is simple just stay near a train station or a bus station and you're good to go but in particular there are four popular districts for tourists so let me show you the differences between each one so it can help you choose the best area for you let's begin first up Ximending this area is perfect for shopping and nightlife famous for its vibrant energy Ximending is a hub for trendy shops exciting nightlife and mouthwatering street food making it perfect for travelers looking for a lively central location next up the Zhongzheng",
+            "contextText": "easy commute system choosing an accommodation is simple just stay near a train station or a bus station and you're good to go but in particular there are four popular districts for tourists so let me show you the differences between each one so it can help you choose the best area for you let's begin first up Ximending this area is perfect for shopping and nightlife famous for its vibrant energy Ximending is a hub for trendy shops exciting nightlife and mouthwatering street food making it perfect for travelers looking for a lively central location next up the Zhongzheng District this area is perfect for history and sightseeing Zhongzheng showcases Taipei's Rich history and culture with iconic landmarks and popular museums it's also home to Taipei main station the city's Central Transport Hub giving you easy access to all other tour spots around Taipei B now we got the Xinyi District this area is perfect for luxury and business Travelers this upscale area offers high-end malls five-star hotels and fancy dining options making it a",
+            "locationContext": "The Ultimate Taipei Travel Guide Let's go! We stayed at super cool hotels for just 30 bucks per head joined budget friendly tours for only 25 bucks and indulge in Michelin star street food for just two bucks we're now here to give you the best and most informative Taipei Travel Guide the internet has ever seen in this video we give you everything you need to know the best places to visit the best things to do and the best food to eat all so that you could have the best Taiwan trip possible so let's go Hi guys my name is Angelica wanders and this is Aileen wanders and we create budget travel guides all around the world on this channel we show you our easy to follow itineraries and also our cost and expenses in every trip so if you want to travel around the world in the",
+            "captionTrack": "creator",
+            "language": "en",
+            "video": {
+              "id": "oHzxT-pLMqE",
+              "title": "Taipei Taiwan 2026 Travel Guide: Places to Visit & Things to Do • Itinerary & Expenses • Budget Vlog",
+              "channelName": "Angelica & Aileen Wanders",
+              "thumbnailUrl": "https://i.ytimg.com/vi/oHzxT-pLMqE/maxresdefault.jpg",
+              "publishedAt": "2024-12-28"
+            },
+            "title": "Ximending Is Perfect for Shopping and Nightlife",
+            "takeaway": "Ximending is perfect for shopping and nightlife, with vibrant energy, trendy shops, street food, and a lively central location.",
+            "highlights": [
+              "Ximending is perfect for shopping and nightlife,",
+              "with vibrant energy,",
+              "trendy shops, street food, and a lively central"
+            ],
+            "locationVerification": {
+              "poiName": "Ximending",
+              "relationship": "queried_place",
+              "evidence": "this area is perfect for shopping and nightlife famous for its vibrant energy Ximending is a hub for trendy shops",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=oHzxT-pLMqE&t=356s"
+          },
+          {
+            "id": "52PkbB3vtMg-why_visit-62",
+            "intent": "why_visit",
+            "startSeconds": 62,
+            "endSeconds": 116,
+            "exactQuote": "So, grab your favorite bubble tea and join us as we dive into the heart of one of Taiwan's coolest neighborhoods. Let's hit the streets of Ximending, where the air is buzzing with energy. This district isn't just a shopping haven or a nightlife hotspot. It's the place where Taiwan's history is written in every brick, neon sign, and food stall.",
+            "contextText": "So, grab your favorite bubble tea and join us as we dive into the heart of one of Taiwan's coolest neighborhoods. Let's hit the streets of Ximending, where the air is buzzing with energy. This district isn't just a shopping haven or a nightlife hotspot. It's the place where Taiwan's history is written in every brick, neon sign, and food stall. No visit to Ximending is complete without a stop at the iconic Red Door. This vibrant gateway marks the entrance to the Red House, one of Taipei's most beloved landmarks. The bold red color and historic design stand out against the modern backdrop, creating a striking contrast.",
+            "locationContext": "From age-old festivals, fading rituals, and handmade crafts, Tradition in a Box uncovers the vibrant editions that shape communities and identities. Join the Happy Rabbit as we unravel the deeper meanings behind everyday customs and cultural celebrations that still thrive today. These are the stories of the past. Their legacies help the next generation to honor, preserve, and embody through reality. Welcome back to Happy Rabbit. Today, we're taking you to Ximending, Taipei's lively district where the past and present dance together in the most exciting way. From quirky street food to neon lights and history tucked in every corner, Ximending is a place where tradition isn't just kept alive, it's celebrated with flair. So, grab your favorite bubble tea and",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "52PkbB3vtMg",
+              "title": "#20 Ximending EXPOSED:  Where Taiwan's History Meets Street Food and Neon Dreams",
+              "channelName": "Happy Rabbit",
+              "thumbnailUrl": "https://i.ytimg.com/vi/52PkbB3vtMg/maxresdefault.jpg",
+              "publishedAt": "2025-06-06"
+            },
+            "title": "Ximending Shows Taiwan's History Is Written in Every Brick",
+            "takeaway": "Ximending feels significant because Taiwan's history is written in every brick, neon sign, and food stall around this lively district.",
+            "highlights": [
+              "Ximending feels significant because Taiwan's",
+              "history is written in every brick, neon sign, and",
+              "food stall around this lively district."
+            ],
+            "locationVerification": {
+              "poiName": "Ximending",
+              "relationship": "queried_place",
+              "evidence": "Let's hit the streets of Ximending, where the air is buzzing with energy",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=52PkbB3vtMg&t=62s"
+          },
+          {
+            "id": "ba41NXnNjFo-activity-1377",
+            "intent": "activity",
+            "startSeconds": 1377,
+            "endSeconds": 1431,
+            "exactQuote": "It's also near the Ximen Red House and it's a quiet place in the middle of a bustling area Okay, because we're very full we're now going to take you to a free attraction in Ximending upstairs at Sun Drug Store (Riyao Benpu) Okay, just go inside through this Sun Drug Store to its fourth floor, there's a museum Do we have to take the stairs? Exercise a bit after eating so much",
+            "contextText": "It's also near the Ximen Red House and it's a quiet place in the middle of a bustling area Okay, because we're very full we're now going to take you to a free attraction in Ximending upstairs at Sun Drug Store (Riyao Benpu) Okay, just go inside through this Sun Drug Store to its fourth floor, there's a museum Do we have to take the stairs? Exercise a bit after eating so much But what happened? I didn't notice it only opens until 6 PM on weekdays Missed it Time fast-forwarded 24 hours We are here Okay, so on the third floor, there are some stalls, small stalls where you can take photos Do you want to buy sushi, everyone? We have... Okay, let's go up and see It also has a fourth floor.",
+            "locationContext": "As one of the favorite spots for international travelers in Taipei, Ximending truly has all sorts of great food. Today, we're going to check out some famous classic old restaurants to see if they're really good, and what secret must-try spots are on our list. When good food is in front of you, you should still feel happy. This beef noodle soup has every element of a delicious meal. With mango right in front of me, it's really hard for me not to order it. If you really eat delicious food, even if you're really full, you'll still think it's delicious. Hello everyone, I'm Xuan Xuan. I'm Mr. G. So this time, for our food hunting trip, we've come to Ximending in Taipei. Today we're going to eat some of Ximending's must-try foods. Why am I the only one here today? It's because Lizzy is in school right now. We had some trips planned in the North, and we were thinking of filming for two days and one night, or three days and two nights, but we didn't want her to take too many days off. So, sometimes it's just me and Jacky filming. Usually, it's the two of us filming. Since it's just me today, I probably shouldn't look too happy,",
+            "captionTrack": "creator",
+            "language": "en",
+            "englishPresentation": {
+              "channelName": "Xuanxuan & Mr. G — 100 Food Trips"
+            },
+            "video": {
+              "id": "ba41NXnNjFo",
+              "title": "吃爆西門町美食！9間經典老店vs私藏口袋名單，台北最熱鬧商圈！老店動輒五六十年，又還有啥沒吃過？！Ximending Food Guide｜Taipei Must-Eat Food Tour",
+              "channelName": "瑄瑄 & G先生 · 美食夫妻的100次旅行",
+              "thumbnailUrl": "https://i.ytimg.com/vi/ba41NXnNjFo/maxresdefault.jpg",
+              "publishedAt": "2025-10-16"
+            },
+            "title": "Visit a Museum Above Sun Drug Store",
+            "takeaway": "A museum upstairs at Sun Drug Store offers a free attraction in Ximending, reached by going inside and taking the stairs.",
+            "highlights": [
+              "A museum upstairs at Sun Drug Store offers a free",
+              "attraction in Ximending, reached by going inside",
+              "and taking the stairs."
+            ],
+            "locationVerification": {
+              "poiName": "Ximending",
+              "relationship": "inside",
+              "evidence": "a free attraction in Ximending upstairs at Sun Drug Store",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=ba41NXnNjFo&t=1377s"
+          },
+          {
+            "id": "0qzduReirX0-activity-1",
+            "intent": "activity",
+            "startSeconds": 1,
+            "endSeconds": 55,
+            "exactQuote": "I can see It's a night market. So Ximending food street and then you can walk around and then there are many shopping areas you can walk around. And then you can see Taiwanese people and then you",
+            "contextText": "I can see It's a night market. So Ximending food street and then you can walk around and then there are many shopping areas you can walk around. And then you can see Taiwanese people and then you night love with the money uh shopping with So one of the major uh tourist attraction in the Ximending night street. So there are many other night streets but this one is major. Main on the street so you can see many big big displays. Uh you can see them in the street and then you can walk around. And you know",
+            "locationContext": "I can see It's a night market. So Ximending food street and then you can walk around and then there are many shopping areas you can walk around. And then you can see Taiwanese people and then you night love with the money uh shopping with So one of the major uh tourist attraction in the Ximending night street. So there are many other night streets but this one is major. Main on the street so you can see many big big displays. Uh you can see them in the street and then you can walk around. And you know what you can do now? Uh you can walk around and Taipei be order famous on the",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "0qzduReirX0",
+              "title": "Ximending Market Taipei | Taiwan’s Most Vibrant Shopping & Street Food Paradise!",
+              "channelName": "Venky's Trip Alert",
+              "thumbnailUrl": "https://i.ytimg.com/vi/0qzduReirX0/maxresdefault.jpg",
+              "publishedAt": "2026-06-16"
+            },
+            "title": "Walk Through Ximending's Many Shopping Areas",
+            "takeaway": "Ximending offers many shopping areas to walk around after exploring its food street and seeing Taiwanese people nearby.",
+            "highlights": [
+              "Ximending offers many shopping areas",
+              "to walk around after exploring its food street",
+              "and seeing Taiwanese people nearby."
+            ],
+            "locationVerification": {
+              "poiName": "Ximending",
+              "relationship": "queried_place",
+              "evidence": "So Ximending food street and then you can walk around and then there are many shopping areas",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=0qzduReirX0&t=1s"
+          },
+          {
+            "id": "jida4qsowzE-food-84",
+            "intent": "food",
+            "startSeconds": 84,
+            "endSeconds": 138,
+            "exactQuote": "energy. If you love to shop, Ximending is your paradise. We're talking trendy fashion boutiques, unique souvenir shops, anime and manga stores. You can literally spend hours just browsing. And the food? Ximending is a foodie's haven, especially for street food. From classic bubble tea stalls on every corner to famous spots like Ay-Chung Flour Rice Noodle, fried chicken, all sorts of skewers. Your taste buds will thank you. Plus, there are tons of cool,",
+            "contextText": "energy. If you love to shop, Ximending is your paradise. We're talking trendy fashion boutiques, unique souvenir shops, anime and manga stores. You can literally spend hours just browsing. And the food? Ximending is a foodie's haven, especially for street food. From classic bubble tea stalls on every corner to famous spots like Ay-Chung Flour Rice Noodle, fried chicken, all sorts of skewers. Your taste buds will thank you. Plus, there are tons of cool, quirky restaurants and cafes here, too. Right here in Ximending, you've got the historic Red House Theater, which is really cool to see. So, the pros of staying in Ximending, you're right in the middle of that vibrant youthful energy, amazing shopping, incredible street food options, and a lively nightlife. You'll never be bored, and there are tons of budget-friendly accommodation choices",
+            "locationContext": "Hey everyone, and welcome back to the channel. I am so excited to be bringing you this guide straight from Taipei, Taiwan. This city is absolutely buzzing, and if you're planning your first trip here, one of the biggest questions you'll have is where should you stay? Two of the most popular areas for first-time visitors are Ximending and Taipei Main Station. They both have awesome things going for them, but they offer totally different vibes. So, in this video, we're going to break down the pros and cons of each, what's nearby, and help you figure out which spot is the perfect home base for your Taipei adventure. Stick around till the end because I've also got some super handy tips to make your arrival and getting around Taipei smooth as silk. Let's kick things off with the district that feels like the energetic heart of Taipei's youth culture, Ximending. If you've been to places like Harajuku",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "jida4qsowzE",
+              "title": "[EN] TAIPEI FIRST TIMER! Where to Stay? Ximending vs Taipei Main Station | TIPS FOR SMOOTHER ARRIVAL",
+              "channelName": "Lyndon's FeetStops",
+              "thumbnailUrl": "https://i.ytimg.com/vi/jida4qsowzE/maxresdefault.jpg",
+              "publishedAt": "2025-05-31"
+            },
+            "title": "Try Ay-Chung Flour Rice Noodle in Ximending",
+            "takeaway": "Ay-Chung Flour Rice Noodle is a famous Ximending food stop alongside bubble tea, fried chicken, and skewers.",
+            "highlights": [
+              "Ay-Chung Flour Rice Noodle is a famous Ximending"
+            ],
+            "locationVerification": {
+              "poiName": "Ximending",
+              "relationship": "queried_place",
+              "evidence": "Ximending is a foodie's haven, especially for street food",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=jida4qsowzE&t=84s"
+          },
+          {
+            "id": "zxnZz-T51-Q-food-70",
+            "intent": "food",
+            "startSeconds": 70,
+            "endSeconds": 124,
+            "exactQuote": "In the lively corners of Ximending, you will often see people scattered around, comfortably standing or squatting on the street as they savor their noodles This vermicelli place in Taipei is so famous that every day there's a long queue. It's a must-visit place when you come to Ximending area. Originally a humble street stall, Ay-Chung floor rice noodle became a local favorite. Customers would gather,",
+            "contextText": "In the lively corners of Ximending, you will often see people scattered around, comfortably standing or squatting on the street as they savor their noodles This vermicelli place in Taipei is so famous that every day there's a long queue. It's a must-visit place when you come to Ximending area. Originally a humble street stall, Ay-Chung floor rice noodle became a local favorite. Customers would gather, standing to enjoy their meals directly from the vendor who had no shop or seating. This practice of standing and eating has evolved into a cherished tradition continuing to this day. Smells so good. Hot and delicious, like me. Fried chicken can be found in almost every country's cuisine,",
+            "locationContext": "Welcome to Anything Goes with JL. I'm your host Jenny. Today we're in Taipei's Ximending area. Follow me this evening as I enjoy all my favorite snacks when I visit this area. Come check it out! Ximending has long been a culture hub for Taipei's youth. It was originally designed as a grid shaped entertainment district. It has also been the birthplace of iconic local foods On a warm day, what better way to start our food tour than with a refreshing uniquely Taiwanese cold drink. Star Fruits Ice This place has been in Ximending since 1966. It's one of the places you cannot miss when you visit this area.",
+            "captionTrack": "creator",
+            "language": "en-US",
+            "video": {
+              "id": "zxnZz-T51-Q",
+              "title": "What To Eat in Ximending Taipei: Best Street Food | Anything Goes With JL",
+              "channelName": "TaiwanPlus",
+              "thumbnailUrl": "https://i.ytimg.com/vi/zxnZz-T51-Q/maxresdefault.jpg",
+              "publishedAt": "2024-09-15"
+            },
+            "title": "Queue for Ay-Chung Floor Rice Noodle in Ximending",
+            "takeaway": "Ay-Chung floor rice noodle is a famous Ximending vermicelli stop where customers traditionally stand and enjoy hot noodles.",
+            "highlights": [
+              "Ay-Chung floor rice noodle is a famous Ximending",
+              "vermicelli stop where customers traditionally",
+              "stand and enjoy hot noodles."
+            ],
+            "locationVerification": {
+              "poiName": "Ximending",
+              "relationship": "queried_place",
+              "evidence": "It's a must-visit place when you come to Ximending area",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=zxnZz-T51-Q&t=70s"
+          },
+          {
+            "id": "L3v9MA-l9rA-practical_tip-28",
+            "intent": "food",
+            "startSeconds": 28,
+            "endSeconds": 82,
+            "exactQuote": "[Music] here. [Music] Well, good morning. Welcome to Shiming. Um, I'm just ending a weekend full of fun and I'm heading to this place we're going to try called uh A Chong Flowered Rice Noodles and um it's a really well-known spot here in Thai in Taipei. Um, I've",
+            "contextText": "[Music] here. [Music] Well, good morning. Welcome to Shiming. Um, I'm just ending a weekend full of fun and I'm heading to this place we're going to try called uh A Chong Flowered Rice Noodles and um it's a really well-known spot here in Thai in Taipei. Um, I've seen on many vlogs before. So, now we're going to try it out. So, let's check out Chong Flour Rice Noodle. All right. So, here's the shop. It's located in Shiming on the pedestrian walk here. And it's just down one of the alleyways, corridor alley E12. It's a sign for And they hand to their noodles. Comes",
+            "locationContext": "Heat up [Music] [Music] here. [Music] Well, good morning. Welcome to Shiming. Um, I'm just ending a weekend full of fun and I'm heading to this place we're going to try called uh A Chong Flowered Rice Noodles and um it's a really well-known spot here in Thai in Taipei. Um, I've seen on many vlogs before. So, now we're",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "L3v9MA-l9rA",
+              "title": "Vlog 118 Ay Chung Flour Rice Noodles & Scallion Pancakes at Ximending",
+              "channelName": "Can We Go?",
+              "thumbnailUrl": "https://i.ytimg.com/vi/L3v9MA-l9rA/maxresdefault.jpg",
+              "publishedAt": "2025-04-05"
+            },
+            "title": "Try A Chong Flowered Rice Noodles",
+            "takeaway": "A Chong Flowered Rice Noodles is a well-known Taipei spot the creator plans to try.",
+            "highlights": [
+              "A Chong Flowered Rice Noodles is a well-known",
+              "Taipei spot the creator plans to try"
+            ],
+            "locationVerification": {
+              "poiName": "Ximending",
+              "relationship": "queried_place",
+              "evidence": "Welcome to Shiming",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=L3v9MA-l9rA&t=28s"
+          },
+          {
+            "id": "5PzX842eP9w-practical_tip-283",
+            "intent": "practical_tip",
+            "startSeconds": 283,
+            "endSeconds": 337,
+            "exactQuote": "tang and this is what it is right here daily fresh handmade tapioca pearls hand fried Boba look at how long the line is here guys I promise you we will come back for that drink and you don't want to miss our review I'm sure they turn on the lights at night yeah it's packed it's a young crowd mixed crowd with tourists and locals alike but tons of stores anything you want you got clothes electronic gadgets toys shoes food and you can spend",
+            "contextText": "tang and this is what it is right here daily fresh handmade tapioca pearls hand fried Boba look at how long the line is here guys I promise you we will come back for that drink and you don't want to miss our review I'm sure they turn on the lights at night yeah it's packed it's a young crowd mixed crowd with tourists and locals alike but tons of stores anything you want you got clothes electronic gadgets toys shoes food and you can spend probably a few hours down here huh and not even touch it all so we're going to keep walking around and definitely get some food heads up if you're walking around here it's not only for pedestrians cuz that's a there was some motorbikes and then there was a car that drove by earlier you never know what you'll see next down here I'm not sure what's in front of us but there's a bunch of dancing ladies heading our way",
+            "locationContext": "in today's video we are in Taipei Taiwan and we are going to show you how to take the MRT from the Taipei main station to the Zim mening walking District the Zim anding walking district is a vibrant part of town with fun games beautiful bright lights amazing food and some great people watching now let's head to the Z anding walking district and so now we're on the train during commute hours and check it out much much different experience although the experience is different it is still a pleasant one tons of people on here but still every no's super respectful and nobody's pushing and everybody's just kind of in their own little space these cards here they're called easy cards and you use them for the MRT but you could also use them to pay for things all around the city and so what Vanessa is doing now is she is topping off our card you just put the card on that little reader insert your money and then it's basically like a debit card",
+            "captionTrack": "automatic",
+            "language": "en",
+            "video": {
+              "id": "5PzX842eP9w",
+              "title": "We Took the Taipei MRT to Ximending Walking District — Here's How",
+              "channelName": "TV Travels",
+              "thumbnailUrl": "https://i.ytimg.com/vi/5PzX842eP9w/maxresdefault.jpg",
+              "publishedAt": "2025-03-02"
+            },
+            "title": "Creator tip: Check How Long the Line Is Here",
+            "takeaway": "The creator observed: check how long the line is here before returning for the daily fresh handmade tapioca pearls and hand fried Boba drink.",
+            "highlights": [
+              "Check how long the line is here",
+              "before returning for the daily fresh handmade tapi",
+              "oca pearls and hand fried Boba drink."
+            ],
+            "locationVerification": {
+              "poiName": "Ximending",
+              "relationship": "queried_place",
+              "evidence": "it's packed it's a young crowd mixed crowd with tourists and locals alike but tons of stores",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=5PzX842eP9w&t=283s"
+          },
+          {
+            "id": "4Ca4yhKAcoo-practical_tip-394",
+            "intent": "practical_tip",
+            "startSeconds": 394,
+            "endSeconds": 448,
+            "exactQuote": "Let's get into the gate where it says Xi-Men Walker ... It's quite packed here … Probably because it's the weekend We’re going to browse through the shops as we make our way to our first stop - Ice Una dessert cafe If you prefer a quieter experience, visit Ximending on a weekday to avoid the crowds … Or embrace the excitement of the weekend and national holidays for a lively, bustling atmosphere For the best experience ... Come in the evening when neon lights brighten the streets and the energy is at its peak",
+            "contextText": "Let's get into the gate where it says Xi-Men Walker ... It's quite packed here … Probably because it's the weekend We’re going to browse through the shops as we make our way to our first stop - Ice Una dessert cafe If you prefer a quieter experience, visit Ximending on a weekday to avoid the crowds … Or embrace the excitement of the weekend and national holidays for a lively, bustling atmosphere For the best experience ... Come in the evening when neon lights brighten the streets and the energy is at its peak To the left is KR4Cut, a dedicated Korean-style photo booth … … and a hotspot for all things K-pop We’ll be coming back to check it out later Up ahead, there’s a large Swatch store … offering a variety of stylish and collectible timepieces Swatch is known for its bold designs and limited-edition collaborations, making it a great spot for watch enthusiasts",
+            "locationContext": "Welcome to another video from Cheeseman Travel! In today’s video, we’re going to explore Ximending … … one of Taipei’s most vibrant and energetic districts Known as the “Harajuku of Taipei,” it’s packed with street food, shopping, and entertainment. From neon-lit streets to trendy boutiques and hidden gems … … there’s always something exciting happening here! Let’s explore Ximending and see what this lively hotspot has to offer! Ximending is located in the west of Taipei, in Wanhua District … is a vibrant hub for shopping, food, and entertainment Once a historic entertainment district, it’s now a trendsetting hotspot … … it’s now a trendy spot for locals and tourists alike! We are continuing our journey from Beitou by riding the 218 bus direct to Ximending We’re using our EasyCard to pay for the bus, and it costs only 30 NTD per person.",
+            "captionTrack": "creator",
+            "language": "en",
+            "video": {
+              "id": "4Ca4yhKAcoo",
+              "title": "Exploring the Vibrant Streets of Ximending | A Shopping and Food Lover's Paradise in Taipei",
+              "channelName": "CHEESEman TRAVEL",
+              "thumbnailUrl": "https://i.ytimg.com/vi/4Ca4yhKAcoo/maxresdefault.jpg",
+              "publishedAt": "2025-03-07"
+            },
+            "title": "Creator tip: Visit Ximending on a weekday to avoid crowds",
+            "takeaway": "The creator observed: visit Ximending on a weekday to avoid the crowds, or come in the evening for neon lights.",
+            "highlights": [
+              "Visit Ximending on a weekday to avoid the crowds",
+              "come in the evening for neon lights"
+            ],
+            "locationVerification": {
+              "poiName": "Ximending",
+              "relationship": "queried_place",
+              "evidence": "visit Ximending on a weekday to avoid the crowds",
+              "status": "same_place",
+              "distanceMeters": 0
+            },
+            "youtubeTimestampSource": "https://www.youtube.com/watch?v=4Ca4yhKAcoo&t=394s"
+          }
+        ],
+        "suggestedPlan": [
+          "Creator tip: Check How Long the Line Is Here",
+          "Visit a Museum Above Sun Drug Store",
+          "Walk Through Ximending's Many Shopping Areas",
+          "Try Ay-Chung Flour Rice Noodle in Ximending"
+        ],
+        "warnings": [
+          "Opening hours, prices, reservations, and temporary closures still require a current check."
+        ],
+        "mode": "ai",
+        "aiModel": "gpt-5.6-luna",
+        "sourceStatus": "verified_snapshot",
+        "verification": {
+          "videosFound": 492,
+          "captionedVideos": 138,
+          "candidateClips": 13,
+          "evidenceMatches": 9,
+          "verifiedClips": 9,
+          "rejectedEvidenceOrRanking": 4,
+          "rejectedLocation": 0
+        },
+        "snapshotVersion": 1,
+        "snapshotStatus": "verified",
+        "sourceCutoffDate": "2024-07-18",
+        "reviewAfter": "2026-07-25",
+        "demoSnapshot": true
+      }
+    }
+  ]
+}

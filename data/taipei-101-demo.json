@@ -161,5 +161,7 @@
     "rejectedEvidenceOrRanking": 3,
     "rejectedLocation": 0
   },
-  "demoSnapshot": true
+  "demoSnapshot": false,
+  "legacySnapshot": true,
+  "sourceStatus": "legacy_fixture"
 }

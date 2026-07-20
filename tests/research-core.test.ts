@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { applySemanticClipAnalyses, buildExtractiveResearchResult, buildVerifiedResearchResult, extractResearchClips, isRecentPublishedAt, parseResearchJson3, recentVideoCutoffDate, reconcileVerificationCounts, type ResearchVideoTranscript } from "@/lib/research-core";
+import { applySemanticClipAnalyses, buildExtractiveResearchResult, buildVerifiedResearchResult, extractResearchClips, isRecentPublishedAt, parseResearchJson3, recentVideoCutoffDate, reconcileVerificationCounts, selectBalancedEvidenceClips, selectSnapshotEvidenceClips, type ResearchVideoTranscript, type SemanticClipAnalysis } from "@/lib/research-core";
 import { resolveOpenAIModel } from "@/lib/openai";
 import { researchPlaceRequestSchema } from "@/lib/schemas";
-import type { ResearchClip } from "@/types/research";
+import type { ResearchClip, ResearchIntent } from "@/types/research";
 
 const baseVideo = (overrides: Partial<ResearchVideoTranscript> & Pick<ResearchVideoTranscript, "id" | "title" | "channelName" | "searchIntents" | "cues">): ResearchVideoTranscript => ({
   thumbnailUrl: `https://i.ytimg.com/vi/${overrides.id}/hqdefault.jpg`,
@@ -151,6 +151,53 @@ describe("new-place transcript research", () => {
     expect(extractResearchClips("Dadaocheng", [broadVideo])).toEqual([]);
   });
 
+  it("recognizes Dihua Street and its common automatic-caption spelling as in-scope Dadaocheng evidence", () => {
+    const dihuaWalk = baseVideo({
+      id: "dihwa-walk-123",
+      title: "Dihwa Street walk in old Taipei",
+      channelName: "Taipei Walks",
+      searchIntents: ["activity"],
+      cues: [{
+        startSeconds: 74,
+        endSeconds: 98,
+        text: "Dihwa Street has narrow side streets to explore, and the Taiwan Crafts Workshop is a concrete stop before you continue your walk."
+      }]
+    });
+
+    const clips = extractResearchClips("Dadaocheng", [dihuaWalk]);
+    expect(clips.some((clip) => clip.intent === "activity" && clip.video.id === dihuaWalk.id)).toBe(true);
+  });
+
+  it("accepts narrowly focused in-scope video-title location evidence without treating city-wide titles as proof", () => {
+    const clip: ResearchClip = {
+      id: "dihua-title-location", intent: "practical_tip", title: "Keyword fallback", takeaway: "fallback", startSeconds: 0, endSeconds: 52,
+      exactQuote: "It is not too busy today because it is Monday at one in the afternoon, so the five or six block excursion feels easy.",
+      contextText: "The creator is walking the same five or six block excursion and describes the Monday afternoon crowd level.",
+      locationContext: "This is a single-location walking video.", captionTrack: "automatic", language: "en",
+      video: { id: "dihua-title1", title: "Dihua Street, Taipei City: What to Expect?", channelName: "Fixture channel", thumbnailUrl: "https://i.ytimg.com/vi/dihua-title1/hqdefault.jpg" }
+    };
+    const result = buildExtractiveResearchResult("Dadaocheng", "Taipei", [clip], "2026-07-18T00:00:00.000Z");
+    const verified = applySemanticClipAnalyses(result, [{
+      clipId: clip.id,
+      intent: "practical_tip",
+      primarySubject: "not too busy today",
+      title: "Not too busy today on Monday",
+      takeaway: "Not too busy today because Monday at one in the afternoon makes the five or six block excursion easier.",
+      supportQuote: "not too busy today because it is Monday at one in the afternoon",
+      highlights: ["not too busy today", "Monday at one in the afternoon"],
+      mentionOnly: false,
+      placeRelevant: true,
+      confidence: 0.94,
+      poiName: "Dadaocheng",
+      locationRelationship: "inside",
+      locationEvidence: "Dihua Street",
+      locationEvidenceSource: "video_title"
+    }]);
+
+    expect(verified.clips.map((item) => item.id)).toEqual([clip.id]);
+    expect(verified.clips[0]?.locationVerification?.evidenceSource).toBe("video_title");
+  });
+
   it("uses the numeric landmark token for Taipei 101 instead of accepting every Taipei clip", () => {
     const cityGuide = baseVideo({
       id: "taipei-city-123",
@@ -291,6 +338,23 @@ describe("new-place transcript research", () => {
     expect(clips.some((clip) => clip.intent === "practical_tip" && clip.video.id === queueVideo.id)).toBe(true);
   });
 
+  it("keeps the complete route instruction in a practical card's exact quote", () => {
+    const routeVideo = baseVideo({
+      id: "dihua-route-123",
+      title: "Dihua Street access guide",
+      channelName: "Taipei Walks",
+      searchIntents: ["practical_tip"],
+      cues: [
+        { startSeconds: 0, endSeconds: 10, text: "Dihua Street is easy to reach from the station exit: arrive early, turn left and walk straight through the market." },
+        { startSeconds: 32, endSeconds: 44, text: "It is about a ten to fifteen minute walk from the station, so you do not need the shuttle." }
+      ]
+    });
+
+    const practical = extractResearchClips("Dadaocheng", [routeVideo]).find((clip) => clip.intent === "practical_tip");
+    expect(practical?.exactQuote).toMatch(/ten to fifteen minute walk/i);
+    expect(practical?.endSeconds).toBeGreaterThanOrEqual(52);
+  });
+
   it("opens a food clip near the topic lead-in instead of the last tasting sentence", () => {
     const wheelCakeVideo = baseVideo({
       id: "wheel-cake-123",
@@ -334,6 +398,51 @@ describe("new-place transcript research", () => {
     const verified = buildVerifiedResearchResult({ ...result, mode: "ai" }, clips, 0);
     expect(verified.clips.filter((clip) => clip.intent === "food")).toHaveLength(3);
     expect(verified.sourceCount).toBe(3);
+  });
+
+  it("caps a semantic verification batch at twelve balanced source cards", () => {
+    const intents: ResearchIntent[] = ["why_visit", "activity", "food", "practical_tip"];
+    const clips = intents.flatMap((intent) => Array.from({ length: 4 }, (_, index): ResearchClip => ({
+      id: `${intent}-${index}`,
+      intent,
+      title: `${intent} source ${index}`,
+      takeaway: `A source-backed ${intent} takeaway ${index}.`,
+      startSeconds: 30 + index,
+      endSeconds: 60 + index,
+      exactQuote: `Dadaocheng has a source-backed ${intent} observation ${index}.`,
+      contextText: "Dadaocheng context.",
+      captionTrack: "creator",
+      language: "en",
+      video: { id: `${intent}-video-${index}`, title: `Dadaocheng ${intent} ${index}`, channelName: `Channel ${index}`, thumbnailUrl: "https://example.com/thumb.jpg" }
+    })));
+
+    const selected = selectBalancedEvidenceClips(clips);
+    expect(selected).toHaveLength(12);
+    for (const intent of intents) {
+      expect(selected.filter((clip) => clip.intent === intent)).toHaveLength(3);
+    }
+  });
+
+  it("selects two distinct sources per category for final snapshot review", () => {
+    const intents: ResearchIntent[] = ["why_visit", "activity", "food", "practical_tip"];
+    const clips = intents.flatMap((intent) => Array.from({ length: 3 }, (_, index): ResearchClip => ({
+      id: `${intent}-snapshot-${index}`,
+      intent,
+      title: `${intent} source ${index}`,
+      takeaway: `A source-backed ${intent} takeaway ${index}.`,
+      startSeconds: 30 + index,
+      endSeconds: 60 + index,
+      exactQuote: `Dadaocheng has a source-backed ${intent} observation ${index}.`,
+      contextText: "Dadaocheng context.",
+      captionTrack: "creator",
+      language: "en",
+      video: { id: `${intent}-snapshot-video-${index}`, title: `Dadaocheng ${intent} ${index}`, channelName: `Channel ${index}`, thumbnailUrl: "https://example.com/thumb.jpg" }
+    })));
+    const selected = selectSnapshotEvidenceClips(clips);
+    expect(selected).toHaveLength(8);
+    for (const intent of intents) {
+      expect(new Set(selected.filter((clip) => clip.intent === intent).map((clip) => clip.video.id)).size).toBe(2);
+    }
   });
 });
 
@@ -526,5 +635,74 @@ describe("semantic title verification", () => {
     }]);
 
     expect(verified.clips).toEqual([]);
+  });
+
+  it("accepts Traditional Chinese public captions without weakening place or quote checks", () => {
+    const foodVideo = baseVideo({
+      id: "zhfood00001",
+      title: "大稻埕迪化街美食散步",
+      channelName: "台北散步頻道",
+      language: "zh-TW",
+      searchIntents: ["food"],
+      cues: [{ startSeconds: 40, endSeconds: 60, text: "今天來到大稻埕迪化街，這家老店的傳統糕餅和茶點很受歡迎，逛街時可以當作下午點心慢慢吃。" }]
+    });
+    const tipVideo = baseVideo({
+      id: "zhtip000001",
+      title: "西門町捷運交通攻略",
+      channelName: "台北旅遊筆記",
+      language: "zh-Hant",
+      searchIntents: ["practical_tip"],
+      cues: [{ startSeconds: 70, endSeconds: 92, text: "今天到西門町旅遊，如果搭捷運請從西門站六號出口走，週末晚上人潮很多，建議提早抵達避免排隊。" }]
+    });
+
+    expect(extractResearchClips("Dadaocheng", [foodVideo]).some((clip) => clip.intent === "food")).toBe(true);
+    expect(extractResearchClips("Ximending", [tipVideo]).some((clip) => clip.intent === "practical_tip")).toBe(true);
+
+    const clip: ResearchClip = {
+      id: "zhfood00001-food-40",
+      intent: "food",
+      title: "Keyword fallback",
+      takeaway: "fallback",
+      startSeconds: 40,
+      endSeconds: 60,
+      exactQuote: "今天來到大稻埕迪化街，這家老店的傳統糕餅和茶點很受歡迎，逛街時可以當作下午點心慢慢吃。",
+      contextText: "今天來到大稻埕迪化街，這家老店的傳統糕餅和茶點很受歡迎。",
+      locationContext: "今天來到大稻埕迪化街。",
+      captionTrack: "creator",
+      language: "zh-TW",
+      video: { id: "zhfood00001", title: "大稻埕迪化街美食散步", channelName: "台北散步頻道", thumbnailUrl: "https://i.ytimg.com/vi/zhfood00001/hqdefault.jpg" }
+    };
+    const result = buildExtractiveResearchResult("Dadaocheng", "Taipei", [clip], "2026-07-18T00:00:00.000Z");
+    const analysis: SemanticClipAnalysis = {
+      clipId: clip.id,
+      intent: "food",
+      primarySubject: "傳統糕餅",
+      title: "傳統糕餅",
+      takeaway: "傳統糕餅和茶點是迪化街散步時值得品嚐的小吃。",
+      supportQuote: "這家老店的傳統糕餅和茶點很受歡迎",
+      highlights: ["傳統糕餅"],
+      mentionOnly: false,
+      placeRelevant: true,
+      confidence: 0.96,
+      poiName: "Dadaocheng",
+      locationRelationship: "queried_place",
+      locationEvidence: "大稻埕迪化街"
+    };
+
+    expect(applySemanticClipAnalyses(result, [analysis]).clips).toEqual([]);
+
+    const verified = applySemanticClipAnalyses(result, [{
+      ...analysis,
+      englishPresentation: {
+        title: "Traditional pastries on Dihua Street",
+        takeaway: "The creator says this long-running shop's traditional pastries and tea snacks are popular and make an easy afternoon stop while walking Dihua Street.",
+        exactQuote: "At Dadaocheng's Dihua Street, this long-running shop's traditional pastries and tea snacks are popular and can be enjoyed slowly as an afternoon snack while walking.",
+        highlights: ["traditional pastries", "tea snacks", "afternoon snack"],
+        channelName: "Taipei Walking Channel"
+      }
+    }]);
+
+    expect(verified.clips.map((item) => item.id)).toEqual([clip.id]);
+    expect(verified.clips[0]?.englishPresentation?.takeaway).toContain("traditional pastries");
   });
 });

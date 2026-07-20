@@ -1,0 +1,320 @@
+{
+  "place": "Taipei 101",
+  "city": "Taipei",
+  "overview": "9 captioned travel videos produced 9 semantically verified clips for Taipei 101. Each title is tied to an exact supporting quote. Named places are also checked against the requested location.",
+  "generatedAt": "2026-07-18T13:07:20.612Z",
+  "cacheHit": true,
+  "sourceCount": 9,
+  "clipCount": 9,
+  "clips": [
+    {
+      "id": "TaWwXMebpUs-why_visit-304",
+      "intent": "why_visit",
+      "startSeconds": 304,
+      "endSeconds": 358,
+      "exactQuote": "direction effectively stabilizing the entire structure the damper is made of 41 circular steel plates each 125 mm thick it's so effective that it reduces the building's Movement by 40% the damper is one of the largest in the world and visitors to taipe 101 can actually see it in action providing a unique glimpse into how engineering can mitigate natural",
+      "contextText": "direction effectively stabilizing the entire structure the damper is made of 41 circular steel plates each 125 mm thick it's so effective that it reduces the building's Movement by 40% the damper is one of the largest in the world and visitors to taipe 101 can actually see it in action providing a unique glimpse into how engineering can mitigate natural disasters taipe 101 is not just an iconic Landmark it's a testament to what human Ingenuity can achieve from its striking design to its Advanced earthquake resistant technology this building stands as a symbol of strength Innovation and cultural Pride whether you're an architect an engineer or simply a lover of great design taipe 101",
+      "locationContext": "Rising high above the skyline of Taipei this is the Taipei 101 it is a symbol of resilience Innovation and cultural Pride this incredible skyscraper once held the title of the world's tallest building and continues to inspire Architects and Engineers worldwide but beyond its breathtaking height and design there's a story of how a building was engineered to defy Nature's Most unpredictable forces stick with us as we dive into the fascinating world of taipe 101 and uncover the secrets behind its groundbreaking construction and earthquake resistant design [Music]",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "TaWwXMebpUs",
+        "title": "The Marvel of Taipei 101: Architecture That Defies Earthquakes",
+        "channelName": "3Ts Architecture",
+        "thumbnailUrl": "https://i.ytimg.com/vi/TaWwXMebpUs/maxresdefault.jpg",
+        "publishedAt": "2024-08-20"
+      },
+      "title": "See the damper in action",
+      "takeaway": "The damper lets visitors see engineering in action while stabilizing Taipei 101 and mitigating natural disasters.",
+      "highlights": [
+        "The damper lets visitors see engineering in action"
+      ],
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "queried_place",
+        "evidence": "visitors to taipe 101 can actually see it in action",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=TaWwXMebpUs&t=304s"
+    },
+    {
+      "id": "CPoDRr-0xsQ-why_visit-75",
+      "intent": "why_visit",
+      "startSeconds": 75,
+      "endSeconds": 129,
+      "exactQuote": "This damper sways to counteract the building's movements during earthquakes and typhoons, ensuring stability. Additionally, the skyscrapers flexible design inspired by bamboo allows it to absorb and dissipate seismic energy, making it one of the safest buildings in the world. What are the secrets behind Taipei 101's design? Taipei 101’s design is packed with symbolism and innovation. The tower's eight sections represent prosperity in Chinese culture,",
+      "contextText": "This damper sways to counteract the building's movements during earthquakes and typhoons, ensuring stability. Additionally, the skyscrapers flexible design inspired by bamboo allows it to absorb and dissipate seismic energy, making it one of the safest buildings in the world. What are the secrets behind Taipei 101's design? Taipei 101’s design is packed with symbolism and innovation. The tower's eight sections represent prosperity in Chinese culture, while its pagoda like tiers echo traditional Asian architecture. Hidden within are advanced green technologies, making it one of the world's most energy efficient skyscrapers. The building's exterior features a double-paned reflective glass curtain wall that conserves energy and reduces heat gain. Plus, its foundation anchors deep into the ground, ensuring stability. How did Taipei 101 shatter records?",
+      "locationContext": "Why is Taipei 101 so special? Taipei 101 isn't just any skyscraper. It's a symbol of innovation and resilience. Standing at 1,667 feet, it held the title of the world's tallest building from 2004 to 2010. But what really sets it apart is its design. Inspired by bamboo, it represents strength and growth. The building's segmented structure mimics bamboo stalks, symbolizing prosperity and flexibility making Taipei 101 truly unique. How was Taipei 101 built? The construction of Taipei 101 was a feat of engineering and design. Rising from a small plot of land, the skyscraper was built between 1999 and 2004. It involved over 5000 workers and used 100,000 tons of steel. Innovative techniques like the use of a giant crane and advanced seismic engineering, ensured the building's safety and stability.",
+      "captionTrack": "creator",
+      "language": "en",
+      "video": {
+        "id": "CPoDRr-0xsQ",
+        "title": "Why Taipei 101 is More Than Just a Tall Building",
+        "channelName": "Walls of Wonder",
+        "thumbnailUrl": "https://i.ytimg.com/vi/CPoDRr-0xsQ/maxresdefault.jpg",
+        "publishedAt": "2024-08-30"
+      },
+      "title": "Taipei 101’s eight sections symbolize prosperity",
+      "takeaway": "Taipei 101’s eight sections represent prosperity, combining cultural symbolism with innovative skyscraper design.",
+      "highlights": [
+        "Taipei 101’s eight sections represent prosperity"
+      ],
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "queried_place",
+        "evidence": "Taipei 101’s design is packed with symbolism and innovation",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=CPoDRr-0xsQ&t=75s"
+    },
+    {
+      "id": "QjqNQTpqiHU-why_visit-562",
+      "intent": "activity",
+      "startSeconds": 562,
+      "endSeconds": 616,
+      "exactQuote": "building in the world and houses offices, restaurants, a very packed food court, luxury shops like Dior, Prada, LV, and lastly, what everyone comes here for, the Taipei 101 indoor and outdoor observatories. While the shops are beautiful, surprisingly, today's main goal is not to shop. Today, we are going to hit up",
+      "contextText": "building in the world and houses offices, restaurants, a very packed food court, luxury shops like Dior, Prada, LV, and lastly, what everyone comes here for, the Taipei 101 indoor and outdoor observatories. While the shops are beautiful, surprisingly, today's main goal is not to shop. Today, we are going to hit up Ding Taiong, Taiwan's most famous Shaol restaurant. And then we're going to hit up the observatories just in time for sunset. >> 60 minutes. >> 60 to 75. >> Okay. Thank you. >> I don't think we're going to get it. Oh, >> at this time. >> Okay, change of plans. Although we arrived at 400 p.m., the wait was still",
+      "locationContext": "Hi everyone, welcome back to my channel. In today's vlog, I will be sharing the first four days of my November 2023 Asia trip with you in the beautiful Taipei, Taiwan. My partner and I will be eating, visiting landmarks, and eating more throughout this video. So, if you're interested in all the places we visited and everything we ate, then just keep on watching. We are descending. >> I don't think my legs work anymore. What time is it? It's currently 7:17 a.m. in Taipei. Finally arrived. Even though our flight was delayed an hour about, we were supposed to arrive at 6:00 a.m. We walked through immigration after this and then proceeded to get our bags from baggage claim, picked up some cash at",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "QjqNQTpqiHU",
+        "title": "our first day in taipei | din tai fung, taipei 101 & quiet moments",
+        "channelName": "jamie hung",
+        "thumbnailUrl": "https://i.ytimg.com/vi/QjqNQTpqiHU/maxresdefault.jpg",
+        "publishedAt": "2026-02-22"
+      },
+      "title": "Visit the Taipei 101 indoor and outdoor observatories",
+      "takeaway": "The Taipei 101 indoor and outdoor observatories are the main goal after browsing restaurants, shops, and the packed food court.",
+      "highlights": [
+        "The Taipei 101 indoor and outdoor observatories"
+      ],
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "queried_place",
+        "evidence": "what everyone comes here for, the Taipei 101 indoor and outdoor observatories",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=QjqNQTpqiHU&t=562s"
+    },
+    {
+      "id": "S7aSOOhXr9Q-activity-36",
+      "intent": "activity",
+      "startSeconds": 36,
+      "endSeconds": 90,
+      "exactQuote": "then we're going to go take a look around the food court right I'm going to start this tour outside just so you get a sense of place those the entry doors to the Food Hall as I said is in the basement of taipe 101 now 101 floor building with a great Observatory up on top if you're just coming for the food Hall the best way to get here is to take the MRT to the taipe 101 Station and then you will come out exit number four the station is taipe",
+      "contextText": "then we're going to go take a look around the food court right I'm going to start this tour outside just so you get a sense of place those the entry doors to the Food Hall as I said is in the basement of taipe 101 now 101 floor building with a great Observatory up on top if you're just coming for the food Hall the best way to get here is to take the MRT to the taipe 101 Station and then you will come out exit number four the station is taipe 101 World Trade Center now just outside is a famous branch of D thaun well is this Branch famous I guess it is cuz it's in taipe 101 but Den thaun is a famous soup dumpling restaurant here in Taipei they're all around the world now but their original location is in Taipei it's not this one but because this one's in taipe 101 it's really popular you can see the weight time if you want to eat here on a Sunday at 1:00",
+      "locationContext": "hey fellow explorers today I'm at the best food court in taipe 101 I'm going to show you around this food court all the different things you can get here but first let me show you what I've got for lunch today this is the chong ching shrimp rice this is the shrimp rice set about $300 Taiwan dollars that includes the drink it's a oolong tea so about $10 for this plate of food the main course is the shrimp rice here it's got egg it's got shrimp over rice it comes with a soup and it comes with a little kind of tofu and some pickled veggies on the side all right I'm going to eat this and then we're going to go take a look around the food court right I'm going to start this tour outside just so you get a sense of place those the entry doors to the Food Hall as I said is in the basement of taipe 101 now 101 floor building with a great Observatory up on top if you're just coming for the food Hall the best way to get here is to take the MRT to the taipe 101 Station and then you will come out",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "S7aSOOhXr9Q",
+        "title": "Inside the Best Food Court in Taipei Taiwan - Taipei 101",
+        "channelName": "Yellow Productions",
+        "thumbnailUrl": "https://i.ytimg.com/vi/S7aSOOhXr9Q/maxresdefault.jpg",
+        "publishedAt": "2025-12-14"
+      },
+      "title": "Tour the food court inside Taipei 101",
+      "takeaway": "Tour the food court in the basement of Taipei 101, using MRT exit number four for access.",
+      "highlights": [
+        "Tour the food court in the basement of Taipei 101"
+      ],
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "inside",
+        "evidence": "the Food Hall as I said is in the basement of taipe 101",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=S7aSOOhXr9Q&t=36s"
+    },
+    {
+      "id": "fHXvu6Ev9yA-activity-758",
+      "intent": "activity",
+      "startSeconds": 758,
+      "endSeconds": 812,
+      "exactQuote": "See the mountains way up on the hill there. So cool. Kind of looks down the city. So, you can't go all the way around. That side's fenced, but still a lot of space up here. Like, I'm not really struggling to get a spot to see the view. Right. And you can get all the way around to there. So, half the building.",
+      "contextText": "See the mountains way up on the hill there. So cool. Kind of looks down the city. So, you can't go all the way around. That side's fenced, but still a lot of space up here. Like, I'm not really struggling to get a spot to see the view. Right. And you can get all the way around to there. So, half the building. And the weirdest thing about being up here is is you're looking out at the skyline and for the first time that I've been in this country or in the city, I can't see Taipei 101 cuz I'm standing on it. So, that's actually kind of bizarre. It's been ever present in everything that I've looked at. Every time I look out a window or, you know, out of an Uber or out of my hotel, there it is. There's something that's not there.",
+      "locationContext": "Good day humans. Chris Dead here. I'm on the road today. I'm in Taipei in Taiwan. I'm about to do the most touristy thing that you can do here. I'm going to go up Taipei 101 X tallest building in the world. Up to the top, take a look and see if it's worth your while. Let's do it. Now, I'm not going to give you instructions on how to get there to be honest because you can see this place from everywhere. It's pretty clear which general direction you need to go in. Uh I've just walked here from my hotel actually. So I'm not sure what the closest MRT is, but I'll work that out. What's interesting is that I'm in floor 28 of my hotel room, which is that one, second one in the background there. And this thing, you know, it looks big. It doesn't look that much bigger than where I was at 428, but it goes up to floor 101, hence the name. So, I can't wait to see just how much higher it feels once you're up there. All right,",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "fHXvu6Ev9yA",
+        "title": "Taipei 101 Observatory Review, Guide and Tour - ex-World's Tallest Building",
+        "channelName": "Motivated Travel | Family Reviews, Guides and Tips",
+        "thumbnailUrl": "https://i.ytimg.com/vi/fHXvu6Ev9yA/maxresdefault.jpg",
+        "publishedAt": "2025-10-29"
+      },
+      "title": "Enjoy the view from Taipei 101",
+      "takeaway": "The view from up here includes mountains, city scenery, and space to move around despite one fenced side.",
+      "highlights": [
+        "The view from up here includes mountains, city"
+      ],
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "inside",
+        "evidence": "for the first time that I've been in this country or in the city, I can't see Taipei 101 cuz I'm standing on it",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=fHXvu6Ev9yA&t=758s"
+    },
+    {
+      "id": "RBwGCZo0uwo-food-1291",
+      "intent": "food",
+      "startSeconds": 1291,
+      "endSeconds": 1345,
+      "exactQuote": "nice order online yeah so we just used my device to order so I mean I feel like yeah they have like the whole menu set they have a ton of appetizers ton all their Shon Bowser on display which is good cuz America doesn't have all of these uh sh as well pork buns dessert pork top rice yeah get one of those get one of those we can share this I always get this one you want brown",
+      "contextText": "nice order online yeah so we just used my device to order so I mean I feel like yeah they have like the whole menu set they have a ton of appetizers ton all their Shon Bowser on display which is good cuz America doesn't have all of these uh sh as well pork buns dessert pork top rice yeah get one of those get one of those we can share this I always get this one you want brown rice or white rice white rice get that healthy stuff out of here I already ate purple rice this morning all right let add it at B tyone you hungry Sarah I'm very hungry yeah we're at taipe 101 101 here so yeah [Music] excited cucumbers start off with 90 for one one that's right how to enjoy the sh",
+      "locationContext": "[Music] [Applause] [Music] good morning it is now day three of Taiwan morning 2 and today we are going to go to the Pokemon Center taipe which just opened about a month ago and then we're going to shop at the Shing Kong department store and then head to taipe 101 later tonight so yeah this will be a fun Vlog I'm I love see Pokémon centers",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "RBwGCZo0uwo",
+        "title": "Top 5 Things To Do In Taiwan's TAIPEI 101! Pokemon Center, Din Tai Fung, Linjiang Night Market 🏮",
+        "channelName": "CantoExplorers",
+        "thumbnailUrl": "https://i.ytimg.com/vi/RBwGCZo0uwo/maxresdefault.jpg",
+        "publishedAt": "2024-07-20"
+      },
+      "title": "Order pork buns at Taipei 101",
+      "takeaway": "Order pork buns from the menu, alongside appetizers, dessert, pork, and rice, using the device to choose items.",
+      "highlights": [
+        "Order pork buns from the menu"
+      ],
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "inside",
+        "evidence": "we're at taipe 101 101 here",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=RBwGCZo0uwo&t=1291s"
+    },
+    {
+      "id": "FSoK7VVN7JQ-food-1145",
+      "intent": "food",
+      "startSeconds": 1145,
+      "endSeconds": 1199,
+      "exactQuote": "Johnson takes. Get it? But still good. Right here, fruit? Yeah, fruit is dessert in Asia. Here they have an assortment of delectable chocolates and desserts and cakes. They have flan, a little bit of everything. Finally, we are in Taipei 101 after all, so they have a dessert that looks just like this building. Look at that, a mini Taipei 101. That is 101 floors of pure flavor. Cheers. Mhm, crispy. And look, the inside is full of little offices and happy eating people. So that is a joy buffet and my",
+      "contextText": "Johnson takes. Get it? But still good. Right here, fruit? Yeah, fruit is dessert in Asia. Here they have an assortment of delectable chocolates and desserts and cakes. They have flan, a little bit of everything. Finally, we are in Taipei 101 after all, so they have a dessert that looks just like this building. Look at that, a mini Taipei 101. That is 101 floors of pure flavor. Cheers. Mhm, crispy. And look, the inside is full of little offices and happy eating people. So that is a joy buffet and my god, it was a joy to come here. Next I'm going to tell you between the very cheap buffet and the more expensive buffet, which one I thought gave me the most bang for my buck. Boom, today we ate at two different buffets. One that was very affordable and one that was a bit more expensive. The first buffet, I appreciated 90 minutes under $10, eat as much weird meat as you want, amazing. But I must say as far as premium buffets go, the buffet that I had just up there, it is without a doubt the best buffet I've ever had in my life. I know what",
+      "locationContext": "In this video, I'm going to reveal what you can find at Taiwan's cheapest buffet. Look at that. It's gorgeous. It's basically Italian pasta, the low-carb version. Then, I'll compare that to Taiwan's most expensive buffet, one of the most beautiful, well-put-together buffets I've ever seen in my life. Oh my god. Have you ever seen anything like that? But, is it worth the high price tag? Today, I'm on a mission to choose which of these two extreme buffets gives me the most bang for my buck. Let's move. Right behind me, we've come to our first crazy affordable location. The restaurant is called Da Wei Wan. Here, they're serving hot pot, but you can also grill up the meat, too. It costs only 250 Taiwanese dollars, or $7.72. That is extremely affordable. When I first came here, I thought there must be a catch. How is it that you can come here and eat as much hot pot and grill as much meat as you want to for under $10? The only stipulation is that you only have 90 minutes. The other way they save money is on staff. Here, you don't exactly have a server. You need to go up and get all the food yourself. That's",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "FSoK7VVN7JQ",
+        "title": "Rich Man Buffet vs Poor Man Buffet in Taiwan!!",
+        "channelName": "More Best Ever Food Review Show",
+        "thumbnailUrl": "https://i.ytimg.com/vi/FSoK7VVN7JQ/maxresdefault.jpg",
+        "publishedAt": "2024-08-03"
+      },
+      "title": "Try a dessert that looks just like this building",
+      "takeaway": "A dessert that looks just like this building offers a crispy, Taipei 101-shaped treat with little offices inside.",
+      "highlights": [
+        "A dessert that looks just like this building"
+      ],
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "inside",
+        "evidence": "Finally, we are in Taipei 101 after all, so they have a dessert that looks just like this building",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=FSoK7VVN7JQ&t=1145s"
+    },
+    {
+      "id": "sDLkWbKGi74-practical_tip-1",
+      "intent": "practical_tip",
+      "startSeconds": 1,
+      "endSeconds": 55,
+      "exactQuote": "After exploring Taipei Zoo, our next stop was none other than the iconic Taipei 101. From Taipei Zoo Station, we hopped on the Wenhoo or Brown Line to Dawn station, then transferred to the Tamsui Shini Red Line. The entire ride took around 38 minutes, giving us just enough time to recharge before our next big adventure. Stepping out of exit 4, the very first thing you'll notice is the towering giant itself, Taipei 101. The",
+      "contextText": "After exploring Taipei Zoo, our next stop was none other than the iconic Taipei 101. From Taipei Zoo Station, we hopped on the Wenhoo or Brown Line to Dawn station, then transferred to the Tamsui Shini Red Line. The entire ride took around 38 minutes, giving us just enough time to recharge before our next big adventure. Stepping out of exit 4, the very first thing you'll notice is the towering giant itself, Taipei 101. The way it dominates the skyline is incredible. Before heading in, we also spotted a massive advertisement of Gragon, the South Korean music and fashion icon. And yes, we couldn't resist joining the viral trend of filming the elevator ride up and down just for fun. Walking inside, you'll immediately be surrounded by luxury. High-end brands line both sides of the lobby, making it feel like you're strolling through an international fashion avenue. Right in the middle, we",
+      "locationContext": "After exploring Taipei Zoo, our next stop was none other than the iconic Taipei 101. From Taipei Zoo Station, we hopped on the Wenhoo or Brown Line to Dawn station, then transferred to the Tamsui Shini Red Line. The entire ride took around 38 minutes, giving us just enough time to recharge before our next big adventure. Stepping out of exit 4, the very first thing you'll notice is the towering giant itself, Taipei 101. The way it dominates the skyline is incredible. Before heading in, we also spotted a massive advertisement of Gragon, the South Korean music and fashion icon. And yes, we couldn't resist joining the viral trend of filming the elevator ride up and down just for fun. Walking inside, you'll immediately be surrounded by luxury. High-end brands line both sides of the lobby, making it feel like you're strolling through an international fashion avenue. Right in the middle, we also came across the Gragon media exhibition, Uber Mench, which added a",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "sDLkWbKGi74",
+        "title": "Taipei 101 Travel Guide 2025 🇹🇼 | Observatory, Fast Elevator & G-Dragon Exhibit",
+        "channelName": "Nomadic Thyme",
+        "thumbnailUrl": "https://i.ytimg.com/vi/sDLkWbKGi74/maxresdefault.jpg",
+        "publishedAt": "2025-08-23"
+      },
+      "title": "Creator tip: From Taipei Zoo Station to Taipei 101",
+      "takeaway": "The creator observed: from Taipei Zoo Station, take the Wenhoo or Brown Line, transfer to the Tamsui Shini Red Line, and ride around 38 minutes.",
+      "highlights": [
+        "From Taipei Zoo Station, take the Wenhoo or Brown",
+        "transfer to the Tamsui Shini Red Line",
+        "ride around 38 minutes"
+      ],
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "queried_place",
+        "evidence": "our next stop was none other than the iconic Taipei 101",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=sDLkWbKGi74&t=1s"
+    },
+    {
+      "id": "BFJQMeQS6Cc-practical_tip-51",
+      "intent": "practical_tip",
+      "startSeconds": 51,
+      "endSeconds": 105,
+      "exactQuote": "like a very luxurious mall. All the luxury brands are here. And you got to break a way up to the fifth floor in order to go up to the observatory. >> [music] >> I got our tickets. Yeah, we booked them online through Klook. And we booked the experience including the 101 floor. With the online reservation, you can skip the queue buying tickets. We have a normal ticket [music] for the 89th and 88th floor. And this is for the 101 floor, which has a time of 1 hour from",
+      "contextText": "like a very luxurious mall. All the luxury brands are here. And you got to break a way up to the fifth floor in order to go up to the observatory. >> [music] >> I got our tickets. Yeah, we booked them online through Klook. And we booked the experience including the 101 floor. With the online reservation, you can skip the queue buying tickets. We have a normal ticket [music] for the 89th and 88th floor. And this is for the 101 floor, which has a time of 1 hour from 1:00 to 2:00. And also we got a discount voucher for the cafe upstairs. [music] And a postcard cuz apparently there's a mailbox up there. So first, we're going to go to the 88th floor. The Taipei 101 elevators is one of the fastest in the world. It reaches a top speed of 60 km/h",
+      "locationContext": "This is the tallest building here in Taiwan, the Taipei 101. And today we're going to go check it out. Let's go. Today we are exploring four floors at the top of Taipei 101. We'll be checking out the main observation deck, >> [music] >> the outdoor platform, getting a close-up look at this impressive mass damper, and then making a visit to the secret garden on the 101st floor. From the outside, the design of Taipei 101 is meant to resemble a giant bamboo stalk and the form of a traditional Chinese pagoda. >> [music] >> All right, we're here at Taipei 101. We're going to head in and check out the place. In order to go to the observatory at Taipei 101, you have to go through this mall first. And this is actually like a very luxurious mall. All the luxury brands are here. And you got to break a way up to the fifth floor in order to go up to the observatory. >> [music]",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "BFJQMeQS6Cc",
+        "title": "Taipei 101 Experience: The FULL Tour (89F, 101F, Sky Deck) | Taiwan Travel",
+        "channelName": "Puri and Sue",
+        "thumbnailUrl": "https://i.ytimg.com/vi/BFJQMeQS6Cc/maxresdefault.jpg",
+        "publishedAt": "2025-10-13"
+      },
+      "title": "Creator tip: Book tickets online through Klook for Taipei 101",
+      "takeaway": "The creator observed: they booked them online through Klook, including the 101 floor, and say online reservations let visitors skip the ticket queue.",
+      "highlights": [
+        "booked them online through Klook",
+        "including the 101 floor",
+        "online reservations let visitors skip the ticket"
+      ],
+      "locationVerification": {
+        "poiName": "Taipei 101",
+        "relationship": "inside",
+        "evidence": "And you got to break a way up to the fifth floor in order to go up to the observatory",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=BFJQMeQS6Cc&t=51s"
+    }
+  ],
+  "suggestedPlan": [
+    "Creator tip: From Taipei Zoo Station to Taipei 101",
+    "Visit the Taipei 101 indoor and outdoor observatories",
+    "Tour the food court inside Taipei 101",
+    "Order pork buns at Taipei 101"
+  ],
+  "warnings": [
+    "Opening hours, prices, reservations, and temporary closures still require a current check."
+  ],
+  "mode": "ai",
+  "aiModel": "gpt-5.6-luna",
+  "sourceStatus": "verified_snapshot",
+  "verification": {
+    "videosFound": 362,
+    "captionedVideos": 111,
+    "candidateClips": 10,
+    "evidenceMatches": 9,
+    "verifiedClips": 9,
+    "rejectedEvidenceOrRanking": 1,
+    "rejectedLocation": 0
+  },
+  "snapshotVersion": 1,
+  "snapshotStatus": "verified",
+  "sourceCutoffDate": "2024-07-18",
+  "reviewAfter": "2026-07-25",
+  "demoSnapshot": true
+}

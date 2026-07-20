@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./research-states.css";
 
 export const metadata: Metadata = {
   title: "TripTrace Research — Travel-video evidence",

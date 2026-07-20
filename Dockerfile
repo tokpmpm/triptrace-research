@@ -16,15 +16,7 @@ ENV NODE_ENV=production \
     TRIPTRACE_RUNTIME=production \
     NEXT_TELEMETRY_DISABLED=1 \
     HOSTNAME=0.0.0.0 \
-    PORT=8080 \
-    YT_DLP_BIN=/usr/local/bin/yt-dlp
-
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends ca-certificates curl \
-    && curl -fsSL https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_linux -o /usr/local/bin/yt-dlp \
-    && chmod 0755 /usr/local/bin/yt-dlp \
-    && apt-get purge -y --auto-remove curl \
-    && rm -rf /var/lib/apt/lists/*
+    PORT=8080
 
 RUN addgroup --system --gid 1001 nodejs \
     && adduser --system --uid 1001 nextjs

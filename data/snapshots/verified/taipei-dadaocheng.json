@@ -1,0 +1,334 @@
+{
+  "place": "Dadaocheng",
+  "city": "Taipei",
+  "overview": "8 captioned travel videos produced 8 semantically verified clips for Dadaocheng. Each title is tied to an exact supporting quote.",
+  "generatedAt": "2026-07-18T14:58:32.437Z",
+  "cacheHit": true,
+  "sourceCount": 8,
+  "clipCount": 8,
+  "clips": [
+    {
+      "id": "frcjhcSxe0U-food-28",
+      "intent": "why_visit",
+      "startSeconds": 28,
+      "endSeconds": 82,
+      "exactQuote": "这裡融合了传统与创新 成为怀旧与时尚交织的场域 这一集我们走街串巷 探索大稻埕周边的商店美食 走访就是台北最大的製茶厂 更不能错过的是 各具特色的三间咖啡茶馆 跟我一起感受大稻埕的百年风华",
+      "contextText": "这裡融合了传统与创新 成为怀旧与时尚交织的场域 这一集我们走街串巷 探索大稻埕周边的商店美食 走访就是台北最大的製茶厂 更不能错过的是 各具特色的三间咖啡茶馆 跟我一起感受大稻埕的百年风华 老台北人的一天 常常都是慈圣宫前的早餐开始的 这裡是台北传统文化的起点 也是老台北人的聚集地",
+      "locationContext": "一百多年前 大稻埕是台北最繁华的物资集散地 茶叶与布料的贸易 让这片土地熠熠生辉 一百多年後 大稻埕以全新的面貌延续它的生命力 老宅咖啡厅 复古老茶馆 南北乾货铺 文创艺术小店 在保留历史建築与人文底蕴的基础上 这裡融合了传统与创新 成为怀旧与时尚交织的场域 这一集我们走街串巷 探索大稻埕周边的商店美食 走访就是台北最大的製茶厂 更不能错过的是 各具特色的三间咖啡茶馆 跟我一起感受大稻埕的百年风华",
+      "captionTrack": "creator",
+      "language": "zh-CN",
+      "englishPresentation": {
+        "title": "Dadaocheng, where tradition meets innovation",
+        "takeaway": "Dadaocheng blends tradition and innovation into a district where nostalgia and contemporary style meet, while preserving more than a century of history.",
+        "exactQuote": "Here, tradition and innovation come together, creating a place where nostalgia and fashion intertwine. In this episode, we walk the streets and alleys to explore the shops and food around Dadaocheng, visit Taipei's largest tea factory, and discover three distinctive coffee and tea houses. Come experience Dadaocheng's century-old charm with me.",
+        "highlights": [
+          "tradition and innovation come together",
+          "nostalgia and fashion intertwine",
+          "Dadaocheng's century-old charm"
+        ],
+        "channelName": "Miffy's Journey"
+      },
+      "video": {
+        "id": "frcjhcSxe0U",
+        "title": "2025大稻埕景點美食攻略｜16個必逛必吃景點，迪化街老屋咖啡茶館推薦｜台北旅遊必去 ｜Taipei travel guide2025|taipeitravel #dadaocheng",
+        "channelName": "米菲看世界Miffy’s journey",
+        "thumbnailUrl": "https://i.ytimg.com/vi/frcjhcSxe0U/maxresdefault.jpg",
+        "publishedAt": "2025-01-22"
+      },
+      "title": "传统与创新交织的大稻埕",
+      "takeaway": "大稻埕融合传统与创新，成为怀旧与时尚交织的场域，并展现百年风华。",
+      "highlights": [
+        "大稻埕融合传统与创新",
+        "成为怀旧与时尚交织的场域",
+        "并展现百年风华"
+      ],
+      "locationVerification": {
+        "poiName": "Dadaocheng",
+        "relationship": "queried_place",
+        "evidence": "探索大稻埕周边的商店美食",
+        "evidenceSource": "transcript",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=frcjhcSxe0U&t=28s"
+    },
+    {
+      "id": "4Nw3JXwEVKU-why_visit-249",
+      "intent": "why_visit",
+      "startSeconds": 249,
+      "endSeconds": 303,
+      "exactQuote": "needed, and I did a lot of shooting. You can do it faster, but why would you? It's just beautiful. And we are not done with this video yet. Just like on my first day in Taipei many years ago, I am heading to Dadaocheng to check out Dihua Street. As you see, it got dark, and I am now in Dadaocheng, a very famous tourist area. They used to build ships here, but now it is an outgoing district. Dadaocheng is a famous nightlife area with many pop-up bars. On a normal day, it reminds me a bit of a beer",
+      "contextText": "needed, and I did a lot of shooting. You can do it faster, but why would you? It's just beautiful. And we are not done with this video yet. Just like on my first day in Taipei many years ago, I am heading to Dadaocheng to check out Dihua Street. As you see, it got dark, and I am now in Dadaocheng, a very famous tourist area. They used to build ships here, but now it is an outgoing district. Dadaocheng is a famous nightlife area with many pop-up bars. On a normal day, it reminds me a bit of a beer garden back home. But tonight is special, and as you may realize, it is super busy today. There are more people here than usual. It is literally packed with people everywhere. The reason is today there are some fireworks that we got to check out right now. [Applause] [Music] [Applause] [Music]",
+      "locationContext": "After 5 years, I finally had time to return to the Elephant Mountain. This was the very first spot that I visited in Taipei, and I recommend that you do the same. See all the details in this video. In this video, I recreate my first day in Taiwan, exploring Elephant Mountain and Dadaocheng in Datong. So many good memories, and an ideal start for your trip to Taipei. But be warned, I came as a tourist and ended up living here permanently. [Music] Hey there, and welcome back to the Traveling Kunz YouTube channel. I'm your host, Ferdinand, and today I am checking out Elephant Mountain. I just arrived and left the Metro. I am now in the park, and it is time to hike up",
+      "captionTrack": "creator",
+      "language": "en-US",
+      "video": {
+        "id": "4Nw3JXwEVKU",
+        "title": "Taipei Travel Guide - 2 Spots for Your First Taiwan Trip - Elephant Mountain & Dadaocheng (象山 & 大稻埕)",
+        "channelName": "Traveling Kunz",
+        "thumbnailUrl": "https://i.ytimg.com/vi/4Nw3JXwEVKU/maxresdefault.jpg",
+        "publishedAt": "2024-09-01"
+      },
+      "title": "Dadaocheng is a famous nightlife area",
+      "takeaway": "The creator describes Dadaocheng as a famous nightlife area with many pop-up bars and compares it to a beer garden back home.",
+      "highlights": [
+        "many pop-up bars",
+        "a beer garden back home"
+      ],
+      "locationVerification": {
+        "poiName": "Dadaocheng",
+        "relationship": "queried_place",
+        "evidence": "I am now in Dadaocheng, a very famous tourist area.",
+        "evidenceSource": "transcript",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=4Nw3JXwEVKU&t=249s"
+    },
+    {
+      "id": "btZPB8MJfys-activity-6",
+      "intent": "activity",
+      "startSeconds": 6,
+      "endSeconds": 59,
+      "exactQuote": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter",
+      "contextText": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights century old buildings glow under lantern light red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+      "locationContext": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights century old buildings glow under lantern light red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+      "captionTrack": "creator",
+      "language": "en-US",
+      "video": {
+        "id": "btZPB8MJfys",
+        "title": "【TaipeiWalk】EP.27 Dihua St to Ningxia Night Market | 台北迪化街→寧夏夜市・從大稻埕老街夜色走進熱鬧夜市 | 4K | 2025",
+        "channelName": "Wasabi Walk",
+        "thumbnailUrl": "https://i.ytimg.com/vi/btZPB8MJfys/maxresdefault.jpg",
+        "publishedAt": "2026-06-28"
+      },
+      "title": "Walking east through Dadaocheng at night",
+      "takeaway": "At night, walk east from Dadaocheng Dihua Street as crowds increase, quiet streets become nightlife scenes, and food aromas spread.",
+      "highlights": [
+        "At night, walk east from Dadaocheng Dihua Street",
+        "crowds increase",
+        "quiet streets become nightlife scenes"
+      ],
+      "locationVerification": {
+        "poiName": "Dadaocheng",
+        "relationship": "queried_place",
+        "evidence": "At night Dadaocheng Dihua Street shifts rhythm",
+        "evidenceSource": "transcript",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=btZPB8MJfys&t=6s"
+    },
+    {
+      "id": "FO9MQmRffmM-activity-72",
+      "intent": "activity",
+      "startSeconds": 72,
+      "endSeconds": 126,
+      "exactQuote": "are perfect for a leisurely stroll. A new lifestyle scene to slowly explore. Come and follow us for a day of Dadaocheng Come walk around with us. For our first stop, we arrived at Cisheng Temple in Dadaocheng It's right here And this temple, has been here since 1866 I can still see on it a juren (provincial exam graduate)",
+      "contextText": "are perfect for a leisurely stroll. A new lifestyle scene to slowly explore. Come and follow us for a day of Dadaocheng Come walk around with us. For our first stop, we arrived at Cisheng Temple in Dadaocheng It's right here And this temple, has been here since 1866 I can still see on it a juren (provincial exam graduate) and from the Tongzhi era Mm, the Tongzhi period But when people come here, aside from worshipping, there's another very important attraction which is that there are many delicious foods here This is Bao'an Street This place is known as a top snack hotspot Only a short stretch, under 100 meters There are over a dozen popular food stalls gathered here. It's like an outdoor food street.",
+      "locationContext": "Hi everyone, welcome back to Yang Yang's channel Taipei's 12 districts Each district has its own story and style We've already been to places like Wanhua Beitou In the last episode and Songshan This time we've come to Datong District Datong District has two iconic spots like Dalongdong There is also the familiar Dadaocheng The name Dadaocheng comes from earlier times when it was a space for drying rice Back then, with the opening of the Tamsui port this area became Taipei's most prosperous commercial center The tea and textile businesses",
+      "captionTrack": "creator",
+      "language": "en",
+      "englishPresentation": {
+        "channelName": "The Walk Street Channel"
+      },
+      "video": {
+        "id": "FO9MQmRffmM",
+        "title": "大稻埕每間都經典，走28站吃喝逛好逛滿｜最好吃油飯・小京都咖啡店Ura・蔥油餅・黑膠復古老宅・觀光客必喝咖啡・現做潤餅＋白湯豬腳麵線｜Taipei VLOG｜yang and yang",
+        "channelName": "yang and yang",
+        "thumbnailUrl": "https://i.ytimg.com/vi/FO9MQmRffmM/maxresdefault.jpg",
+        "publishedAt": "2025-11-09"
+      },
+      "title": "Visit Cisheng Temple in Dadaocheng",
+      "takeaway": "Visit Cisheng Temple in Dadaocheng, a temple that has been there since 1866 and serves as the video's first stop.",
+      "highlights": [
+        "Visit Cisheng Temple in Dadaocheng",
+        "has been there since 1866",
+        "the video's first stop"
+      ],
+      "locationVerification": {
+        "poiName": "Dadaocheng",
+        "relationship": "inside",
+        "evidence": "we arrived at Cisheng Temple in Dadaocheng",
+        "evidenceSource": "transcript",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=FO9MQmRffmM&t=72s"
+    },
+    {
+      "id": "2xMEkcpCgqA-food-217",
+      "intent": "food",
+      "startSeconds": 217,
+      "endSeconds": 270,
+      "exactQuote": "It's really a good deal There are soup noodles and stir-fried side dishes eat pasta It turns out that there are also shops where many people drink coffee. The price is also low Iced drip coffee NTD 100 This restaurant specializes in pork All are pork From cooked to raw food Look at the pork sausage",
+      "contextText": "It's really a good deal There are soup noodles and stir-fried side dishes eat pasta It turns out that there are also shops where many people drink coffee. The price is also low Iced drip coffee NTD 100 This restaurant specializes in pork All are pork From cooked to raw food Look at the pork sausage There is also a stall here that serves sushi and sashimi The store is smaller I originally wanted to try crepes Turns out it’s closed in the fall Until the 23rd This stall is famous for its buns I see many people choosing to eat Thousand Layer Steamed Buns There is custard filling inside",
+      "locationContext": "(music) This morning we came to Dadaocheng There is a very famous market It's called Yongle Market The shop only opens in the morning So if you want to eat, you have to come in the morning There are also some famous shops there. Let's find a restaurant called Marutaka Sashimi Shop see many people I'll go over and take a look first right here Looks like there's a queue The store opened at 9 a.m. But please note that they are closed on Mondays At the counter you can clearly see the chef working.",
+      "captionTrack": "creator",
+      "language": "en",
+      "video": {
+        "id": "2xMEkcpCgqA",
+        "title": "【台北旅行】大稻埕迪化街一日怎安排？人氣美食推介！中西合璧的獨特建築風格！ 充滿日式昭和風情的小店！【Taipei Travel】DIHUA STREET walking tour #heritage",
+        "channelName": "The Walk Street Channel 玩行街頻道",
+        "thumbnailUrl": "https://i.ytimg.com/vi/2xMEkcpCgqA/maxresdefault.jpg",
+        "publishedAt": "2024-10-13"
+      },
+      "title": "Try Iced drip coffee in Dihua Street",
+      "takeaway": "The Dihua Street restaurant offers Iced drip coffee for NTD 100 and specializes in pork, including pork sausage.",
+      "highlights": [
+        "The Dihua Street restaurant offers Iced drip",
+        "coffee for NTD 100 and specializes in pork,",
+        "including pork sausage."
+      ],
+      "locationVerification": {
+        "poiName": "Dadaocheng",
+        "relationship": "inside",
+        "evidence": "Dihua Street",
+        "evidenceSource": "video_title",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=2xMEkcpCgqA&t=217s"
+    },
+    {
+      "id": "DegR9CsYttU-food-31",
+      "intent": "food",
+      "startSeconds": 31,
+      "endSeconds": 85,
+      "exactQuote": "一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔",
+      "contextText": "一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔 淋上麵糊炸成的一個餅 我們還點了韭菜條和糯米腸 先吃韭菜條 看起來很吸引，滿滿的韭菜 韭菜條的麵皮比較厚 但裡面的韭菜很嫩 有新鮮的韭菜香味 完全沒有渣，好吃 來吃蚵嗲吧",
+      "locationContext": ". Hello 大家好，我是士多貓Joys 我是Alan 今天來到迪化街（大稻埕） 來吃一些放在口袋名單很久的東西 迪化街有很多又美又古典的餐廳 迪化街有很多又美又古典的餐廳 我們有很多口袋名單想試 這支影片會吃很多家我們想吃的餐廳 來看看是否真的好吃 我們也不知道好不好吃 一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔 淋上麵糊炸成的一個餅",
+      "captionTrack": "creator",
+      "language": "zh-HK",
+      "englishPresentation": {
+        "title": "Try traditional oyster fritters on Dihua Street",
+        "takeaway": "Cai Ji on Dihua Street serves traditional Taiwanese oyster fritters made with cabbage, Chinese chives, and oysters.",
+        "exactQuote": "Let's go and try it. Two years ago, we made a video recommending sights and food on Dihua Street, which you can also refer to. Beside Yongle Market is Cai Ji Traditional Dihua Street Oyster Fritters, a classic Taiwanese snack. An oyster fritter is made with cabbage, Chinese chives, and oysters.",
+        "highlights": [
+          "Cai Ji Traditional Dihua Street Oyster Fritters",
+          "a classic Taiwanese snack",
+          "cabbage, Chinese chives, and oysters"
+        ],
+        "channelName": "Store Cat TV"
+      },
+      "video": {
+        "id": "DegR9CsYttU",
+        "title": "【台灣旅行】大稻埕迪化街必吃10樣隱藏美食2026，不吃可惜！推薦在台港人開的咖啡店",
+        "channelName": "士多貓TV",
+        "thumbnailUrl": "https://i.ytimg.com/vi/DegR9CsYttU/maxresdefault.jpg",
+        "publishedAt": "2026-07-11"
+      },
+      "title": "Eat 蔡記迪化街古早味蚵嗲",
+      "takeaway": "迪化街有蔡記迪化街古早味蚵嗲，是台灣的古早小吃，蚵嗲包括高麗菜、韭菜和蚵仔。",
+      "highlights": [
+        "迪化街有蔡記迪化街古早味蚵嗲，是台灣的古早小吃，蚵嗲包括高麗菜、韭菜和蚵仔。"
+      ],
+      "locationVerification": {
+        "poiName": "Dadaocheng",
+        "relationship": "inside",
+        "evidence": "迪化街",
+        "evidenceSource": "video_title",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=DegR9CsYttU&t=31s"
+    },
+    {
+      "id": "gBV3XgzzBC0-practical_tip-13",
+      "intent": "practical_tip",
+      "startSeconds": 13,
+      "endSeconds": 67,
+      "exactQuote": "snacks in this video we'll be revealing Tai's most epic four floor wholesale decoration shop in Lunar New Year's secret that's hidden in plain sight dewa street is really easy to get to once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free shuttle bus but during Lunar New Year basically everyone's heading the same direction so you can just follow the crowd it's basically just around a 10 to 15 minute walk from the station so I don't think that you really need to take a shuttle there's huge traffic jam here we're going to buy that souvenir later that's a really famous Taiwanese egg roll we're going to go there right now everyone's here taking photos so we're going to go to this place so line up lineup starts over here this place is",
+      "contextText": "snacks in this video we'll be revealing Tai's most epic four floor wholesale decoration shop in Lunar New Year's secret that's hidden in plain sight dewa street is really easy to get to once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free shuttle bus but during Lunar New Year basically everyone's heading the same direction so you can just follow the crowd it's basically just around a 10 to 15 minute walk from the station so I don't think that you really need to take a shuttle there's huge traffic jam here we're going to buy that souvenir later that's a really famous Taiwanese egg roll we're going to go there right now everyone's here taking photos so we're going to go to this place so line up lineup starts over here this place is",
+      "locationContext": "it's pure Madness at taies Dew street it's our tradition to visit every year to shop for New Year decorations and snacks in this video we'll be revealing Tai's most epic four floor wholesale decoration shop in Lunar New Year's secret that's hidden in plain sight dewa street is really easy to get to once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free shuttle bus but during Lunar New Year basically everyone's heading the same direction so you can just follow the crowd it's basically just around a 10 to 15 minute walk from the station so I don't think that you really need to take a shuttle there's huge traffic jam here we're going to buy that souvenir later that's a really famous Taiwanese egg roll we're going to go there right now everyone's here taking photos so we're going to go to this",
+      "captionTrack": "automatic",
+      "language": "en",
+      "video": {
+        "id": "gBV3XgzzBC0",
+        "title": "We Braved Taiwan's CRAZIEST Market: Dihua Street Before Lunar New Year",
+        "channelName": "Bodhi Explorers",
+        "thumbnailUrl": "https://i.ytimg.com/vi/gBV3XgzzBC0/maxresdefault.jpg",
+        "publishedAt": "2025-01-26"
+      },
+      "title": "Creator tip: The 10 to 15 minute walk from the station",
+      "takeaway": "The creator says the 10 to 15 minute walk from the station means you do not really need to take a shuttle.",
+      "highlights": [
+        "The creator says the 10 to 15 minute walk from the",
+        "station means you do not really need to take a",
+        "shuttle."
+      ],
+      "locationVerification": {
+        "poiName": "Dadaocheng",
+        "relationship": "inside",
+        "evidence": "Dihua Street",
+        "evidenceSource": "video_title",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=gBV3XgzzBC0&t=13s"
+    },
+    {
+      "id": "O_KsRhOE8Gs-practical_tip-36",
+      "intent": "practical_tip",
+      "startSeconds": 36,
+      "endSeconds": 90,
+      "exactQuote": "Hello, we're JS. Today's video shows us strolling through Taipei's Dadaocheng district. Exploring a wonderful day of experiences. There are so many local delicacies, quality shops, and old houses and alleyways that we love. We wanted to share these leisurely moments with everyone. So I edited this video to reflect my daily life. I hope you can relax and enjoy it to the end. If you have favorite Taiwanese local delicacies, quality restaurants, or old houses and alleyways, please leave a comment and share your experiences with us. Tourists taking the MRT to Beimen Station or Daqiaotou Station Dadaocheng Street is about a 5-minute walk away. Okay, let's begin our journey to Taipei's Dadaocheng! This morning, I discovered a coffee shop in the ABC building that's currently in its trial operation.",
+      "contextText": "Hello, we're JS. Today's video shows us strolling through Taipei's Dadaocheng district. Exploring a wonderful day of experiences. There are so many local delicacies, quality shops, and old houses and alleyways that we love. We wanted to share these leisurely moments with everyone. So I edited this video to reflect my daily life. I hope you can relax and enjoy it to the end. If you have favorite Taiwanese local delicacies, quality restaurants, or old houses and alleyways, please leave a comment and share your experiences with us. Tourists taking the MRT to Beimen Station or Daqiaotou Station Dadaocheng Street is about a 5-minute walk away. Okay, let's begin our journey to Taipei's Dadaocheng! This morning, I discovered a coffee shop in the ABC building that's currently in its trial operation.",
+      "locationContext": "Hello, we're JS. Today's video shows us strolling through Taipei's Dadaocheng district. Exploring a wonderful day of experiences. There are so many local delicacies, quality shops, and old houses and alleyways that we love. We wanted to share these leisurely moments with everyone. So I edited this video to reflect my daily life.",
+      "captionTrack": "creator",
+      "language": "en",
+      "englishPresentation": {
+        "channelName": "JS Travel Journal"
+      },
+      "video": {
+        "id": "O_KsRhOE8Gs",
+        "title": "漫步台北大稻埕，探索老宅巷弄的台灣美食！擔仔麵．杏仁豆腐．魚丸湯．咖啡．魯肉飯．蔥油餅．油飯｜大同區．迪化街．永樂市場．捷運．北門站．大橋頭站｜度小月．大稻埕魯肉飯．滋養和菓子．夏樹甜品｜JSの旅途中",
+        "channelName": "JSの旅途中",
+        "thumbnailUrl": "https://i.ytimg.com/vi/O_KsRhOE8Gs/maxresdefault.jpg",
+        "publishedAt": "2025-08-08"
+      },
+      "title": "Creator tip: Dadaocheng Street is about a 5-minute walk away",
+      "takeaway": "The creator says Dadaocheng Street is about a 5-minute walk away from Beimen Station or Daqiaotou Station.",
+      "highlights": [
+        "The creator says Dadaocheng Street is about a 5",
+        "minute walk away from Beimen Station or Daqiaotou",
+        "Station."
+      ],
+      "locationVerification": {
+        "poiName": "Dadaocheng",
+        "relationship": "queried_place",
+        "evidence": "Today's video shows us strolling through Taipei's Dadaocheng district.",
+        "evidenceSource": "transcript",
+        "status": "same_place",
+        "distanceMeters": 0
+      },
+      "youtubeTimestampSource": "https://www.youtube.com/watch?v=O_KsRhOE8Gs&t=36s"
+    }
+  ],
+  "suggestedPlan": [
+    "Creator tip: The 10 to 15 minute walk from the station",
+    "Walking east through Dadaocheng at night",
+    "Visit Cisheng Temple in Dadaocheng",
+    "Try Iced drip coffee in Dihua Street"
+  ],
+  "warnings": [
+    "Opening hours, prices, reservations, and temporary closures still require a current check."
+  ],
+  "mode": "ai",
+  "aiModel": "gpt-5.6-luna",
+  "sourceStatus": "verified_snapshot",
+  "verification": {
+    "videosFound": 857,
+    "captionedVideos": 138,
+    "candidateClips": 19,
+    "evidenceMatches": 8,
+    "verifiedClips": 8,
+    "rejectedEvidenceOrRanking": 11,
+    "rejectedLocation": 0
+  },
+  "snapshotVersion": 1,
+  "snapshotStatus": "verified",
+  "sourceCutoffDate": "2024-07-18",
+  "reviewAfter": "2026-07-25",
+  "demoSnapshot": true
+}

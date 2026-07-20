@@ -1,7 +1,9 @@
 import { Search, ShieldCheck } from "lucide-react";
 import { PlaceResearch } from "@/components/PlaceResearch";
+import { getVerifiedSnapshot } from "@/lib/snapshots";
 
 export default function ResearchHomePage() {
+  const initialSnapshot = getVerifiedSnapshot("Taipei 101", "Taipei");
   return (
     <main className="research-shell">
       <nav className="site-nav">
@@ -11,10 +13,10 @@ export default function ResearchHomePage() {
         </div>
         <div className="nav-evidence"><ShieldCheck size={14} /><span>Travel-video evidence only</span></div>
       </nav>
-      <PlaceResearch />
+      <PlaceResearch initialResult={initialSnapshot} />
       <footer className="landing-footer">
-        <span><Search size={12} /> On-demand YouTube research · local cache</span>
-        <span>Local beta · no database</span>
+        <span><Search size={12} /> Verified snapshots · seven-day cache</span>
+        <span>Evidence-first demo · no database</span>
       </footer>
     </main>
   );

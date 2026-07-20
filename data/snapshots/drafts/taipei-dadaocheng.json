@@ -1,0 +1,1248 @@
+{
+  "snapshotStatus": "draft",
+  "place": "Dadaocheng",
+  "city": "Taipei",
+  "generatedAt": "2026-07-18T14:58:32.437Z",
+  "reason": "Final snapshot validation failed: Card 6 takeaway does not align with its exact transcript quote.; Card 9 location evidence does not match its saved video title.. Retained the pre-final verified partial evidence for the next incremental pass.",
+  "sourceCount": 28,
+  "clipCount": 45,
+  "categories": [
+    "activity",
+    "why_visit",
+    "food",
+    "practical_tip"
+  ],
+  "categoryVideoCounts": {
+    "why_visit": 4,
+    "activity": 13,
+    "food": 11,
+    "practical_tip": 16
+  },
+  "finalAcceptedClipIds": [
+    "frcjhcSxe0U-food-28",
+    "4Nw3JXwEVKU-why_visit-249",
+    "GIlY0iWHWvw-why_visit-788",
+    "btZPB8MJfys-activity-6",
+    "FO9MQmRffmM-activity-72",
+    "IwQlJqQGjA0-activity-257",
+    "2xMEkcpCgqA-food-217",
+    "DegR9CsYttU-food-31",
+    "FuA66AtviRI-food-1350",
+    "gBV3XgzzBC0-practical_tip-13",
+    "O_KsRhOE8Gs-practical_tip-36",
+    "2xMEkcpCgqA-practical_tip-154"
+  ],
+  "result": {
+    "place": "Dadaocheng",
+    "city": "Taipei",
+    "overview": "28 captioned travel videos produced 45 locally verified partial clips for Dadaocheng. Each title is tied to an exact supporting quote.",
+    "generatedAt": "2026-07-18T14:58:32.437Z",
+    "cacheHit": false,
+    "sourceCount": 28,
+    "clipCount": 45,
+    "clips": [
+      {
+        "id": "btZPB8MJfys-activity-6",
+        "intent": "activity",
+        "startSeconds": 6,
+        "endSeconds": 59,
+        "exactQuote": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter",
+        "contextText": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights century old buildings glow under lantern light red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+        "locationContext": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights century old buildings glow under lantern light red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+        "captionTrack": "creator",
+        "language": "en-US",
+        "video": {
+          "id": "btZPB8MJfys",
+          "title": "【TaipeiWalk】EP.27 Dihua St to Ningxia Night Market | 台北迪化街→寧夏夜市・從大稻埕老街夜色走進熱鬧夜市 | 4K | 2025",
+          "channelName": "Wasabi Walk",
+          "thumbnailUrl": "https://i.ytimg.com/vi/btZPB8MJfys/maxresdefault.jpg",
+          "publishedAt": "2026-06-28"
+        },
+        "title": "Try: everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street",
+        "takeaway": "Suggested experience: Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights walking east crowds gradually increase…",
+        "highlights": [
+          "walk",
+          "street",
+          "market",
+          "nightlife"
+        ]
+      },
+      {
+        "id": "frcjhcSxe0U-food-28",
+        "intent": "why_visit",
+        "startSeconds": 28,
+        "endSeconds": 82,
+        "exactQuote": "这裡融合了传统与创新 成为怀旧与时尚交织的场域 这一集我们走街串巷 探索大稻埕周边的商店美食 走访就是台北最大的製茶厂 更不能错过的是 各具特色的三间咖啡茶馆 跟我一起感受大稻埕的百年风华",
+        "contextText": "这裡融合了传统与创新 成为怀旧与时尚交织的场域 这一集我们走街串巷 探索大稻埕周边的商店美食 走访就是台北最大的製茶厂 更不能错过的是 各具特色的三间咖啡茶馆 跟我一起感受大稻埕的百年风华 老台北人的一天 常常都是慈圣宫前的早餐开始的 这裡是台北传统文化的起点 也是老台北人的聚集地",
+        "locationContext": "一百多年前 大稻埕是台北最繁华的物资集散地 茶叶与布料的贸易 让这片土地熠熠生辉 一百多年後 大稻埕以全新的面貌延续它的生命力 老宅咖啡厅 复古老茶馆 南北乾货铺 文创艺术小店 在保留历史建築与人文底蕴的基础上 这裡融合了传统与创新 成为怀旧与时尚交织的场域 这一集我们走街串巷 探索大稻埕周边的商店美食 走访就是台北最大的製茶厂 更不能错过的是 各具特色的三间咖啡茶馆 跟我一起感受大稻埕的百年风华",
+        "captionTrack": "creator",
+        "language": "zh-CN",
+        "video": {
+          "id": "frcjhcSxe0U",
+          "title": "2025大稻埕景點美食攻略｜16個必逛必吃景點，迪化街老屋咖啡茶館推薦｜台北旅遊必去 ｜Taipei travel guide2025|taipeitravel #dadaocheng",
+          "channelName": "米菲看世界Miffy’s journey",
+          "thumbnailUrl": "https://i.ytimg.com/vi/frcjhcSxe0U/maxresdefault.jpg",
+          "publishedAt": "2025-01-22"
+        },
+        "title": "大稻埕的百年风华值得用心感受",
+        "takeaway": "這裡融合了传统与创新，成为怀旧与时尚交织的场域；跟我一起感受大稻埕的百年风华。",
+        "highlights": [
+          "融合了传统与创新",
+          "怀旧与时尚交织的场域",
+          "大稻埕的百年风华"
+        ],
+        "locationVerification": {
+          "poiName": "大稻埕",
+          "relationship": "queried_place",
+          "evidence": "跟我一起感受大稻埕的百年风华",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "4Nw3JXwEVKU-why_visit-249",
+        "intent": "why_visit",
+        "startSeconds": 249,
+        "endSeconds": 303,
+        "exactQuote": "needed, and I did a lot of shooting. You can do it faster, but why would you? It's just beautiful. And we are not done with this video yet. Just like on my first day in Taipei many years ago, I am heading to Dadaocheng to check out Dihua Street. As you see, it got dark, and I am now in Dadaocheng, a very famous tourist area. They used to build ships here, but now it is an outgoing district. Dadaocheng is a famous nightlife area with many pop-up bars. On a normal day, it reminds me a bit of a beer",
+        "contextText": "needed, and I did a lot of shooting. You can do it faster, but why would you? It's just beautiful. And we are not done with this video yet. Just like on my first day in Taipei many years ago, I am heading to Dadaocheng to check out Dihua Street. As you see, it got dark, and I am now in Dadaocheng, a very famous tourist area. They used to build ships here, but now it is an outgoing district. Dadaocheng is a famous nightlife area with many pop-up bars. On a normal day, it reminds me a bit of a beer garden back home. But tonight is special, and as you may realize, it is super busy today. There are more people here than usual. It is literally packed with people everywhere. The reason is today there are some fireworks that we got to check out right now. [Applause] [Music] [Applause] [Music]",
+        "locationContext": "After 5 years, I finally had time to return to the Elephant Mountain. This was the very first spot that I visited in Taipei, and I recommend that you do the same. See all the details in this video. In this video, I recreate my first day in Taiwan, exploring Elephant Mountain and Dadaocheng in Datong. So many good memories, and an ideal start for your trip to Taipei. But be warned, I came as a tourist and ended up living here permanently. [Music] Hey there, and welcome back to the Traveling Kunz YouTube channel. I'm your host, Ferdinand, and today I am checking out Elephant Mountain. I just arrived and left the Metro. I am now in the park, and it is time to hike up",
+        "captionTrack": "creator",
+        "language": "en-US",
+        "video": {
+          "id": "4Nw3JXwEVKU",
+          "title": "Taipei Travel Guide - 2 Spots for Your First Taiwan Trip - Elephant Mountain & Dadaocheng (象山 & 大稻埕)",
+          "channelName": "Traveling Kunz",
+          "thumbnailUrl": "https://i.ytimg.com/vi/4Nw3JXwEVKU/maxresdefault.jpg",
+          "publishedAt": "2024-09-01"
+        },
+        "title": "Dadaocheng is a famous nightlife area with many pop-up bars",
+        "takeaway": "The narrator says Dadaocheng is a famous nightlife area with many pop-up bars, and that on a normal day it reminds them of a beer garden.",
+        "highlights": [
+          "Dadaocheng is a famous nightlife area with many\n  ",
+          "many pop-up bars"
+        ],
+        "locationVerification": {
+          "poiName": "Dadaocheng",
+          "relationship": "queried_place",
+          "evidence": "Dadaocheng is a famous nightlife area with many pop-up bars. On a normal day, it reminds me a bit of a beer",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "GIlY0iWHWvw-why_visit-788",
+        "intent": "why_visit",
+        "startSeconds": 788,
+        "endSeconds": 842,
+        "exactQuote": "Like it's two desserts in one. Pretty amazing. The next morning we set out to explore Dadaocheng, one of Taipei's oldest neighborhoods. This area was once a busy trading hub during the Qing Dynasty, and today Dadaocheng still holds on to that historic legacy with its preserved architecture, traditional tea houses, and temples that have stood for over a century. After grabbing some breakfast from a local noodle spot, we went to check out one of the neighborhood's historical tea factories. Wang Tea Taipei is a tea manufacturer turned storefront",
+        "contextText": "Like it's two desserts in one. Pretty amazing. The next morning we set out to explore Dadaocheng, one of Taipei's oldest neighborhoods. This area was once a busy trading hub during the Qing Dynasty, and today Dadaocheng still holds on to that historic legacy with its preserved architecture, traditional tea houses, and temples that have stood for over a century. After grabbing some breakfast from a local noodle spot, we went to check out one of the neighborhood's historical tea factories. Wang Tea Taipei is a tea manufacturer turned storefront where people can learn about the tea making process and also buy tea and all things tea-related. And right next door to the original location is something I've never seen before. A modern day tea bar opened in recent years by Wang Tea that combines the centuries-old process of tea making with modern day techniques. They have nitro cold brew tea, carbonated sparkling tea, and even some tea beers on tap. So this is sparkling black tea.",
+        "locationContext": "Welcome to Taipei, the capital of Taiwan and quite possibly one of Asia's most underrated destinations. Over the next five days, we're diving deep into the heart of Taiwan's capital, exploring its rich heritage, tasting world-class street food, and discovering this island's unique history and culture. From ancient temples nestled in the mountains to trendy, bustling neighborhoods, Taipei is a city where tradition meets modernity. To kick things off, I met up with my Taiwanese friends Cynthia and Mel to grab a traditional Taiwanese street food breakfast of danbing: Delicious rolled egg crepes with bacon, of course with some milk tea to wash it down. Then we hit the streets to start exploring. So we've made it to the Chiang Kai-shek Memorial Hall. You can see it there behind me. Chiang Kai-shek is sort of the founder of modern day Taiwan, but still a controversial figure here, believe it or not. Chiang Kai-shek was the leader of the Chinese Nationalist Party and led the country during World War II. After losing the Chinese Civil War to the Communists in 1949, he fled to Taiwan, establishing the Taiwan we know today and ruling with an iron fist.",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "GIlY0iWHWvw",
+          "title": "How to Spend 5 Days in TAIPEI, TAIWAN (Underrated!)",
+          "channelName": "Doug Barnard",
+          "thumbnailUrl": "https://i.ytimg.com/vi/GIlY0iWHWvw/maxresdefault.jpg",
+          "publishedAt": "2024-10-20"
+        },
+        "title": "Explore Dadaocheng: Taipei’s historic trading hub",
+        "takeaway": "Explore Dadaocheng, one of Taipei's oldest neighborhoods, for its historic legacy—preserved architecture, traditional tea houses, and temples for over a century.",
+        "highlights": [
+          "Explore Dadaocheng",
+          "one of Taipei's oldest neighborhoods",
+          "preserved architecture"
+        ],
+        "locationVerification": {
+          "poiName": "Dadaocheng",
+          "relationship": "queried_place",
+          "evidence": "the next morning we set out to explore Dadaocheng, one of Taipei's oldest neighborhoods",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "2xMEkcpCgqA-food-217",
+        "intent": "food",
+        "startSeconds": 217,
+        "endSeconds": 270,
+        "exactQuote": "It's really a good deal There are soup noodles and stir-fried side dishes eat pasta It turns out that there are also shops where many people drink coffee. The price is also low Iced drip coffee NTD 100 This restaurant specializes in pork All are pork From cooked to raw food Look at the pork sausage",
+        "contextText": "It's really a good deal There are soup noodles and stir-fried side dishes eat pasta It turns out that there are also shops where many people drink coffee. The price is also low Iced drip coffee NTD 100 This restaurant specializes in pork All are pork From cooked to raw food Look at the pork sausage There is also a stall here that serves sushi and sashimi The store is smaller I originally wanted to try crepes Turns out it’s closed in the fall Until the 23rd This stall is famous for its buns I see many people choosing to eat Thousand Layer Steamed Buns There is custard filling inside",
+        "locationContext": "(music) This morning we came to Dadaocheng There is a very famous market It's called Yongle Market The shop only opens in the morning So if you want to eat, you have to come in the morning There are also some famous shops there. Let's find a restaurant called Marutaka Sashimi Shop see many people I'll go over and take a look first right here Looks like there's a queue The store opened at 9 a.m. But please note that they are closed on Mondays At the counter you can clearly see the chef working.",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "2xMEkcpCgqA",
+          "title": "【台北旅行】大稻埕迪化街一日怎安排？人氣美食推介！中西合璧的獨特建築風格！ 充滿日式昭和風情的小店！【Taipei Travel】DIHUA STREET walking tour #heritage",
+          "channelName": "The Walk Street Channel 玩行街頻道",
+          "thumbnailUrl": "https://i.ytimg.com/vi/2xMEkcpCgqA/maxresdefault.jpg",
+          "publishedAt": "2024-10-13"
+        },
+        "title": "Eat: It's really a good deal There are soup noodles",
+        "takeaway": "Food highlight: It's really a good deal There are soup noodles and stir-fried side dishes eat pasta It turns out that…",
+        "highlights": [
+          "sushi",
+          "pork",
+          "sausage",
+          "stall"
+        ]
+      },
+      {
+        "id": "DegR9CsYttU-food-31",
+        "intent": "food",
+        "startSeconds": 31,
+        "endSeconds": 85,
+        "exactQuote": "一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔",
+        "contextText": "一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔 淋上麵糊炸成的一個餅 我們還點了韭菜條和糯米腸 先吃韭菜條 看起來很吸引，滿滿的韭菜 韭菜條的麵皮比較厚 但裡面的韭菜很嫩 有新鮮的韭菜香味 完全沒有渣，好吃 來吃蚵嗲吧",
+        "locationContext": ". Hello 大家好，我是士多貓Joys 我是Alan 今天來到迪化街（大稻埕） 來吃一些放在口袋名單很久的東西 迪化街有很多又美又古典的餐廳 迪化街有很多又美又古典的餐廳 我們有很多口袋名單想試 這支影片會吃很多家我們想吃的餐廳 來看看是否真的好吃 我們也不知道好不好吃 一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔 淋上麵糊炸成的一個餅",
+        "captionTrack": "creator",
+        "language": "zh-HK",
+        "video": {
+          "id": "DegR9CsYttU",
+          "title": "【台灣旅行】大稻埕迪化街必吃10樣隱藏美食2026，不吃可惜！推薦在台港人開的咖啡店",
+          "channelName": "士多貓TV",
+          "thumbnailUrl": "https://i.ytimg.com/vi/DegR9CsYttU/maxresdefault.jpg",
+          "publishedAt": "2026-07-11"
+        },
+        "title": "Eat: 一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃",
+        "takeaway": "Food highlight: 一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔",
+        "highlights": [
+          "美食",
+          "小吃",
+          "吃"
+        ]
+      },
+      {
+        "id": "2xMEkcpCgqA-practical_tip-154",
+        "intent": "practical_tip",
+        "startSeconds": 154,
+        "endSeconds": 207,
+        "exactQuote": "They are all delicious The miso soup is here ... also very delicious ... Because it has a very fresh and sweet fish flavor I recommend that if you want to come, Gotta be here before 11:00 in the morning Because look it’s about 11:45 now There has been a very long queue The queue for sashimi ... Line up here at the exit Divide into sections So be sure to come early",
+        "contextText": "They are all delicious The miso soup is here ... also very delicious ... Because it has a very fresh and sweet fish flavor I recommend that if you want to come, Gotta be here before 11:00 in the morning Because look it’s about 11:45 now There has been a very long queue The queue for sashimi ... Line up here at the exit Divide into sections So be sure to come early There is another famous store in this market It's a fried sticky rice shop You have to queue up And it closes at 12:00 So when I was eating sashimi just now I saw a lot of people buying takeaways first There are fried rice, chicken legs, braised eggs and taro cakes Saw him packing food This is the fried rice In addition, this fried rice can be paired with chicken legs And eggs",
+        "locationContext": "(music) This morning we came to Dadaocheng There is a very famous market It's called Yongle Market The shop only opens in the morning So if you want to eat, you have to come in the morning There are also some famous shops there. Let's find a restaurant called Marutaka Sashimi Shop see many people I'll go over and take a look first right here Looks like there's a queue The store opened at 9 a.m. But please note that they are closed on Mondays At the counter you can clearly see the chef working.",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "2xMEkcpCgqA",
+          "title": "【台北旅行】大稻埕迪化街一日怎安排？人氣美食推介！中西合璧的獨特建築風格！ 充滿日式昭和風情的小店！【Taipei Travel】DIHUA STREET walking tour #heritage",
+          "channelName": "The Walk Street Channel 玩行街頻道",
+          "thumbnailUrl": "https://i.ytimg.com/vi/2xMEkcpCgqA/maxresdefault.jpg",
+          "publishedAt": "2024-10-13"
+        },
+        "title": "Creator tip: Good to know: here at the exit Divide into sections So be",
+        "takeaway": "The creator observed: planning takeaway: …Line up here at the exit Divide into sections So be sure to come early",
+        "highlights": [
+          "exit",
+          "early",
+          "before",
+          "morning"
+        ]
+      },
+      {
+        "id": "FO9MQmRffmM-activity-72",
+        "intent": "activity",
+        "startSeconds": 72,
+        "endSeconds": 126,
+        "exactQuote": "are perfect for a leisurely stroll. A new lifestyle scene to slowly explore. Come and follow us for a day of Dadaocheng Come walk around with us. For our first stop, we arrived at Cisheng Temple in Dadaocheng It's right here And this temple, has been here since 1866 I can still see on it a juren (provincial exam graduate)",
+        "contextText": "are perfect for a leisurely stroll. A new lifestyle scene to slowly explore. Come and follow us for a day of Dadaocheng Come walk around with us. For our first stop, we arrived at Cisheng Temple in Dadaocheng It's right here And this temple, has been here since 1866 I can still see on it a juren (provincial exam graduate) and from the Tongzhi era Mm, the Tongzhi period But when people come here, aside from worshipping, there's another very important attraction which is that there are many delicious foods here This is Bao'an Street This place is known as a top snack hotspot Only a short stretch, under 100 meters There are over a dozen popular food stalls gathered here. It's like an outdoor food street.",
+        "locationContext": "Hi everyone, welcome back to Yang Yang's channel Taipei's 12 districts Each district has its own story and style We've already been to places like Wanhua Beitou In the last episode and Songshan This time we've come to Datong District Datong District has two iconic spots like Dalongdong There is also the familiar Dadaocheng The name Dadaocheng comes from earlier times when it was a space for drying rice Back then, with the opening of the Tamsui port this area became Taipei's most prosperous commercial center The tea and textile businesses",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "FO9MQmRffmM",
+          "title": "大稻埕每間都經典，走28站吃喝逛好逛滿｜最好吃油飯・小京都咖啡店Ura・蔥油餅・黑膠復古老宅・觀光客必喝咖啡・現做潤餅＋白湯豬腳麵線｜Taipei VLOG｜yang and yang",
+          "channelName": "yang and yang",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FO9MQmRffmM/maxresdefault.jpg",
+          "publishedAt": "2025-11-09"
+        },
+        "title": "Try: scene to slowly explore. Come and follow us for",
+        "takeaway": "Suggested experience: …new lifestyle scene to slowly explore. Come and follow us for a day of Dadaocheng Come walk around with us. For our first stop,…",
+        "highlights": [
+          "explore",
+          "temple",
+          "walk",
+          "stroll"
+        ]
+      },
+      {
+        "id": "IwQlJqQGjA0-activity-257",
+        "intent": "activity",
+        "startSeconds": 257,
+        "endSeconds": 311,
+        "exactQuote": "其實這棟老房子也曾經遭到戰火的破壞 是後來經過修復才恢復原有風貌 上到二樓還有一個品茶空間 團體預約的話就可以有泡茶教學和體驗的服務 還有不定期有展覽可以參觀 來大稻埕的話 「新芳春茶行」絕對不可錯過啊",
+        "contextText": "其實這棟老房子也曾經遭到戰火的破壞 是後來經過修復才恢復原有風貌 上到二樓還有一個品茶空間 團體預約的話就可以有泡茶教學和體驗的服務 還有不定期有展覽可以參觀 來大稻埕的話 「新芳春茶行」絕對不可錯過啊 這是一間90年老餐廳 招牌是用注音符號拼出法文的Boléro 而Boléro是老老闆喜歡的一首西班牙圓舞曲 因此就當作店名啦",
+        "locationContext": "啊～ 你很誇張ㄟ 這一次來大稻埕 剛好遇到「台北年貨大街」的活動 這次行程還是安排了許多還沒去過的景點 逛景點之前先來吃點東西 永樂市場旁邊的小巷子裡 有間賣「蚵嗲」的店 聽說原本只是路邊賣炸物的小攤 現在搬到這裡了 原本只是要來吃蚵嗲的 現場各種炸物看起來都好好吃 結果就忍不住點了其他的炸物來試一試",
+        "captionTrack": "creator",
+        "language": "zh-Hant",
+        "video": {
+          "id": "IwQlJqQGjA0",
+          "title": "認真找出許多歷史景點..美食也不可少..O型散步路線 #大稻埕 #迪化街",
+          "channelName": "Old Chang  short travel in Taiwan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IwQlJqQGjA0/maxresdefault.jpg",
+          "publishedAt": "2025-01-25"
+        },
+        "title": "Try: 其實這棟老房子也曾經遭到戰火的破壞 是後來經過修復才恢復原有風貌 上到二樓還有一個品茶空間 團體預約的話就可以有泡茶教學和體驗的服務 還有不定期有展覽可以參觀 來大稻埕的話 「新芳春茶行」絕對不可錯過啊",
+        "takeaway": "Suggested experience: 其實這棟老房子也曾經遭到戰火的破壞 是後來經過修復才恢復原有風貌 上到二樓還有一個品茶空間 團體預約的話就可以有泡茶教學和體驗的服務 還有不定期有展覽可以參觀 來大稻埕的話 「新芳春茶行」絕對不可錯過啊",
+        "highlights": [
+          "參觀",
+          "體驗"
+        ]
+      },
+      {
+        "id": "FuA66AtviRI-food-1350",
+        "intent": "food",
+        "startSeconds": 1350,
+        "endSeconds": 1404,
+        "exactQuote": "the minimum spend is one cocktail per person. But because you are driving, both are mine. I ordered a \"Taisho Café\" today, and \"Showa Era Western Tea\". Inside this is tea alcohol, also quite a Dihua Street feature. Both cups are very unique. Like this one you really taste the tea flavor. And with a hint of fruit flavor. And this \"Taisho Café\", just leaning close you smell the strong coffee aroma. Drinking it confirms it.",
+        "contextText": "the minimum spend is one cocktail per person. But because you are driving, both are mine. I ordered a \"Taisho Café\" today, and \"Showa Era Western Tea\". Inside this is tea alcohol, also quite a Dihua Street feature. Both cups are very unique. Like this one you really taste the tea flavor. And with a hint of fruit flavor. And this \"Taisho Café\", just leaning close you smell the strong coffee aroma. Drinking it confirms it. Let me tell you, although we can't drink, I'm actually quite happy. You know why? Why? Because when drinking, I like watching people mix drinks more than drinking. I can only deceive myself like this. Getting the experience is enough. Exactly, exactly, exactly. Watching you drink makes me happy too. The name of this shop has a very interesting origin. Because the chef loves meat. So he used the transliteration of German for meat (Fleisch), which sounds like \"Fu Lai Xu\", to name the shop.",
+        "locationContext": "Every year at this time, Dihua Street is filled with the aroma of herbal medicine and dried goods. But besides the crowded throngs and the New Year Market that looks much the same every year, do you really know this street? This year, we want to give you a new perspective. We've prepared 13 brand new ways to \"unbox\" this place. It might be a little miracle story in the old temple street, or a dinner conversation with an old house. Before the New Year Market officially opens, we invite you to join this sneak peek plan. It's not just shopping, but walking into a time tunnel to hear those interesting little stories of the old street. These 13 items on the list will add depth to your shopping itinerary. This year, you won't just be taking home dried goods, but also a fulfilling spiritual memory. New Year is approaching, and it's time to buy New Year supplies again. Although we have filmed Dihua Street many times, this place with its deep cultural heritage changes every year. Whether you are a Taipei local, a tourist from another city, or even a foreign tourist,",
+        "captionTrack": "creator",
+        "language": "en-US",
+        "video": {
+          "id": "FuA66AtviRI",
+          "title": "迪化街偷跑計畫！年貨大街即將來臨，你準備好了嗎？！集合迪化街四大重點，精選13個特色逛街行程，好吃好逛好買一次集合！",
+          "channelName": "CHILL先生一家人",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FuA66AtviRI/maxresdefault.jpg",
+          "publishedAt": "2026-01-21"
+        },
+        "title": "Eat: \"Showa Era Western Tea\". Inside this is tea alcohol",
+        "takeaway": "Food highlight: …today, and \"Showa Era Western Tea\". Inside this is tea alcohol, also quite a Dihua Street feature. Both cups are very unique. Like this…",
+        "highlights": [
+          "tea",
+          "drink",
+          "taste",
+          "coffee"
+        ]
+      },
+      {
+        "id": "E8g7sl65TyM-practical_tip-79",
+        "intent": "practical_tip",
+        "startSeconds": 79,
+        "endSeconds": 133,
+        "exactQuote": "His ride is near something like Cenrance or exit number 3. I'm just looking for which is very close. Actually, that's all we still need to take the bus and the bus we're taking is the GR17 again to the Daeng Container market. Or foggy. Let's cross here and then cross over there on the other side. Did you know that one of the things I noticed here at the Cening Night Market before was that there were so many people performing, like street performers, aside from down near Popmart, what's the next intersection? Now there aren't many anymore, maybe they've been banned. Ah, ah, strength. There he is, guys. Ah, so artistic. The wind is so strong. Hey, just wait. Shall we continue?",
+        "contextText": "His ride is near something like Cenrance or exit number 3. I'm just looking for which is very close. Actually, that's all we still need to take the bus and the bus we're taking is the GR17 again to the Daeng Container market. Or foggy. Let's cross here and then cross over there on the other side. Did you know that one of the things I noticed here at the Cening Night Market before was that there were so many people performing, like street performers, aside from down near Popmart, what's the next intersection? Now there aren't many anymore, maybe they've been banned. Ah, ah, strength. There he is, guys. Ah, so artistic. The wind is so strong. Hey, just wait. Shall we continue?",
+        "locationContext": "This night market is called ninja. Guys, welcome to the Deng Container Market. Do you see that? How beautiful. But let's taste the beef first. He is just small. He has more guys. It's his second. Hello. Oh, come with me, brother. How much? How delicious. Char Oh, sorry, sorry. [Music] Hello guys, it's me again Mark Paragas and welcome back to another travel vlog here in Taiwan. And guys, currently it is 5:59 p.m. and we have a night market to go to. Okay. So I'll figure out how to get there first. For the first time, of course, this night market is called the Ninja night market. But before that, we have one more thing to go to. The",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "E8g7sl65TyM",
+          "title": "EXPLORING NINGXIA NIGHT MARKET & DADAOCHENG WHARF CONTAINER MARKET FOR THE FIRST TIME",
+          "channelName": "Mark Paragas Official",
+          "thumbnailUrl": "https://i.ytimg.com/vi/E8g7sl65TyM/maxresdefault.jpg",
+          "publishedAt": "2025-09-07"
+        },
+        "title": "Creator tip: Good to know: like Cenrance or exit number 3. I'm just looking",
+        "takeaway": "The creator observed: planning takeaway: …near something like Cenrance or exit number 3. I'm just looking for which is very close. Actually, that's all we still need to take…",
+        "highlights": [
+          "exit",
+          "before",
+          "close",
+          "bus"
+        ]
+      },
+      {
+        "id": "gBV3XgzzBC0-practical_tip-13",
+        "intent": "practical_tip",
+        "startSeconds": 13,
+        "endSeconds": 67,
+        "exactQuote": "snacks in this video we'll be revealing Tai's most epic four floor wholesale decoration shop in Lunar New Year's secret that's hidden in plain sight dewa street is really easy to get to once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free shuttle bus but during Lunar New Year basically everyone's heading the same direction so you can just follow the crowd it's basically just around a 10 to 15 minute walk from the station so I don't think that you really need to take a shuttle there's huge traffic jam here we're going to buy that souvenir later that's a really famous Taiwanese egg roll we're going to go there right now everyone's here taking photos so we're going to go to this place so line up lineup starts over here this place is",
+        "contextText": "snacks in this video we'll be revealing Tai's most epic four floor wholesale decoration shop in Lunar New Year's secret that's hidden in plain sight dewa street is really easy to get to once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free shuttle bus but during Lunar New Year basically everyone's heading the same direction so you can just follow the crowd it's basically just around a 10 to 15 minute walk from the station so I don't think that you really need to take a shuttle there's huge traffic jam here we're going to buy that souvenir later that's a really famous Taiwanese egg roll we're going to go there right now everyone's here taking photos so we're going to go to this place so line up lineup starts over here this place is",
+        "locationContext": "it's pure Madness at taies Dew street it's our tradition to visit every year to shop for New Year decorations and snacks in this video we'll be revealing Tai's most epic four floor wholesale decoration shop in Lunar New Year's secret that's hidden in plain sight dewa street is really easy to get to once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free shuttle bus but during Lunar New Year basically everyone's heading the same direction so you can just follow the crowd it's basically just around a 10 to 15 minute walk from the station so I don't think that you really need to take a shuttle there's huge traffic jam here we're going to buy that souvenir later that's a really famous Taiwanese egg roll we're going to go there right now everyone's here taking photos so we're going to go to this",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "gBV3XgzzBC0",
+          "title": "We Braved Taiwan's CRAZIEST Market: Dihua Street Before Lunar New Year",
+          "channelName": "Bodhi Explorers",
+          "thumbnailUrl": "https://i.ytimg.com/vi/gBV3XgzzBC0/maxresdefault.jpg",
+          "publishedAt": "2025-01-26"
+        },
+        "title": "Creator tip: Good to know: arrive at Bayman station you just turn left and",
+        "takeaway": "The creator observed: planning takeaway: …once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free…",
+        "highlights": [
+          "station",
+          "crowd",
+          "bus"
+        ]
+      },
+      {
+        "id": "O_KsRhOE8Gs-practical_tip-36",
+        "intent": "practical_tip",
+        "startSeconds": 36,
+        "endSeconds": 90,
+        "exactQuote": "Hello, we're JS. Today's video shows us strolling through Taipei's Dadaocheng district. Exploring a wonderful day of experiences. There are so many local delicacies, quality shops, and old houses and alleyways that we love. We wanted to share these leisurely moments with everyone. So I edited this video to reflect my daily life. I hope you can relax and enjoy it to the end. If you have favorite Taiwanese local delicacies, quality restaurants, or old houses and alleyways, please leave a comment and share your experiences with us. Tourists taking the MRT to Beimen Station or Daqiaotou Station Dadaocheng Street is about a 5-minute walk away. Okay, let's begin our journey to Taipei's Dadaocheng! This morning, I discovered a coffee shop in the ABC building that's currently in its trial operation.",
+        "contextText": "Hello, we're JS. Today's video shows us strolling through Taipei's Dadaocheng district. Exploring a wonderful day of experiences. There are so many local delicacies, quality shops, and old houses and alleyways that we love. We wanted to share these leisurely moments with everyone. So I edited this video to reflect my daily life. I hope you can relax and enjoy it to the end. If you have favorite Taiwanese local delicacies, quality restaurants, or old houses and alleyways, please leave a comment and share your experiences with us. Tourists taking the MRT to Beimen Station or Daqiaotou Station Dadaocheng Street is about a 5-minute walk away. Okay, let's begin our journey to Taipei's Dadaocheng! This morning, I discovered a coffee shop in the ABC building that's currently in its trial operation.",
+        "locationContext": "Hello, we're JS. Today's video shows us strolling through Taipei's Dadaocheng district. Exploring a wonderful day of experiences. There are so many local delicacies, quality shops, and old houses and alleyways that we love. We wanted to share these leisurely moments with everyone. So I edited this video to reflect my daily life.",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "O_KsRhOE8Gs",
+          "title": "漫步台北大稻埕，探索老宅巷弄的台灣美食！擔仔麵．杏仁豆腐．魚丸湯．咖啡．魯肉飯．蔥油餅．油飯｜大同區．迪化街．永樂市場．捷運．北門站．大橋頭站｜度小月．大稻埕魯肉飯．滋養和菓子．夏樹甜品｜JSの旅途中",
+          "channelName": "JSの旅途中",
+          "thumbnailUrl": "https://i.ytimg.com/vi/O_KsRhOE8Gs/maxresdefault.jpg",
+          "publishedAt": "2025-08-08"
+        },
+        "title": "Creator tip: Good to know: MRT to Beimen Station or Daqiaotou Station Dadaocheng Street",
+        "takeaway": "The creator observed: planning takeaway: …taking the MRT to Beimen Station or Daqiaotou Station Dadaocheng Street is about a 5-minute walk away. Okay, let's begin our journey to Taipei's…",
+        "highlights": [
+          "station"
+        ]
+      },
+      {
+        "id": "mXGU7RYUClA-practical_tip-107",
+        "intent": "practical_tip",
+        "startSeconds": 107,
+        "endSeconds": 161,
+        "exactQuote": "麵皮現桿現包現煎 應該就是好吃的保證吧 排隊10分鐘之後果然到手 現吃口感外皮薄香焦脆 內餡很多 而且調味不會過重 吃起來非常的清爽 大橋頭這裡還有一個延三夜市 晚上會有很多美食攤位在這裡 而我們現在要來的這一攤 早上10點就開始營業了 低調樸實的老店面 看招牌就知道這家店主打的品項 上餐速度很快 趕快來吃吃看 首先這個菜飯吃起來很清爽 高麗菜的熟度很剛好",
+        "contextText": "麵皮現桿現包現煎 應該就是好吃的保證吧 排隊10分鐘之後果然到手 現吃口感外皮薄香焦脆 內餡很多 而且調味不會過重 吃起來非常的清爽 大橋頭這裡還有一個延三夜市 晚上會有很多美食攤位在這裡 而我們現在要來的這一攤 早上10點就開始營業了 低調樸實的老店面 看招牌就知道這家店主打的品項 上餐速度很快 趕快來吃吃看 首先這個菜飯吃起來很清爽 高麗菜的熟度很剛好",
+        "locationContext": "這次我們來到台北的大橋頭 屬於大稻埕北邊的台北老城區 保留了許多老台北生活的樣貌 巷弄中還藏著許多特色小店 在地美食也不少 「大橋頭」的大橋 指的就是「台北橋」 從清代以來 就是台北與三重間的重要橋樑 一下橋就是熱鬧的重慶北路 為了體驗在地生活 今天的行程 就從在地人熟悉的太平市場開始 這次主要是來尋找品嚐 這個市場裡面厲害的兩道美食 首先我們找到了這一攤 這攤的炸物種類很多",
+        "captionTrack": "creator",
+        "language": "zh-Hant",
+        "video": {
+          "id": "mXGU7RYUClA",
+          "title": "大橋頭：大稻埕北邊的老城區，美食與舊時光散步一日｜老張微旅行 #台北一日遊 #大稻埕",
+          "channelName": "Old Chang  short travel in Taiwan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/mXGU7RYUClA/maxresdefault.jpg",
+          "publishedAt": "2026-06-19"
+        },
+        "title": "Creator tip: Good to know: 麵皮現桿現包現煎 應該就是好吃的保證吧 排隊10分鐘之後果然到手 現吃口感外皮薄香焦脆 內餡很多 而且調味不會過重 吃起來非常的清爽 大橋頭這裡還有一個延三夜市 晚上會有很多美食攤位在這裡",
+        "takeaway": "The creator observed: planning takeaway: 麵皮現桿現包現煎 應該就是好吃的保證吧 排隊10分鐘之後果然到手 現吃口感外皮薄香焦脆 內餡很多 而且調味不會過重 吃起來非常的清爽 大橋頭這裡還有一個延三夜市 晚上會有很多美食攤位在這裡 而我們現在要來的這一攤 早上10點就開始營業了 低調樸實的老店面 看招牌就知道這家店主打的品項 上餐速度很快 趕快來吃吃看 首先這個菜飯吃起來很清爽 高麗菜的熟度很剛好",
+        "highlights": [
+          "營業",
+          "排隊",
+          "晚上",
+          "早上"
+        ]
+      },
+      {
+        "id": "uIjf-khZYzs-food-121",
+        "intent": "food",
+        "startSeconds": 121,
+        "endSeconds": 175,
+        "exactQuote": "再點很甜的味道的話 會超甜的～ 這是麵茶 有麵茶粉 吃起來有點像…… 花生的味道 對 我剛剛也覺得有點像花生 但有點難解釋 這到底是甚麼 這邊是迪化街清心福全店旁邊 這攤位是售賣麥芽糖餅 太多人排隊了！ 一包TW$60（HK$15）",
+        "contextText": "再點很甜的味道的話 會超甜的～ 這是麵茶 有麵茶粉 吃起來有點像…… 花生的味道 對 我剛剛也覺得有點像花生 但有點難解釋 這到底是甚麼 這邊是迪化街清心福全店旁邊 這攤位是售賣麥芽糖餅 太多人排隊了！ 一包TW$60（HK$15） 20塊小餅乾 打算試一下 還有酥脆煎餅 一口吃小餅乾是最多人購買的 全人手製作 聽說這是不黏牙的麥芽糖餅乾 還可以止咳 （我吃了真的好吃😋） 這裡以前是售賣布匹",
+        "locationContext": "這裏紅磚地方比較多 對的 這邊比較紅 一邊是售賣藥材 這裡可能以前的人是帶塑膠袋 再過來買幾斤多少 現在包裝是少少的 以前的人可能是購買幾斤 現在是預先包裝好 還有手作攤檔 迪化街草莓大福 很多家差不多的 那家白糖⋯⋯ 白糖哪個？ 這個白糖粿 oh！ 這家叫白糖粿 上面沾滿了糖粉 可以選擇口味 一份可以選擇一至三款味道 全都是即點即製 鐵⋯⋯觀⋯⋯ 鐵觀音及麵茶 對😂 好～",
+        "captionTrack": "creator",
+        "language": "zh-HK",
+        "video": {
+          "id": "uIjf-khZYzs",
+          "title": "台灣VLOG | 2025大稻埕食買玩攻略‼️迪化街買台灣LV🛍️必食超牽絲麥芽餅🤤 #台灣 #台北 #台灣手信",
+          "channelName": "Siuyanzi♥",
+          "thumbnailUrl": "https://i.ytimg.com/vi/uIjf-khZYzs/maxresdefault.jpg",
+          "publishedAt": "2025-10-12"
+        },
+        "title": "Eat: 再點很甜的味道的話 會超甜的～ 這是麵茶 有麵茶粉 吃起來有點像…… 花生的味道 對 我剛剛也覺得有點像花生 但有點難解釋",
+        "takeaway": "Food highlight: 再點很甜的味道的話 會超甜的～ 這是麵茶 有麵茶粉 吃起來有點像…… 花生的味道 對 我剛剛也覺得有點像花生 但有點難解釋 這到底是甚麼 這邊是迪化街清心福全店旁邊 這攤位是售賣麥芽糖餅 太多人排隊了！ 一包TW$60（HK$15）",
+        "highlights": [
+          "攤位",
+          "茶",
+          "吃"
+        ]
+      },
+      {
+        "id": "btZPB8MJfys-activity-46",
+        "intent": "activity",
+        "startSeconds": 46,
+        "endSeconds": 99,
+        "exactQuote": "red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+        "contextText": "red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+        "locationContext": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights century old buildings glow under lantern light red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+        "captionTrack": "creator",
+        "language": "en-US",
+        "video": {
+          "id": "btZPB8MJfys",
+          "title": "【TaipeiWalk】EP.27 Dihua St to Ningxia Night Market | 台北迪化街→寧夏夜市・從大稻埕老街夜色走進熱鬧夜市 | 4K | 2025",
+          "channelName": "Wasabi Walk",
+          "thumbnailUrl": "https://i.ytimg.com/vi/btZPB8MJfys/maxresdefault.jpg",
+          "publishedAt": "2026-06-28"
+        },
+        "title": "Try: not just a walk but a city encounter century",
+        "takeaway": "Suggested experience: …Night Market not just a walk but a city encounter century old trade town meets night street life",
+        "highlights": [
+          "walk",
+          "street",
+          "market",
+          "nightlife"
+        ]
+      },
+      {
+        "id": "0T1vuBhkbUs-activity-65",
+        "intent": "activity",
+        "startSeconds": 65,
+        "endSeconds": 119,
+        "exactQuote": "tour. Last night, I temporarily took an afternoon tour at Kluke. This is an English guided tour. Although I participated in the Diwa street tour in Chinese, I wanted to experience it in English. The guided tour takes about 2 hours and 45 minutes. And the route is as follows. Jang Jang District, Taipei Fusing North Gate, Chenang Gate, Taipei Northgate Post Office, Daong District, Taipei Father Gong Temple, Tiamati House Ruins, Yong La Cloth Market, Taipei Xiai Shang Wuang Temple, Diwa Street, Diwa",
+        "contextText": "tour. Last night, I temporarily took an afternoon tour at Kluke. This is an English guided tour. Although I participated in the Diwa street tour in Chinese, I wanted to experience it in English. The guided tour takes about 2 hours and 45 minutes. And the route is as follows. Jang Jang District, Taipei Fusing North Gate, Chenang Gate, Taipei Northgate Post Office, Daong District, Taipei Father Gong Temple, Tiamati House Ruins, Yong La Cloth Market, Taipei Xiai Shang Wuang Temple, Diwa Street, Diwa Street, 10 buildings. There are two tour guides today. One is Yuan who explains this route about 100 times a year and the other is Hanwen who should have just joined the tour guide. Meeting point at exit two of Bayman MRT station. Their English is excellent and their explanations are very clear and easy to understand. There are seven girls in our group, three from the Philippines, two from France, one from the United States, and one from Taipei, Taiwan. The tour",
+        "locationContext": "[Music] Wallace was the guide assigned to us and she just poured out her knowledge and personal insights regarding every places we visited and also recommended some place for us to have some replenishment. It was an enriching tour not only in sights and sounds but also to our mind. Thank you Wallace for letting us know more of the golden age of Taiwan. Kathy is a knowledgeable and relatable guide. She could link world events with the Taiwanese timeline so that you could easily understand the context. It was an enjoyable experience. It just so happened that the tour occurred in the month where the city god's birthday was being celebrated. If you're into architecture and the union of the old and the new, this tour is for you. We were captivated by more than just the old buildings and streets on our walking tour. We delve deep into Taiwan's culture and rich history. Our gu's enthusiasm and warmth made the experience truly unforgettable. We wholeheartedly recommend this",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "0T1vuBhkbUs",
+          "title": "「TravelPZ」 Review Taipei City North Gate ＆ Dadaocheng Half-day Cultural ＆ Historical Tour",
+          "channelName": "TravelPZ (travelpz.com)",
+          "thumbnailUrl": "https://i.ytimg.com/vi/0T1vuBhkbUs/maxresdefault.jpg",
+          "publishedAt": "2025-04-01"
+        },
+        "title": "Try: Taipei Father Gong Temple, Tiamati House Ruins, Yong La",
+        "takeaway": "Suggested experience: …Daong District, Taipei Father Gong Temple, Tiamati House Ruins, Yong La Cloth Market, Taipei Xiai Shang Wuang Temple, Diwa Street, Diwa",
+        "highlights": [
+          "temple",
+          "tour",
+          "street",
+          "market"
+        ]
+      },
+      {
+        "id": "0T1vuBhkbUs-practical_tip-99",
+        "intent": "practical_tip",
+        "startSeconds": 99,
+        "endSeconds": 153,
+        "exactQuote": "guides today. One is Yuan who explains this route about 100 times a year and the other is Hanwen who should have just joined the tour guide. Meeting point at exit two of Bayman MRT station. Their English is excellent and their explanations are very clear and easy to understand. There are seven girls in our group, three from the Philippines, two from France, one from the United States, and one from Taipei, Taiwan. The tour guide will start with a brief introduction to the history of Taiwan and then go to each location to explain a little history and have some interactive questions. The content will not be boring. The only drawback is that the itinerary is too rich. So, you have to seize the opportunity and time to take photos because every point is explained before leaving. But what I want to say is that this time I really learned more about the history of Taipei. It's really worth it. Although Cluke said it was a free trip, we still have to be self-aware and tip people. Smiley face emoji. The final stop was",
+        "contextText": "guides today. One is Yuan who explains this route about 100 times a year and the other is Hanwen who should have just joined the tour guide. Meeting point at exit two of Bayman MRT station. Their English is excellent and their explanations are very clear and easy to understand. There are seven girls in our group, three from the Philippines, two from France, one from the United States, and one from Taipei, Taiwan. The tour guide will start with a brief introduction to the history of Taiwan and then go to each location to explain a little history and have some interactive questions. The content will not be boring. The only drawback is that the itinerary is too rich. So, you have to seize the opportunity and time to take photos because every point is explained before leaving. But what I want to say is that this time I really learned more about the history of Taipei. It's really worth it. Although Cluke said it was a free trip, we still have to be self-aware and tip people. Smiley face emoji. The final stop was",
+        "locationContext": "[Music] Wallace was the guide assigned to us and she just poured out her knowledge and personal insights regarding every places we visited and also recommended some place for us to have some replenishment. It was an enriching tour not only in sights and sounds but also to our mind. Thank you Wallace for letting us know more of the golden age of Taiwan. Kathy is a knowledgeable and relatable guide. She could link world events with the Taiwanese timeline so that you could easily understand the context. It was an enjoyable experience. It just so happened that the tour occurred in the month where the city god's birthday was being celebrated. If you're into architecture and the union of the old and the new, this tour is for you. We were captivated by more than just the old buildings and streets on our walking tour. We delve deep into Taiwan's culture and rich history. Our gu's enthusiasm and warmth made the experience truly unforgettable. We wholeheartedly recommend this",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "0T1vuBhkbUs",
+          "title": "「TravelPZ」 Review Taipei City North Gate ＆ Dadaocheng Half-day Cultural ＆ Historical Tour",
+          "channelName": "TravelPZ (travelpz.com)",
+          "thumbnailUrl": "https://i.ytimg.com/vi/0T1vuBhkbUs/maxresdefault.jpg",
+          "publishedAt": "2025-04-01"
+        },
+        "title": "Creator tip: Good to know: of Bayman MRT station. Their English is excellent and",
+        "takeaway": "The creator observed: planning takeaway: …exit two of Bayman MRT station. Their English is excellent and their explanations are very clear and easy to understand. There are seven girls…",
+        "highlights": [
+          "station",
+          "exit"
+        ]
+      },
+      {
+        "id": "DjNXkS_F9M8-activity-437",
+        "intent": "activity",
+        "startSeconds": 437,
+        "endSeconds": 491,
+        "exactQuote": "We're heading to the this park. >> [music] [music] >> So, now we're heading to the statue. Statue in the park in the garden. >> [music] [music]",
+        "contextText": "We're heading to the this park. >> [music] [music] >> So, now we're heading to the statue. Statue in the park in the garden. >> [music] [music] >> Yeah. Wow. Okay.",
+        "locationContext": "It's nice. It's a nice one, isn't it? Wow, look at Khadija. >> [laughter] >> So, what are you doing, Khadija? We're trying to look for the breakfast. >> That's uh Queen's Road uh Street. >> Oh, straight? >> Queen's Road Street. I think we came from the other side, but then if you keep walking up and go left, you go to the the river. >> Oh, okay. Thank you. >> That's a really nice area. >> Let's go and have breakfast. Kids is hungry. >> Just up here. >> Oh, okay. >> Now, try to meet us up here. >> [music] [music] >> I bought some sticky rice here. >> Yeah. It's very traditional. My grandma used to make.",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "DjNXkS_F9M8",
+          "title": "澳洲老公女兒體驗不一樣的台北！大稻埕、迪化街美食吃到停不下來！沒想到最讓他們驚豔的竟然不是美食！Eating Through Dadaocheng & Dihua Street | TaipeiEYE",
+          "channelName": "Cordelia Super Fantastic ",
+          "thumbnailUrl": "https://i.ytimg.com/vi/DjNXkS_F9M8/sddefault.jpg",
+          "publishedAt": "2026-07-17"
+        },
+        "title": "Try: park in the garden. >> [music] [music]",
+        "takeaway": "Suggested experience: …in the park in the garden. >> [music] [music]",
+        "highlights": [
+          "garden",
+          "park"
+        ]
+      },
+      {
+        "id": "jyLEVVyWyT4-activity-841",
+        "intent": "activity",
+        "startSeconds": 841,
+        "endSeconds": 895,
+        "exactQuote": "can actually walk along the pier. Let's do that. You know what? This is kind of nice. So all these are [music] like places where you can get food and then you can sit here overlooking the the the water. This would be nice at night time too. Yes. I feel like I need to come back here and sit myself on one of these stools here and maybe watch the sunset. It looks like you can rent bicycles over there.",
+        "contextText": "can actually walk along the pier. Let's do that. You know what? This is kind of nice. So all these are [music] like places where you can get food and then you can sit here overlooking the the the water. This would be nice at night time too. Yes. I feel like I need to come back here and sit myself on one of these stools here and maybe watch the sunset. It looks like you can rent bicycles over there. >> [music] >> Ah, there's grass. There's grassy area. Ah, this is so relaxing. What a nice way to spend the afternoon. I'm so happy right now. I'm so relaxed and I'm so happy.",
+        "locationContext": "Apple orange cinnamon roll. That was good. M. Wow. These freeze-dried figs. Not sure what these things are. Maybe some fried dough snacks. I guess shop 181. Here it says 181. And this is the pepper pork bun. It looks very good and it's very nice and warm. Hey guys, what's up? Thank you so much for being here and welcome to another video. This is day two of my Taipei solo trip and I'm feeling pretty good today. Yeah. Yeah, I I think I got some rest and I I had a really good night's sleep. Honestly, uh the hotel I'm staying at is really good and I'm so glad I chose it. So today I decided to come to this place called Dihwa Street and it's one of the oldest commercial streets in Taipei.",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "jyLEVVyWyT4",
+          "title": "Exploring Old Taipei Alone: Dihua, Gua Bao & Taiwanese Tea",
+          "channelName": "Shinichi's World",
+          "thumbnailUrl": "https://i.ytimg.com/vi/jyLEVVyWyT4/maxresdefault.jpg",
+          "publishedAt": "2026-01-23"
+        },
+        "title": "Try: can actually walk along the pier. Let's do that",
+        "takeaway": "Suggested experience: can actually walk along the pier. Let's do that. You know what? This is kind of nice. So all these are…",
+        "highlights": [
+          "walk",
+          "sunset",
+          "pier"
+        ]
+      },
+      {
+        "id": "jyLEVVyWyT4-practical_tip-1039",
+        "intent": "practical_tip",
+        "startSeconds": 1039,
+        "endSeconds": 1093,
+        "exactQuote": "as you see. just for some reason I didn't expect to be so narrow. I thought it would be uh like wider streets, but there is definitely tons of food to choose from. All right, just got out of the crowd. I don't know if I can handle this. Seriously, I don't know. I don't know. Should just come another day. This is too much. Okay, that's a little bit better. So, it's it's most crowded around the food stores. So, it's better when you're away from the from the all the food, but then I want something to eat. Anyway, I'm hungry. I found this place right here. I want to get this pepper pork cake. Let's get this one here. So, so these things are cooked here in these very hot ovens here. I'm not sure what the name of this place is, but uh I",
+        "contextText": "as you see. just for some reason I didn't expect to be so narrow. I thought it would be uh like wider streets, but there is definitely tons of food to choose from. All right, just got out of the crowd. I don't know if I can handle this. Seriously, I don't know. I don't know. Should just come another day. This is too much. Okay, that's a little bit better. So, it's it's most crowded around the food stores. So, it's better when you're away from the from the all the food, but then I want something to eat. Anyway, I'm hungry. I found this place right here. I want to get this pepper pork cake. Let's get this one here. So, so these things are cooked here in these very hot ovens here. I'm not sure what the name of this place is, but uh I",
+        "locationContext": "Apple orange cinnamon roll. That was good. M. Wow. These freeze-dried figs. Not sure what these things are. Maybe some fried dough snacks. I guess shop 181. Here it says 181. And this is the pepper pork bun. It looks very good and it's very nice and warm. Hey guys, what's up? Thank you so much for being here and welcome to another video. This is day two of my Taipei solo trip and I'm feeling pretty good today. Yeah. Yeah, I I think I got some rest and I I had a really good night's sleep. Honestly, uh the hotel I'm staying at is really good and I'm so glad I chose it. So today I decided to come to this place called Dihwa Street and it's one of the oldest commercial streets in Taipei.",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "jyLEVVyWyT4",
+          "title": "Exploring Old Taipei Alone: Dihua, Gua Bao & Taiwanese Tea",
+          "channelName": "Shinichi's World",
+          "thumbnailUrl": "https://i.ytimg.com/vi/jyLEVVyWyT4/maxresdefault.jpg",
+          "publishedAt": "2026-01-23"
+        },
+        "title": "Creator tip: Good to know: it's it's most crowded around the food stores. So",
+        "takeaway": "The creator observed: planning takeaway: …better. So, it's it's most crowded around the food stores. So, it's better when you're away from the from the all the food, but…",
+        "highlights": [
+          "crowded",
+          "crowd"
+        ]
+      },
+      {
+        "id": "DegR9CsYttU-activity-1031",
+        "intent": "activity",
+        "startSeconds": 1031,
+        "endSeconds": 1085,
+        "exactQuote": "但價錢會比較貴一點 大概要$50一個 我們買了一瓶鳳梨汁 這個我們每次都買 100%原汁 我們會用來沖氣泡水 大家可以試試看 不用經常買同一個品牌 我們現在要去一家香港人開的咖啡店 Perfect Days 上次做香港人市集的時候，喝過他們的咖啡 覺得很好喝 又說要去店裏坐坐 差不多隔了一年才來",
+        "contextText": "但價錢會比較貴一點 大概要$50一個 我們買了一瓶鳳梨汁 這個我們每次都買 100%原汁 我們會用來沖氣泡水 大家可以試試看 不用經常買同一個品牌 我們現在要去一家香港人開的咖啡店 Perfect Days 上次做香港人市集的時候，喝過他們的咖啡 覺得很好喝 又說要去店裏坐坐 差不多隔了一年才來 好美唷 這間咖啡店很美 裝潢很有質感 咖啡有很多選擇 有手沖、特調，還有特調咖啡酒",
+        "locationContext": ". Hello 大家好，我是士多貓Joys 我是Alan 今天來到迪化街（大稻埕） 來吃一些放在口袋名單很久的東西 迪化街有很多又美又古典的餐廳 迪化街有很多又美又古典的餐廳 我們有很多口袋名單想試 這支影片會吃很多家我們想吃的餐廳 來看看是否真的好吃 我們也不知道好不好吃 一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔 淋上麵糊炸成的一個餅",
+        "captionTrack": "creator",
+        "language": "zh-HK",
+        "video": {
+          "id": "DegR9CsYttU",
+          "title": "【台灣旅行】大稻埕迪化街必吃10樣隱藏美食2026，不吃可惜！推薦在台港人開的咖啡店",
+          "channelName": "士多貓TV",
+          "thumbnailUrl": "https://i.ytimg.com/vi/DegR9CsYttU/maxresdefault.jpg",
+          "publishedAt": "2026-07-11"
+        },
+        "title": "Try: 但價錢會比較貴一點 大概要$50一個 我們買了一瓶鳳梨汁 這個我們每次都買 100%原汁 我們會用來沖氣泡水 大家可以試試看 不用經常買同一個品牌 我們現在要去一家香港人開的咖啡店",
+        "takeaway": "Suggested experience: 但價錢會比較貴一點 大概要$50一個 我們買了一瓶鳳梨汁 這個我們每次都買 100%原汁 我們會用來沖氣泡水 大家可以試試看 不用經常買同一個品牌 我們現在要去一家香港人開的咖啡店 Perfect Days 上次做香港人市集的時候，喝過他們的咖啡 覺得很好喝 又說要去店裏坐坐 差不多隔了一年才來",
+        "highlights": [
+          "市集"
+        ]
+      },
+      {
+        "id": "_8C7a7m6CdY-activity-172",
+        "intent": "activity",
+        "startSeconds": 172,
+        "endSeconds": 226,
+        "exactQuote": "Taiwanese. But uh you'll also find it mixed with trying to get everything in in this one take like different architecture. Now, we're sort of at the southern end. We only got about a block or two here. But if you head up, as I said, we're not going to do it two or three blocks that way. There's some nicer, as you can see, they sort of keep the buildings, you know, sort of gives you that old vibe, which I find pretty cool. And of course, you know, they got some sort of a temple going on here, too. They all have their own little",
+        "contextText": "Taiwanese. But uh you'll also find it mixed with trying to get everything in in this one take like different architecture. Now, we're sort of at the southern end. We only got about a block or two here. But if you head up, as I said, we're not going to do it two or three blocks that way. There's some nicer, as you can see, they sort of keep the buildings, you know, sort of gives you that old vibe, which I find pretty cool. And of course, you know, they got some sort of a temple going on here, too. They all have their own little theme. And yeah, I just feel like I'm trying to make this super quick for someone who wants to go, hey, what's going on in Dwis Street? Some guys filming over there. What to expect? Well, we did about two blocks, right? roughly. And there's about seven blocks of the same thing sort of repeated. Little coffee shops, lots of little fruits, you know, herbal medicines, dried things. And in the evenings, they'll have street",
+        "locationContext": "Should I just give it a one take through here? Yeah, maybe that's what I'll do. Well, we're up a few blocks. I think it starts. Well, I know it starts, but a lot of that is the same as what you're going to see this way. We're going to head this way. It's about a five or six block excursion. It's not too busy today. Today is Monday, I guess, like 1:00 in the afternoon. So, as I said, I'm just walking through here. I've done live streams here before, but yeah, I haven't done actually a decent, you know, better quality video. So, let's just one take it here. I'll keep chatting. There won't be any cut scenes, nothing flashy. It's lunchtime. People are eating. Of course, you can't go too far in Taipei without finding a place to eat, right? But the main gist of it is like uh lots of herbs, spices, kind of Chinese medicine type things. Obviously some uh you know souvenir type things as well. Different sorts of dried foods. Quite expensive too. So they must be",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "_8C7a7m6CdY",
+          "title": "Dihua Street, Taipei City: What to Expect?",
+          "channelName": "Led Zippo",
+          "thumbnailUrl": "https://i.ytimg.com/vi/_8C7a7m6CdY/maxresdefault.jpg",
+          "publishedAt": "2025-04-21"
+        },
+        "title": "Try: sort of a temple going on here, too. They",
+        "takeaway": "Suggested experience: …got some sort of a temple going on here, too. They all have their own little",
+        "highlights": [
+          "temple",
+          "street"
+        ]
+      },
+      {
+        "id": "gBV3XgzzBC0-activity-126",
+        "intent": "activity",
+        "startSeconds": 126,
+        "endSeconds": 180,
+        "exactQuote": "there's a lot of DIY craft workshops here [Music]",
+        "contextText": "there's a lot of DIY craft workshops here [Music] I think one of the craziest locations at Dew street is definitely the candy shopping area during the Lunar New Year there's a lot of pushing and shoving you have to be prepared for that and when you're ready to pay you actually have to yell to get their attention because people are coming in from all different directions and there's no real lineup it's so hard to move around here basically squeezing through really slowly there's like cashier everywhere",
+        "locationContext": "it's pure Madness at taies Dew street it's our tradition to visit every year to shop for New Year decorations and snacks in this video we'll be revealing Tai's most epic four floor wholesale decoration shop in Lunar New Year's secret that's hidden in plain sight dewa street is really easy to get to once you arrive at Bayman station you just turn left and you walk straight and you'll get there or you can take a free shuttle bus but during Lunar New Year basically everyone's heading the same direction so you can just follow the crowd it's basically just around a 10 to 15 minute walk from the station so I don't think that you really need to take a shuttle there's huge traffic jam here we're going to buy that souvenir later that's a really famous Taiwanese egg roll we're going to go there right now everyone's here taking photos so we're going to go to this",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "gBV3XgzzBC0",
+          "title": "We Braved Taiwan's CRAZIEST Market: Dihua Street Before Lunar New Year",
+          "channelName": "Bodhi Explorers",
+          "thumbnailUrl": "https://i.ytimg.com/vi/gBV3XgzzBC0/maxresdefault.jpg",
+          "publishedAt": "2025-01-26"
+        },
+        "title": "Try: there's a lot of DIY craft workshops here [Music]",
+        "takeaway": "Suggested experience: there's a lot of DIY craft workshops here [Music]",
+        "highlights": [
+          "shopping",
+          "street"
+        ]
+      },
+      {
+        "id": "_8C7a7m6CdY-practical_tip-0",
+        "intent": "practical_tip",
+        "startSeconds": 0,
+        "endSeconds": 54,
+        "exactQuote": "Should I just give it a one take through here? Yeah, maybe that's what I'll do. Well, we're up a few blocks. I think it starts. Well, I know it starts, but a lot of that is the same as what you're going to see this way. We're going to head this way. It's about a five or six block excursion. It's not too busy today. Today is Monday, I guess, like 1:00 in the afternoon. So, as I said, I'm just walking through here. I've done live streams here before, but yeah, I haven't",
+        "contextText": "Should I just give it a one take through here? Yeah, maybe that's what I'll do. Well, we're up a few blocks. I think it starts. Well, I know it starts, but a lot of that is the same as what you're going to see this way. We're going to head this way. It's about a five or six block excursion. It's not too busy today. Today is Monday, I guess, like 1:00 in the afternoon. So, as I said, I'm just walking through here. I've done live streams here before, but yeah, I haven't done actually a decent, you know, better quality video. So, let's just one take it here. I'll keep chatting. There won't be any cut scenes, nothing flashy. It's lunchtime. People are eating. Of course, you can't go too far in Taipei without finding a place to eat, right? But the main gist of it is like uh lots of herbs, spices, kind of Chinese medicine type things. Obviously some uh you know souvenir type things as",
+        "locationContext": "Should I just give it a one take through here? Yeah, maybe that's what I'll do. Well, we're up a few blocks. I think it starts. Well, I know it starts, but a lot of that is the same as what you're going to see this way. We're going to head this way. It's about a five or six block excursion. It's not too busy today. Today is Monday, I guess, like 1:00 in the afternoon. So, as I said, I'm just walking through here. I've done live streams here before, but yeah, I haven't done actually a decent, you know, better quality video. So, let's just one take it here. I'll keep chatting. There won't be any cut scenes, nothing flashy. It's lunchtime. People are eating. Of course, you can't go too far in Taipei without finding a place to eat, right? But the main gist of it is like uh lots of herbs, spices, kind of Chinese medicine type things. Obviously some uh you know souvenir type things as well. Different sorts of dried foods. Quite expensive too. So they must be",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "_8C7a7m6CdY",
+          "title": "Dihua Street, Taipei City: What to Expect?",
+          "channelName": "Led Zippo",
+          "thumbnailUrl": "https://i.ytimg.com/vi/_8C7a7m6CdY/maxresdefault.jpg",
+          "publishedAt": "2025-04-21"
+        },
+        "title": "Creator tip: Good to know: live streams here before, but yeah, I haven't",
+        "takeaway": "The creator observed: planning takeaway: …I've done live streams here before, but yeah, I haven't",
+        "highlights": [
+          "before",
+          "busy"
+        ]
+      },
+      {
+        "id": "FuA66AtviRI-practical_tip-1219",
+        "intent": "practical_tip",
+        "startSeconds": 1219,
+        "endSeconds": 1273,
+        "exactQuote": "Lao Mian Cheng. We are now at Fleisch Café (Fu Lai Xu). Actually at the beginning of the itinerary, we passed by this place. But I put it towards the end of the itinerary. Because many shops here on Dihua Street close relatively early. So we finish shopping first then come to eat. Why did we pick this shop? It's because Dadaocheng has a few features that must be experienced.",
+        "contextText": "Lao Mian Cheng. We are now at Fleisch Café (Fu Lai Xu). Actually at the beginning of the itinerary, we passed by this place. But I put it towards the end of the itinerary. Because many shops here on Dihua Street close relatively early. So we finish shopping first then come to eat. Why did we pick this shop? It's because Dadaocheng has a few features that must be experienced. First, it's tea, and rice. And then, we mentioned earlier, fabric, Chinese medicine, and dried goods. Coming here, we can eat their classic Taiwanese cuisine, drink tea, drink coffee, drink cocktails. We are pretty much done eating.",
+        "locationContext": "Every year at this time, Dihua Street is filled with the aroma of herbal medicine and dried goods. But besides the crowded throngs and the New Year Market that looks much the same every year, do you really know this street? This year, we want to give you a new perspective. We've prepared 13 brand new ways to \"unbox\" this place. It might be a little miracle story in the old temple street, or a dinner conversation with an old house. Before the New Year Market officially opens, we invite you to join this sneak peek plan. It's not just shopping, but walking into a time tunnel to hear those interesting little stories of the old street. These 13 items on the list will add depth to your shopping itinerary. This year, you won't just be taking home dried goods, but also a fulfilling spiritual memory. New Year is approaching, and it's time to buy New Year supplies again. Although we have filmed Dihua Street many times, this place with its deep cultural heritage changes every year. Whether you are a Taipei local, a tourist from another city, or even a foreign tourist,",
+        "captionTrack": "creator",
+        "language": "en-US",
+        "video": {
+          "id": "FuA66AtviRI",
+          "title": "迪化街偷跑計畫！年貨大街即將來臨，你準備好了嗎？！集合迪化街四大重點，精選13個特色逛街行程，好吃好逛好買一次集合！",
+          "channelName": "CHILL先生一家人",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FuA66AtviRI/maxresdefault.jpg",
+          "publishedAt": "2026-01-21"
+        },
+        "title": "Creator tip: Good to know: Street close relatively early. So we finish shopping first",
+        "takeaway": "The creator observed: planning takeaway: …on Dihua Street close relatively early. So we finish shopping first then come to eat. Why did we pick this shop? It's because Dadaocheng…",
+        "highlights": [
+          "early",
+          "close"
+        ]
+      },
+      {
+        "id": "FO9MQmRffmM-food-111",
+        "intent": "food",
+        "startSeconds": 111,
+        "endSeconds": 164,
+        "exactQuote": "This is Bao'an Street This place is known as a top snack hotspot Only a short stretch, under 100 meters There are over a dozen popular food stalls gathered here. It's like an outdoor food street. His noodle dish is dipped in a lot of mashed garlic. And when you taste it, it's very tasty and full of flavor.",
+        "contextText": "This is Bao'an Street This place is known as a top snack hotspot Only a short stretch, under 100 meters There are over a dozen popular food stalls gathered here. It's like an outdoor food street. His noodle dish is dipped in a lot of mashed garlic. And when you taste it, it's very tasty and full of flavor. As for this place, it's a pork knuckle spot recommended by Korean chef Baek Jong-won. So I saw many Koreans come to eat here. The area is full of Korean tourists. If you like lots of meat, you should order the leg-meat soup. Or if you prefer more skin, you can order the pork-knuckle soup. The menu here is very simple. You can choose the dry version of the thin noodles. Or you can get the noodle soup. Or pig's trotter. Or a portion with more leg meat. Just pick according to your own preference. You can order it.",
+        "locationContext": "Hi everyone, welcome back to Yang Yang's channel Taipei's 12 districts Each district has its own story and style We've already been to places like Wanhua Beitou In the last episode and Songshan This time we've come to Datong District Datong District has two iconic spots like Dalongdong There is also the familiar Dadaocheng The name Dadaocheng comes from earlier times when it was a space for drying rice Back then, with the opening of the Tamsui port this area became Taipei's most prosperous commercial center The tea and textile businesses",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "FO9MQmRffmM",
+          "title": "大稻埕每間都經典，走28站吃喝逛好逛滿｜最好吃油飯・小京都咖啡店Ura・蔥油餅・黑膠復古老宅・觀光客必喝咖啡・現做潤餅＋白湯豬腳麵線｜Taipei VLOG｜yang and yang",
+          "channelName": "yang and yang",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FO9MQmRffmM/maxresdefault.jpg",
+          "publishedAt": "2025-11-09"
+        },
+        "title": "Eat: food street. His noodle dish is dipped in a",
+        "takeaway": "Food highlight: …an outdoor food street. His noodle dish is dipped in a lot of mashed garlic. And when you taste it, it's very tasty and…",
+        "highlights": [
+          "noodle",
+          "pork",
+          "dish",
+          "taste"
+        ]
+      },
+      {
+        "id": "TYmYRGsibms-practical_tip-118",
+        "intent": "practical_tip",
+        "startSeconds": 118,
+        "endSeconds": 172,
+        "exactQuote": "總體來說這家店的海鮮算是新鮮 聽說假日的時候也是必須排隊啊 （美食總是必須等待） 剛剛急著排隊買美食、吃美食 到現在才有時間仔細看看「永樂市場」的外貌 （買油飯的隊伍更長了... ） 好啦 那麼現在就正式開始 迪化街老城區的文青之旅",
+        "contextText": "總體來說這家店的海鮮算是新鮮 聽說假日的時候也是必須排隊啊 （美食總是必須等待） 剛剛急著排隊買美食、吃美食 到現在才有時間仔細看看「永樂市場」的外貌 （買油飯的隊伍更長了... ） 好啦 那麼現在就正式開始 迪化街老城區的文青之旅 第一站到先「遊客中心」看看 一樓是遊客中心的櫃檯 還有「大稻埕」景點位置圖 上到二、三樓則有幾個美美的復古場景可以拍照",
+        "locationContext": "歡迎收看老張微旅行 我是老張 這次要到台北大稻埕走走喔 當車子一轉進迪化街 就明顯感覺到街道景色的轉變 老建築一棟接著一棟都好有味道 讓人忍不住想要馬上去逛一逛 但在逛老街之前 必須先到永樂市場買個好吃的東西 還沒進到市場就看到了排隊人龍 這家油飯老店已有百年歷史 據說是台北最好吃的油飯",
+        "captionTrack": "creator",
+        "language": "zh-Hant",
+        "video": {
+          "id": "TYmYRGsibms",
+          "title": "「文青小旅行」變成「一路吃不停」… 大稻埕迪化商圈太好吃、太好買了！#大稻埕 #迪化街",
+          "channelName": "Old Chang  short travel in Taiwan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/TYmYRGsibms/maxresdefault.jpg",
+          "publishedAt": "2024-11-01"
+        },
+        "title": "Creator tip: Good to know: 總體來說這家店的海鮮算是新鮮 聽說假日的時候也是必須排隊啊 （美食總是必須等待） 剛剛急著排隊買美食、吃美食 到現在才有時間仔細看看「永樂市場」的外貌 （買油飯的隊伍更長了... ） 好啦 那麼現在就正式開始",
+        "takeaway": "The creator observed: planning takeaway: 總體來說這家店的海鮮算是新鮮 聽說假日的時候也是必須排隊啊 （美食總是必須等待） 剛剛急著排隊買美食、吃美食 到現在才有時間仔細看看「永樂市場」的外貌 （買油飯的隊伍更長了... ） 好啦 那麼現在就正式開始 迪化街老城區的文青之旅",
+        "highlights": [
+          "排隊",
+          "時間"
+        ]
+      },
+      {
+        "id": "IwQlJqQGjA0-food-472",
+        "intent": "food",
+        "startSeconds": 472,
+        "endSeconds": 526,
+        "exactQuote": "ＣＤ、卡帶、黑膠都有 真的是滿滿的懷舊感啊 我們到這家老字號糕餅店 快閃買一些超復古的小點心之後 也差不多要找個地方休息一下啦 這家店看起來是新開的啊",
+        "contextText": "ＣＤ、卡帶、黑膠都有 真的是滿滿的懷舊感啊 我們到這家老字號糕餅店 快閃買一些超復古的小點心之後 也差不多要找個地方休息一下啦 這家店看起來是新開的啊 豆花、愛玉都很不錯 尤其這個刨冰有夠大碗 配料給的也很足 (超誇張的..) 高ＣＰ值甜品 終於回到迪化街啦 我們計劃從迪化街的最尾巴這一家老店開始逛 70多年的麻油老舖 整間店看起來有老雜貨店的復古味道",
+        "locationContext": "啊～ 你很誇張ㄟ 這一次來大稻埕 剛好遇到「台北年貨大街」的活動 這次行程還是安排了許多還沒去過的景點 逛景點之前先來吃點東西 永樂市場旁邊的小巷子裡 有間賣「蚵嗲」的店 聽說原本只是路邊賣炸物的小攤 現在搬到這裡了 原本只是要來吃蚵嗲的 現場各種炸物看起來都好好吃 結果就忍不住點了其他的炸物來試一試",
+        "captionTrack": "creator",
+        "language": "zh-Hant",
+        "video": {
+          "id": "IwQlJqQGjA0",
+          "title": "認真找出許多歷史景點..美食也不可少..O型散步路線 #大稻埕 #迪化街",
+          "channelName": "Old Chang  short travel in Taiwan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IwQlJqQGjA0/maxresdefault.jpg",
+          "publishedAt": "2025-01-25"
+        },
+        "title": "Eat: ＣＤ、卡帶、黑膠都有 真的是滿滿的懷舊感啊 我們到這家老字號糕餅店 快閃買一些超復古的小點心之後 也差不多要找個地方休息一下啦 這家店看起來是新開的啊",
+        "takeaway": "Food highlight: ＣＤ、卡帶、黑膠都有 真的是滿滿的懷舊感啊 我們到這家老字號糕餅店 快閃買一些超復古的小點心之後 也差不多要找個地方休息一下啦 這家店看起來是新開的啊",
+        "highlights": [
+          "糕餅",
+          "點心"
+        ]
+      },
+      {
+        "id": "btZPB8MJfys-food-46",
+        "intent": "food",
+        "startSeconds": 46,
+        "endSeconds": 99,
+        "exactQuote": "red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+        "contextText": "red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+        "locationContext": "Hello everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street shifts rhythm daytime shops slowly close their lights century old buildings glow under lantern light red brick arcades preserve old city memory once a major commercial hub of Taipei walking east crowds gradually increase quiet streets turn into nightlife scenes scooters pass and food aromas spread the city atmosphere warms up entering Ningxia Night Market oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old trade town meets night street life",
+        "captionTrack": "creator",
+        "language": "en-US",
+        "video": {
+          "id": "btZPB8MJfys",
+          "title": "【TaipeiWalk】EP.27 Dihua St to Ningxia Night Market | 台北迪化街→寧夏夜市・從大稻埕老街夜色走進熱鬧夜市 | 4K | 2025",
+          "channelName": "Wasabi Walk",
+          "thumbnailUrl": "https://i.ytimg.com/vi/btZPB8MJfys/maxresdefault.jpg",
+          "publishedAt": "2026-06-28"
+        },
+        "title": "Eat: taro balls chicken rice line up from Dadaocheng to",
+        "takeaway": "Food highlight: …oyster omelets taro balls chicken rice line up from Dadaocheng to Ningxia Night Market not just a walk but a city encounter century old…",
+        "highlights": [
+          "rice",
+          "food"
+        ]
+      },
+      {
+        "id": "FO9MQmRffmM-practical_tip-409",
+        "intent": "practical_tip",
+        "startSeconds": 409,
+        "endSeconds": 463,
+        "exactQuote": "Let's go. Mimi is busy. You can also find traditional farming tools here. The kitties here are all so busy.",
+        "contextText": "Let's go. Mimi is busy. You can also find traditional farming tools here. The kitties here are all so busy. Even the fire station is so distinctive You have to walk through a clothing shop before reaching the café.",
+        "locationContext": "Hi everyone, welcome back to Yang Yang's channel Taipei's 12 districts Each district has its own story and style We've already been to places like Wanhua Beitou In the last episode and Songshan This time we've come to Datong District Datong District has two iconic spots like Dalongdong There is also the familiar Dadaocheng The name Dadaocheng comes from earlier times when it was a space for drying rice Back then, with the opening of the Tamsui port this area became Taipei's most prosperous commercial center The tea and textile businesses",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "FO9MQmRffmM",
+          "title": "大稻埕每間都經典，走28站吃喝逛好逛滿｜最好吃油飯・小京都咖啡店Ura・蔥油餅・黑膠復古老宅・觀光客必喝咖啡・現做潤餅＋白湯豬腳麵線｜Taipei VLOG｜yang and yang",
+          "channelName": "yang and yang",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FO9MQmRffmM/maxresdefault.jpg",
+          "publishedAt": "2025-11-09"
+        },
+        "title": "Creator tip: Good to know: Let's go. Mimi is busy. You can also find",
+        "takeaway": "The creator observed: planning takeaway: Let's go. Mimi is busy. You can also find traditional farming tools here. The kitties here are all so…",
+        "highlights": [
+          "station",
+          "before",
+          "busy"
+        ]
+      },
+      {
+        "id": "aCp1hCqhKdI-practical_tip-137",
+        "intent": "practical_tip",
+        "startSeconds": 137,
+        "endSeconds": 191,
+        "exactQuote": "thousands of people come by here during that time of year. Next, we're going to check out Yang Lelay Market. Famous for its fabrics. I think they also serve food. See what it looks like. Looks like I'm here a little early. Most of the restaurants aren't open yet.",
+        "contextText": "thousands of people come by here during that time of year. Next, we're going to check out Yang Lelay Market. Famous for its fabrics. I think they also serve food. See what it looks like. Looks like I'm here a little early. Most of the restaurants aren't open yet. Yeah,",
+        "locationContext": "Good morning, guys. Today, I'm going to visit some of the oldest parts of Taipei. Later on, we'll check out some night markets and sample some street food. So, join me. I'm starting here at Dwa Street. I just walked here from my hotel. It's about a 15-minute walk away. There's also a metro stop nearby if you want to travel here from some other part of the city. Supposedly, this is Taipei's oldest street. Most of this area was built during the 1850s. Some of these businesses have actually been in operation for over a hundred years. There are some sections that date back as far as the 1620s when Taiwan was",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "aCp1hCqhKdI",
+          "title": "1 Day in Taipei, Taiwan | Dihua Street, Ningxia Nightmarket, and Dadaocheng Wharf",
+          "channelName": "Where The Road Forks",
+          "thumbnailUrl": "https://i.ytimg.com/vi/aCp1hCqhKdI/maxresdefault.jpg",
+          "publishedAt": "2025-07-13"
+        },
+        "title": "Creator tip: Good to know: here a little early. Most of the restaurants aren't",
+        "takeaway": "The creator observed: planning takeaway: …like I'm here a little early. Most of the restaurants aren't open yet.",
+        "highlights": [
+          "early",
+          "open"
+        ]
+      },
+      {
+        "id": "mXGU7RYUClA-activity-584",
+        "intent": "activity",
+        "startSeconds": 584,
+        "endSeconds": 638,
+        "exactQuote": "口感綿密滑順 （夫人說下次絕對回購） 吃完點心接著到店外 再仔細看看這間很有味道的房子 下一個景點很特別 我們要到一間國小裡面的博物館參觀 算是這次小旅行的重頭戲之一 路程中 經過一小段迪化街 好讓夫人逛一下這家店",
+        "contextText": "口感綿密滑順 （夫人說下次絕對回購） 吃完點心接著到店外 再仔細看看這間很有味道的房子 下一個景點很特別 我們要到一間國小裡面的博物館參觀 算是這次小旅行的重頭戲之一 路程中 經過一小段迪化街 好讓夫人逛一下這家店 這間選物店好像也開蠻久了 每次到迪化街 夫人都必逛必買 算是情有獨鍾啊 這次來迪化街 還發現了不少新的店面 改天也許可以來拍一集「迪化街」 （老店依然老當益壯😄) 往那一間國小的路上",
+        "locationContext": "這次我們來到台北的大橋頭 屬於大稻埕北邊的台北老城區 保留了許多老台北生活的樣貌 巷弄中還藏著許多特色小店 在地美食也不少 「大橋頭」的大橋 指的就是「台北橋」 從清代以來 就是台北與三重間的重要橋樑 一下橋就是熱鬧的重慶北路 為了體驗在地生活 今天的行程 就從在地人熟悉的太平市場開始 這次主要是來尋找品嚐 這個市場裡面厲害的兩道美食 首先我們找到了這一攤 這攤的炸物種類很多",
+        "captionTrack": "creator",
+        "language": "zh-Hant",
+        "video": {
+          "id": "mXGU7RYUClA",
+          "title": "大橋頭：大稻埕北邊的老城區，美食與舊時光散步一日｜老張微旅行 #台北一日遊 #大稻埕",
+          "channelName": "Old Chang  short travel in Taiwan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/mXGU7RYUClA/maxresdefault.jpg",
+          "publishedAt": "2026-06-19"
+        },
+        "title": "Try: 口感綿密滑順 （夫人說下次絕對回購） 吃完點心接著到店外 再仔細看看這間很有味道的房子 下一個景點很特別 我們要到一間國小裡面的博物館參觀 算是這次小旅行的重頭戲之一 路程中 經過一小段迪化街",
+        "takeaway": "Suggested experience: 口感綿密滑順 （夫人說下次絕對回購） 吃完點心接著到店外 再仔細看看這間很有味道的房子 下一個景點很特別 我們要到一間國小裡面的博物館參觀 算是這次小旅行的重頭戲之一 路程中 經過一小段迪化街 好讓夫人逛一下這家店",
+        "highlights": [
+          "逛",
+          "參觀"
+        ]
+      },
+      {
+        "id": "mXGU7RYUClA-food-737",
+        "intent": "food",
+        "startSeconds": 737,
+        "endSeconds": 791,
+        "exactQuote": "姿態優雅 看起來很有氣質 逛到現在肚子有點小餓 趕快來這裡吃個下午茶 這家的魚湯很有名 但是進到店裡 看到這一鍋滷肉好誘人 就忍不住點了滷肉飯來吃 （湯要等一下） 沒想到魚湯店裡的滷肉飯 也是這麼有水準",
+        "contextText": "姿態優雅 看起來很有氣質 逛到現在肚子有點小餓 趕快來這裡吃個下午茶 這家的魚湯很有名 但是進到店裡 看到這一鍋滷肉好誘人 就忍不住點了滷肉飯來吃 （湯要等一下） 沒想到魚湯店裡的滷肉飯 也是這麼有水準 魚湯的部分 老張沒有聽夫人的話 兩種魚湯我們都點來試試 夫人點的是這種 吃起來新鮮Q彈 沒什麼魚刺 拌著青蔥和薑絲 吃起來很爽 魚湯喝起來也很鮮甜順口 清湯之外也可以選配味噌湯 老張點的這一碗稍微貴一點點 純肉的部分比較吃不到",
+        "locationContext": "這次我們來到台北的大橋頭 屬於大稻埕北邊的台北老城區 保留了許多老台北生活的樣貌 巷弄中還藏著許多特色小店 在地美食也不少 「大橋頭」的大橋 指的就是「台北橋」 從清代以來 就是台北與三重間的重要橋樑 一下橋就是熱鬧的重慶北路 為了體驗在地生活 今天的行程 就從在地人熟悉的太平市場開始 這次主要是來尋找品嚐 這個市場裡面厲害的兩道美食 首先我們找到了這一攤 這攤的炸物種類很多",
+        "captionTrack": "creator",
+        "language": "zh-Hant",
+        "video": {
+          "id": "mXGU7RYUClA",
+          "title": "大橋頭：大稻埕北邊的老城區，美食與舊時光散步一日｜老張微旅行 #台北一日遊 #大稻埕",
+          "channelName": "Old Chang  short travel in Taiwan",
+          "thumbnailUrl": "https://i.ytimg.com/vi/mXGU7RYUClA/maxresdefault.jpg",
+          "publishedAt": "2026-06-19"
+        },
+        "title": "Eat: 姿態優雅 看起來很有氣質 逛到現在肚子有點小餓 趕快來這裡吃個下午茶 這家的魚湯很有名 但是進到店裡 看到這一鍋滷肉好誘人 就忍不住點了滷肉飯來吃 （湯要等一下）",
+        "takeaway": "Food highlight: 姿態優雅 看起來很有氣質 逛到現在肚子有點小餓 趕快來這裡吃個下午茶 這家的魚湯很有名 但是進到店裡 看到這一鍋滷肉好誘人 就忍不住點了滷肉飯來吃 （湯要等一下） 沒想到魚湯店裡的滷肉飯 也是這麼有水準",
+        "highlights": [
+          "滷肉飯",
+          "茶",
+          "吃"
+        ]
+      },
+      {
+        "id": "DegR9CsYttU-practical_tip-175",
+        "intent": "practical_tip",
+        "startSeconds": 175,
+        "endSeconds": 229,
+        "exactQuote": "最好的是店內有冷氣 這個很重要 在永樂市場裡面 有一家很有名的生魚片店 (主打廉價生魚片丼) 丸隆生魚行 我們本來打算吃那家 但現在超多人在排隊 排到出菜市場外面 市場裡還有另外兩家生魚片店 我們隨便選了一家 這家是永樂町壽司 完全不用排隊 我沒有吃過丸隆 所以我不知道好不好吃 我很久以前吃過一次 那你待會可以比較一下",
+        "contextText": "最好的是店內有冷氣 這個很重要 在永樂市場裡面 有一家很有名的生魚片店 (主打廉價生魚片丼) 丸隆生魚行 我們本來打算吃那家 但現在超多人在排隊 排到出菜市場外面 市場裡還有另外兩家生魚片店 我們隨便選了一家 這家是永樂町壽司 完全不用排隊 我沒有吃過丸隆 所以我不知道好不好吃 我很久以前吃過一次 那你待會可以比較一下 憑你的記憶去比較 已經記憶模糊了 這三家生魚片店 點餐超過一定金額都會贈送味噌湯 味噌湯的料很豐富 裡面有很多豆腐和魚肉 你說味噌湯很甜？ 你試試看 我覺得是台南口味 好像在喝甜湯 但味道是可以的 我們點了綜合生魚片",
+        "locationContext": ". Hello 大家好，我是士多貓Joys 我是Alan 今天來到迪化街（大稻埕） 來吃一些放在口袋名單很久的東西 迪化街有很多又美又古典的餐廳 迪化街有很多又美又古典的餐廳 我們有很多口袋名單想試 這支影片會吃很多家我們想吃的餐廳 來看看是否真的好吃 我們也不知道好不好吃 一起去試試看 Let's go 我們兩年前有一支影片 推介迪化街景點美食 大家也可以參考一下 來到永樂市場旁邊 蔡記迪化街古早味蚵嗲 是台灣的古早小吃 蚵嗲就是將高麗菜韭菜蚵仔 淋上麵糊炸成的一個餅",
+        "captionTrack": "creator",
+        "language": "zh-HK",
+        "video": {
+          "id": "DegR9CsYttU",
+          "title": "【台灣旅行】大稻埕迪化街必吃10樣隱藏美食2026，不吃可惜！推薦在台港人開的咖啡店",
+          "channelName": "士多貓TV",
+          "thumbnailUrl": "https://i.ytimg.com/vi/DegR9CsYttU/maxresdefault.jpg",
+          "publishedAt": "2026-07-11"
+        },
+        "title": "Creator tip: Good to know: 最好的是店內有冷氣 這個很重要 在永樂市場裡面 有一家很有名的生魚片店 (主打廉價生魚片丼) 丸隆生魚行 我們本來打算吃那家 但現在超多人在排隊 排到出菜市場外面",
+        "takeaway": "The creator observed: planning takeaway: 最好的是店內有冷氣 這個很重要 在永樂市場裡面 有一家很有名的生魚片店 (主打廉價生魚片丼) 丸隆生魚行 我們本來打算吃那家 但現在超多人在排隊 排到出菜市場外面 市場裡還有另外兩家生魚片店 我們隨便選了一家 這家是永樂町壽司 完全不用排隊 我沒有吃過丸隆 所以我不知道好不好吃 我很久以前吃過一次 那你待會可以比較一下",
+        "highlights": [
+          "排隊"
+        ]
+      },
+      {
+        "id": "2WMegkMUOTs-why_visit-100",
+        "intent": "why_visit",
+        "startSeconds": 100,
+        "endSeconds": 154,
+        "exactQuote": "Start the first stop Let's go! Dihua Street is a historical district located in Dadaocheng, Datong District, Taipei City It is also one of the most well-preserved and century-old ancient streets in Taipei City It was once the largest shopping mall in northern Taiwan in the late Qing Dynasty It is famous for selling various products such as tea, cloth, north-south goods, and Chinese medicinal materials It is a distribution center for Taiwan's north-south goods and traditional daily necessities The streets are narrow, and most of the shops along the streets are long street buildings",
+        "contextText": "Start the first stop Let's go! Dihua Street is a historical district located in Dadaocheng, Datong District, Taipei City It is also one of the most well-preserved and century-old ancient streets in Taipei City It was once the largest shopping mall in northern Taiwan in the late Qing Dynasty It is famous for selling various products such as tea, cloth, north-south goods, and Chinese medicinal materials It is a distribution center for Taiwan's north-south goods and traditional daily necessities The streets are narrow, and most of the shops along the streets are long street buildings It preserves a variety of architectural styles, including Hokkien style, Chinese and Western baroque styles It has a strong historical style and cultural heritage Happy strawberry daifuku It is one of the most popular desserts on Dihua Street The characteristic is that the skin is thin and chewy The filling is made with fresh and juicy Taiwanese strawberries Pair it with sweet but not greasy red bean paste or creamy taro paste",
+        "locationContext": "This episode takes you to Taipei's Datong District See what the attractions are Try Dihua Street food Feel the charm of the century-old traditional street Go to an ice cream specialty store with a strong Showa nostalgic style Taste the unique ice cream Then to Yongle Market Discover the hidden snacks and delicacies everywhere Begin the third episode of Taipei",
+        "captionTrack": "creator",
+        "language": "en-US",
+        "video": {
+          "id": "2WMegkMUOTs",
+          "title": "EP3最新2025四日三夜玩轉台北💥台北大同區💥迪化街💥人氣美食💥必試甜品💥景點介紹💥打卡點💢大公開💢",
+          "channelName": "TraveLink",
+          "thumbnailUrl": "https://i.ytimg.com/vi/2WMegkMUOTs/maxresdefault.jpg",
+          "publishedAt": "2025-11-08"
+        },
+        "title": "Dihua Street is a historical district in Dadaocheng",
+        "takeaway": "Dihua Street in Dadaocheng is a historical district and well-preserved ancient streets, famous for selling tea, cloth, and medicinal materials.",
+        "highlights": [
+          "Dihua Street in Dadaocheng",
+          "historical district",
+          "well-preserved ancient streets"
+        ],
+        "locationVerification": {
+          "poiName": "Dadaocheng",
+          "relationship": "queried_place",
+          "evidence": "Dihua Street is a historical district located in Dadaocheng",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "gjgJIHS0CFM-food-159",
+        "intent": "activity",
+        "startSeconds": 159,
+        "endSeconds": 213,
+        "exactQuote": "It may take a full day to walk around so this time I tried to visit those places that I haven’t been to Here is the Dadaocheng Wharf Container Market So many stores are closed so I just enjoy the view Feel free to comment more Taipei nice places for me! This time it’s really flash trip with just 2.5 days Actually It’s just 1.5 days to stay At the end, I also revisit Showa Ice Cream if you remember",
+        "contextText": "It may take a full day to walk around so this time I tried to visit those places that I haven’t been to Here is the Dadaocheng Wharf Container Market So many stores are closed so I just enjoy the view Feel free to comment more Taipei nice places for me! This time it’s really flash trip with just 2.5 days Actually It’s just 1.5 days to stay At the end, I also revisit Showa Ice Cream if you remember I ordered Matcha Red Beans Ice cream but it tastes just fine Tiramisu taste is the best one The places that I visited this time seems same as last time But each single trip is a unique and different experience See you in next ep!",
+        "locationContext": "First Trip in 2025 - Taipei again! This time I revisit Dadaocheng You may walk around Lunar New Year street this season In Hong Kong, we normally hang out in Flower Market In Taiwan, there are also quite a lot of new year streets I believe the lanterns would be wonderful at night too Wishing you good luck and good sailing in the year of Snake! May your year of Snake be full of happiness and health! It’s a weekday but still unexpectedly crowded Seems everyone is well-prepared to shop a lot I saw the popular Strawberry Daifuku stall but the queuing line is too long so I just found a stall nearby and try it The strawberries looks fresh I just chose a large one (they have XL and XXL too)",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "gjgJIHS0CFM",
+          "title": "Walking in Taipei Dadaocheng Vlog | 台北大稻埕再訪! | 滿滿的新年氣氛~",
+          "channelName": "Sherry Pe",
+          "thumbnailUrl": "https://i.ytimg.com/vi/gjgJIHS0CFM/maxresdefault.jpg",
+          "publishedAt": "2025-02-01"
+        },
+        "title": "Dadaocheng Wharf Container Market view day plan",
+        "takeaway": "Plan around a full day to walk around: the Dadaocheng Wharf Container Market has so many stores closed, so you just enjoy the view.",
+        "highlights": [
+          "full day to walk around",
+          "Dadaocheng Wharf Container Market"
+        ],
+        "locationVerification": {
+          "poiName": "Dadaocheng Wharf Container Market",
+          "relationship": "queried_place",
+          "evidence": "Here is the Dadaocheng Wharf Container Market So many stores are closed so I just enjoy the view",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "fAlRlSnShsY-activity-1",
+        "intent": "activity",
+        "startSeconds": 1,
+        "endSeconds": 55,
+        "exactQuote": "Welcome to unique stays in Taiwan, where we highlight some of the island's most fascinating cultural destinations. In this episode, Mia and Natalie visit OrigInn Space in the historic Dadaocheng neighborhood of Taipei. We'll join them as they explore the century-old business district and try out local activities. These streets are full of history. Let's go see them for ourselves.",
+        "contextText": "Welcome to unique stays in Taiwan, where we highlight some of the island's most fascinating cultural destinations. In this episode, Mia and Natalie visit OrigInn Space in the historic Dadaocheng neighborhood of Taipei. We'll join them as they explore the century-old business district and try out local activities. These streets are full of history. Let's go see them for ourselves. This is nice. It's like a cute little boutique. Yeah. This is cool. I love these. I like it, you know, when it comes to places you stay, but they also have little stuff for you take it back with you that you can shop around. Mia, we can sit here later and have some coffee",
+        "locationContext": "Welcome to unique stays in Taiwan, where we highlight some of the island's most fascinating cultural destinations. In this episode, Mia and Natalie visit OrigInn Space in the historic Dadaocheng neighborhood of Taipei. We'll join them as they explore the century-old business district and try out local activities. These streets are full of history. Let's go see them for ourselves. This is nice. It's like a cute little boutique. Yeah. This is cool. I love these. I like it, you know, when it comes to places you stay, but they also have little stuff for you take it back with you that you can shop around. Mia, we can sit here later and have some coffee because they sell coffee and tea here. I like it.",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "fAlRlSnShsY",
+          "title": "The Place Where Taipei First Prospered: OrigInn Space | Unique Stays in Taiwan",
+          "channelName": "Taiwan Food & Travel",
+          "thumbnailUrl": "https://i.ytimg.com/vi/fAlRlSnShsY/maxresdefault.jpg",
+          "publishedAt": "2025-02-21"
+        },
+        "title": "OrigInn Space in the historic Dadaocheng",
+        "takeaway": "Mia and Natalie visit OrigInn Space in the historic Dadaocheng neighborhood, explore the century-old business district, and try out local activities.",
+        "highlights": [
+          "OrigInn Space",
+          "historic Dadaocheng neighborhood",
+          "century-old business district"
+        ],
+        "locationVerification": {
+          "poiName": "Dadaocheng",
+          "relationship": "inside",
+          "evidence": "Mia and Natalie visit OrigInn Space in the historic Dadaocheng neighborhood of Taipei.",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "Rh1nkM7hd_M-activity-18",
+        "intent": "activity",
+        "startSeconds": 18,
+        "endSeconds": 72,
+        "exactQuote": "involved into a popular destination for both locals and [Music] tourists oh look at this view we are at D outon Warf you know it's actually a perfect place to watch some said we still got a couple hours in I heard they have some delicious eery and foot stalls over there why don't we go check that out before the sunset hour right next to the warf there's a",
+        "contextText": "involved into a popular destination for both locals and [Music] tourists oh look at this view we are at D outon Warf you know it's actually a perfect place to watch some said we still got a couple hours in I heard they have some delicious eery and foot stalls over there why don't we go check that out before the sunset hour right next to the warf there's a market open daily from 4:00 p.m. to 10: p.m. oh sa delous each shop is made from converted shipping containers and has its own distinct style not only are they filled with artistic flare but you can also indulge in a variety of international cuisine perfect",
+        "locationContext": "thaton Warf is a historical landmark located on the west side of taipe City along the banks of the tanre river it was once the bustling trading ports during the Chin Dynasty and has since involved into a popular destination for both locals and [Music] tourists oh look at this view we are at D outon Warf you know it's actually a perfect place to watch some said we still got a couple hours in I heard they have some delicious eery and foot stalls over there why don't we go check that out before the sunset hour right next to the warf there's a market open daily from 4:00 p.m. to 10: p.m. oh sa delous each shop is made from converted shipping containers and has its own distinct style not only are they filled",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "Rh1nkM7hd_M",
+          "title": "Dadaocheng Wharf & Evening Bike Ride 🚴‍♂️🌃 | 📍𝑻𝒂𝒊𝒑𝒆𝒊 | Whirlwind Trip",
+          "channelName": "Taiwan Food & Travel",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Rh1nkM7hd_M/maxresdefault.jpg",
+          "publishedAt": "2024-10-30"
+        },
+        "title": "Try: look at this view we are at D outon",
+        "takeaway": "Suggested experience: …tourists oh look at this view we are at D outon Warf you know it's actually a perfect place to watch some said we…",
+        "highlights": [
+          "view",
+          "sunset",
+          "market"
+        ]
+      },
+      {
+        "id": "DjNXkS_F9M8-food-152",
+        "intent": "food",
+        "startSeconds": 152,
+        "endSeconds": 206,
+        "exactQuote": "Let me see inside. How's it? I I've got the seaweed one. >> It's very very tasty filling. >> Yeah? >> Uh definitely bean sprouts. >> Bean sprouts? Yep. You know it's some some pork. >> Yeah, pork. Yeah. >> You like it? >> Yeah. >> Yeah, okay. >> [music] >> Daddy's trying to dessert is a Japanese. This is a >> Yeah, it's like mochi and uh",
+        "contextText": "Let me see inside. How's it? I I've got the seaweed one. >> It's very very tasty filling. >> Yeah? >> Uh definitely bean sprouts. >> Bean sprouts? Yep. You know it's some some pork. >> Yeah, pork. Yeah. >> You like it? >> Yeah. >> Yeah, okay. >> [music] >> Daddy's trying to dessert is a Japanese. This is a >> Yeah, it's like mochi and uh >> Is it mochi? Yeah? >> It tastes amazing. >> Okay. >> And the pastry outside is very nice. I like it. Very soft. >> Yeah. >> Okay. >> Delicious. >> Yeah, let me see inside. Daddy is trying her red bean mochi. Tell",
+        "locationContext": "It's nice. It's a nice one, isn't it? Wow, look at Khadija. >> [laughter] >> So, what are you doing, Khadija? We're trying to look for the breakfast. >> That's uh Queen's Road uh Street. >> Oh, straight? >> Queen's Road Street. I think we came from the other side, but then if you keep walking up and go left, you go to the the river. >> Oh, okay. Thank you. >> That's a really nice area. >> Let's go and have breakfast. Kids is hungry. >> Just up here. >> Oh, okay. >> Now, try to meet us up here. >> [music] [music] >> I bought some sticky rice here. >> Yeah. It's very traditional. My grandma used to make.",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "DjNXkS_F9M8",
+          "title": "澳洲老公女兒體驗不一樣的台北！大稻埕、迪化街美食吃到停不下來！沒想到最讓他們驚豔的竟然不是美食！Eating Through Dadaocheng & Dihua Street | TaipeiEYE",
+          "channelName": "Cordelia Super Fantastic ",
+          "thumbnailUrl": "https://i.ytimg.com/vi/DjNXkS_F9M8/sddefault.jpg",
+          "publishedAt": "2026-07-17"
+        },
+        "title": "Eat: it's some some pork. >> Yeah, pork. Yeah. >>",
+        "takeaway": "Food highlight: …You know it's some some pork. >> Yeah, pork. Yeah. >> You like it? >> Yeah. >> Yeah, okay. >> [music] >> Daddy's trying…",
+        "highlights": [
+          "pork",
+          "dessert",
+          "tasty",
+          "filling"
+        ]
+      },
+      {
+        "id": "O_KsRhOE8Gs-food-761",
+        "intent": "food",
+        "startSeconds": 761,
+        "endSeconds": 815,
+        "exactQuote": "The sweet and salty peppery flavor is captivating. A great snack to enjoy while exploring. Nearby Du Xiao Yue is our favorite danzai noodle shop. Just watching the freshly prepared danzai noodles makes you want to eat a bowl.",
+        "contextText": "The sweet and salty peppery flavor is captivating. A great snack to enjoy while exploring. Nearby Du Xiao Yue is our favorite danzai noodle shop. Just watching the freshly prepared danzai noodles makes you want to eat a bowl. A century-old taste The braised pork rice is our favorite savory style. The broth that goes well with the danzai noodles. The savory and delicious flavor is irresistible.",
+        "locationContext": "Hello, we're JS. Today's video shows us strolling through Taipei's Dadaocheng district. Exploring a wonderful day of experiences. There are so many local delicacies, quality shops, and old houses and alleyways that we love. We wanted to share these leisurely moments with everyone. So I edited this video to reflect my daily life.",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "O_KsRhOE8Gs",
+          "title": "漫步台北大稻埕，探索老宅巷弄的台灣美食！擔仔麵．杏仁豆腐．魚丸湯．咖啡．魯肉飯．蔥油餅．油飯｜大同區．迪化街．永樂市場．捷運．北門站．大橋頭站｜度小月．大稻埕魯肉飯．滋養和菓子．夏樹甜品｜JSの旅途中",
+          "channelName": "JSの旅途中",
+          "thumbnailUrl": "https://i.ytimg.com/vi/O_KsRhOE8Gs/maxresdefault.jpg",
+          "publishedAt": "2025-08-08"
+        },
+        "title": "Eat: The sweet and salty peppery flavor is captivating. A",
+        "takeaway": "Food highlight: The sweet and salty peppery flavor is captivating. A great snack to enjoy while exploring. Nearby Du Xiao Yue…",
+        "highlights": [
+          "delicious",
+          "noodles",
+          "rice",
+          "pork"
+        ]
+      },
+      {
+        "id": "PRcQFDLK5Hw-food-134",
+        "intent": "food",
+        "startSeconds": 134,
+        "endSeconds": 188,
+        "exactQuote": "So this is the place I am looking for. It's called Dadaocheng which is braised pork rice. There is a line up here so it's probably going to be good. So braised pork rice is a very famous dish here in Taiwan. It's basically like minced pork made into a sauce over rice. It's like local comfort food. And the hotel gave me some food vouchers that I",
+        "contextText": "So this is the place I am looking for. It's called Dadaocheng which is braised pork rice. There is a line up here so it's probably going to be good. So braised pork rice is a very famous dish here in Taiwan. It's basically like minced pork made into a sauce over rice. It's like local comfort food. And the hotel gave me some food vouchers that I can use at some of the restaurants around here and this was one of them. So I plan to eat here. Interesting. They have like another location around the corner. So, she told me to go over there and sit at table 17. Okay.",
+        "locationContext": "So, I just checked into my hotel here in Taipei where I'll be staying for two nights as part of my solo adventure. Um, I was previously in Hong Kong with my family for a while, and then we all came over here to visit some family, do some fun things with with my nephews and celebrate my sister's 40th birthday, but they just flew back to Hong Kong, and I decided to stay an extra 2 days to do some exploring by myself. And if you are wondering where Note is, he actually didn't join this trip because I wanted to try to do a bit of solo traveling. He was happy to stay back in Koh Samui in Thailand to take care of our cats and dog that we somehow",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "PRcQFDLK5Hw",
+          "title": "Solo Travel in Taiwan Taught Me This",
+          "channelName": "Flora and Note",
+          "thumbnailUrl": "https://i.ytimg.com/vi/PRcQFDLK5Hw/maxresdefault.jpg",
+          "publishedAt": "2025-08-16"
+        },
+        "title": "Eat: is braised pork rice. There is a line up",
+        "takeaway": "Food highlight: …Dadaocheng which is braised pork rice. There is a line up here so it's probably going to be good. So braised pork rice is…",
+        "highlights": [
+          "rice",
+          "pork",
+          "dish",
+          "food"
+        ]
+      },
+      {
+        "id": "wvB7H7VHlxk-practical_tip-31",
+        "intent": "practical_tip",
+        "startSeconds": 31,
+        "endSeconds": 85,
+        "exactQuote": "want your room to be cleaned just like like us they will leave at the doorstep there is just no luggage storage at the lobby because it is quite small but it's okay there are a lot of luggage storage at the train stations overall good experience in this hotel good value for money nice hotel staff were helpful throughout our stay location is quite accessible to TMS few blocks behind the building is the diwa old Street Easy checking even in the we hours of the morning through their self check and kiosk good value for money great stay the room is small and cozy there's good",
+        "contextText": "want your room to be cleaned just like like us they will leave at the doorstep there is just no luggage storage at the lobby because it is quite small but it's okay there are a lot of luggage storage at the train stations overall good experience in this hotel good value for money nice hotel staff were helpful throughout our stay location is quite accessible to TMS few blocks behind the building is the diwa old Street Easy checking even in the we hours of the morning through their self check and kiosk good value for money great stay the room is small and cozy there's good water pressure and hot water the AC is okay the fridge is okay the kettle is okay the hotel is a fair few minutes walk away to main attractions but taipe has got a very good value transport system there are plenty of local cheap eateries around I tried the pork noodle soup across the road very very nice indeed 5 days Trip's best hotel ever 15 mens 12 minutes 10",
+        "locationContext": "[Music] we had a pleasant day the hotel is near ning X market and just behind thewa old Street it is also near a bus stop so riding the bus isn't a problem the room has enough space for two people in luggages I'm more surprised with how big the bathroom is the staff is very approachable she greets us whenever we will enter and leave the building they provide water every day if you don't want your room to be cleaned just like like us they will leave at the doorstep there is just no luggage storage at the lobby because it is quite small but it's okay there are a lot of luggage storage at the train stations overall good experience in this hotel good value for money nice hotel staff were helpful throughout our stay location is quite accessible to TMS few blocks behind the building is the diwa old Street Easy checking even in the we hours of the morning through their self check and kiosk good value for money great stay the room is small and cozy there's good",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "wvB7H7VHlxk",
+          "title": "HotelKDM | Review Guide Hotel Taipei Dadaocheng",
+          "channelName": "HotelKDM",
+          "thumbnailUrl": "https://i.ytimg.com/vi/wvB7H7VHlxk/maxresdefault.jpg",
+          "publishedAt": "2024-10-20"
+        },
+        "title": "Creator tip: Few blocks behind the building is the diwa old Street",
+        "takeaway": "The creator observed: the narrator notes the hotel is accessible and that few blocks behind the building is the diwa old Street, easy checking in early hours via self check and kiosk.",
+        "highlights": [
+          "few blocks behind the building is the diwa old\n  ",
+          "self check and kiosk"
+        ],
+        "locationVerification": {
+          "poiName": "Dadaocheng",
+          "relationship": "queried_place",
+          "evidence": "few blocks behind the building is the diwa old Street Easy checking even in the we hours of the morning through their self check and kiosk",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "j9TxfM2Mngc-practical_tip-341",
+        "intent": "practical_tip",
+        "startSeconds": 341,
+        "endSeconds": 395,
+        "exactQuote": "can get bubble tea, herbs, spices, teas, that was all common trading items during the spice orient era. Uh when the Europeans would come over here, this whole area was known as the spice orient. So this here is the Formosa tea house. This is one of those red brick buildings I was telling you about. The name Formosa was the original name of Taiwan before it was called Taiwan. Taipei is a very walking friendly city, but it does also have a great metro system.",
+        "contextText": "can get bubble tea, herbs, spices, teas, that was all common trading items during the spice orient era. Uh when the Europeans would come over here, this whole area was known as the spice orient. So this here is the Formosa tea house. This is one of those red brick buildings I was telling you about. The name Formosa was the original name of Taiwan before it was called Taiwan. Taipei is a very walking friendly city, but it does also have a great metro system. They have monor rails or trams, even a subway system. There's at least five walking streets that you must visit when you're in Taipei because they're really awesome environments, especially if you love food. Actually going to walk down here to the Riverside. The Riverside area is mostly for exercise or outdoor activities. They do have some food stalls. Also, at night time,",
+        "locationContext": "Welcome back, island hoppers. Today we're going to do a Taipei, Taiwan travel guide. Let's do it. That's right, everybody. We're going to go to some night markets, show you around some old town streets with lantern festivals. Let's do it. All right, guys. We're here at Taipei 101. This is an observatory. You can go to the top. So, let's go up there. The ticket price is 600 Taiwanese dollars. That's approximately 18 or 19 US. It does have a Guinness Book of World Record. World's fastest passenger elevator, which is definitely a good thing cuz this is a tall building. Now, it does have 101 floors. Although, on this tour, we're going up to 89 and 88. Although, if you wanted to go to the top,",
+        "captionTrack": "creator",
+        "language": "en-US",
+        "video": {
+          "id": "j9TxfM2Mngc",
+          "title": "Taipei Travel Guide 2026 | 25 Best Things to Do in Taiwan's Capital",
+          "channelName": "Island Hopper TV",
+          "thumbnailUrl": "https://i.ytimg.com/vi/j9TxfM2Mngc/maxresdefault.jpg",
+          "publishedAt": "2026-03-20"
+        },
+        "title": "Creator tip: Good to know: have a great metro system",
+        "takeaway": "The creator observed: planning takeaway: …does also have a great metro system.",
+        "highlights": [
+          "metro"
+        ]
+      },
+      {
+        "id": "dhZ9_PkxhBQ-practical_tip-80",
+        "intent": "practical_tip",
+        "startSeconds": 80,
+        "endSeconds": 134,
+        "exactQuote": "have you guys been to America before I have Austin Austin away from the work I'm not in the OIC office this afternoon which means I need you guys to take a grp photo as evidence why I'm absent from my work okay so please help me to take a grp photos",
+        "contextText": "have you guys been to America before I have Austin Austin away from the work I'm not in the OIC office this afternoon which means I need you guys to take a grp photo as evidence why I'm absent from my work okay so please help me to take a grp photos we're using the favorite Market as a [Music] background you give me love and I can give you for so how you feeling about a meast it's good what did you take this is oh can I [Music] in",
+        "locationContext": "oh very bad very [Music] [Music] badish just oh we in the Mark I don't [Music] [Applause] know like [Music]",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "dhZ9_PkxhBQ",
+          "title": "Exploring Dadaocheng with NCCU: A Journey Through History and Culture",
+          "channelName": "Office of International Cooperation, NCCU",
+          "thumbnailUrl": "https://i.ytimg.com/vi/dhZ9_PkxhBQ/maxresdefault.jpg",
+          "publishedAt": "2025-03-19"
+        },
+        "title": "Creator tip: Good to know: been to America before I have Austin Austin away",
+        "takeaway": "The creator observed: planning takeaway: …you guys been to America before I have Austin Austin away from the work I'm not in the OIC office this afternoon which means…",
+        "highlights": [
+          "before"
+        ]
+      }
+    ],
+    "suggestedPlan": [
+      "Creator tip: Good to know: here at the exit Divide into sections So be",
+      "Try: everyone, I’m Wasabi Walk At night Dadaocheng Dihua Street",
+      "Try: scene to slowly explore. Come and follow us for",
+      "Eat: It's really a good deal There are soup noodles"
+    ],
+    "warnings": [
+      "Partial research: 4 independent videos produced 4 timestamped transcript matches. Missing: why it is worth going, what to do, what to eat.",
+      "No clip passed semantic verification in this pass; showing the exact caption matches so the research does not stop empty.",
+      "4 keyword-matched clips were omitted because their main subject or title support was not strong enough.",
+      "No reliable why-visit segment passed semantic verification.",
+      "No reliable activity segment passed semantic verification.",
+      "No reliable food segment passed semantic verification.",
+      "No reliable practical-tip segment passed semantic verification.",
+      "Opening hours, prices, reservations, and temporary closures still require a current check.",
+      "Partial research: 3 independent videos produced 3 timestamped transcript matches. Missing: why it is worth going, what to do, what to eat.",
+      "3 keyword-matched clips were omitted because their main subject or title support was not strong enough.",
+      "Partial research: 9 independent videos produced 11 timestamped transcript matches. Missing: why it is worth going, what to eat.",
+      "11 keyword-matched clips were omitted because their main subject or title support was not strong enough.",
+      "Partial research: 4 independent videos produced 8 timestamped transcript matches. Missing: why it is worth going, what to eat.",
+      "8 keyword-matched clips were omitted because their main subject or title support was not strong enough.",
+      "Partial research: 1 independent videos produced 1 timestamped transcript matches. Missing: why it is worth going, what to do, what to eat, good to know.",
+      "1 keyword-matched clips were omitted because their main subject or title support was not strong enough.",
+      "Partial research: 3 independent videos produced 5 timestamped transcript matches. Missing: why it is worth going, what to do.",
+      "5 keyword-matched clips were omitted because their main subject or title support was not strong enough.",
+      "Partial research: 7 independent videos produced 15 timestamped transcript matches. Missing: why it is worth going.",
+      "15 keyword-matched clips were omitted because their main subject or title support was not strong enough.",
+      "Partial research: 1 independent videos produced 1 verified clips. Missing: why it is worth going, what to do, what to eat, good to know."
+    ],
+    "mode": "ai",
+    "aiModel": "gpt-5.4-nano",
+    "sourceStatus": "local_research",
+    "verification": {
+      "videosFound": 857,
+      "captionedVideos": 138,
+      "candidateClips": 133,
+      "evidenceMatches": 80,
+      "verifiedClips": 45,
+      "rejectedEvidenceOrRanking": 53,
+      "rejectedLocation": 35
+    }
+  }
+}

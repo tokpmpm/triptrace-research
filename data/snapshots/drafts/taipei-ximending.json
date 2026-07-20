@@ -1,0 +1,437 @@
+{
+  "snapshotStatus": "draft",
+  "place": "Ximending",
+  "city": "Taipei",
+  "generatedAt": "2026-07-18T13:35:33.769Z",
+  "reason": "Incremental local search preserved existing evidence and added only missing-category candidates. Remaining gaps: none.",
+  "sourceCount": 13,
+  "clipCount": 13,
+  "categories": [
+    "food",
+    "why_visit",
+    "activity",
+    "practical_tip"
+  ],
+  "categoryVideoCounts": {
+    "why_visit": 3,
+    "activity": 3,
+    "food": 4,
+    "practical_tip": 3
+  },
+  "result": {
+    "place": "Ximending",
+    "city": "Taipei",
+    "overview": "13 captioned travel videos produced 13 locally verified partial clips for Ximending. Each title is tied to an exact supporting quote.",
+    "generatedAt": "2026-07-18T13:35:33.769Z",
+    "cacheHit": false,
+    "sourceCount": 13,
+    "clipCount": 13,
+    "clips": [
+      {
+        "id": "5PzX842eP9w-practical_tip-283",
+        "intent": "food",
+        "startSeconds": 283,
+        "endSeconds": 337,
+        "exactQuote": "tang and this is what it is right here daily fresh handmade tapioca pearls hand fried Boba look at how long the line is here guys I promise you we will come back for that drink and you don't want to miss our review I'm sure they turn on the lights at night yeah it's packed it's a young crowd mixed crowd with tourists and locals alike but tons of stores anything you want you got clothes electronic gadgets toys shoes food and you can spend",
+        "contextText": "tang and this is what it is right here daily fresh handmade tapioca pearls hand fried Boba look at how long the line is here guys I promise you we will come back for that drink and you don't want to miss our review I'm sure they turn on the lights at night yeah it's packed it's a young crowd mixed crowd with tourists and locals alike but tons of stores anything you want you got clothes electronic gadgets toys shoes food and you can spend probably a few hours down here huh and not even touch it all so we're going to keep walking around and definitely get some food heads up if you're walking around here it's not only for pedestrians cuz that's a there was some motorbikes and then there was a car that drove by earlier you never know what you'll see next down here I'm not sure what's in front of us but there's a bunch of dancing ladies heading our way",
+        "locationContext": "in today's video we are in Taipei Taiwan and we are going to show you how to take the MRT from the Taipei main station to the Zim mening walking District the Zim anding walking district is a vibrant part of town with fun games beautiful bright lights amazing food and some great people watching now let's head to the Z anding walking district and so now we're on the train during commute hours and check it out much much different experience although the experience is different it is still a pleasant one tons of people on here but still every no's super respectful and nobody's pushing and everybody's just kind of in their own little space these cards here they're called easy cards and you use them for the MRT but you could also use them to pay for things all around the city and so what Vanessa is doing now is she is topping off our card you just put the card on that little reader insert your money and then it's basically like a debit card",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "5PzX842eP9w",
+          "title": "We Took the Taipei MRT to Ximending Walking District — Here's How",
+          "channelName": "TV Travels",
+          "thumbnailUrl": "https://i.ytimg.com/vi/5PzX842eP9w/maxresdefault.jpg",
+          "publishedAt": "2025-03-02"
+        },
+        "title": "daily fresh handmade tapioca pearls",
+        "takeaway": "Daily fresh handmade tapioca pearls hand fried Boba—look at how long the line is here; it’s packed, with a young crowd mixed crowd with tourists and locals alike.",
+        "highlights": [
+          "daily fresh handmade tapioca pearls",
+          "hand fried Boba"
+        ],
+        "locationVerification": {
+          "poiName": "Ximending",
+          "relationship": "queried_place",
+          "evidence": "we will come back for that drink and you don't want to miss our review I'm sure they turn on the lights at night yeah it's packed it's a young crowd mixed crowd with tourists and locals alike but tons of stores anything you want you got clothes electronic",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "oHzxT-pLMqE-why_visit-356",
+        "intent": "why_visit",
+        "startSeconds": 356,
+        "endSeconds": 409,
+        "exactQuote": "easy commute system choosing an accommodation is simple just stay near a train station or a bus station and you're good to go but in particular there are four popular districts for tourists so let me show you the differences between each one so it can help you choose the best area for you let's begin first up Ximending this area is perfect for shopping and nightlife famous for its vibrant energy Ximending is a hub for trendy shops exciting nightlife and mouthwatering street food making it perfect for travelers looking for a lively central location next up the Zhongzheng",
+        "contextText": "easy commute system choosing an accommodation is simple just stay near a train station or a bus station and you're good to go but in particular there are four popular districts for tourists so let me show you the differences between each one so it can help you choose the best area for you let's begin first up Ximending this area is perfect for shopping and nightlife famous for its vibrant energy Ximending is a hub for trendy shops exciting nightlife and mouthwatering street food making it perfect for travelers looking for a lively central location next up the Zhongzheng District this area is perfect for history and sightseeing Zhongzheng showcases Taipei's Rich history and culture with iconic landmarks and popular museums it's also home to Taipei main station the city's Central Transport Hub giving you easy access to all other tour spots around Taipei B now we got the Xinyi District this area is perfect for luxury and business Travelers this upscale area offers high-end malls five-star hotels and fancy dining options making it a",
+        "locationContext": "The Ultimate Taipei Travel Guide Let's go! We stayed at super cool hotels for just 30 bucks per head joined budget friendly tours for only 25 bucks and indulge in Michelin star street food for just two bucks we're now here to give you the best and most informative Taipei Travel Guide the internet has ever seen in this video we give you everything you need to know the best places to visit the best things to do and the best food to eat all so that you could have the best Taiwan trip possible so let's go Hi guys my name is Angelica wanders and this is Aileen wanders and we create budget travel guides all around the world on this channel we show you our easy to follow itineraries and also our cost and expenses in every trip so if you want to travel around the world in the",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "oHzxT-pLMqE",
+          "title": "Taipei Taiwan 2026 Travel Guide: Places to Visit & Things to Do • Itinerary & Expenses • Budget Vlog",
+          "channelName": "Angelica & Aileen Wanders",
+          "thumbnailUrl": "https://i.ytimg.com/vi/oHzxT-pLMqE/maxresdefault.jpg",
+          "publishedAt": "2024-12-28"
+        },
+        "title": "Ximending is perfect for shopping and nightlife",
+        "takeaway": "Ximending is perfect for shopping and nightlife, famous for its vibrant energy, a hub for trendy shops and exciting nightlife.",
+        "highlights": [
+          "shopping",
+          "nightlife",
+          "famous for its vibrant energy"
+        ],
+        "locationVerification": {
+          "poiName": "Ximending",
+          "relationship": "queried_place",
+          "evidence": "let's begin first up Ximending this area is perfect for shopping and nightlife famous for its vibrant energy",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "jida4qsowzE-food-84",
+        "intent": "why_visit",
+        "startSeconds": 84,
+        "endSeconds": 138,
+        "exactQuote": "energy. If you love to shop, Ximending is your paradise. We're talking trendy fashion boutiques, unique souvenir shops, anime and manga stores. You can literally spend hours just browsing. And the food? Ximending is a foodie's haven, especially for street food. From classic bubble tea stalls on every corner to famous spots like Ay-Chung Flour Rice Noodle, fried chicken, all sorts of skewers. Your taste buds will thank you. Plus, there are tons of cool,",
+        "contextText": "energy. If you love to shop, Ximending is your paradise. We're talking trendy fashion boutiques, unique souvenir shops, anime and manga stores. You can literally spend hours just browsing. And the food? Ximending is a foodie's haven, especially for street food. From classic bubble tea stalls on every corner to famous spots like Ay-Chung Flour Rice Noodle, fried chicken, all sorts of skewers. Your taste buds will thank you. Plus, there are tons of cool, quirky restaurants and cafes here, too. Right here in Ximending, you've got the historic Red House Theater, which is really cool to see. So, the pros of staying in Ximending, you're right in the middle of that vibrant youthful energy, amazing shopping, incredible street food options, and a lively nightlife. You'll never be bored, and there are tons of budget-friendly accommodation choices",
+        "locationContext": "Hey everyone, and welcome back to the channel. I am so excited to be bringing you this guide straight from Taipei, Taiwan. This city is absolutely buzzing, and if you're planning your first trip here, one of the biggest questions you'll have is where should you stay? Two of the most popular areas for first-time visitors are Ximending and Taipei Main Station. They both have awesome things going for them, but they offer totally different vibes. So, in this video, we're going to break down the pros and cons of each, what's nearby, and help you figure out which spot is the perfect home base for your Taipei adventure. Stick around till the end because I've also got some super handy tips to make your arrival and getting around Taipei smooth as silk. Let's kick things off with the district that feels like the energetic heart of Taipei's youth culture, Ximending. If you've been to places like Harajuku",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "jida4qsowzE",
+          "title": "[EN] TAIPEI FIRST TIMER! Where to Stay? Ximending vs Taipei Main Station | TIPS FOR SMOOTHER ARRIVAL",
+          "channelName": "Lyndon's FeetStops",
+          "thumbnailUrl": "https://i.ytimg.com/vi/jida4qsowzE/maxresdefault.jpg",
+          "publishedAt": "2025-05-31"
+        },
+        "title": "Ximending is your paradise.",
+        "takeaway": "Ximending is your paradise for shopping: trendy fashion boutiques, unique souvenir shops, anime and manga stores, and you can literally spend hours just browsing.",
+        "highlights": [
+          "Ximending is your paradise",
+          "trendy fashion boutiques, unique souvenir shops, "
+        ],
+        "locationVerification": {
+          "poiName": "Ximending",
+          "relationship": "queried_place",
+          "evidence": "If you love to shop, Ximending is your paradise.",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "52PkbB3vtMg-why_visit-62",
+        "intent": "why_visit",
+        "startSeconds": 62,
+        "endSeconds": 116,
+        "exactQuote": "So, grab your favorite bubble tea and join us as we dive into the heart of one of Taiwan's coolest neighborhoods. Let's hit the streets of Ximending, where the air is buzzing with energy. This district isn't just a shopping haven or a nightlife hotspot. It's the place where Taiwan's history is written in every brick, neon sign, and food stall.",
+        "contextText": "So, grab your favorite bubble tea and join us as we dive into the heart of one of Taiwan's coolest neighborhoods. Let's hit the streets of Ximending, where the air is buzzing with energy. This district isn't just a shopping haven or a nightlife hotspot. It's the place where Taiwan's history is written in every brick, neon sign, and food stall. No visit to Ximending is complete without a stop at the iconic Red Door. This vibrant gateway marks the entrance to the Red House, one of Taipei's most beloved landmarks. The bold red color and historic design stand out against the modern backdrop, creating a striking contrast.",
+        "locationContext": "From age-old festivals, fading rituals, and handmade crafts, Tradition in a Box uncovers the vibrant editions that shape communities and identities. Join the Happy Rabbit as we unravel the deeper meanings behind everyday customs and cultural celebrations that still thrive today. These are the stories of the past. Their legacies help the next generation to honor, preserve, and embody through reality. Welcome back to Happy Rabbit. Today, we're taking you to Ximending, Taipei's lively district where the past and present dance together in the most exciting way. From quirky street food to neon lights and history tucked in every corner, Ximending is a place where tradition isn't just kept alive, it's celebrated with flair. So, grab your favorite bubble tea and",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "52PkbB3vtMg",
+          "title": "#20 Ximending EXPOSED:  Where Taiwan's History Meets Street Food and Neon Dreams",
+          "channelName": "Happy Rabbit",
+          "thumbnailUrl": "https://i.ytimg.com/vi/52PkbB3vtMg/maxresdefault.jpg",
+          "publishedAt": "2025-06-06"
+        },
+        "title": "Ximending: Taiwan’s history in bricks, neon, and food stalls",
+        "takeaway": "In Ximending, “the place where Taiwan's history is written in every brick, neon sign, and food stall,” with energy and an immersive street feel.",
+        "highlights": [
+          "Ximending",
+          "the place where Taiwan's history is written",
+          "every brick, neon sign, and food stall"
+        ],
+        "locationVerification": {
+          "poiName": "Ximending",
+          "relationship": "queried_place",
+          "evidence": "Let's hit the streets of Ximending, where the air is buzzing with energy.",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "zxnZz-T51-Q-food-70",
+        "intent": "activity",
+        "startSeconds": 70,
+        "endSeconds": 124,
+        "exactQuote": "In the lively corners of Ximending, you will often see people scattered around, comfortably standing or squatting on the street as they savor their noodles This vermicelli place in Taipei is so famous that every day there's a long queue. It's a must-visit place when you come to Ximending area. Originally a humble street stall, Ay-Chung floor rice noodle became a local favorite. Customers would gather,",
+        "contextText": "In the lively corners of Ximending, you will often see people scattered around, comfortably standing or squatting on the street as they savor their noodles This vermicelli place in Taipei is so famous that every day there's a long queue. It's a must-visit place when you come to Ximending area. Originally a humble street stall, Ay-Chung floor rice noodle became a local favorite. Customers would gather, standing to enjoy their meals directly from the vendor who had no shop or seating. This practice of standing and eating has evolved into a cherished tradition continuing to this day. Smells so good. Hot and delicious, like me. Fried chicken can be found in almost every country's cuisine,",
+        "locationContext": "Welcome to Anything Goes with JL. I'm your host Jenny. Today we're in Taipei's Ximending area. Follow me this evening as I enjoy all my favorite snacks when I visit this area. Come check it out! Ximending has long been a culture hub for Taipei's youth. It was originally designed as a grid shaped entertainment district. It has also been the birthplace of iconic local foods On a warm day, what better way to start our food tour than with a refreshing uniquely Taiwanese cold drink. Star Fruits Ice This place has been in Ximending since 1966. It's one of the places you cannot miss when you visit this area.",
+        "captionTrack": "creator",
+        "language": "en-US",
+        "video": {
+          "id": "zxnZz-T51-Q",
+          "title": "What To Eat in Ximending Taipei: Best Street Food | Anything Goes With JL",
+          "channelName": "TaiwanPlus",
+          "thumbnailUrl": "https://i.ytimg.com/vi/zxnZz-T51-Q/maxresdefault.jpg",
+          "publishedAt": "2024-09-15"
+        },
+        "title": "Every day there's a long queue",
+        "takeaway": "Every day there's a long queue, and this vermicelli place in Taipei is so famous that it's a must-visit place when you come to Ximending area.",
+        "highlights": [
+          "every day there's a long queue",
+          "must-visit place",
+          "come to Ximending area"
+        ],
+        "locationVerification": {
+          "poiName": "Ximending",
+          "relationship": "queried_place",
+          "evidence": "It's a must-visit place when you come to Ximending area.",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "ba41NXnNjFo-activity-1377",
+        "intent": "activity",
+        "startSeconds": 1377,
+        "endSeconds": 1431,
+        "exactQuote": "It's also near the Ximen Red House and it's a quiet place in the middle of a bustling area Okay, because we're very full we're now going to take you to a free attraction in Ximending upstairs at Sun Drug Store (Riyao Benpu) Okay, just go inside through this Sun Drug Store to its fourth floor, there's a museum Do we have to take the stairs? Exercise a bit after eating so much",
+        "contextText": "It's also near the Ximen Red House and it's a quiet place in the middle of a bustling area Okay, because we're very full we're now going to take you to a free attraction in Ximending upstairs at Sun Drug Store (Riyao Benpu) Okay, just go inside through this Sun Drug Store to its fourth floor, there's a museum Do we have to take the stairs? Exercise a bit after eating so much But what happened? I didn't notice it only opens until 6 PM on weekdays Missed it Time fast-forwarded 24 hours We are here Okay, so on the third floor, there are some stalls, small stalls where you can take photos Do you want to buy sushi, everyone? We have... Okay, let's go up and see It also has a fourth floor.",
+        "locationContext": "As one of the favorite spots for international travelers in Taipei, Ximending truly has all sorts of great food. Today, we're going to check out some famous classic old restaurants to see if they're really good, and what secret must-try spots are on our list. When good food is in front of you, you should still feel happy. This beef noodle soup has every element of a delicious meal. With mango right in front of me, it's really hard for me not to order it. If you really eat delicious food, even if you're really full, you'll still think it's delicious. Hello everyone, I'm Xuan Xuan. I'm Mr. G. So this time, for our food hunting trip, we've come to Ximending in Taipei. Today we're going to eat some of Ximending's must-try foods. Why am I the only one here today? It's because Lizzy is in school right now. We had some trips planned in the North, and we were thinking of filming for two days and one night, or three days and two nights, but we didn't want her to take too many days off. So, sometimes it's just me and Jacky filming. Usually, it's the two of us filming. Since it's just me today, I probably shouldn't look too happy,",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "ba41NXnNjFo",
+          "title": "吃爆西門町美食！9間經典老店vs私藏口袋名單，台北最熱鬧商圈！老店動輒五六十年，又還有啥沒吃過？！Ximending Food Guide｜Taipei Must-Eat Food Tour",
+          "channelName": "瑄瑄 & G先生 · 美食夫妻的100次旅行",
+          "thumbnailUrl": "https://i.ytimg.com/vi/ba41NXnNjFo/maxresdefault.jpg",
+          "publishedAt": "2025-10-16"
+        },
+        "title": "a free attraction in Ximending upstairs at Sun",
+        "takeaway": "They guide you to a free attraction in Ximending upstairs at Sun Drug Store (Riyao Benpu), telling you to go inside through Sun Drug Store to its fourth floor.",
+        "highlights": [
+          "free attraction in Ximending upstairs",
+          "Sun Drug Store (Riyao Benpu)",
+          "fourth floor"
+        ],
+        "locationVerification": {
+          "poiName": "Ximending",
+          "relationship": "inside",
+          "evidence": "a free attraction in Ximending upstairs at Sun Drug Store (Riyao Benpu) Okay, just go inside through this Sun Drug Store to its fourth floor",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "0qzduReirX0-activity-1",
+        "intent": "activity",
+        "startSeconds": 1,
+        "endSeconds": 55,
+        "exactQuote": "I can see It's a night market. So Ximending food street and then you can walk around and then there are many shopping areas you can walk around. And then you can see Taiwanese people and then you",
+        "contextText": "I can see It's a night market. So Ximending food street and then you can walk around and then there are many shopping areas you can walk around. And then you can see Taiwanese people and then you night love with the money uh shopping with So one of the major uh tourist attraction in the Ximending night street. So there are many other night streets but this one is major. Main on the street so you can see many big big displays. Uh you can see them in the street and then you can walk around. And you know",
+        "locationContext": "I can see It's a night market. So Ximending food street and then you can walk around and then there are many shopping areas you can walk around. And then you can see Taiwanese people and then you night love with the money uh shopping with So one of the major uh tourist attraction in the Ximending night street. So there are many other night streets but this one is major. Main on the street so you can see many big big displays. Uh you can see them in the street and then you can walk around. And you know what you can do now? Uh you can walk around and Taipei be order famous on the",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "0qzduReirX0",
+          "title": "Ximending Market Taipei | Taiwan’s Most Vibrant Shopping & Street Food Paradise!",
+          "channelName": "Venky's Trip Alert",
+          "thumbnailUrl": "https://i.ytimg.com/vi/0qzduReirX0/maxresdefault.jpg",
+          "publishedAt": "2026-06-16"
+        },
+        "title": "Ximending food street at the night market",
+        "takeaway": "It’s a night market: Ximending food street, so you can walk around, see Taiwanese people, and find many shopping areas on the major main street.",
+        "highlights": [
+          "night market",
+          "Ximending food street",
+          "walk around"
+        ],
+        "locationVerification": {
+          "poiName": "Ximending",
+          "relationship": "queried_place",
+          "evidence": "I can see It's a night market. So Ximending food street and then you can walk around and then there are many shopping areas you can walk around.",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "nsO0pVmCTJI-food-210",
+        "intent": "food",
+        "startSeconds": 210,
+        "endSeconds": 264,
+        "exactQuote": "Then burn it well Authentic Salted Crispy Chicken in Taiwan Founding Store I'm going to tell you, the crust is really crispy. If you are the kind of soft and crunchy feeling It's amazing with melted Z, it's really delicious And the meat inside is very juicy It's the kind of dried meat It's just slippery meat. Ah, a little bit of this dish",
+        "contextText": "Then burn it well Authentic Salted Crispy Chicken in Taiwan Founding Store I'm going to tell you, the crust is really crispy. If you are the kind of soft and crunchy feeling It's amazing with melted Z, it's really delicious And the meat inside is very juicy It's the kind of dried meat It's just slippery meat. Ah, a little bit of this dish It also smells good with it. Because this dish also tastes like that salt. The taste of salt and pepper. What kind of salt is good? It's delicious. Highly recommended, highly recommended. Come to Ximending Don't miss it, don't miss this one either. Azong noodles. I think both are easier to cut. Ok, see you later. At West Gate Staple Surprise is not just in the bowl but also on the street The street performers here really have a lot of energy When I was full, I just stopped to experience the artistic atmosphere of Taipei",
+        "locationContext": "Come to Taipei, it would be a pity if you only visit Ximending and don't eat these classic foods. Today we will take you to visit the most lively Ximending Night Market in Taipei From queuing up the famous store Azong noodles to the Taiwanese favorite salted chicken Let's see what's fun and delicious here Welcome back to KBKG Adventures. Today we're mainly going to take you to see what's good and fun It's not just a night market. It is a representative of the culture here There's street performances, there's food, and it's all combined. It's a bit like that street in Osaka, Japan Really and I heard that there is that Azong noodle thread here, you must come and try it. You can see he is really famous People are queuing up The front is only two sizes. The small one is 65 yuan. The big one is 80 yuan, very simple. Did you get it? Did you get it? Our long-awaited Azong noodle line has finally arrived",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "nsO0pVmCTJI",
+          "title": "台北西门町夜市必吃！阿宗面线+盐酥鸡+蚵仔煎｜Ximending Night Market Food Tour",
+          "channelName": "KBKG Adventures阿憲阿綺去旅行",
+          "thumbnailUrl": "https://i.ytimg.com/vi/nsO0pVmCTJI/maxresdefault.jpg",
+          "publishedAt": "2026-03-22"
+        },
+        "title": "Eat: Z, it's really delicious And the meat inside is",
+        "takeaway": "Food highlight: …with melted Z, it's really delicious And the meat inside is very juicy It's the kind of dried meat It's just slippery meat. Ah,…",
+        "highlights": [
+          "delicious",
+          "noodles",
+          "dish",
+          "taste"
+        ]
+      },
+      {
+        "id": "42-jt7aAzy0-food-164",
+        "intent": "food",
+        "startSeconds": 164,
+        "endSeconds": 218,
+        "exactQuote": "with get it take it thank you okay roast squid roasted squid but it's right in between a jerky and yeah fresh yeah everybody is standing here eating these noodles one okay flow rice noodle small for 65 large for",
+        "contextText": "with get it take it thank you okay roast squid roasted squid but it's right in between a jerky and yeah fresh yeah everybody is standing here eating these noodles one okay flow rice noodle small for 65 large for 80 get ready to take it thank you so fast they just say add one and they know which one to make you use a spoon to eat it so interesting cuz [Music] it's you know what remind me",
+        "locationContext": "we're on our way going to a market what is it called I don't know SE Market Sean [Laughter] Market oh my God can you shut SE ding Sean ding let me show them Sean ding Night Market okay and it's a 20 minute walk from here this is [Music] Taiwan a whole list of stuff okay so so busy in there 311 uh King King oyster mushroom okay",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "42-jt7aAzy0",
+          "title": "What to EAT at XIMENDING NIGHT MARKET Taipei Taiwan Street Food 🇹🇼",
+          "channelName": "Jess and Alex",
+          "thumbnailUrl": "https://i.ytimg.com/vi/42-jt7aAzy0/sddefault.jpg",
+          "publishedAt": "2025-01-29"
+        },
+        "title": "Eat: okay flow rice noodle small for 65 large for",
+        "takeaway": "Food highlight: …noodles one okay flow rice noodle small for 65 large for",
+        "highlights": [
+          "noodle",
+          "noodles",
+          "rice"
+        ]
+      },
+      {
+        "id": "3ZUrsGqWkzY-food-57",
+        "intent": "food",
+        "startSeconds": 57,
+        "endSeconds": 111,
+        "exactQuote": "on the outside, soft and fluffy on the inside, and topped with lots of powdered milk. >> [music] [music] [music] [music]",
+        "contextText": "on the outside, soft and fluffy on the inside, and topped with lots of powdered milk. >> [music] [music] [music] [music] >> Next, we grabbed a bowl of Ai Chung rice flour noodles, a Ximending classic that's simple, comforting, and packed with an interesting smoky umami flavor. >> [music]",
+        "locationContext": "Here's everything we ate in Ximending. Our first stop is San Ma's Stinky Pot, where we tried their house special stinky pot. Rich, flavorful, and generously filled with vegetables and different toppings. [music] Their serving size is perfect for solo diners. >> [music] [music] [music] [music] >> For something sweet, we tried the [music] viral crispy milk donut. Crispy on the outside, soft and fluffy on the inside, and topped with lots of powdered milk.",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "3ZUrsGqWkzY",
+          "title": "Ximending Food Tour 🇹🇼 | Best Taiwan Street Food in Taipei (Must-Try Eats!)",
+          "channelName": "The Daily Phil",
+          "thumbnailUrl": "https://i.ytimg.com/vi/3ZUrsGqWkzY/maxresdefault.jpg",
+          "publishedAt": "2026-05-29"
+        },
+        "title": "Eat: on the outside, soft and fluffy on the inside",
+        "takeaway": "Food highlight: on the outside, soft and fluffy on the inside, and topped with lots of powdered milk. >> [music] [music]…",
+        "highlights": [
+          "noodles",
+          "rice",
+          "flavor"
+        ]
+      },
+      {
+        "id": "4Ca4yhKAcoo-practical_tip-394",
+        "intent": "practical_tip",
+        "startSeconds": 394,
+        "endSeconds": 448,
+        "exactQuote": "Let's get into the gate where it says Xi-Men Walker ... It's quite packed here … Probably because it's the weekend We’re going to browse through the shops as we make our way to our first stop - Ice Una dessert cafe If you prefer a quieter experience, visit Ximending on a weekday to avoid the crowds … Or embrace the excitement of the weekend and national holidays for a lively, bustling atmosphere For the best experience ... Come in the evening when neon lights brighten the streets and the energy is at its peak",
+        "contextText": "Let's get into the gate where it says Xi-Men Walker ... It's quite packed here … Probably because it's the weekend We’re going to browse through the shops as we make our way to our first stop - Ice Una dessert cafe If you prefer a quieter experience, visit Ximending on a weekday to avoid the crowds … Or embrace the excitement of the weekend and national holidays for a lively, bustling atmosphere For the best experience ... Come in the evening when neon lights brighten the streets and the energy is at its peak To the left is KR4Cut, a dedicated Korean-style photo booth … … and a hotspot for all things K-pop We’ll be coming back to check it out later Up ahead, there’s a large Swatch store … offering a variety of stylish and collectible timepieces Swatch is known for its bold designs and limited-edition collaborations, making it a great spot for watch enthusiasts",
+        "locationContext": "Welcome to another video from Cheeseman Travel! In today’s video, we’re going to explore Ximending … … one of Taipei’s most vibrant and energetic districts Known as the “Harajuku of Taipei,” it’s packed with street food, shopping, and entertainment. From neon-lit streets to trendy boutiques and hidden gems … … there’s always something exciting happening here! Let’s explore Ximending and see what this lively hotspot has to offer! Ximending is located in the west of Taipei, in Wanhua District … is a vibrant hub for shopping, food, and entertainment Once a historic entertainment district, it’s now a trendsetting hotspot … … it’s now a trendy spot for locals and tourists alike! We are continuing our journey from Beitou by riding the 218 bus direct to Ximending We’re using our EasyCard to pay for the bus, and it costs only 30 NTD per person.",
+        "captionTrack": "creator",
+        "language": "en",
+        "video": {
+          "id": "4Ca4yhKAcoo",
+          "title": "Exploring the Vibrant Streets of Ximending | A Shopping and Food Lover's Paradise in Taipei",
+          "channelName": "CHEESEman TRAVEL",
+          "thumbnailUrl": "https://i.ytimg.com/vi/4Ca4yhKAcoo/maxresdefault.jpg",
+          "publishedAt": "2025-03-07"
+        },
+        "title": "Creator tip: visit Ximending on a weekday to avoid the crowds",
+        "takeaway": "The creator observed: to avoid the crowds, visit Ximending on a weekday. Otherwise, embrace the excitement of the weekend and national holidays for a lively atmosphere.",
+        "highlights": [
+          "embrace the excitement of the weekend"
+        ],
+        "locationVerification": {
+          "poiName": "Ximending",
+          "relationship": "queried_place",
+          "evidence": "If you prefer a quieter experience, visit Ximending on a weekday to avoid the crowds … Or embrace the excitement of the weekend and national holidays for a lively, bustling atmosphere",
+          "status": "same_place",
+          "distanceMeters": 0
+        }
+      },
+      {
+        "id": "Dz39cd-lKDQ-practical_tip-152",
+        "intent": "practical_tip",
+        "startSeconds": 152,
+        "endSeconds": 206,
+        "exactQuote": "this one is just heating up. The dance floor is packed with Taiwanese pop, K-pop, and non-stop energy. It's one of the few spots where the party goes strong until 4 in the morning. So whether you want the hot boy dancers, theme nights, or dancing till sunrise, Taipei's night life really has it all. The only question is how much energy do you have? So after the bars, the saunas are their own adventure in Taipei. First up, SOI13. It's the largest sauna in Taipei. Spacious facilities, clean, always busy. And here's the secret. Young guys get discounts, which means the crowd here is",
+        "contextText": "this one is just heating up. The dance floor is packed with Taiwanese pop, K-pop, and non-stop energy. It's one of the few spots where the party goes strong until 4 in the morning. So whether you want the hot boy dancers, theme nights, or dancing till sunrise, Taipei's night life really has it all. The only question is how much energy do you have? So after the bars, the saunas are their own adventure in Taipei. First up, SOI13. It's the largest sauna in Taipei. Spacious facilities, clean, always busy. And here's the secret. Young guys get discounts, which means the crowd here is usually very young. The peak times around 6:30 in the evening and again close to 11:00 p.m. And yes, you'll often spot a few foreigners here, too. Now there's XL Club. A lot of visitors don't even know this place exists. The vibe, muscular local guys, more serious energy. It even has a rooftop",
+        "locationContext": "Most travelers think they know Taipei. Night markets, bubble tea, maybe a quick gay bar in Ximending. But what if I told you there's a side of Taipei almost no traveler knows? In fact, some gay traveler here just for this experience. Locals swear by it. Some Asians may already know it, but in the West, still kind of a secret. In this guide, I'll show you not only the bars, but also the hidden places you really don't want to miss. Taiwan is the first country in Asia to legalize same-sex marriage. Taipei is safe, welcoming, and yes, holding hands in public is totally fine. It's a city where you don't have to hide who you are. This kind of atmosphere, you'll only find it here. Anywhere else in Asia, it just doesn't exist. Hotels in Taipei, honestly, they're kind of overpriced. You'll pay a lot, and it still won't feel like Bangkok Lavel luxury. That's why so many gay travelers skip the hotels and stay at a hostel instead. Literally 2 minutes",
+        "captionTrack": "creator",
+        "language": "en-US",
+        "video": {
+          "id": "Dz39cd-lKDQ",
+          "title": "Taipei's Gay Secret Nightlife Spots You Never Knew!",
+          "channelName": "GAYIFIERS ",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Dz39cd-lKDQ/maxresdefault.jpg",
+          "publishedAt": "2025-08-30"
+        },
+        "title": "Creator tip: Good to know: you have? So after the bars, the saunas are",
+        "takeaway": "The creator observed: planning takeaway: …energy do you have? So after the bars, the saunas are their own adventure in Taipei. First up, SOI13. It's the largest sauna in…",
+        "highlights": [
+          "after",
+          "crowd",
+          "close",
+          "busy"
+        ]
+      },
+      {
+        "id": "L3v9MA-l9rA-practical_tip-28",
+        "intent": "practical_tip",
+        "startSeconds": 28,
+        "endSeconds": 82,
+        "exactQuote": "[Music] here. [Music] Well, good morning. Welcome to Shiming. Um, I'm just ending a weekend full of fun and I'm heading to this place we're going to try called uh A Chong Flowered Rice Noodles and um it's a really well-known spot here in Thai in Taipei. Um, I've",
+        "contextText": "[Music] here. [Music] Well, good morning. Welcome to Shiming. Um, I'm just ending a weekend full of fun and I'm heading to this place we're going to try called uh A Chong Flowered Rice Noodles and um it's a really well-known spot here in Thai in Taipei. Um, I've seen on many vlogs before. So, now we're going to try it out. So, let's check out Chong Flour Rice Noodle. All right. So, here's the shop. It's located in Shiming on the pedestrian walk here. And it's just down one of the alleyways, corridor alley E12. It's a sign for And they hand to their noodles. Comes",
+        "locationContext": "Heat up [Music] [Music] here. [Music] Well, good morning. Welcome to Shiming. Um, I'm just ending a weekend full of fun and I'm heading to this place we're going to try called uh A Chong Flowered Rice Noodles and um it's a really well-known spot here in Thai in Taipei. Um, I've seen on many vlogs before. So, now we're",
+        "captionTrack": "automatic",
+        "language": "en",
+        "video": {
+          "id": "L3v9MA-l9rA",
+          "title": "Vlog 118 Ay Chung Flour Rice Noodles & Scallion Pancakes at Ximending",
+          "channelName": "Can We Go?",
+          "thumbnailUrl": "https://i.ytimg.com/vi/L3v9MA-l9rA/maxresdefault.jpg",
+          "publishedAt": "2025-04-05"
+        },
+        "title": "Creator tip: Good to know: [Music] here. [Music] Well, good morning. Welcome to Shiming",
+        "takeaway": "The creator observed: planning takeaway: [Music] here. [Music] Well, good morning. Welcome to Shiming. Um, I'm just ending a weekend full of fun and…",
+        "highlights": [
+          "before",
+          "morning",
+          "weekend"
+        ]
+      }
+    ],
+    "suggestedPlan": [
+      "Creator tip: visit Ximending on a weekday to avoid the crowds",
+      "Every day there's a long queue",
+      "a free attraction in Ximending upstairs at Sun",
+      "daily fresh handmade tapioca pearls"
+    ],
+    "warnings": [
+      "Partial research: 1 independent videos produced 1 verified clips. Missing: why it is worth going, what to do, what to eat, good to know.",
+      "3 keyword-matched clips were omitted because their main subject or title support was not strong enough.",
+      "No reliable why-visit segment passed semantic verification.",
+      "No reliable activity segment passed semantic verification.",
+      "No reliable practical-tip segment passed semantic verification.",
+      "Opening hours, prices, reservations, and temporary closures still require a current check."
+    ],
+    "mode": "ai",
+    "aiModel": "gpt-5.4-nano",
+    "sourceStatus": "local_research",
+    "verification": {
+      "videosFound": 492,
+      "captionedVideos": 138,
+      "candidateClips": 76,
+      "evidenceMatches": 22,
+      "verifiedClips": 13,
+      "rejectedEvidenceOrRanking": 54,
+      "rejectedLocation": 9
+    }
+  }
+}

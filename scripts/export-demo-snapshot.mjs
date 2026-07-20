@@ -70,9 +70,9 @@ const snapshot = {
   suggestedPlan: selected
     .filter((clip) => ["practical_tip", "activity", "food"].includes(clip.intent))
     .map((clip) => clip.title),
-  overview: "Four independent travel videos produced four semantically and geographically verified, timestamped clips for Taipei 101. This saved demo opens instantly; run live research whenever you want fresh source discovery.",
+  overview: "Legacy Taipei 101 sample evidence kept only for local fixture and regression testing. It is not a current public verified snapshot.",
   warnings: [
-    `Verified demo snapshot generated ${source.generatedAt}. Run live research to refresh YouTube evidence.`,
+    `Legacy demo generated ${source.generatedAt}. It cannot enter the public verified snapshot registry because its sources may be outside the current two-year window.`,
     ...source.warnings.filter((warning) => /opening hours|prices|reservations|closures/i.test(warning))
   ],
   verification: {
@@ -84,7 +84,9 @@ const snapshot = {
     rejectedEvidenceOrRanking: Math.max(0, source.clipCount - selected.length),
     rejectedLocation: 0
   },
-  demoSnapshot: true
+  demoSnapshot: false,
+  legacySnapshot: true,
+  sourceStatus: "legacy_fixture"
 };
 
 await fs.writeFile(path.join(dataDir, "taipei-101-demo.json"), `${JSON.stringify(snapshot, null, 2)}\n`, "utf8");
